@@ -23,10 +23,10 @@ import java.net.URL;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WeatherInfo extends Fragment {
+public class WeatherInfoFragment extends Fragment {
 
 
-    public WeatherInfo() {
+    public WeatherInfoFragment() {
         // Required empty public constructor
     }
 

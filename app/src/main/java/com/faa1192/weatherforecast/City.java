@@ -1,5 +1,7 @@
 package com.faa1192.weatherforecast;
 
+import android.os.Bundle;
+
 import java.util.ArrayList;
 
 /**
@@ -28,5 +30,13 @@ public class City {
         return name;
     }
 
-
+    public Bundle toBundle(){
+        Bundle b = new Bundle();
+        b.putString("name", name);
+        b.putInt("id", id);
+        return b;
+    }
+    public static City fromBundle(Bundle b){
+        return new City(b.getString("name"), b.getInt("id"));
+    }
 }

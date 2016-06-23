@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.content.Intent;
 
 
 /**
@@ -47,7 +48,17 @@ public class CitiesListFragment extends ListFragment {
         City selectedCity  = (City) l.getItemAtPosition((int) id);
         //((TextView) v.findViewById((int)id)).getText().toString()
         Toast.makeText(getActivity(), selectedCity.name, Toast.LENGTH_SHORT).show();
-        WeatherInfo f = (WeatherInfo) getFragmentManager().findFragmentById(R.id.fragment2);
-        f.showWeather(selectedCity);
+        int i = 10;
+        WeatherInfoFragment f = (WeatherInfoFragment) getFragmentManager().findFragmentById(R.id.fragment2);
+
+        if(f!=null) {
+            f.showWeather(selectedCity);
+
+        }
+        else{
+            Intent intent = new Intent(getActivity(), WeatherInfoContainer.class);
+            intent.putExtras(selectedCity.toBundle());
+            startActivity(intent);
+        }
     }
 }

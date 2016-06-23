@@ -18,11 +18,4 @@
         android:id="@+id/fragment1"
         tools:layout="@layout/fragment_cities_list"
         android:layout_gravity="center" />
-    <fragment
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="com.faa1192.weatherforecast.WeatherInfo"
-        android:id="@+id/fragment2"
-        tools:layout="@layout/fragment_weather_info" />
 </LinearLayout>
