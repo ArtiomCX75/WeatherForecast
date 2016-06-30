@@ -42,7 +42,7 @@ public class WeatherInfoFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_weather_info, container, false);
     }
 
-    public void showWeather(City city){
+        public void showWeather(City city){
         WeatherInfoHelper wih = new WeatherInfoHelper();
         wih.execute(city);
     }
@@ -56,6 +56,7 @@ public class WeatherInfoFragment extends Fragment {
         protected Void doInBackground(City... city) {
             String strUrl = "http://api.openweathermap.org/data/2.5/weather?id="+city[0].id+"&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric";
             jo = new JSONObject();
+            Log.e("my", "url:"+strUrl);
             try {
                 URL u1 = new URL(strUrl);
                 HttpURLConnection con = (HttpURLConnection) u1.openConnection();
@@ -106,6 +107,7 @@ public class WeatherInfoFragment extends Fragment {
                 for(int i=0;i<e.getStackTrace().length;i++) {
                     Log.e("my", e.getStackTrace()[i].toString());
                 }
+                e.printStackTrace();
             }
 
         }

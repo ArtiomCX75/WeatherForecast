@@ -8,8 +8,9 @@ import android.database.Cursor;
  */
 
 public class CursorCity {
-    public Cursor temp(Context c){
-        return  new CityDBHelper(c).getWritableDatabase().query("CITY", new String[] {"_id", "NAME"}, null, null, null, null, null);
+    public Cursor getCursor(Context c){
+        return  new CityDBHelper(c).getWritableDatabase().query("CITY", new String[] {"_id", "NAME"}, null, null, null, null, "Name");
     }
+
 
 }
