@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".WeatherInfoContainer"></activity>
+        <activity android:name=".AddCityActivity"></activity>
     </application>
 
 </manifest>

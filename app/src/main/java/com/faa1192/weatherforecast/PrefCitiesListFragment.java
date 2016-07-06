@@ -2,17 +2,13 @@ package com.faa1192.weatherforecast;
 
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -20,27 +16,14 @@ import android.widget.ListView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CitiesListFragment extends ListFragment {
-    Cursor cu;
-
-    public CitiesListFragment() {
-        // Required empty public constructor
-    }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cities_list, container, false);
-    }
+public class PrefCitiesListFragment extends CitiesListFragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ArrayAdapter la = new ArrayAdapter<City>(getActivity(), R.layout.custom_list1, City.citiesList);
-        cu = new CursorCity().getCursor(getActivity().getApplicationContext());
+        ArrayAdapter la = new ArrayAdapter<PrefCity>(getActivity(), R.layout.custom_list1, PrefCity.prefcitiesList);
+        cu = new PrefCursorCity().getCursor(getActivity().getApplicationContext());
         CursorAdapter ca = new SimpleCursorAdapter(getActivity().getApplicationContext(), R.layout.custom_list1, cu , new String[]{"NAME"}, new int[]{android.R.id.text1}, 0);
-
         ListView lv = getListView();
        // lv.setAdapter(ca);
         setListAdapter(ca);
@@ -55,17 +38,13 @@ public class CitiesListFragment extends ListFragment {
         Log.e("my", selectedCity.toString()+"  "+cu.getString(0)+"   "+"pos:"+position);
         WeatherInfoFragment f = (WeatherInfoFragment) getFragmentManager().findFragmentById(R.id.fragment2);
         if(f!=null) {
-            Log.e("my", "IF");
-           // f.showWeather(selectedCity);
-            selectedCity.addToDB(getContext());
-            Intent intent = new Intent(getActivity(), MainActivity.class);
-            startActivity(intent);
+            f.showWeather(selectedCity);
+           // PrefCityDBHelper.addPrefCity();
         }
         else{
-            Log.e("my", "ELSE");
-            selectedCity.addToDB(getContext());
-            Intent intent = new Intent(getActivity(), MainActivity.class);
-            startActivity(intent);;
+            Intent intent = new Intent(getActivity(), WeatherInfoContainer.class);
+            intent.putExtras(selectedCity.toBundle());
+            startActivity(intent);
         }
     }
 }
