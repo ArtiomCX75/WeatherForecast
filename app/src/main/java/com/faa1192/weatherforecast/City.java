@@ -1,5 +1,8 @@
 package com.faa1192.weatherforecast;
 
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.SQLException;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -9,17 +12,22 @@ import java.util.ArrayList;
  */
 
 public class City {
-    public String name = "";
     public int id = -1;
-    public static ArrayList<City> citiesList = new ArrayList<>();
+    public String name = "";
+    public String data ="";
+    static ArrayList<City> citiesList = new ArrayList<>();
 
     public City(){
-
     }
 
-    public City(String name, int id){
-        this.name = name;
+    City(int id, String name){
         this.id = id;
+        this.name = name;
+    }
+
+    City(int id, String name, String data){
+        this(id, name);
+        this.data = data;
     }
 
     @Override
@@ -29,11 +37,36 @@ public class City {
 
     public Bundle toBundle(){
         Bundle b = new Bundle();
-        b.putString("name", name);
         b.putInt("id", id);
+        b.putString("name", name);
+        b.putString("data", data);
         return b;
     }
-    public static City fromBundle(Bundle b){
-        return new City(b.getString("name"), b.getInt("id"));
+
+    static City fromBundle(Bundle b){
+        return new City(b.getInt("id"), b.getString("name"), b.getString("data"));
+    }
+
+    void addToDbPref(Context context){
+        try {
+            ContentValues cv = new ContentValues();
+            cv.put("_id", this.id);
+            cv.put("NAME", this.name);
+            cv.put("DATA", this.data);
+            new PrefCityDBHelper(context).getWritableDatabase().insert("PREFCITY", null, cv);
+
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void delFromDbPref(Context context){
+        try {
+            new PrefCityDBHelper(context).getWritableDatabase().delete("PREFCITY", "_id="+id, null);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 }

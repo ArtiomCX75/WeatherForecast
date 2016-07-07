@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
@@ -22,6 +21,7 @@ import android.widget.ListView;
  */
 public class CitiesListFragment extends ListFragment {
     Cursor cu;
+    CursorAdapter ca;
 
     public CitiesListFragment() {
         // Required empty public constructor
@@ -37,33 +37,25 @@ public class CitiesListFragment extends ListFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ArrayAdapter la = new ArrayAdapter<City>(getActivity(), R.layout.custom_list1, City.citiesList);
         cu = new CursorCity().getCursor(getActivity().getApplicationContext());
-        CursorAdapter ca = new SimpleCursorAdapter(getActivity().getApplicationContext(), R.layout.custom_list1, cu , new String[]{"NAME"}, new int[]{android.R.id.text1}, 0);
-
-        ListView lv = getListView();
-       // lv.setAdapter(ca);
+        ca = new SimpleCursorAdapter(getActivity().getApplicationContext(), R.layout.custom_list1, cu , new String[]{"NAME"}, new int[]{android.R.id.text1}, 0);
         setListAdapter(ca);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
         cu.moveToFirst();
         cu.move(position);
-        PrefCity selectedCity =  new PrefCity(cu.getString(1), Integer.parseInt(cu.getString(0)));
-        Log.e("my", selectedCity.toString()+"  "+cu.getString(0)+"   "+"pos:"+position);
+        City selectedCity =  new City(Integer.parseInt(cu.getString(0)), cu.getString(1));
         WeatherInfoFragment f = (WeatherInfoFragment) getFragmentManager().findFragmentById(R.id.fragment2);
         if(f!=null) {
-            Log.e("my", "IF");
            // f.showWeather(selectedCity);
-            selectedCity.addToDB(getContext());
+            selectedCity.addToDbPref(getContext());
             Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);
         }
         else{
-            Log.e("my", "ELSE");
-            selectedCity.addToDB(getContext());
+            selectedCity.addToDbPref(getContext());
             Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);;
         }
