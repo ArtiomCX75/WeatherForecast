@@ -9,9 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="hello"/>
-
     <fragment
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="com.faa1192.weatherforecast.CitiesListFragment"

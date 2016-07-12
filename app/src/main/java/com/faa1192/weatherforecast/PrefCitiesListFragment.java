@@ -1,45 +1,37 @@
 package com.faa1192.weatherforecast;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SimpleCursorAdapter;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.view.ViewGroup;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PrefCitiesListFragment extends CitiesListFragment {
+public class PrefCitiesListFragment extends Fragment {
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        updateList();
-        getListView().setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
-                cu.moveToFirst();
-                cu.move(position);
-                City selectedCity =  new City(Integer.parseInt(cu.getString(0)), cu.getString(1));
-                selectedCity.delFromDbPref(getActivity());
-                updateList();
-                return true;
-            }
-        });
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        RecyclerView rv = (RecyclerView) inflater.inflate(R.layout.recycle_pref_cities, container, false);
+        CityWeatherAdapter cwa = new CityWeatherAdapter(new PrefCursorCity().getList(getContext()), 5);
+        rv.setAdapter(cwa);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        rv.setLayoutManager(linearLayoutManager);
+        return rv;
     }
 
-    void updateList(){
+  /*  void updateList(){
         cu = new PrefCursorCity().getCursor(getActivity().getApplicationContext());
         ca = new SimpleCursorAdapter(getActivity().getApplicationContext(), R.layout.custom_list1, cu , new String[]{"NAME"}, new int[]{android.R.id.text1}, 0);
         setListAdapter(ca);
-    }
+    }*/
 
-    @Override
+ /*   @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         cu.moveToFirst();
         cu.move(position);
@@ -53,5 +45,5 @@ public class PrefCitiesListFragment extends CitiesListFragment {
             intent.putExtras(selectedCity.toBundle());
             startActivity(intent);
         }
-    }
+    }*/
 }
