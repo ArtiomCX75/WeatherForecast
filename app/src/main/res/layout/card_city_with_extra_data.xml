@@ -19,6 +19,7 @@
 
     <LinearLayout
         android:tag="lin_layout"
+
         android:layout_width="match_parent"
 
         android:layout_height="fill_parent"

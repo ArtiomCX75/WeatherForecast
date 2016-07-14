@@ -17,9 +17,9 @@ public class PrefCitiesListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView rv = (RecyclerView) inflater.inflate(R.layout.recycle_pref_cities, container, false);
-        CityWeatherAdapter cwa = new CityWeatherAdapter(new PrefCursorCity().getList(getContext()), 5);
-        rv.setAdapter(cwa);
+        RecyclerView rv = (RecyclerView) inflater.inflate(R.layout.recycle_view_cities, container, false);
+        CityWithTempAdapter cwta = new CityWithTempAdapter(new PrefCursorCity().getCityList(getContext()), new PrefCursorCity().getDataList(getContext()));
+        rv.setAdapter(cwta);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(linearLayoutManager);
         return rv;

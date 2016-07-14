@@ -61,6 +61,22 @@ public class City {
         }
     }
 
+    void updateData(Context context, WeatherData wd){
+        try {
+            ContentValues cv = new ContentValues();
+//            cv.put("_id", this.id);
+//            cv.put("NAME", this.name);
+            cv.put("DATA", wd.jsonString);
+            new PrefCityDBHelper(context).getWritableDatabase().update("PREFCITY", cv, "_id = "+ id, null);
+//                    insert("PREFCITY", null, cv);
+
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+
     public void delFromDbPref(Context context){
         try {
             new PrefCityDBHelper(context).getWritableDatabase().delete("PREFCITY", "_id="+id, null);
