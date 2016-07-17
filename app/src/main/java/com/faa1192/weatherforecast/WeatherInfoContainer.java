@@ -13,6 +13,6 @@ public class WeatherInfoContainer extends FragmentActivity {
         Intent intent = getIntent();
         City selectedCity = City.fromBundle(intent.getExtras());
         WeatherInfoFragment f = (WeatherInfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3);
-        f.showWeather(selectedCity);
+       // f.showWeather(selectedCity);
     }
 }

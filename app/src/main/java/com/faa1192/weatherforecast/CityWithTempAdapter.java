@@ -1,5 +1,8 @@
 package com.faa1192.weatherforecast;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,8 +21,8 @@ import java.util.List;
 public class CityWithTempAdapter extends CityInListAdapter {
 
 
-    public CityWithTempAdapter(List<String> cities, List<WeatherData> wd) {
-        super(cities, wd);
+    public CityWithTempAdapter(List<City> cities, Context context) {
+        super(cities, context);
     }
 
     @Override
@@ -29,17 +32,33 @@ public class CityWithTempAdapter extends CityInListAdapter {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position){
+    public void onBindViewHolder(final ViewHolder holder, final int position){
         Log.e("MY", "!!!added "+position+"   ");
         CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
-        textView.setText(cities.get(position));
+        textView.setText(cities.get(position).name);
         textView = (TextView) cardView.findViewById(R.id.city_info_temp);
-        textView.setText("t="+wd.get(position).temp);
+        textView.setText("t="+cities.get(position).data.temp);
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "t: "+cities.get(position), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WeatherInfoContainer.class);
+                City selectedCity =  cities.get(position);
+                intent.putExtras(selectedCity.toBundle());
+                context.startActivity(intent);
+            }
+        });
+        ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                City selectedCity =  cities.get(position);
+                selectedCity.delFromDbPref(context);
+                Activity act = (Activity) context;
+                Intent intent = act.getIntent();
+                act.finish();
+                act.startActivity(intent);
+                return true;
             }
         });
     }

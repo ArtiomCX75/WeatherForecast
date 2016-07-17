@@ -18,22 +18,25 @@ import java.util.List;
  */
 
 public class PrefCursorCity {
-    Context tempContext;
-    public Cursor getCursor(Context c){
+    static Context tempContext;
+    public static Cursor getCursor(Context c){
         return  new PrefCityDBHelper(c).getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, null, null, null, null, "Name");
     }
 
-    public List<String> getCityList(Context c){
-        Cursor cu = this.getCursor(c);
-        List<String > l = new ArrayList<>();
+    public static List<City> getCityList(Context c){
+        tempContext = c;
+        Cursor cu = getCursor(c);
+        List<City > l = new ArrayList<>();
         while(cu.moveToNext()){
-            String s = cu.getString(1);
-            l.add(s);
+            int id = cu.getInt(0);
+            String name = cu.getString(1);
+            WeatherData wd = new WeatherData(cu.getString(2));
+            l.add(new City(id, name, wd));
         }
         return l;
     }
 
-    public List<WeatherData> getDataList(Context c){
+    /*public List<WeatherData> getDataList(Context c){
         Cursor cu = this.getCursor(c);
         List<WeatherData > l = new ArrayList<>();
         while(cu.moveToNext()){
@@ -43,21 +46,21 @@ public class PrefCursorCity {
         }
         return l;
     }
-
-    public void updateData(Context c){
-        tempContext = c;
-        Cursor cu = this.getCursor(c);
+*/
+    public static void updateData(Context c){
+       // tempContext = c;
+        Cursor cu = getCursor(c);
         List<WeatherData > l = new ArrayList<>();
         while(cu.moveToNext()){
             City city = new City(Integer.valueOf(cu.getString(0)), cu.getString(1));
-            WeatherInfoHelper2 wih = new WeatherInfoHelper2();
+            WeatherInfoHelper wih = new WeatherInfoHelper();
             wih.execute(city);
         }
 
     }
 
 
-    public class WeatherInfoHelper2 extends AsyncTask<City, Void, Void> {
+    public static class WeatherInfoHelper extends AsyncTask<City, Void, Void> {
         String res = "";
         InputStream is;
         JSONObject jo;

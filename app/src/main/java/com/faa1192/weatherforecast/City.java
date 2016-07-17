@@ -14,7 +14,8 @@ import java.util.ArrayList;
 public class City {
     public int id = -1;
     public String name = "";
-    public String data ="";
+  //  public String data ="";
+    public WeatherData data = new WeatherData();
     static ArrayList<City> citiesList = new ArrayList<>();
 
     public City(){
@@ -25,7 +26,7 @@ public class City {
         this.name = name;
     }
 
-    City(int id, String name, String data){
+    City(int id, String name, WeatherData data){
         this(id, name);
         this.data = data;
     }
@@ -39,12 +40,12 @@ public class City {
         Bundle b = new Bundle();
         b.putInt("id", id);
         b.putString("name", name);
-        b.putString("data", data);
+        b.putString("data", data.jsonString);
         return b;
     }
 
     static City fromBundle(Bundle b){
-        return new City(b.getInt("id"), b.getString("name"), b.getString("data"));
+        return new City(b.getInt("id"), b.getString("name"), new WeatherData(b.getString("data")));
     }
 
     void addToDbPref(Context context){
@@ -52,7 +53,7 @@ public class City {
             ContentValues cv = new ContentValues();
             cv.put("_id", this.id);
             cv.put("NAME", this.name);
-            cv.put("DATA", this.data);
+            cv.put("DATA", this.data.jsonString);
             new PrefCityDBHelper(context).getWritableDatabase().insert("PREFCITY", null, cv);
 
         }

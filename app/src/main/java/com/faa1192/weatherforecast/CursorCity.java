@@ -15,12 +15,13 @@ public class CursorCity {
         return  new CityDBHelper(c).getWritableDatabase().query("CITY", new String[] {"_id", "NAME"}, null, null, null, null, "Name");
     }
 
-    public List<String> getCityList(Context c){
+    public List<City> getCityList(Context c){
         Cursor cu = this.getCursor(c);
-        List<String > l = new ArrayList<>();
+        List<City > l = new ArrayList<>();
         while(cu.moveToNext()){
-            String s = cu.getString(1);
-            l.add(s);
+            int id = cu.getInt(0);
+            String name = cu.getString(1);
+            l.add(new City(id, name));
         }
         return l;
     }

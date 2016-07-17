@@ -1,5 +1,8 @@
 package com.faa1192.weatherforecast;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,17 +15,19 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by faa11 on 12.07.2016.
  */
 
 public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.ViewHolder>{
-    public List<String> cities;
-    public List<WeatherData> wd;
-    public CityInListAdapter(List<String> cities, List<WeatherData> wd){
+    public List<City> cities;
+    public Context context;
+    public CityInListAdapter(List<City> cities, Context context){
         Log.e("MY", "create city in list  adapter");
         this.cities = cities;
-        this.wd = wd;
+        this.context = context;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -41,13 +46,22 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position){
         Log.e("MY", "!!!added "+position+"   ");
-        CardView cardView = holder.cardView;
+        final CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
-        textView.setText(cities.get(position));
+        textView.setText(cities.get(position).name);
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "t: "+cities.get(position), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.putExtras(cities.get(position).toBundle());
+                Toast.makeText(context, City.fromBundle(intent.getExtras()).name, Toast.LENGTH_SHORT);
+                cities.get(position).addToDbPref(context);
+                PrefCursorCity.updateData(context);
+                Activity act = (Activity) context;
+                act.setResult(RESULT_OK, intent);
+                for(int i = 0; i < 10_000_000; i++){}
+                act.finish();
+
             }
         });
     }

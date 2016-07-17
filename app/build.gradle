@@ -30,7 +30,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha2'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.android.support:support-v4:24'
     compile 'com.android.support:cardview-v7:+'
@@ -39,4 +38,5 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support:support-annotations:+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
 }
