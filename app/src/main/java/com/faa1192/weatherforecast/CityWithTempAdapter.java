@@ -38,7 +38,7 @@ public class CityWithTempAdapter extends CityInListAdapter {
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
         textView.setText(cities.get(position).name);
         textView = (TextView) cardView.findViewById(R.id.city_info_temp);
-        textView.setText("t="+cities.get(position).data.temp);
+        textView.setText("t="+cities.get(position).data.getTemp());
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

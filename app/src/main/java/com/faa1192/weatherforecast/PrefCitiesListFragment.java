@@ -24,26 +24,4 @@ public class PrefCitiesListFragment extends Fragment {
         rv.setLayoutManager(linearLayoutManager);
         return rv;
     }
-
-  /*  void updateList(){
-        cu = new PrefCursorCity().getCursor(getActivity().getApplicationContext());
-        ca = new SimpleCursorAdapter(getActivity().getApplicationContext(), R.layout.custom_list1, cu , new String[]{"NAME"}, new int[]{android.R.id.text1}, 0);
-        setListAdapter(ca);
-    }*/
-
- /*   @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        cu.moveToFirst();
-        cu.move(position);
-        City selectedCity =  new City(Integer.parseInt(cu.getString(0)), cu.getString(1));
-        WeatherInfoFragment f = (WeatherInfoFragment) getFragmentManager().findFragmentById(R.id.fragment2);
-        if(f!=null) {
-            f.showWeather(selectedCity);
-        }
-        else{
-            Intent intent = new Intent(getActivity(), WeatherInfoContainer.class);
-            intent.putExtras(selectedCity.toBundle());
-            startActivity(intent);
-        }
-    }*/
 }

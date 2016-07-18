@@ -11,8 +11,8 @@ public class WeatherInfoContainer extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_info_container);
         Intent intent = getIntent();
-        City selectedCity = City.fromBundle(intent.getExtras());
+        City city = City.fromBundle(intent.getExtras());
         WeatherInfoFragment f = (WeatherInfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3);
-       // f.showWeather(selectedCity);
+        f.setInfo(city);
     }
 }

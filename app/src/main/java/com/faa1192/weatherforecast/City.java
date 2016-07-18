@@ -40,7 +40,7 @@ public class City {
         Bundle b = new Bundle();
         b.putInt("id", id);
         b.putString("name", name);
-        b.putString("data", data.jsonString);
+        b.putString("data", data.getJsonString());
         return b;
     }
 
@@ -53,7 +53,7 @@ public class City {
             ContentValues cv = new ContentValues();
             cv.put("_id", this.id);
             cv.put("NAME", this.name);
-            cv.put("DATA", this.data.jsonString);
+            cv.put("DATA", this.data.getJsonString());
             new PrefCityDBHelper(context).getWritableDatabase().insert("PREFCITY", null, cv);
 
         }
@@ -65,9 +65,7 @@ public class City {
     void updateData(Context context, WeatherData wd){
         try {
             ContentValues cv = new ContentValues();
-//            cv.put("_id", this.id);
-//            cv.put("NAME", this.name);
-            cv.put("DATA", wd.jsonString);
+            cv.put("DATA", wd.getJsonString());
             new PrefCityDBHelper(context).getWritableDatabase().update("PREFCITY", cv, "_id = "+ id, null);
 //                    insert("PREFCITY", null, cv);
 
