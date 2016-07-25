@@ -88,7 +88,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-.idea/
+.idea/*
 .idea/compiler.xml
 .idea/compiler.xml
 .idea/gradle.xml
@@ -96,5 +96,7 @@ $RECYCLE.BIN/
 .idea/libraries/espresso_core_2_2_2.xml
 .idea/libraries/exposed_instrumentation_api_publish_0_5.xml
 .idea/libraries/rules_0_5.xml
+.idea/misc.xml
+.idea/workspace.xml
 .idea/misc.xml
 .idea/workspace.xml
