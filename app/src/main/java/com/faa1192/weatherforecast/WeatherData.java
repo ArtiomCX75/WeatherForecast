@@ -5,6 +5,8 @@ import android.util.Log;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import java.util.Date;
+
 /**
  * Created by faa11 on 14.07.2016.
  */
@@ -28,7 +30,7 @@ public class WeatherData {
     private String windDeg = "";
     private String weatherDescription = "";
     private String weatherMain = "";
-    private int time = 0;
+    private Long time = Long.valueOf(0);
     private String nd = "no data";
     private int timeZone = +3;
 
@@ -53,11 +55,19 @@ public class WeatherData {
             weatherJsonObject = baseJsonObject.getJSONArray("weather").getJSONObject(0);
             weatherDescription = weatherJsonObject.getString("description");
             weatherMain = weatherJsonObject.getString("main");
+            time = baseJsonObject.getLong("dt");
+            //time = new Date().getTime()/1000;
+            Log.e("my", "_______time="+time);
+            Long temptime =   new Date().getTime()/1000;
+            //temptime/=1000;
+        //    Log.e("my", "___cur_time="+ temptime+"");
+
         }
         catch (Exception e){
-            for(int i=0;i<e.getStackTrace().length;i++) {
-                Log.e("my error wd", e.getStackTrace()[i].toString());
-            }
+            Log.e("my", "WeatherData not received");
+//            for(int i=0;i<e.getStackTrace().length;i++) {
+  //              Log.e("my error wd", e.getStackTrace()[i].toString());
+    //        }
         }
     }
 
@@ -69,11 +79,9 @@ public class WeatherData {
                 + "  windSpeed " + windSpeed + "  windDeg "
                 + windDeg + "  weatherDescription "+ weatherDescription
                 + "  weatherMain " +weatherMain;
-        Log.e("MY", s);
+  //      Log.e("MY", s);
         return s;
     }
-
-
 
 
     public String getCityName() {
@@ -125,11 +133,13 @@ public class WeatherData {
     }
 
     private String stringToTime(String s){
-        Integer i = new Integer(s);
+        if(getTemp().equals(nd))
+            return nd;
+        Integer i = new Integer("0"+s);
         int hour=(i/60/60)%24;
         int min = (i/60)%60;
         int sec = i%60;
-        return (hour+timeZone)+"h "+min+"m "+sec +"s";
+        return (hour+timeZone)%24+"h "+min+"m "+sec +"s";
     }
 
     public JSONObject getSysJsonObject() {
@@ -149,10 +159,10 @@ public class WeatherData {
     }
 
     public String getTime() {
-        return time+"";
+        return stringToTime(time.toString())+"";
     }
 
-    public void setTime(int time) {
+    public void setTime(long time) {
         this.time = time;
     }
 
@@ -202,5 +212,13 @@ public class WeatherData {
 
     public void setWindSpeed(String windSpeed) {
         this.windSpeed = windSpeed;
+    }
+
+    public boolean isActualData(){
+        Long curtime =   new Date().getTime()/1000;
+        Log.e("my", (curtime-time)+"");
+        if((curtime-time)<2900)
+            return true;
+        return false;
     }
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -22,6 +23,12 @@ public class PrefCursorCity {
     public static Cursor getCursor(Context c){
         return  new PrefCityDBHelper(c).getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, null, null, null, null, "Name");
     }
+    public static City getCity(Context c, int id){
+        Cursor cursor = new PrefCityDBHelper(c).getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, "_id="+id, null, null, null, null);
+        cursor.moveToFirst();
+        City city = new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
+        return city;
+    }
 
     public static List<City> getCityList(Context c){
         tempContext = c;
@@ -36,29 +43,30 @@ public class PrefCursorCity {
         return l;
     }
 
-    /*public List<WeatherData> getDataList(Context c){
-        Cursor cu = this.getCursor(c);
-        List<WeatherData > l = new ArrayList<>();
-        while(cu.moveToNext()){
-            String s = cu.getString(2);
-            l.add(new WeatherData(s));
-            Log.e("MY", new WeatherData(s).toString());
-        }
-        return l;
-    }
-*/
-    public static void updateData(Context c){
-       // tempContext = c;
+
+    public static void updateAllData(Context c){
         Cursor cu = getCursor(c);
         List<WeatherData > l = new ArrayList<>();
         while(cu.moveToNext()){
-            City city = new City(Integer.valueOf(cu.getString(0)), cu.getString(1));
-            WeatherInfoHelper wih = new WeatherInfoHelper();
-            wih.execute(city);
+            City city = new City(Integer.valueOf(cu.getString(0)), cu.getString(1), new WeatherData(cu.getString(2)));
+            updateData(c, city);
         }
 
     }
 
+    public static void updateData(Context context, City city){
+        if(city.data.isActualData()) {
+            Toast.makeText(context, "actual", Toast.LENGTH_SHORT).show();
+            Log.e("my", "actual");
+            return;
+        }
+        else{
+            Toast.makeText(context, "old", Toast.LENGTH_SHORT).show();
+            Log.e("my", "old");
+        }
+        WeatherInfoHelper wih = new WeatherInfoHelper();
+        wih.execute(city);
+    }
 
     public static class WeatherInfoHelper extends AsyncTask<City, Void, Void> {
         String res = "";

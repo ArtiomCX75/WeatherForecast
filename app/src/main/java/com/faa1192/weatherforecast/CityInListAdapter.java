@@ -56,7 +56,7 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
                 intent.putExtras(cities.get(position).toBundle());
                 Toast.makeText(context, City.fromBundle(intent.getExtras()).name, Toast.LENGTH_SHORT);
                 cities.get(position).addToDbPref(context);
-                PrefCursorCity.updateData(context);
+                PrefCursorCity.updateAllData(context);
                 Activity act = (Activity) context;
                 act.setResult(RESULT_OK, intent);
                 for(int i = 0; i < 10_000_000; i++){}

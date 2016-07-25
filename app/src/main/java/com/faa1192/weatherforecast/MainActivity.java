@@ -10,7 +10,7 @@ public class MainActivity extends FragmentActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PrefCursorCity.updateData(getApplicationContext());
+        PrefCursorCity.updateAllData(getApplicationContext());
         for(int i = 0; i < 10_000_000; i++){}
         setContentView(R.layout.activity_pref_container);
         View.OnClickListener addListener = new View.OnClickListener() {
