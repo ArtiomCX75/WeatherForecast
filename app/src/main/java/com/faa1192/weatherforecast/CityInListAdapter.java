@@ -54,14 +54,12 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.putExtras(cities.get(position).toBundle());
-                Toast.makeText(context, City.fromBundle(intent.getExtras()).name, Toast.LENGTH_SHORT);
-                cities.get(position).addToDbPref(context);
-                PrefCursorCity.updateAllData(context);
+                Toast.makeText(context, City.fromBundle(intent.getExtras()).name, Toast.LENGTH_SHORT).show();
+                PrefCityDBHelper.init(context).addToDbPref(cities.get(position));
+                PrefCityDBHelper.init(context).updateAllDataFromWeb();
                 Activity act = (Activity) context;
                 act.setResult(RESULT_OK, intent);
-                for(int i = 0; i < 10_000_000; i++){}
                 act.finish();
-
             }
         });
     }
@@ -70,6 +68,4 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
     public int getItemCount(){
         return cities.size();
     }
-
-
 }

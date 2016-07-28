@@ -1,6 +1,5 @@
 package com.faa1192.weatherforecast;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,19 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class WeatherInfoFragment extends Fragment {
-
 
     public WeatherInfoFragment() {
         // Required empty public constructor
     }
 
     public void setInfo(City city){
-
         ((TextView) getActivity().findViewById(R.id.extra_city_name)).setText("name: "+city.data.getCityName());
         ((TextView) getActivity().findViewById(R.id.extra_city_humidity)).setText("humidity: "+city.data.getHumidity());
         ((TextView) getActivity().findViewById(R.id.extra_city_pressure)).setText("pressure: "+city.data.getPressure());
@@ -38,5 +34,4 @@ public class WeatherInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return  inflater.inflate(R.layout.fragment_weather_info, container, false);
  }
-
 }

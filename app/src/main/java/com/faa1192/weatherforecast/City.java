@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class City {
     public int id = -1;
     public String name = "";
-  //  public String data ="";
     public WeatherData data = new WeatherData();
     static ArrayList<City> citiesList = new ArrayList<>();
 
@@ -46,42 +45,5 @@ public class City {
 
     static City fromBundle(Bundle b){
         return new City(b.getInt("id"), b.getString("name"), new WeatherData(b.getString("data")));
-    }
-
-    void addToDbPref(Context context){
-        try {
-            ContentValues cv = new ContentValues();
-            cv.put("_id", this.id);
-            cv.put("NAME", this.name);
-            cv.put("DATA", this.data.getJsonString());
-            new PrefCityDBHelper(context).getWritableDatabase().insert("PREFCITY", null, cv);
-
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-    }
-
-    void updateData(Context context, WeatherData wd){
-        try {
-            ContentValues cv = new ContentValues();
-            cv.put("DATA", wd.getJsonString());
-            new PrefCityDBHelper(context).getWritableDatabase().update("PREFCITY", cv, "_id = "+ id, null);
-//                    insert("PREFCITY", null, cv);
-
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-    }
-
-
-    public void delFromDbPref(Context context){
-        try {
-            new PrefCityDBHelper(context).getWritableDatabase().delete("PREFCITY", "_id="+id, null);
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
     }
 }

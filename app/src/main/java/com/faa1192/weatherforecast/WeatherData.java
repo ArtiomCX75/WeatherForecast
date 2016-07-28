@@ -56,18 +56,9 @@ public class WeatherData {
             weatherDescription = weatherJsonObject.getString("description");
             weatherMain = weatherJsonObject.getString("main");
             time = baseJsonObject.getLong("dt");
-            //time = new Date().getTime()/1000;
-            Log.e("my", "_______time="+time);
-            Long temptime =   new Date().getTime()/1000;
-            //temptime/=1000;
-        //    Log.e("my", "___cur_time="+ temptime+"");
-
         }
         catch (Exception e){
             Log.e("my", "WeatherData not received");
-//            for(int i=0;i<e.getStackTrace().length;i++) {
-  //              Log.e("my error wd", e.getStackTrace()[i].toString());
-    //        }
         }
     }
 
@@ -135,7 +126,7 @@ public class WeatherData {
     private String stringToTime(String s){
         if(getTemp().equals(nd))
             return nd;
-        Integer i = new Integer("0"+s);
+        Integer i = Integer.valueOf("0"+s);
         int hour=(i/60/60)%24;
         int min = (i/60)%60;
         int sec = i%60;

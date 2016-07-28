@@ -1,6 +1,5 @@
 package com.faa1192.weatherforecast;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -52,12 +51,13 @@ public class CityWithTempAdapter extends CityInListAdapter {
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                City selectedCity =  cities.get(position);
-                selectedCity.delFromDbPref(context);
-                Activity act = (Activity) context;
-                Intent intent = act.getIntent();
-                act.finish();
-                act.startActivity(intent);
+                PrefCityDBHelper.init(context).delFromDbPref(cities.get(position));
+                try{
+                    ((Updatable) context).update();
+                }
+                catch (Exception e){
+                    Log.e("my", "citywithtempadapter: cannot be cast to updatable");
+                }
                 return true;
             }
         });

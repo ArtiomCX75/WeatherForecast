@@ -20,8 +20,8 @@ City city;
         refExData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PrefCursorCity.updateData(getApplicationContext(), city);
-                f.setInfo(PrefCursorCity.getCity(getApplicationContext(), city.id));
+                PrefCityDBHelper.init(getApplicationContext()).updateDataFromWeb(city);
+                f.setInfo(PrefCityDBHelper.init(getApplicationContext()).getCity(city.id));
             }
         });
     }
