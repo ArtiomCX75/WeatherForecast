@@ -129,6 +129,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                 for(int i = 0 ; i<b.length;i++) {
                     res += (char) b[i];
                 }
+                success = true;
             }
             catch (Exception e){
                 for(int i=0;i<e.getStackTrace().length;i++) {
@@ -142,25 +143,28 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
             try{
-                WeatherData wd = new WeatherData(res);
-                myCity.data = new WeatherData(res);//)  .updateData(context, wd);
-                ContentValues cv = new ContentValues();
-                cv.put("DATA", wd.getJsonString());
-                dbHelper.getWritableDatabase().update("PREFCITY", cv, "_id = "+ myCity.id, null);
-
-                }
-                catch (SQLException e){
-                    for(int i=0;i<e.getStackTrace().length;i++) {
-                        Log.e("my error", e.getStackTrace()[i].toString());
-                    }
-                    e.printStackTrace();
-                }
-                try{
+                if(success) {
+                    WeatherData wd = new WeatherData(res);
+                    myCity.data = new WeatherData(res);//)  .updateData(context, wd);
+                    ContentValues cv = new ContentValues();
+                    cv.put("DATA", wd.getJsonString());
+                    dbHelper.getWritableDatabase().update("PREFCITY", cv, "_id = " + myCity.id, null);
+                    Toast.makeText(context, "success", Toast.LENGTH_SHORT);
                     ((Updatable) context).update();
                 }
-                catch (Exception e){
-                    Log.e("my", "prefcitydbhelper: cannot be cast to updatable");
+                else{
+                    Toast.makeText(context, "not success", Toast.LENGTH_SHORT);
                 }
+            }
+            catch (SQLException e){
+                for(int i=0;i<e.getStackTrace().length;i++) {
+                    Log.e("my error", e.getStackTrace()[i].toString());
+                }
+                e.printStackTrace();
+            }
+            catch (Exception e){
+                Log.e("my", "prefcitydbhelper: cannot be cast to updatable");
+            }
         }
     }
 

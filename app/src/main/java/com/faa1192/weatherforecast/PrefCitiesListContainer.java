@@ -27,7 +27,8 @@ public class PrefCitiesListContainer extends FragmentActivity  implements Updata
         View.OnClickListener refreshListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            ma.update();
+                PrefCityDBHelper.init(ma).updateAllDataFromWeb();
+                ma.update();
             }
         };
         ((Button) findViewById(R.id.refresh_button)).setOnClickListener(refreshListener);
