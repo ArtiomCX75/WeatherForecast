@@ -149,11 +149,11 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                     ContentValues cv = new ContentValues();
                     cv.put("DATA", wd.getJsonString());
                     dbHelper.getWritableDatabase().update("PREFCITY", cv, "_id = " + myCity.id, null);
-                    Toast.makeText(context, "success", Toast.LENGTH_SHORT);
+                    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();
                     ((Updatable) context).update();
                 }
                 else{
-                    Toast.makeText(context, "not success", Toast.LENGTH_SHORT);
+                    Toast.makeText(context, "not success", Toast.LENGTH_SHORT).show();
                 }
             }
             catch (SQLException e){
