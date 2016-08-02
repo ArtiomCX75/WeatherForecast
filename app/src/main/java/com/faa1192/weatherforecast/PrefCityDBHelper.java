@@ -25,7 +25,6 @@ import java.util.List;
 public class PrefCityDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "pref_city_db";
     private static final int DB_VERSION = 1;
-  //  private static SQLiteDatabase prefdb;
     private static Context context;
     private static PrefCityDBHelper dbHelper;
 

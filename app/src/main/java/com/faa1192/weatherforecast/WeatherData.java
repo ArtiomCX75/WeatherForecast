@@ -58,7 +58,7 @@ public class WeatherData {
             time = baseJsonObject.getLong("dt");
         }
         catch (Exception e){
-            Log.e("my", "WeatherData not received");
+            Log.e("my", "WeatherData weren't received or were received partially");
         }
     }
 

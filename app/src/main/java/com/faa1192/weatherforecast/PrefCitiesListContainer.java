@@ -19,6 +19,7 @@ public class PrefCitiesListContainer extends FragmentActivity  implements Updata
         View.OnClickListener addListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(ma, "Подождите...", Toast.LENGTH_SHORT).show();
                 Intent intent =  new Intent(getApplicationContext(), AddCityActivity.class);
                 startActivityForResult(intent, 1);
             }

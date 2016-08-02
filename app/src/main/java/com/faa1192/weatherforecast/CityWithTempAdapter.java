@@ -1,7 +1,9 @@
 package com.faa1192.weatherforecast;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,12 +34,11 @@ public class CityWithTempAdapter extends CityInListAdapter {
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position){
-        Log.e("MY", "!!!added "+position+"   ");
         CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
         textView.setText(cities.get(position).name);
         textView = (TextView) cardView.findViewById(R.id.city_info_temp);
-        textView.setText("t="+cities.get(position).data.getTemp());
+        textView.setText("temperature="+cities.get(position).data.getTemp());
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,13 +52,30 @@ public class CityWithTempAdapter extends CityInListAdapter {
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                PrefCityDBHelper.init(context).delFromDbPref(cities.get(position));
-                try{
-                    ((Updatable) context).update();
-                }
-                catch (Exception e){
-                    Log.e("my", "citywithtempadapter: cannot be cast to updatable");
-                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Удаление города")
+                        .setMessage("Удалить город \""+cities.get(position).name+"\"?")
+                        .setCancelable(true)
+                        .setNegativeButton("Нет",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                }).setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        PrefCityDBHelper.init(context).delFromDbPref(cities.get(position));
+                        try{
+                            ((Updatable) context).update();
+                        }
+                        catch (Exception e){
+                            Log.e("my", "citywithtempadapter: cannot be cast to updatable");
+                        }
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+
                 return true;
             }
         });

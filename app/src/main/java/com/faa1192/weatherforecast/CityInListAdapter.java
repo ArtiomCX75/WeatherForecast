@@ -45,7 +45,6 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position){
-        Log.e("MY", "!!!added "+position+"   ");
         final CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
         textView.setText(cities.get(position).name);
