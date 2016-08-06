@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -42,7 +41,6 @@ public class CityWithTempAdapter extends CityInListAdapter {
         ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "t: "+cities.get(position), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, WeatherInfoContainer.class);
                 City selectedCity =  cities.get(position);
                 intent.putExtras(selectedCity.toBundle());
