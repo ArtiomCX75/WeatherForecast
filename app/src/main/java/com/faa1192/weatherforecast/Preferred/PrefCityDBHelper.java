@@ -1,4 +1,4 @@
-package com.faa1192.weatherforecast;
+package com.faa1192.weatherforecast.Preferred;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,20 +7,20 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.json.JSONObject;
+import com.faa1192.weatherforecast.Cities.City;
+import com.faa1192.weatherforecast.Updatable;
+import com.faa1192.weatherforecast.Weather.WeatherData;
+import com.faa1192.weatherforecast.Weather.WeatherInfoActivity;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by faa11 on 07.07.2016.
- */
 
 public class PrefCityDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "pref_city_db";
@@ -38,15 +38,15 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
         return new PrefCityDBHelper(c);
     }
 
-    public Cursor getCursor(){
+    private Cursor getCursor(){
         return  this.getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, null, null, null, null, "Name");
     }
 
     public City getCity(int id){
         Cursor cursor = this.getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, "_id="+id, null, null, null, null);
         cursor.moveToFirst();
-        City city = new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
-        return city;
+        return new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
+
     }
 
     public List<City> getCityList(){
@@ -110,23 +110,21 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     private class WebUpdateHelper extends AsyncTask<City, Void, Void> {
         String res = "";
         InputStream is;
-        JSONObject jo;
         City myCity;
         boolean success = false;
         @Override
         protected Void doInBackground(City... city) {
             myCity = city[0];
             String strUrl = "http://api.openweathermap.org/data/2.5/weather?id="+city[0].id+"&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric";
-            jo = new JSONObject();
             Log.e("my", "url:"+strUrl);
             try {
                 URL u1 = new URL(strUrl);
                 HttpURLConnection con = (HttpURLConnection) u1.openConnection();
                 is =  con.getInputStream();
-                byte b[] = new byte[500];
-                is.read(b);
-                for(int i = 0 ; i<b.length;i++) {
-                    res += (char) b[i];
+                byte data[] = new byte[500];
+                is.read(data);
+                for (byte dataByte : data) {
+                    res += (char) dataByte;
                 }
                 success = true;
             }
@@ -144,7 +142,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             try{
                 if(success) {
                     WeatherData wd = new WeatherData(res);
-                    myCity.data = new WeatherData(res);//)  .updateData(context, wd);
+                    myCity.data = new WeatherData(res);
                     ContentValues cv = new ContentValues();
                     cv.put("DATA", wd.getJsonString());
                     dbHelper.getWritableDatabase().update("PREFCITY", cv, "_id = " + myCity.id, null);
@@ -156,6 +154,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                 }
             }
             catch (SQLException e){
+                Log.e("my", "sql exception");
                 for(int i=0;i<e.getStackTrace().length;i++) {
                     Log.e("my error", e.getStackTrace()[i].toString());
                 }
@@ -163,20 +162,26 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             }
             catch (Exception e){
                 Log.e("my", "prefcitydbhelper: cannot be cast to updatable");
+
+                for(int i=0;i<e.getStackTrace().length;i++) {
+                    Log.e("my error", e.getStackTrace()[i].toString());
+                }
+                e.printStackTrace();
             }
         }
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE PREFCITY (_id TEXT, NAME TEXT, DATA TEXT);");
+        db.execSQL("CREATE TABLE PREFCITY (_id TEXT PRIMARY KEY, NAME TEXT, DATA TEXT);");
         try {
                 ContentValues cv = new ContentValues();
                 cv.put("_id", 551487);
                 cv.put("NAME", "Kazan");
                 db.insert("PREFCITY", null, cv);
         }
-        catch (SQLException e){}
+        catch (SQLException e){
+            Log.e("my", "Error while creating table prefcity");}
     }
 
     @Override

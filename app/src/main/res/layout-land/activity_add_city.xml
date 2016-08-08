@@ -12,8 +12,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.faa1192.weatherforecast.CitiesListFragment"
+        android:name="com.faa1192.weatherforecast.Cities.CitiesListFragment"
         android:id="@+id/fragment1"
-        tools:layout="@layout/fragment_cities_list"
         android:layout_gravity="center" />
 </LinearLayout>

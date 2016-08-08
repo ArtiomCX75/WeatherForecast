@@ -1,4 +1,4 @@
-package com.faa1192.weatherforecast;
+package com.faa1192.weatherforecast.Preferred;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+import com.faa1192.weatherforecast.R;
+
 public class PrefCitiesListFragment extends Fragment {
 
     @Override

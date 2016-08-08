@@ -1,4 +1,4 @@
-package com.faa1192.weatherforecast;
+package com.faa1192.weatherforecast.Preferred;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,11 +12,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.List;
+import com.faa1192.weatherforecast.Cities.City;
+import com.faa1192.weatherforecast.Cities.CityInListAdapter;
+import com.faa1192.weatherforecast.R;
+import com.faa1192.weatherforecast.Updatable;
+import com.faa1192.weatherforecast.Weather.WeatherInfoActivity;
 
-/**
- * Created by faa11 on 14.07.2016.
- */
+import java.util.List;
 
 public class CityWithTempAdapter extends CityInListAdapter {
 
@@ -26,33 +28,33 @@ public class CityWithTempAdapter extends CityInListAdapter {
     }
 
     @Override
-    public CityInListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public CityInListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         CardView cv = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_city_with_temp, parent, false);
         return new ViewHolder(cv);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position){
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
         textView.setText(cities.get(position).name);
         textView = (TextView) cardView.findViewById(R.id.city_info_temp);
-        textView.setText("temperature="+cities.get(position).data.getTemp());
-        ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnClickListener(new View.OnClickListener() {
+        textView.setText("temperature=" + cities.get(position).data.getTemp());
+        cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, WeatherInfoContainer.class);
-                City selectedCity =  cities.get(position);
+                Intent intent = new Intent(context, WeatherInfoActivity.class);
+                City selectedCity = cities.get(position);
                 intent.putExtras(selectedCity.toBundle());
                 context.startActivity(intent);
             }
         });
-        ((LinearLayout) cardView.findViewWithTag("lin_layout")).setOnLongClickListener(new View.OnLongClickListener() {
+        cardView.findViewWithTag("lin_layout").setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Удаление города")
-                        .setMessage("Удалить город \""+cities.get(position).name+"\"?")
+                        .setMessage("Удалить город \"" + cities.get(position).name + "\"?")
                         .setCancelable(true)
                         .setNegativeButton("Нет",
                                 new DialogInterface.OnClickListener() {
@@ -62,10 +64,9 @@ public class CityWithTempAdapter extends CityInListAdapter {
                                 }).setPositiveButton("Да", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         PrefCityDBHelper.init(context).delFromDbPref(cities.get(position));
-                        try{
+                        try {
                             ((Updatable) context).update();
-                        }
-                        catch (Exception e){
+                        } catch (Exception e) {
                             Log.e("my", "citywithtempadapter: cannot be cast to updatable");
                         }
                         dialog.cancel();

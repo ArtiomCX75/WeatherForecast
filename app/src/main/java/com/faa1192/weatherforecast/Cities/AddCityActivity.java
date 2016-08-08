@@ -1,19 +1,16 @@
-package com.faa1192.weatherforecast;
+package com.faa1192.weatherforecast.Cities;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by faa11 on 07.07.2016.
- */
+import com.faa1192.weatherforecast.R;
 
 public class AddCityActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_city_container);
+        setContentView(R.layout.activity_add_city);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Добавление города");
         actionBar.setDisplayHomeAsUpEnabled(true);
