@@ -1,6 +1,8 @@
 package com.faa1192.weatherforecast.Weather;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
@@ -12,7 +14,7 @@ import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 
-public class WeatherInfoActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener{
+public class WeatherInfoActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener {
     private City city;
     private SwipeRefreshLayout mSwipeRefreshLayout;
 
@@ -26,6 +28,7 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         final WeatherInfoFragment f = (WeatherInfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3);
         f.setInfo(city);
         ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CE5E00")));
         actionBar.setTitle("Погода в городе: " + city.name);
         actionBar.setDisplayHomeAsUpEnabled(true);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher_weather_data);
@@ -37,7 +40,7 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         mSwipeRefreshLayout.setRefreshing(true);
         PrefCityDBHelper.init(this).updateDataFromWeb(city);
         Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
-       // update();
+        // update();
         mSwipeRefreshLayout.setRefreshing(false);
 
     }

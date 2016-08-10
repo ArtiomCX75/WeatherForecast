@@ -4,15 +4,34 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center|top"
+    android:background="#F5FFA2"
+    >
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Выберите город:"/>
+        android:gravity="center"
+        android:text="Выберите город:"
+        android:background="#FF8F00"
+        android:textColor="#FFFFFF"
+        />
+
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:queryHint="Введите название города"
+        android:elevation="14dp"
+        android:background="@drawable/searchview_background"
+        android:inputType="textCapWords"
+        android:imeOptions="flagNoExtractUi"
+
+        />
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="com.faa1192.weatherforecast.Cities.CitiesListFragment"
-        android:id="@+id/fragment1"
+        android:id="@+id/fragment_city_list"
         android:layout_gravity="center" />
 </LinearLayout>

@@ -1,6 +1,9 @@
 package com.faa1192.weatherforecast.Preferred;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -34,7 +37,9 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
         };
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Избранное");
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CE5E00")));
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF8F00")));
         fab.setOnClickListener(addListener);
         fab.setSize(FloatingActionButton.SIZE_NORMAL);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher);

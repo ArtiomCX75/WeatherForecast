@@ -27,12 +27,12 @@ public class CityDBHelper extends SQLiteOpenHelper {
         return new CityDBHelper(c);
     }
 
-    private Cursor getCursor() {
-        return this.getWritableDatabase().query("CITY", new String[]{"_id", "NAME"}, null, null, null, null, "Name");
+    private Cursor getCursor(String s) {
+        return this.getWritableDatabase().query("CITY", new String[]{"_id", "NAME"}, "Name like '%"+s+"%'", null, null, null, "Name");
     }
 
-    public List<City> getCityList() {
-        Cursor cu = getCursor();
+    public List<City> getCityList(String s) {
+        Cursor cu = getCursor(s);
         List<City> l = new ArrayList<>();
         while (cu.moveToNext()) {
             int id = cu.getInt(0);

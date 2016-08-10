@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".Weather.WeatherInfoActivity"
     android:orientation="vertical"
-    android:gravity="end">
+    android:gravity="end"
+    android:background="#F5FFA2"
+    android:padding="5dp">
 
     <android.support.v4.widget.SwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,7 +26,7 @@
         android:layout_height="wrap_content"
         android:name="com.faa1192.weatherforecast.Weather.WeatherInfoFragment"
         android:id="@+id/fragment3"
-        tools:layout="@layout/fragment_weather_info" />
+        tools:layout="@layout/card_weather_info" />
         </ScrollView>
     </android.support.v4.widget.SwipeRefreshLayout>
 

@@ -7,15 +7,15 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
 
     android:id="@+id/card_view_temp"
-
     android:layout_width="match_parent"
-
     android:layout_height="wrap_content"
 
-    android:layout_margin="5dp"
 
-    card_view:cardCornerRadius="24dp"
-    card_view:cardBackgroundColor="#d4d2d2">
+    card_view:cardCornerRadius="8dp"
+    card_view:cardBackgroundColor="@color/cardview_light_background"
+    card_view:cardElevation="4dp"
+
+    >
 
     <LinearLayout
         android:tag="lin_layout"

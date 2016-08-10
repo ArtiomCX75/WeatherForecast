@@ -123,7 +123,45 @@ public class WeatherData {
     }
 
     public String getWindDeg() {
-        return windDeg.isEmpty() ? nd : windDeg;
+        if (windDeg.isEmpty())
+            return nd;
+        else {
+            String s = "";
+            double ang = Double.valueOf(windDeg);
+            if (ang < 23)
+                s = "N";
+            else {
+                if (ang < 68)
+                    s = "NE";
+                else {
+                    if (ang < 113)
+                        s = "E";
+                    else {
+                        if (ang < 158)
+                            s = "SE";
+                        else {
+                            if (ang < 203)
+                                s = "S";
+                            else {
+                                if (ang < 248)
+                                    s = "SW";
+                                else {
+                                    if (ang < 293)
+                                        s = "W";
+                                    else {
+                                        if (ang < 338)
+                                            s = "NW";
+                                        else
+                                            s = "N";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return s;
+        }
     }
 
     public String getWindSpeed() {
