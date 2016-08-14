@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.faa1192.weatherforecast.Weather.WeatherData;
 
+// класс объекта "Город". Содержит ид города (в базе, на сервере), название, и объект с информаций о погоде в городе
 public class City {
     public int id = -1;
     public String name = "";
@@ -25,14 +26,14 @@ public class City {
     }
 
     public Bundle toBundle() {
-        Bundle b = new Bundle();
-        b.putInt("id", id);
-        b.putString("name", name);
-        b.putString("data", data.getJsonString());
-        return b;
+        Bundle bundle = new Bundle();
+        bundle.putInt("id", id);
+        bundle.putString("name", name);
+        bundle.putString("data", data.getJsonString());
+        return bundle;
     }
 
-    public static City fromBundle(Bundle b) {
-        return new City(b.getInt("id"), b.getString("name"), new WeatherData(b.getString("data")));
+    public static City fromBundle(Bundle bundle) {
+        return new City(bundle.getInt("id"), bundle.getString("name"), new WeatherData(bundle.getString("data")));
     }
 }

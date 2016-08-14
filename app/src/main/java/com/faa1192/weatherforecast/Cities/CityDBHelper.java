@@ -13,6 +13,7 @@ import com.faa1192.weatherforecast.R;
 import java.util.ArrayList;
 import java.util.List;
 
+//хелпер для работы с базой всех городов
 public class CityDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "city_db";
     private static final int DB_VERSION = 1;
@@ -23,23 +24,23 @@ public class CityDBHelper extends SQLiteOpenHelper {
         this.context = context;
     }
 
-    public static CityDBHelper init(Context c) {
-        return new CityDBHelper(c);
+    public static CityDBHelper init(Context context) {
+        return new CityDBHelper(context);
     }
 
-    private Cursor getCursor(String s) {
-        return this.getWritableDatabase().query("CITY", new String[]{"_id", "NAME"}, "Name like '%"+s+"%'", null, null, null, "Name");
+    private Cursor getCursor(String query) {
+        return this.getWritableDatabase().query("CITY", new String[]{"_id", "NAME"}, "Name like '%" + query + "%'", null, null, null, "Name");
     }
 
-    public List<City> getCityList(String s) {
-        Cursor cu = getCursor(s);
-        List<City> l = new ArrayList<>();
-        while (cu.moveToNext()) {
-            int id = cu.getInt(0);
-            String name = cu.getString(1);
-            l.add(new City(id, name));
+    public List<City> getCityList(String query) {
+        Cursor cursor = getCursor(query);
+        List<City> cityList = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            cityList.add(new City(id, name));
         }
-        return l;
+        return cityList;
     }
 
     @Override

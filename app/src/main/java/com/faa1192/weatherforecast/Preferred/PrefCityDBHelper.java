@@ -7,14 +7,13 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.City;
+import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 import com.faa1192.weatherforecast.Weather.WeatherData;
-import com.faa1192.weatherforecast.Weather.WeatherInfoActivity;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -22,114 +21,118 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+//хелпер для работы с базой городов добавленных в избранное
 public class PrefCityDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "pref_city_db";
     private static final int DB_VERSION = 1;
     private static Context context;
     private static PrefCityDBHelper dbHelper;
 
-    private PrefCityDBHelper(Context c) {
-        super(c, DB_NAME, null, DB_VERSION);
-        context = c;
+    private PrefCityDBHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
+        PrefCityDBHelper.context = context;
         dbHelper = this;
     }
 
-    public static PrefCityDBHelper  init(Context c){
-        return new PrefCityDBHelper(c);
+    //Инициализация хелпера
+    public static PrefCityDBHelper init(Context context) {
+        return new PrefCityDBHelper(context);
     }
 
-    private Cursor getCursor(){
-        return  this.getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, null, null, null, null, "Name");
+    private Cursor getCursor() {
+        return this.getWritableDatabase().query("PREFCITY", new String[]{"_id", "NAME", "DATA"}, null, null, null, null, "Name");
     }
 
-    public City getCity(int id){
-        Cursor cursor = this.getWritableDatabase().query("PREFCITY", new String[] {"_id", "NAME", "DATA"}, "_id="+id, null, null, null, null);
+    //Получение города из избранного по ид
+    public City getCity(int id) {
+        Cursor cursor = this.getWritableDatabase().query("PREFCITY", new String[]{"_id", "NAME", "DATA"}, "_id=" + id, null, null, null, null);
         cursor.moveToFirst();
         return new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
-
     }
 
-    public List<City> getCityList(){
-        Cursor cu = getCursor();
-        List<City > l = new ArrayList<>();
-        while(cu.moveToNext()){
-            int id = cu.getInt(0);
-            String name = cu.getString(1);
-            WeatherData wd = new WeatherData(cu.getString(2));
-            l.add(new City(id, name, wd));
+    //Получение списка городов из избранного
+    public List<City> getCityList() {
+        Cursor cursor = getCursor();
+        List<City> cityList = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            WeatherData weatherData = new WeatherData(cursor.getString(2));
+            cityList.add(new City(id, name, weatherData));
         }
-        return l;
+        return cityList;
     }
 
-    public void updateAllDataFromWeb(){
-        Cursor cu = new PrefCityDBHelper(context).getCursor();
-        while(cu.moveToNext()){
-            City city = new City(Integer.valueOf(cu.getString(0)), cu.getString(1), new WeatherData(cu.getString(2)));
+    //Обновление данных о погоде в городах из избранного
+    public void updateAllDataFromWeb() {
+        Cursor cursor = new PrefCityDBHelper(context).getCursor();
+        while (cursor.moveToNext()) {
+            City city = new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
             updateDataFromWeb(city);
         }
-
     }
 
-    public void updateDataFromWeb(City city){
-        if(city.data.isActualData()) {
-            Toast.makeText(context, "actual", Toast.LENGTH_SHORT).show();
+    //Загрузка данных о погоде с инета, если данные неактуальны
+    public void updateDataFromWeb(City city) {
+        if (city.data.isActualData()) {
+            //Toast.makeText(context, "actual", Toast.LENGTH_SHORT).show(); //for debug
             Log.e("my", "actual");
             return;
-        }
-        else{
-            Toast.makeText(context, "old", Toast.LENGTH_SHORT).show();
+        } else {
+            //Toast.makeText(context, "old", Toast.LENGTH_SHORT).show(); //for debug
             Log.e("my", "old");
         }
-        WebUpdateHelper wih = new WebUpdateHelper();
-        wih.execute(city);
+        WebUpdateHelper webUpdateHelper = new WebUpdateHelper();
+        webUpdateHelper.execute(city);
     }
 
-    public void delFromDbPref(City city){
+    //удаление города из избранного
+    public void delFromDbPref(City city) {
         try {
-            PrefCityDBHelper.init(context).getWritableDatabase().delete("PREFCITY", "_id="+city.id, null);
-        }
-        catch (SQLException e){
+            PrefCityDBHelper.init(context).getWritableDatabase().delete("PREFCITY", "_id=" + city.id, null);
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void addToDbPref(City city){
+    //добавление города в избранное
+    public void addToDbPref(City city) {
         try {
-            ContentValues cv = new ContentValues();
-            cv.put("_id", city.id);
-            cv.put("NAME", city.name);
-            cv.put("DATA", city.data.getJsonString());
-            getWritableDatabase().insert("PREFCITY", null, cv);
-
-        }
-        catch (SQLException e){
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("_id", city.id);
+            contentValues.put("NAME", city.name);
+            contentValues.put("DATA", city.data.getJsonString());
+            getWritableDatabase().insert("PREFCITY", null, contentValues);
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    //класс для работы с инетом
     private class WebUpdateHelper extends AsyncTask<City, Void, Void> {
-        String res = "";
-        InputStream is;
-        City myCity;
-        boolean success = false;
+        String resultString = "";
+        InputStream inputStream;
+        City city;
+        boolean success;
+
         @Override
         protected Void doInBackground(City... city) {
-            myCity = city[0];
-            String strUrl = "http://api.openweathermap.org/data/2.5/weather?id="+city[0].id+"&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric";
-            Log.e("my", "url:"+strUrl);
+            success = false;
+            this.city = city[0];
+            String urlString = "http://api.openweathermap.org/data/2.5/weather?id=" + city[0].id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric";
+            Log.e("my", "url:" + urlString);
             try {
-                URL u1 = new URL(strUrl);
-                HttpURLConnection con = (HttpURLConnection) u1.openConnection();
-                is =  con.getInputStream();
+                URL url = new URL(urlString);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                inputStream = httpURLConnection.getInputStream();
                 byte data[] = new byte[500];
-                is.read(data);
+                inputStream.read(data);
                 for (byte dataByte : data) {
-                    res += (char) dataByte;
+                    resultString += (char) dataByte;
                 }
                 success = true;
-            }
-            catch (Exception e){
-                for(int i=0;i<e.getStackTrace().length;i++) {
+            } catch (Exception e) {
+                for (int i = 0; i < e.getStackTrace().length; i++) {
                     Log.e("my", e.getStackTrace()[i].toString());
                 }
             }
@@ -139,34 +142,28 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            try{
-                if(success) {
-                    WeatherData wd = new WeatherData(res);
-                    myCity.data = new WeatherData(res);
-                    ContentValues cv = new ContentValues();
-                    cv.put("DATA", wd.getJsonString());
-                    dbHelper.getWritableDatabase().update("PREFCITY", cv, "_id = " + myCity.id, null);
-                    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();
+            try {
+                if (success) {
+                    WeatherData weatherData = new WeatherData(resultString);
+                    city.data = new WeatherData(resultString);
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put("DATA", weatherData.getJsonString());
+                    dbHelper.getWritableDatabase().update("PREFCITY", contentValues, "_id = " + city.id, null);
+                    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
                     ((Updatable) context).update();
+                } else {
+                    Toast.makeText(context, context.getResources().getString(R.string.connection_error), Toast.LENGTH_SHORT).show();
                 }
-                else{
-                    Toast.makeText(context, "not success", Toast.LENGTH_SHORT).show();
-                }
-            }
-            catch (SQLException e){
+            } catch (SQLException e) {
                 Log.e("my", "sql exception");
-                for(int i=0;i<e.getStackTrace().length;i++) {
-                    Log.e("my error", e.getStackTrace()[i].toString());
+                for (int i = 0; i < e.getStackTrace().length; i++) {
+                    Log.e("my", e.getStackTrace()[i].toString());
                 }
-                e.printStackTrace();
-            }
-            catch (Exception e){
-                Log.e("my", "prefcitydbhelper: cannot be cast to updatable");
-
-                for(int i=0;i<e.getStackTrace().length;i++) {
-                    Log.e("my error", e.getStackTrace()[i].toString());
+            } catch (Exception e) {
+                Log.e("my", "prefcitydbhelper: cannot be cast to updatable"); // не критично
+                for (int i = 0; i < e.getStackTrace().length; i++) {
+                    Log.e("my", e.getStackTrace()[i].toString());
                 }
-                e.printStackTrace();
             }
         }
     }
@@ -175,13 +172,32 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE PREFCITY (_id TEXT PRIMARY KEY, NAME TEXT, DATA TEXT);");
         try {
-                ContentValues cv = new ContentValues();
-                cv.put("_id", 551487);
-                cv.put("NAME", "Kazan");
-                db.insert("PREFCITY", null, cv);
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("_id", 551487);
+            contentValues.put("NAME", "Kazan");
+            db.insert("PREFCITY", null, contentValues);
+            contentValues = new ContentValues();
+            contentValues.put("_id", 524901);
+            contentValues.put("NAME", "Moscow");
+            db.insert("PREFCITY", null, contentValues);
+
+            contentValues = new ContentValues();
+            contentValues.put("_id", 582432);
+            contentValues.put("NAME", "Almetyevsk");
+            db.insert("PREFCITY", null, contentValues);
+
+            contentValues = new ContentValues();
+            contentValues.put("_id", 570990);
+            contentValues.put("NAME", "Bolgar");
+            db.insert("PREFCITY", null, contentValues);
+
+            contentValues = new ContentValues();
+            contentValues.put("_id", 521118);
+            contentValues.put("NAME", "Nizhnekamsk");
+            db.insert("PREFCITY", null, contentValues);
+        } catch (SQLException e) {
+            Log.e("my", "Error while creating table prefcity");
         }
-        catch (SQLException e){
-            Log.e("my", "Error while creating table prefcity");}
     }
 
     @Override

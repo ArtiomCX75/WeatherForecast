@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.faa1192.weatherforecast.R;
 
+//Фрагмент со списком всех городов
 public class CitiesListFragment extends Fragment {
     public CitiesListFragment() {
         // Required empty public constructor
@@ -20,33 +21,18 @@ public class CitiesListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        RecyclerView rv = (RecyclerView) inflater.inflate(R.layout.recycle_view_cities, container, false);
-        CityInListAdapter cila = new CityInListAdapter(CityDBHelper.init(getActivity()).getCityList(""), getContext());
-        rv.setAdapter(cila);
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycle_view_cities, container, false);
+        CityInListAdapter cityInListAdapter = new CityInListAdapter(CityDBHelper.init(getActivity()).getCityList(""), getContext());
+        recyclerView.setAdapter(cityInListAdapter);
         int orientation = getActivity().getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
             linearLayoutManager.setSmoothScrollbarEnabled(true);
-            rv.setLayoutManager(linearLayoutManager);
+            recyclerView.setLayoutManager(linearLayoutManager);
         } else {
             StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, Configuration.ORIENTATION_PORTRAIT);
-            rv.setLayoutManager(staggeredGridLayoutManager);
+            recyclerView.setLayoutManager(staggeredGridLayoutManager);
         }
-        return rv;
-    }
-    public View set(String s){
-        RecyclerView rv = (RecyclerView) getView().findViewById(R.id.recycle_view_cities);
-        CityInListAdapter cwa = new CityInListAdapter(CityDBHelper.init(getActivity()).getCityList(s), getContext());
-        rv.setAdapter(cwa);
-        int orientation = getActivity().getResources().getConfiguration().orientation;
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-            linearLayoutManager.setSmoothScrollbarEnabled(true);
-            rv.setLayoutManager(linearLayoutManager);
-        } else {
-            StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, Configuration.ORIENTATION_PORTRAIT);
-            rv.setLayoutManager(staggeredGridLayoutManager);
-        }
-        return rv;
+        return recyclerView;
     }
 }

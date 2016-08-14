@@ -10,15 +10,16 @@ import android.view.ViewGroup;
 
 import com.faa1192.weatherforecast.R;
 
+//Фрагмент со списком избранных городов
 public class PrefCitiesListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView rv = (RecyclerView) inflater.inflate(R.layout.recycle_view_cities, container, false);
-        CityWithTempAdapter cwta = new CityWithTempAdapter(PrefCityDBHelper.init(getContext()).getCityList(), getContext());
-        rv.setAdapter(cwta);
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycle_view_cities, container, false);
+        CityWithTempAdapter cityWithTempAdapter = new CityWithTempAdapter(PrefCityDBHelper.init(getContext()).getCityList(), getContext());
+        recyclerView.setAdapter(cityWithTempAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        rv.setLayoutManager(linearLayoutManager);
-        return rv;
+        recyclerView.setLayoutManager(linearLayoutManager);
+        return recyclerView;
     }
 }

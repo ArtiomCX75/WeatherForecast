@@ -8,7 +8,7 @@
     tools:context=".Weather.WeatherInfoActivity"
     android:orientation="vertical"
     android:gravity="end"
-    android:background="#F5FFA2"
+    android:background="@color/yellow_light"
     android:padding="5dp">
 
     <android.support.v4.widget.SwipeRefreshLayout

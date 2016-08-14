@@ -5,11 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,53 +18,53 @@ import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
+//адптер для recycler view в класса CitiesListFragment
 public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.ViewHolder> {
-    protected final List<City> cities;
+    protected final List<City> cityList;
     protected final Context context;
 
-    public CityInListAdapter(List<City> cities, Context context) {
-        this.cities = cities;
+    public CityInListAdapter(List<City> cityList, Context context) {
+        this.cityList = cityList;
         this.context = context;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public final CardView cardView;
 
-        public ViewHolder(CardView v) {
-            super(v);
-            cardView = v;
+        public ViewHolder(CardView cardView) {
+            super(cardView);
+            this.cardView = cardView;
         }
     }
 
     @Override
     public CityInListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        CardView cv = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_city_in_list, parent, false);
-        return new ViewHolder(cv);
+        CardView cardView = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_city_in_list, parent, false);
+        return new ViewHolder(cardView);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final CardView cardView = holder.cardView;
-        TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
-        textView.setText(cities.get(position).name);
+        TextView cityInfoTextView = (TextView) cardView.findViewById(R.id.city_info_text);
+        cityInfoTextView.setText(cityList.get(position).name);
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                City city = cities.get(position);
+                City chosenCity = cityList.get(position);
                 Intent intent = new Intent();
-                intent.putExtras(city.toBundle());
-                Toast.makeText(context, city.name, Toast.LENGTH_SHORT).show();
-                PrefCityDBHelper.init(context).addToDbPref(city);
-                PrefCityDBHelper.init(context).updateDataFromWeb(city);
-                Activity act = (Activity) context;
-                act.setResult(RESULT_OK, intent);
-                act.finish();
+                intent.putExtras(chosenCity.toBundle());
+                PrefCityDBHelper.init(context).addToDbPref(chosenCity);
+                PrefCityDBHelper.init(context).updateDataFromWeb(chosenCity);
+                Activity activity = (Activity) context;
+                activity.setResult(RESULT_OK, intent);
+                activity.finish();
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return cities.size();
+        return cityList.size();
     }
 }

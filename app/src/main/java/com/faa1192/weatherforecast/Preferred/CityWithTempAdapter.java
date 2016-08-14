@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.faa1192.weatherforecast.Cities.City;
@@ -20,6 +19,7 @@ import com.faa1192.weatherforecast.Weather.WeatherInfoActivity;
 
 import java.util.List;
 
+//адптер для recycler view в класса PrefCitiesListFragment
 public class CityWithTempAdapter extends CityInListAdapter {
 
 
@@ -29,22 +29,22 @@ public class CityWithTempAdapter extends CityInListAdapter {
 
     @Override
     public CityInListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        CardView cv = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_city_with_temp, parent, false);
-        return new ViewHolder(cv);
+        CardView cardView = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_city_with_temp, parent, false);
+        return new ViewHolder(cardView);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
-        textView.setText(cities.get(position).name);
+        textView.setText(cityList.get(position).name);
         textView = (TextView) cardView.findViewById(R.id.city_info_temp);
-        textView.setText("temperature=" + cities.get(position).data.getTemp());
+        textView.setText(cityList.get(position).data.getTemp());
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, WeatherInfoActivity.class);
-                City selectedCity = cities.get(position);
+                City selectedCity = cityList.get(position);
                 intent.putExtras(selectedCity.toBundle());
                 context.startActivity(intent);
             }
@@ -54,7 +54,7 @@ public class CityWithTempAdapter extends CityInListAdapter {
             public boolean onLongClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Удаление города")
-                        .setMessage("Удалить город \"" + cities.get(position).name + "\"?")
+                        .setMessage("Удалить город \"" + cityList.get(position).name + "\"?")
                         .setCancelable(true)
                         .setNegativeButton("Нет",
                                 new DialogInterface.OnClickListener() {
@@ -63,7 +63,7 @@ public class CityWithTempAdapter extends CityInListAdapter {
                                     }
                                 }).setPositiveButton("Да", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        PrefCityDBHelper.init(context).delFromDbPref(cities.get(position));
+                        PrefCityDBHelper.init(context).delFromDbPref(cityList.get(position));
                         try {
                             ((Updatable) context).update();
                         } catch (Exception e) {
@@ -74,7 +74,6 @@ public class CityWithTempAdapter extends CityInListAdapter {
                 });
                 AlertDialog alert = builder.create();
                 alert.show();
-
                 return true;
             }
         });
