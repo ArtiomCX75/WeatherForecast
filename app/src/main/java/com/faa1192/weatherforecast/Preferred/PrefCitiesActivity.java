@@ -52,9 +52,11 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==-1){
         City city = City.fromBundle(data.getExtras());
         Toast.makeText(this, getResources().getString((R.string.added_city)) + city.name, Toast.LENGTH_SHORT).show();
         PrefCitiesActivity.this.update();
+        }
     }
 
     //Обновление адаптера при добавлении нового города, удалении из избранного etc
