@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'ArtiomCX75'
-            keyPassword 'WexlerZen5'
-            storeFile file('C:/Users/faa11/OneDrive/Android/keystore.jks')
-            storePassword 'WexlerZen5'
-        }
-    }
     compileSdkVersion 24
     buildToolsVersion '24.0.1'
     defaultConfig {
@@ -18,14 +10,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
-            pseudoLocalesEnabled false
         }
         debug {
             debuggable true
@@ -34,10 +23,6 @@ android {
             jniDebuggable true
             renderscriptDebuggable true
             pseudoLocalesEnabled false
-        }
-    }
-    productFlavors {
-        WeatherForecast {
         }
     }
 }
