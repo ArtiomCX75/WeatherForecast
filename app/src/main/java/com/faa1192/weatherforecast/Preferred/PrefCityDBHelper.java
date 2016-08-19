@@ -149,7 +149,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                     ContentValues contentValues = new ContentValues();
                     contentValues.put("DATA", weatherData.getJsonString());
                     dbHelper.getWritableDatabase().update("PREFCITY", contentValues, "_id = " + city.id, null);
-                    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
+                //    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
                     ((Updatable) context).update();
                 } else {
                     Toast.makeText(context, context.getResources().getString(R.string.connection_error), Toast.LENGTH_SHORT).show();
