@@ -3,14 +3,14 @@ package com.faa1192.weatherforecast.Weather;
 import android.content.Context;
 import android.util.Log;
 
+import com.faa1192.weatherforecast.Preferred.PrefCitiesActivity;
+import com.faa1192.weatherforecast.R;
+
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.util.Date;
 import java.util.HashMap;
-
-import com.faa1192.weatherforecast.Preferred.PrefCitiesActivity;
-import com.faa1192.weatherforecast.R;
 
 //класс объекта "Погодные данные". Служит для десериализации json в java object
 public class WeatherData {
@@ -31,9 +31,9 @@ public class WeatherData {
 
     static {
         Context context = PrefCitiesActivity.context;
-        String[] key =  context.getResources().getStringArray(R.array.wd_k);
-        String[] value =  context.getResources().getStringArray(R.array.wd_v);
-        for(int i=0; i<key.length; i++){
+        String[] key = context.getResources().getStringArray(R.array.wd_k);
+        String[] value = context.getResources().getStringArray(R.array.wd_v);
+        for (int i = 0; i < key.length; i++) {
             hm.put(key[i], value[i]);
         }
     }
@@ -48,21 +48,70 @@ public class WeatherData {
             JSONTokener jsonTokener = new JSONTokener(jsonString);
             JSONObject baseJsonObject = new JSONObject(jsonTokener);
             try {
-                cityName = baseJsonObject.getString("name");
-                JSONObject mainJsonObject = baseJsonObject.getJSONObject("main");
-                humidity = mainJsonObject.getString("humidity");
-                pressure = mainJsonObject.getString("pressure");
-                temp = mainJsonObject.getString("temp");
-                JSONObject sysJsonObject = baseJsonObject.getJSONObject("sys");
-                sunrise = sysJsonObject.getString("sunrise");
-                sunset = sysJsonObject.getString("sunset");
-                JSONObject windJsonObject = baseJsonObject.getJSONObject("wind");
-                windSpeed = windJsonObject.getString("speed");
-                windDeg = windJsonObject.getString("deg");
-                JSONObject weatherJsonObject = baseJsonObject.getJSONArray("weather").getJSONObject(0);
-                weatherDescription = weatherJsonObject.getString("description");
-                weatherMain = weatherJsonObject.getString("main");
-                time = baseJsonObject.getLong("dt");
+                try {
+                    cityName = baseJsonObject.getString("name");
+                } catch (Exception e) {
+                }
+                JSONObject mainJsonObject = new JSONObject();
+                try {
+                    mainJsonObject = baseJsonObject.getJSONObject("main");
+                } catch (Exception e) {
+                }
+                try {
+                    humidity = mainJsonObject.getString("humidity");
+                } catch (Exception e) {
+                }
+                try {
+                    pressure = mainJsonObject.getString("pressure");
+                } catch (Exception e) {
+                }
+                try {
+                    temp = mainJsonObject.getString("temp");
+                } catch (Exception e) {
+                }
+                JSONObject sysJsonObject = new JSONObject();
+                try {
+                    sysJsonObject = baseJsonObject.getJSONObject("sys");
+                } catch (Exception e) {
+                }
+                try {
+                    sunrise = sysJsonObject.getString("sunrise");
+                } catch (Exception e) {
+                }
+                try {
+                    sunset = sysJsonObject.getString("sunset");
+                } catch (Exception e) {
+                }
+                JSONObject windJsonObject = new JSONObject();
+                try {
+                    windJsonObject = baseJsonObject.getJSONObject("wind");
+                } catch (Exception e) {
+                }
+                try {
+                    windSpeed = windJsonObject.getString("speed");
+                } catch (Exception e) {
+                }
+                try {
+                    windDeg = windJsonObject.getString("deg");
+                } catch (Exception e) {
+                }
+                JSONObject weatherJsonObject = new JSONObject();
+                try {
+                    weatherJsonObject = baseJsonObject.getJSONArray("weather").getJSONObject(0);
+                } catch (Exception e) {
+                }
+                try {
+                    weatherDescription = weatherJsonObject.getString("description");
+                } catch (Exception e) {
+                }
+                try {
+                    weatherMain = weatherJsonObject.getString("main");
+                } catch (Exception e) {
+                }
+                try {
+                    time = baseJsonObject.getLong("dt");
+                } catch (Exception e) {
+                }
             } catch (Exception e) {
                 Log.e("my", "Данные о погоде некорректные или получены частично");
                 throw e;
@@ -86,11 +135,11 @@ public class WeatherData {
     }
 
     public String getCityName() {
-        return cityName.isEmpty() ? noData : cityName;
+        return cityName.isEmpty() ? hm.get(noData) : cityName;
     }
 
     public String getHumidity() {
-        return humidity.isEmpty() ? noData : humidity + "%";
+        return humidity.isEmpty() ? hm.get(noData) : humidity + "%";
     }
 
     public String getJsonString() {
@@ -98,7 +147,7 @@ public class WeatherData {
     }
 
     public String getPressure() {
-        return pressure.isEmpty() ? noData : (((Double) (Double.valueOf(pressure) * 0.7500637554192)).toString()).substring(0, 6) + "mm";
+        return pressure.isEmpty() ? hm.get(noData) : (((Double) (Double.valueOf(pressure) * 0.7500637554192)).toString()).substring(0, 6) + "mm";
     }
 
     public String getSunrise() {
@@ -110,7 +159,7 @@ public class WeatherData {
     }
 
     public String getTemp() {
-        return temp.isEmpty() ? noData : temp + "°C";
+        return temp.isEmpty() ? hm.get(noData) : temp + "°C";
     }
 
     public String getTime() {
@@ -118,23 +167,23 @@ public class WeatherData {
     }
 
     public String getWeatherDescription() {
-        if(weatherDescription.isEmpty())
+        if (weatherDescription.isEmpty())
             weatherDescription = noData;
         weatherDescription = weatherDescription.replace(" ", "_").toLowerCase();
-        return ((hm.get(weatherDescription)==null)||hm.get(weatherDescription).isEmpty())?weatherDescription:hm.get(weatherDescription);
+        return ((hm.get(weatherDescription) == null) || hm.get(weatherDescription).isEmpty()) ? weatherDescription : hm.get(weatherDescription);
     }
 
     public String getWeatherMain() {
-        if(weatherMain.isEmpty())
+        if (weatherMain.isEmpty())
             weatherMain = noData;
         weatherMain = weatherMain.replace(" ", "_").toLowerCase();
-        return ((hm.get(weatherMain)==null)||hm.get(weatherMain).isEmpty())?weatherMain:hm.get(weatherMain);
+        return ((hm.get(weatherMain) == null) || hm.get(weatherMain).isEmpty()) ? weatherMain : hm.get(weatherMain);
     }
 
     //Направление ветра
     public String getWindDeg() {
         if (windDeg.isEmpty())
-            return noData;
+            return hm.get(noData);
         else {
             String response = "";
             double angle = Double.valueOf(windDeg);
@@ -173,7 +222,7 @@ public class WeatherData {
     }
 
     public String getWindSpeed() {
-        return windSpeed.isEmpty() ? noData : windSpeed;
+        return windSpeed.isEmpty() ? hm.get(noData) : windSpeed;
     }
 
     //Данные старые, если им больше часа. Сравнение со временем приходящим с сервера, а не со временем фактического получения данных
@@ -186,7 +235,7 @@ public class WeatherData {
     //Преобразование строки со временем в читабельный вид с поправкой на часовой пояс +3
     private String stringToTime(String timeString) {
         if (getTemp().equals(noData))
-            return noData;
+            return hm.get(noData);
         Integer timeInt = Integer.valueOf("0" + timeString);
         int hour = (timeInt / 60 / 60) % 24;
         int min = (timeInt / 60) % 60;
@@ -194,6 +243,5 @@ public class WeatherData {
         int timeZone = +3;
         return (hour + timeZone) % 24 + "h " + min + "m " + sec + "s";
     }
-
 
 }

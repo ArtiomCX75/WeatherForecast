@@ -1,87 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="wd_k">
-        <item>no_data</item>
-        <item>thunderstorm_with_light_rain</item>
-        <item>thunderstorm_with_rain</item>
-        <item>thunderstorm_with_heavy</item>
-        <item>light_thunderstorm</item>
-        <item>thunderstorm</item>
-        <item>heavy_thunderstorm</item>
-        <item>ragged_thunderstorm</item>
-        <item>thunderstorm_with_light_drizzle</item>
-        <item>thunderstorm_with_drizzle</item>
-        <item>thunderstorm_with_heavy_drizzle</item>
-        <item>light_intensity_drizzle</item>
-        <item>drizzle</item>
-        <item>heavy_intensity_drizzled</item>
-        <item>light_intensity_drizzle_rain</item>
-        <item>drizzle_rain</item>
-        <item>heavy_intensity_drizzle_rain</item>
-        <item>shower_rain_and_drizzle</item>
-        <item>heavy_shower_rain_and_drizzle</item>
-        <item>shower_drizzle</item>
-        <item>light_rain</item>
-        <item>moderate_rain</item>
-        <item>heavy_intensity_rain</item>
-        <item>very_heavy_rain</item>
-        <item>extreme_rain</item>
-        <item>freezing_rain</item>
-        <item>light_intensity_shower_rain</item>
-        <item>shower_rain</item>
-        <item>heavy_intensity_shower_rain</item>
-        <item>ragged_shower_rain</item>
-        <item>light_snow</item>
-        <item>snow</item>
-        <item>heavy_snow</item>
-        <item>sleet</item>
-        <item>shower_sleet</item>
-        <item>light_rain_and_snow</item>
-        <item>rain_and_snow</item>
-        <item>light_shower_snow</item>
-        <item>shower_snow</item>
-        <item>heavy_shower_snow</item>
-        <item>mist</item>
-        <item>smoke</item>
-        <item>haze</item>
-        <item>sand,_dust_whirls</item>
-        <item>fog</item>
-        <item>sand</item>
-        <item>dust</item>
-        <item>volcanic_ash</item>
-        <item>squalls</item>
-        <item>tornado</item>
-        <item>clear_sky</item>
-        <item>few_clouds</item>
-        <item>scattered_clouds</item>
-        <item>broken_clouds</item>
-        <item>overcast_clouds</item>
-        <item>tornado</item>
-        <item>tropical_storm</item>
-        <item>hurricane</item>
-        <item>cold</item>
-        <item>hot</item>
-        <item>windy</item>
-        <item>hail</item>
-        <item>calm</item>
-        <item>light_breeze</item>
-        <item>gentle_breeze</item>
-        <item>moderate_breeze</item>
-        <item>fresh_breeze</item>
-        <item>strong_breeze</item>
-        <item>high_wind,_near_gale</item>
-        <item>gale</item>
-        <item>severe_gale</item>
-        <item>storm</item>
-        <item>violent_storm</item>
-        <item>hurricane</item>
-    </array>
-
     <array name="wd_v">
         <item>"no data"</item>
         <item>thunderstorm with light rain</item>
         <item>thunderstorm with rain</item>
-        <item>thunderstorm with heavy</item>
+        <item>thunderstorm with heavy rain</item>
         <item>light thunderstorm</item>
         <item>thunderstorm</item>
         <item>heavy thunderstorm</item>
@@ -127,7 +50,6 @@
         <item>dust</item>
         <item>volcanic ash</item>
         <item>squalls</item>
-        <item>tornado</item>
         <item>clear sky</item>
         <item>few clouds</item>
         <item>scattered clouds</item>
@@ -151,8 +73,87 @@
         <item>severe gale</item>
         <item>storm</item>
         <item>violent storm</item>
-        <item>hurricane</item>
+        <!--weather main><-->
+        <item>clouds</item>
+        <item>clear</item>
     </array>
 
+    <array name="wd_k">
+        <item>no_data</item>
+        <item>thunderstorm_with_light_rain</item>
+        <item>thunderstorm_with_rain</item>
+        <item>thunderstorm_with_heavy_rain</item>
+        <item>light_thunderstorm</item>
+        <item>thunderstorm</item>
+        <item>heavy_thunderstorm</item>
+        <item>ragged_thunderstorm</item>
+        <item>thunderstorm_with_light_drizzle</item>
+        <item>thunderstorm_with_drizzle</item>
+        <item>thunderstorm_with_heavy_drizzle</item>
+        <item>light_intensity_drizzle</item>
+        <item>drizzle</item>
+        <item>heavy_intensity_drizzled</item>
+        <item>light_intensity_drizzle_rain</item>
+        <item>drizzle_rain</item>
+        <item>heavy_intensity_drizzle_rain</item>
+        <item>shower_rain_and_drizzle</item>
+        <item>heavy_shower_rain_and_drizzle</item>
+        <item>shower_drizzle</item>
+        <item>light_rain</item>
+        <item>moderate_rain</item>
+        <item>heavy_intensity_rain</item>
+        <item>very_heavy_rain</item>
+        <item>extreme_rain</item>
+        <item>freezing_rain</item>
+        <item>light_intensity_shower_rain</item>
+        <item>shower_rain</item>
+        <item>heavy_intensity_shower_rain</item>
+        <item>ragged_shower_rain</item>
+        <item>light_snow</item>
+        <item>snow</item>
+        <item>heavy_snow</item>
+        <item>sleet</item>
+        <item>shower_sleet</item>
+        <item>light_rain_and_snow</item>
+        <item>rain_and_snow</item>
+        <item>light_shower_snow</item>
+        <item>shower_snow</item>
+        <item>heavy_shower_snow</item>
+        <item>mist</item>
+        <item>smoke</item>
+        <item>haze</item>
+        <item>sand,_dust_whirls</item>
+        <item>fog</item>
+        <item>sand</item>
+        <item>dust</item>
+        <item>volcanic_ash</item>
+        <item>squalls</item>
+        <item>clear_sky</item>
+        <item>few_clouds</item>
+        <item>scattered_clouds</item>
+        <item>broken_clouds</item>
+        <item>overcast_clouds</item>
+        <item>tornado</item>
+        <item>tropical_storm</item>
+        <item>hurricane</item>
+        <item>cold</item>
+        <item>hot</item>
+        <item>windy</item>
+        <item>hail</item>
+        <item>calm</item>
+        <item>light_breeze</item>
+        <item>gentle_breeze</item>
+        <item>moderate_breeze</item>
+        <item>fresh_breeze</item>
+        <item>strong_breeze</item>
+        <item>high_wind,_near_gale</item>
+        <item>gale</item>
+        <item>severe_gale</item>
+        <item>storm</item>
+        <item>violent_storm</item>
+        <!--weather main><-->
+        <item>clouds</item>
+        <item>clear</item>
+    </array>
 
 </resources>
