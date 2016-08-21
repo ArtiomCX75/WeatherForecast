@@ -1,11 +1,16 @@
 package com.faa1192.weatherforecast.Weather;
 
+import android.content.Context;
 import android.util.Log;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.util.Date;
+import java.util.HashMap;
+
+import com.faa1192.weatherforecast.Preferred.PrefCitiesActivity;
+import com.faa1192.weatherforecast.R;
 
 //класс объекта "Погодные данные". Служит для десериализации json в java object
 public class WeatherData {
@@ -21,7 +26,17 @@ public class WeatherData {
     private String weatherDescription = ""; //описание погоды
     private String weatherMain = ""; //краткое описание погоды
     private Long time = 0L; //актуальное время сведений о погоде (приходит с сервера)
-    private final String noData = "Данных нет";
+    private final String noData = "no_data";
+    private static HashMap<String, String> hm = new HashMap<>();
+
+    static {
+        Context context = PrefCitiesActivity.context;
+        String[] key =  context.getResources().getStringArray(R.array.wd_k);
+        String[] value =  context.getResources().getStringArray(R.array.wd_v);
+        for(int i=0; i<key.length; i++){
+            hm.put(key[i], value[i]);
+        }
+    }
 
     public WeatherData() {
     }
@@ -103,11 +118,17 @@ public class WeatherData {
     }
 
     public String getWeatherDescription() {
-        return weatherDescription.isEmpty() ? noData : weatherDescription;
+        if(weatherDescription.isEmpty())
+            weatherDescription = noData;
+        weatherDescription = weatherDescription.replace(" ", "_").toLowerCase();
+        return ((hm.get(weatherDescription)==null)||hm.get(weatherDescription).isEmpty())?weatherDescription:hm.get(weatherDescription);
     }
 
     public String getWeatherMain() {
-        return weatherMain.isEmpty() ? noData : weatherMain;
+        if(weatherMain.isEmpty())
+            weatherMain = noData;
+        weatherMain = weatherMain.replace(" ", "_").toLowerCase();
+        return ((hm.get(weatherMain)==null)||hm.get(weatherMain).isEmpty())?weatherMain:hm.get(weatherMain);
     }
 
     //Направление ветра
@@ -173,4 +194,6 @@ public class WeatherData {
         int timeZone = +3;
         return (hour + timeZone) % 24 + "h " + min + "m " + sec + "s";
     }
+
+
 }

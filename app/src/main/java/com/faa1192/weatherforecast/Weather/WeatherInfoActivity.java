@@ -1,5 +1,6 @@
 package com.faa1192.weatherforecast.Weather;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -58,4 +59,5 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         final WeatherInfoFragment fragment = (WeatherInfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3);
         fragment.setInfo(PrefCityDBHelper.init(this).getCity(city.id));
     }
+
 }

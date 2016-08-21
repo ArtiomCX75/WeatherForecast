@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="wd_v">
+        <item>"Данных нет"</item>
+        <item>thunderstorm with light rain</item>
+        <item>thunderstorm with rain</item>
+        <item>thunderstorm with heavy</item>
+        <item>light thunderstorm</item>
+        <item>thunderstorm</item>
+        <item>heavy thunderstorm</item>
+        <item>ragged thunderstorm</item>
+        <item>thunderstorm with light drizzle</item>
+        <item>thunderstorm with drizzle</item>
+        <item>thunderstorm with heavy drizzle</item>
+        <item>light intensity drizzle</item>
+        <item>drizzle</item>
+        <item>heavy intensity drizzled</item>
+        <item>light intensity drizzle rain</item>
+        <item>drizzle rain</item>
+        <item>heavy intensity drizzle rain</item>
+        <item>shower rain and drizzle</item>
+        <item>heavy shower rain and drizzle</item>
+        <item>shower drizzle</item>
+        <item>light rain</item>
+        <item>moderate rain</item>
+        <item>heavy intensity rain</item>
+        <item>very heavy rain</item>
+        <item>extreme rain</item>
+        <item>freezing rain</item>
+        <item>light intensity shower rain</item>
+        <item>shower rain</item>
+        <item>heavy intensity shower rain</item>
+        <item>ragged shower rain</item>
+        <item>light snow</item>
+        <item>snow</item>
+        <item>heavy snow</item>
+        <item>sleet</item>
+        <item>shower sleet</item>
+        <item>light rain and snow</item>
+        <item>rain and snow</item>
+        <item>light shower snow</item>
+        <item>shower snow</item>
+        <item>heavy shower snow</item>
+        <item>mist</item>
+        <item>smoke</item>
+        <item>haze</item>
+        <item>sand, dust whirls</item>
+        <item>fog</item>
+        <item>sand</item>
+        <item>dust</item>
+        <item>volcanic ash</item>
+        <item>squalls</item>
+        <item>tornado</item>
+        <item>clear sky</item>
+        <item>few clouds</item>
+        <item>scattered clouds</item>
+        <item>broken clouds</item>
+        <item>overcast clouds</item>
+        <item>tornado</item>
+        <item>tropical storm</item>
+        <item>hurricane</item>
+        <item>cold</item>
+        <item>hot</item>
+        <item>windy</item>
+        <item>hail</item>
+        <item>calm</item>
+        <item>light breeze</item>
+        <item>gentle breeze</item>
+        <item>moderate breeze</item>
+        <item>fresh breeze</item>
+        <item>strong breeze</item>
+        <item>high wind, near gale</item>
+        <item>gale</item>
+        <item>severe gale</item>
+        <item>storm</item>
+        <item>violent storm</item>
+        <item>hurricane</item>
+    </array>
+</resources>
