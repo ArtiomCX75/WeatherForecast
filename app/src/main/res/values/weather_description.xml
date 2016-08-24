@@ -51,6 +51,7 @@
         <item>volcanic ash</item>
         <item>squalls</item>
         <item>clear sky</item>
+        <item>sky is clear</item>
         <item>few clouds</item>
         <item>scattered clouds</item>
         <item>broken clouds</item>
@@ -129,6 +130,7 @@
         <item>volcanic_ash</item>
         <item>squalls</item>
         <item>clear_sky</item>
+        <item>sky_is_clear</item>
         <item>few_clouds</item>
         <item>scattered_clouds</item>
         <item>broken_clouds</item>
