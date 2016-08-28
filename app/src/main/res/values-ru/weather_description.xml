@@ -77,5 +77,6 @@
         <!--weather main><-->
         <item>облачно</item>
         <item>ясно</item>
+        <item>дождь</item>
     </array>
 </resources>
