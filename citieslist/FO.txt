@@ -1,0 +1,30 @@
+{"_id":2619504,"name":"Hvítanes","country":"FO","coord":{"lon":-6.76297,"lat":62.045471}}
+{"_id":2616145,"name":"Norðoyar sýsla","country":"FO","coord":{"lon":-6.58333,"lat":62.283329}}
+{"_id":2618795,"name":"Klaksvik","country":"FO","coord":{"lon":-6.58901,"lat":62.226551}}
+{"_id":2621808,"name":"Fuglafjordur","country":"FO","coord":{"lon":-6.81395,"lat":62.24398}}
+{"_id":2612137,"name":"Suðuroyar sýsla","country":"FO","coord":{"lon":-6.81667,"lat":61.48333}}
+{"_id":2620838,"name":"Hamar","country":"FO","coord":{"lon":-6.95,"lat":61.599998}}
+{"_id":2618304,"name":"Kráir","country":"FO","coord":{"lon":-6.8138,"lat":61.467419}}
+{"_id":2612225,"name":"Streymoyar Sýsla","country":"FO","coord":{"lon":-7,"lat":62.133331}}
+{"_id":2611396,"name":"Torshavn","country":"FO","coord":{"lon":-6.77164,"lat":62.009731}}
+{"_id":2624653,"name":"Argir","country":"FO","coord":{"lon":-6.77154,"lat":61.995949}}
+{"_id":2622387,"name":"Eysturoyar sýsla","country":"FO","coord":{"lon":-6.86667,"lat":62.216671}}
+{"_id":2614402,"name":"Runavík","country":"FO","coord":{"lon":-6.71667,"lat":62.116669}}
+{"_id":7798678,"name":"Eystur","country":"FO","coord":{"lon":-6.75247,"lat":62.209068}}
+{"_id":2622677,"name":"Eiði","country":"FO","coord":{"lon":-7.08541,"lat":62.300861}}
+{"_id":2622320,"name":"Faroe Islands","country":"FO","coord":{"lon":-7,"lat":62}}
+{"_id":2611060,"name":"Tvoroyri","country":"FO","coord":{"lon":-6.81109,"lat":61.555569}}
+{"_id":2616495,"name":"Nesið","country":"FO","coord":{"lon":-7.15493,"lat":62.150059}}
+{"_id":2614323,"name":"Saksun","country":"FO","coord":{"lon":-7.17241,"lat":62.248211}}
+{"_id":2621415,"name":"Gjógv","country":"FO","coord":{"lon":-6.9358,"lat":62.322941}}
+{"_id":2610816,"name":"Vága Sýsla","country":"FO","coord":{"lon":-7.25,"lat":62.083328}}
+{"_id":2610685,"name":"Vatnsoyrar","country":"FO","coord":{"lon":-7.23333,"lat":62.066669}}
+{"_id":2610343,"name":"Vestmanna","country":"FO","coord":{"lon":-7.16639,"lat":62.156391}}
+{"_id":2610806,"name":"Vagur","country":"FO","coord":{"lon":-6.81185,"lat":61.47324}}
+{"_id":2612890,"name":"Sorvagur","country":"FO","coord":{"lon":-7.3577,"lat":62.09726}}
+{"_id":2614219,"name":"Sandoyar Sýsla","country":"FO","coord":{"lon":-6.75,"lat":61.833328}}
+{"_id":2614212,"name":"Sandur","country":"FO","coord":{"lon":-6.80778,"lat":61.842499}}
+{"_id":2616914,"name":"Midvagur","country":"FO","coord":{"lon":-7.19389,"lat":62.051109}}
+{"_id":2618511,"name":"Kollafjordhur","country":"FO","coord":{"lon":-6.91067,"lat":62.111671}}
+{"_id":2619693,"name":"Hoyvik","country":"FO","coord":{"lon":-6.78127,"lat":62.034069}}
+{"_id":2622676,"name":"Eidi","country":"FO","coord":{"lon":-7.09245,"lat":62.299301}}

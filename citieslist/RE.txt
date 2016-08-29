@@ -1,0 +1,69 @@
+{"_id":6690283,"name":"Réunion","country":"RE","coord":{"lon":55.602058,"lat":-21.100439}}
+{"_id":6690284,"name":"Réunion","country":"RE","coord":{"lon":55.603439,"lat":-21.10084}}
+{"_id":935213,"name":"Arrondissement de Saint-Pierre","country":"RE","coord":{"lon":55.583328,"lat":-21.25}}
+{"_id":6690308,"name":"Cilaos","country":"RE","coord":{"lon":55.466671,"lat":-21.116671}}
+{"_id":935975,"name":"Cilaos","country":"RE","coord":{"lon":55.471901,"lat":-21.13357}}
+{"_id":935612,"name":"Le Ramier","country":"RE","coord":{"lon":55.536221,"lat":-21.02186}}
+{"_id":935220,"name":"Arrondissement de Saint-Paul","country":"RE","coord":{"lon":55.333328,"lat":-21.08333}}
+{"_id":6690292,"name":"La Possession","country":"RE","coord":{"lon":55.333328,"lat":-20.91667}}
+{"_id":6690300,"name":"Saint-Pierre","country":"RE","coord":{"lon":55.48333,"lat":-21.316669}}
+{"_id":6690298,"name":"Saint-Louis","country":"RE","coord":{"lon":55.416672,"lat":-21.26667}}
+{"_id":6690297,"name":"Saint-Leu","country":"RE","coord":{"lon":55.283329,"lat":-21.15}}
+{"_id":6690296,"name":"Saint-Joseph","country":"RE","coord":{"lon":55.616669,"lat":-21.366671}}
+{"_id":6690295,"name":"Saint-Denis","country":"RE","coord":{"lon":55.466671,"lat":-20.866671}}
+{"_id":935267,"name":"Saint-Benoit","country":"RE","coord":{"lon":55.719372,"lat":-21.03801}}
+{"_id":6690293,"name":"Saint-André","country":"RE","coord":{"lon":55.650002,"lat":-20.950001}}
+{"_id":6690306,"name":"Le Tampon","country":"RE","coord":{"lon":55.51667,"lat":-21.26667}}
+{"_id":935520,"name":"Mare à Vieille Place","country":"RE","coord":{"lon":55.50972,"lat":-21.02607}}
+{"_id":935616,"name":"Le Port","country":"RE","coord":{"lon":55.291889,"lat":-20.9373}}
+{"_id":935737,"name":"La Butte","country":"RE","coord":{"lon":55.29158,"lat":-20.93228}}
+{"_id":6690294,"name":"Saint-Benoît","country":"RE","coord":{"lon":55.716671,"lat":-21.033331}}
+{"_id":935317,"name":"Reunion","country":"RE","coord":{"lon":55.599998,"lat":-21.1}}
+{"_id":935691,"name":"La Possession","country":"RE","coord":{"lon":55.335129,"lat":-20.928921}}
+{"_id":935605,"name":"Les Camélias","country":"RE","coord":{"lon":55.466671,"lat":-20.866671}}
+{"_id":6690299,"name":"Saint-Paul","country":"RE","coord":{"lon":55.26667,"lat":-21}}
+{"_id":935221,"name":"Saint-Paul","country":"RE","coord":{"lon":55.27071,"lat":-21.00963}}
+{"_id":6690307,"name":"Trois-Bassins","country":"RE","coord":{"lon":55.299999,"lat":-21.1}}
+{"_id":935146,"name":"Trois-Bassins","country":"RE","coord":{"lon":55.299999,"lat":-21.1}}
+{"_id":6690287,"name":"L'Entre-Deux","country":"RE","coord":{"lon":55.466671,"lat":-21.23333}}
+{"_id":935915,"name":"LEntre-Deux","country":"RE","coord":{"lon":55.466671,"lat":-21.23333}}
+{"_id":935263,"name":"Arrondissement de Saint-Denis","country":"RE","coord":{"lon":55.5,"lat":-20.91667}}
+{"_id":6690302,"name":"Sainte-Marie","country":"RE","coord":{"lon":55.549999,"lat":-20.883329}}
+{"_id":935255,"name":"Sainte-Marie","country":"RE","coord":{"lon":55.549599,"lat":-20.896839}}
+{"_id":935300,"name":"Rivière du Mât-les Bas","country":"RE","coord":{"lon":55.68718,"lat":-20.974859}}
+{"_id":6690304,"name":"Sainte-Suzanne","country":"RE","coord":{"lon":55.616669,"lat":-20.9}}
+{"_id":935248,"name":"Sainte-Suzanne","country":"RE","coord":{"lon":55.60886,"lat":-20.906139}}
+{"_id":935419,"name":"Petit Bazar","country":"RE","coord":{"lon":55.648361,"lat":-20.940331}}
+{"_id":935661,"name":"Le Butor","country":"RE","coord":{"lon":55.72047,"lat":-21.037001}}
+{"_id":935355,"name":"Ravine à Marquet","country":"RE","coord":{"lon":55.333328,"lat":-20.950001}}
+{"_id":935257,"name":"Sainte-Clotilde","country":"RE","coord":{"lon":55.478722,"lat":-20.891609}}
+{"_id":935697,"name":"La Petite Île","country":"RE","coord":{"lon":55.440189,"lat":-20.88081}}
+{"_id":6690288,"name":"L'Étang-Salé","country":"RE","coord":{"lon":55.383331,"lat":-21.25}}
+{"_id":935902,"name":"L'Étang-Salé","country":"RE","coord":{"lon":55.383331,"lat":-21.25}}
+{"_id":935643,"name":"Le Fond de Maurice","country":"RE","coord":{"lon":55.333328,"lat":-21.23333}}
+{"_id":935695,"name":"La Plaine des Cafres","country":"RE","coord":{"lon":55.557331,"lat":-21.224529}}
+{"_id":935239,"name":"Saint-François","country":"RE","coord":{"lon":55.734749,"lat":-21.067221}}
+{"_id":935613,"name":"Le Quatorzième","country":"RE","coord":{"lon":55.521118,"lat":-21.250589}}
+{"_id":935335,"name":"Ravine du Pont-les Bas","country":"RE","coord":{"lon":55.566669,"lat":-21.35}}
+{"_id":935266,"name":"Arrondissement de Saint-Benoît","country":"RE","coord":{"lon":55.666672,"lat":-21.08333}}
+{"_id":6690290,"name":"La Plaine-des-Palmistes","country":"RE","coord":{"lon":55.633331,"lat":-21.116671}}
+{"_id":935694,"name":"La Plaine-des-Palmistes","country":"RE","coord":{"lon":55.633331,"lat":-21.116671}}
+{"_id":6690301,"name":"Saint-Philippe","country":"RE","coord":{"lon":55.76667,"lat":-21.35}}
+{"_id":935215,"name":"Saint-Philippe","country":"RE","coord":{"lon":55.767948,"lat":-21.358521}}
+{"_id":935927,"name":"Dos d'Âne","country":"RE","coord":{"lon":55.376881,"lat":-20.981689}}
+{"_id":935542,"name":"Makes","country":"RE","coord":{"lon":55.433331,"lat":-21.200001}}
+{"_id":935806,"name":"Grands Bois","country":"RE","coord":{"lon":55.52557,"lat":-21.35928}}
+{"_id":935511,"name":"Marepine","country":"RE","coord":{"lon":55.51844,"lat":-20.8885}}
+{"_id":935214,"name":"Saint-Pierre","country":"RE","coord":{"lon":55.478111,"lat":-21.3393}}
+{"_id":935223,"name":"Saint-Louis","country":"RE","coord":{"lon":55.41124,"lat":-21.285851}}
+{"_id":935225,"name":"Saint-Leu","country":"RE","coord":{"lon":55.288239,"lat":-21.170589}}
+{"_id":935227,"name":"Saint-Joseph","country":"RE","coord":{"lon":55.619179,"lat":-21.37838}}
+{"_id":935264,"name":"Saint-Denis","country":"RE","coord":{"lon":55.450401,"lat":-20.882311}}
+{"_id":935268,"name":"Saint-Andre","country":"RE","coord":{"lon":55.650311,"lat":-20.963329}}
+{"_id":935582,"name":"Le Tampon","country":"RE","coord":{"lon":55.518021,"lat":-21.283091}}
+{"_id":7932385,"name":"Piton Saint-Leu","country":"RE","coord":{"lon":55.315128,"lat":-21.21962}}
+{"_id":935210,"name":"Salazie","country":"RE","coord":{"lon":55.539001,"lat":-21.02734}}
+{"_id":935251,"name":"Sainte-Rose","country":"RE","coord":{"lon":55.796291,"lat":-21.129829}}
+{"_id":935416,"name":"Petite-Ile","country":"RE","coord":{"lon":55.566669,"lat":-21.35}}
+{"_id":935608,"name":"Les Avirons","country":"RE","coord":{"lon":55.339378,"lat":-21.24181}}
+{"_id":936048,"name":"Bras-Panon","country":"RE","coord":{"lon":55.67823,"lat":-20.99667}}

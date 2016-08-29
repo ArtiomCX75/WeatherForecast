@@ -1,0 +1,204 @@
+{"_id":148251,"name":"Culfa","country":"AZ","coord":{"lon":45.630798,"lat":38.955799}}
+{"_id":147059,"name":"Telmankend","country":"AZ","coord":{"lon":48.399021,"lat":39.87867}}
+{"_id":147425,"name":"Neftcala","country":"AZ","coord":{"lon":49.247219,"lat":39.374168}}
+{"_id":148340,"name":"Pushkino","country":"AZ","coord":{"lon":48.544998,"lat":39.458328}}
+{"_id":586925,"name":"Buzovna","country":"AZ","coord":{"lon":50.113899,"lat":40.517891}}
+{"_id":587261,"name":"Amirdzhan","country":"AZ","coord":{"lon":49.983608,"lat":40.426392}}
+{"_id":587342,"name":"Aghsu Rayon","country":"AZ","coord":{"lon":48.333328,"lat":40.5}}
+{"_id":584716,"name":"Xanlar","country":"AZ","coord":{"lon":46.31583,"lat":40.586941}}
+{"_id":409420,"name":"Tartar Rayon","country":"AZ","coord":{"lon":46.94289,"lat":40.33054}}
+{"_id":584871,"name":"Terter","country":"AZ","coord":{"lon":46.92889,"lat":40.345001}}
+{"_id":585103,"name":"Qaracuxur","country":"AZ","coord":{"lon":49.97361,"lat":40.396671}}
+{"_id":585059,"name":"Shamkir Rayon","country":"AZ","coord":{"lon":46.083328,"lat":40.833328}}
+{"_id":585152,"name":"Shamkhor","country":"AZ","coord":{"lon":46.01889,"lat":40.82972}}
+{"_id":585030,"name":"Shamakhi Rayon","country":"AZ","coord":{"lon":48.666672,"lat":40.583328}}
+{"_id":585156,"name":"Shamakhi","country":"AZ","coord":{"lon":48.641369,"lat":40.631409}}
+{"_id":585184,"name":"Sabuncu","country":"AZ","coord":{"lon":49.948059,"lat":40.442501}}
+{"_id":828315,"name":"Hajigabul Rayon","country":"AZ","coord":{"lon":48.916672,"lat":40.083328}}
+{"_id":585225,"name":"Haciqabul","country":"AZ","coord":{"lon":48.944511,"lat":40.04084}}
+{"_id":586087,"name":"Qazakh Rayon","country":"AZ","coord":{"lon":45.166672,"lat":41.166672}}
+{"_id":585226,"name":"Qazax","country":"AZ","coord":{"lon":45.366112,"lat":41.09333}}
+{"_id":585379,"name":"Haci Zeynalabdin","country":"AZ","coord":{"lon":49.558609,"lat":40.623329}}
+{"_id":585557,"name":"Mastaga","country":"AZ","coord":{"lon":50.003891,"lat":40.53278}}
+{"_id":585568,"name":"Mardakyany","country":"AZ","coord":{"lon":50.138889,"lat":40.492222}}
+{"_id":585630,"name":"Lokbatan","country":"AZ","coord":{"lon":49.728039,"lat":40.323719}}
+{"_id":586429,"name":"Hovsan","country":"AZ","coord":{"lon":50.085281,"lat":40.374439}}
+{"_id":587078,"name":"Bilajari","country":"AZ","coord":{"lon":49.80566,"lat":40.444401}}
+{"_id":587361,"name":"Aghsu","country":"AZ","coord":{"lon":48.400871,"lat":40.570278}}
+{"_id":148615,"name":"Aghjabadi Rayon","country":"AZ","coord":{"lon":47.416672,"lat":40}}
+{"_id":587384,"name":"Agdzhabedy","country":"AZ","coord":{"lon":47.461391,"lat":40.05278}}
+{"_id":824003,"name":"Bakixanov","country":"AZ","coord":{"lon":49.964439,"lat":40.421669}}
+{"_id":146961,"name":"Yardimli","country":"AZ","coord":{"lon":48.237221,"lat":38.920559}}
+{"_id":409423,"name":"Xocavənd Rayonu","country":"AZ","coord":{"lon":47,"lat":39.666672}}
+{"_id":147364,"name":"Orconikidze","country":"AZ","coord":{"lon":47.690762,"lat":39.632221}}
+{"_id":148323,"name":"Boradigah","country":"AZ","coord":{"lon":48.703751,"lat":38.933891}}
+{"_id":147435,"name":"Nakhchivan Autonomous Republic","country":"AZ","coord":{"lon":45.418171,"lat":39.209911}}
+{"_id":147287,"name":"Saatly Rayon","country":"AZ","coord":{"lon":48.416672,"lat":39.833328}}
+{"_id":409419,"name":"Şuşa Şəhəri","country":"AZ","coord":{"lon":46.75,"lat":39.75}}
+{"_id":147105,"name":"Shushi","country":"AZ","coord":{"lon":46.749191,"lat":39.75893}}
+{"_id":147422,"name":"Neftchala Rayon","country":"AZ","coord":{"lon":49,"lat":39.333328}}
+{"_id":147310,"name":"Bilasuvar Rayon","country":"AZ","coord":{"lon":48.416672,"lat":39.5}}
+{"_id":148442,"name":"Astara Rayon","country":"AZ","coord":{"lon":48.666672,"lat":38.5}}
+{"_id":148445,"name":"Astara","country":"AZ","coord":{"lon":48.874981,"lat":38.455978}}
+{"_id":148617,"name":"Aghdam Rayon","country":"AZ","coord":{"lon":47,"lat":40}}
+{"_id":148619,"name":"Agdam","country":"AZ","coord":{"lon":46.927361,"lat":39.990959}}
+{"_id":584614,"name":"Zabrat","country":"AZ","coord":{"lon":49.941582,"lat":40.476101}}
+{"_id":584783,"name":"Ujar Rayon","country":"AZ","coord":{"lon":47.75,"lat":40.416672}}
+{"_id":584791,"name":"Ujar","country":"AZ","coord":{"lon":47.654228,"lat":40.51902}}
+{"_id":584938,"name":"Stepan Razin","country":"AZ","coord":{"lon":49.958889,"lat":40.429722}}
+{"_id":147282,"name":"Sedarak","country":"AZ","coord":{"lon":44.88805,"lat":39.711441}}
+{"_id":147551,"name":"Masally Rayon","country":"AZ","coord":{"lon":48.666672,"lat":39}}
+{"_id":147611,"name":"Lerik","country":"AZ","coord":{"lon":48.412788,"lat":38.772629}}
+{"_id":147784,"name":"Xilli","country":"AZ","coord":{"lon":49.101662,"lat":39.430119}}
+{"_id":148140,"name":"Cəbrayıl Rayonu","country":"AZ","coord":{"lon":47,"lat":39.333328}}
+{"_id":587116,"name":"Republic of Azerbaijan","country":"AZ","coord":{"lon":47.5,"lat":40.5}}
+{"_id":587081,"name":"Baku City","country":"AZ","coord":{"lon":49.882221,"lat":40.395279}}
+{"_id":587084,"name":"Baku","country":"AZ","coord":{"lon":49.89201,"lat":40.37767}}
+{"_id":586854,"name":"Chërnyy Gorod","country":"AZ","coord":{"lon":49.883331,"lat":40.383331}}
+{"_id":147269,"name":"Salyan Rayon","country":"AZ","coord":{"lon":49,"lat":39.666672}}
+{"_id":147271,"name":"Salyan","country":"AZ","coord":{"lon":48.980549,"lat":39.59362}}
+{"_id":147368,"name":"Ordubad","country":"AZ","coord":{"lon":46.023411,"lat":38.905949}}
+{"_id":584604,"name":"Zaqatala Rayon","country":"AZ","coord":{"lon":46.666672,"lat":41.583328}}
+{"_id":584596,"name":"Zaqatala","country":"AZ","coord":{"lon":46.64333,"lat":41.63361}}
+{"_id":828303,"name":"Şəki Şəhəri","country":"AZ","coord":{"lon":47.166672,"lat":41.183331}}
+{"_id":585170,"name":"Sheki","country":"AZ","coord":{"lon":47.170559,"lat":41.19194}}
+{"_id":828297,"name":"Aghstafa Rayon","country":"AZ","coord":{"lon":45.5,"lat":41.25}}
+{"_id":587362,"name":"Aghstafa","country":"AZ","coord":{"lon":45.453892,"lat":41.118889}}
+{"_id":586001,"name":"Khachmaz Rayon","country":"AZ","coord":{"lon":48.75,"lat":41.583328}}
+{"_id":584717,"name":"Xacmaz","country":"AZ","coord":{"lon":48.806049,"lat":41.46349}}
+{"_id":147429,"name":"Nakhchivan","country":"AZ","coord":{"lon":45.41222,"lat":39.208889}}
+{"_id":586290,"name":"Qakh Rayon","country":"AZ","coord":{"lon":46.75,"lat":41.333328}}
+{"_id":585227,"name":"Qax","country":"AZ","coord":{"lon":46.924171,"lat":41.422501}}
+{"_id":586482,"name":"Goychay Rayon","country":"AZ","coord":{"lon":47.833328,"lat":40.583328}}
+{"_id":586427,"name":"Geoktschai","country":"AZ","coord":{"lon":47.740559,"lat":40.653061}}
+{"_id":147284,"name":"Sabirabad Rayon","country":"AZ","coord":{"lon":48.666672,"lat":39.916672}}
+{"_id":585187,"name":"Sabirabad","country":"AZ","coord":{"lon":48.475151,"lat":40.00946}}
+{"_id":585786,"name":"Quba Rayon","country":"AZ","coord":{"lon":48.416672,"lat":41.166672}}
+{"_id":585221,"name":"Quba","country":"AZ","coord":{"lon":48.51519,"lat":41.362591}}
+{"_id":828299,"name":"Mingacevir City","country":"AZ","coord":{"lon":47,"lat":40.76667}}
+{"_id":585514,"name":"Mingelchaur","country":"AZ","coord":{"lon":47.059528,"lat":40.76395}}
+{"_id":409417,"name":"Ali Bajramly","country":"AZ","coord":{"lon":48.89938,"lat":39.950932}}
+{"_id":148565,"name":"Sirvan","country":"AZ","coord":{"lon":48.928551,"lat":39.937881}}
+{"_id":409418,"name":"Lənkəran Şəhəri","country":"AZ","coord":{"lon":48.833328,"lat":38.73333}}
+{"_id":147622,"name":"","country":"AZ","coord":{"lon":48.85062,"lat":38.75428}}
+{"_id":584742,"name":"Oghuz Rayon","country":"AZ","coord":{"lon":47.5,"lat":41.083328}}
+{"_id":585333,"name":"Oguz","country":"AZ","coord":{"lon":47.458328,"lat":41.070831}}
+{"_id":409421,"name":"Xankəndi Şəhəri","country":"AZ","coord":{"lon":46.799999,"lat":39.816669}}
+{"_id":146970,"name":"","country":"AZ","coord":{"lon":46.7528,"lat":39.817699}}
+{"_id":587056,"name":"Barda Rayon","country":"AZ","coord":{"lon":47.166672,"lat":40.333328}}
+{"_id":587057,"name":"Barda","country":"AZ","coord":{"lon":47.126671,"lat":40.374439}}
+{"_id":828298,"name":"Ganja City","country":"AZ","coord":{"lon":46.349998,"lat":40.650002}}
+{"_id":586523,"name":"Ganja","country":"AZ","coord":{"lon":46.360561,"lat":40.682781}}
+{"_id":148155,"name":"Jalilabad Rayon","country":"AZ","coord":{"lon":48.5,"lat":39.25}}
+{"_id":148290,"name":"Dzhalilabad","country":"AZ","coord":{"lon":48.491859,"lat":39.209629}}
+{"_id":587376,"name":"Aghdash Rayon","country":"AZ","coord":{"lon":47.416672,"lat":40.583328}}
+{"_id":587378,"name":"Agdas","country":"AZ","coord":{"lon":47.476109,"lat":40.650002}}
+{"_id":828307,"name":"Yevlakh City","country":"AZ","coord":{"lon":47.166672,"lat":40.583328}}
+{"_id":584649,"name":"Yevlakh","country":"AZ","coord":{"lon":47.150139,"lat":40.61832}}
+{"_id":585749,"name":"Qusar Rayon","country":"AZ","coord":{"lon":48.25,"lat":41.416672}}
+{"_id":585220,"name":"Qusar","country":"AZ","coord":{"lon":48.428928,"lat":41.42728}}
+{"_id":147983,"name":"Imishli Rayon","country":"AZ","coord":{"lon":48.083328,"lat":39.833328}}
+{"_id":147982,"name":"Imishli","country":"AZ","coord":{"lon":48.059952,"lat":39.870949}}
+{"_id":828305,"name":"Sumqayit City","country":"AZ","coord":{"lon":49.666672,"lat":40.583328}}
+{"_id":584923,"name":"Sumqayit","country":"AZ","coord":{"lon":49.66861,"lat":40.589722}}
+{"_id":147192,"name":"Shekyarabad","country":"AZ","coord":{"lon":45.43676,"lat":39.19228}}
+{"_id":585967,"name":"Goygol Rayon","country":"AZ","coord":{"lon":46.333328,"lat":40.5}}
+{"_id":585407,"name":"Nadil","country":"AZ","coord":{"lon":46.288891,"lat":40.74139}}
+{"_id":586968,"name":"Biny Selo","country":"AZ","coord":{"lon":50.08564,"lat":40.451931}}
+{"_id":146862,"name":"Prishibinskoye","country":"AZ","coord":{"lon":48.593609,"lat":39.119579}}
+{"_id":146900,"name":"Zangilan Rayon","country":"AZ","coord":{"lon":46.666672,"lat":39.083328}}
+{"_id":146901,"name":"Zangilan","country":"AZ","coord":{"lon":46.651192,"lat":39.088341}}
+{"_id":146962,"name":"Yardymli Rayon","country":"AZ","coord":{"lon":48.25,"lat":38.916672}}
+{"_id":146969,"name":"Novyy Karanlug","country":"AZ","coord":{"lon":47.10989,"lat":39.79546}}
+{"_id":147278,"name":"Sahbuz","country":"AZ","coord":{"lon":45.573891,"lat":39.407219}}
+{"_id":147694,"name":"Qubadli Rayon","country":"AZ","coord":{"lon":46.583328,"lat":39.333328}}
+{"_id":147305,"name":"Qubadli","country":"AZ","coord":{"lon":46.581959,"lat":39.34396}}
+{"_id":147307,"name":"Qaracala","country":"AZ","coord":{"lon":48.952301,"lat":39.813179}}
+{"_id":146879,"name":"Beylagan Rayon","country":"AZ","coord":{"lon":47.666672,"lat":39.75}}
+{"_id":147504,"name":"Mincivan","country":"AZ","coord":{"lon":46.718472,"lat":39.02935}}
+{"_id":147552,"name":"Masally","country":"AZ","coord":{"lon":48.665401,"lat":39.03532}}
+{"_id":147610,"name":"Lerik Rayon","country":"AZ","coord":{"lon":48.416672,"lat":38.75}}
+{"_id":147626,"name":"Laçın Rayonu","country":"AZ","coord":{"lon":46.416672,"lat":39.666672}}
+{"_id":147625,"name":"Lacin","country":"AZ","coord":{"lon":46.550449,"lat":39.598808}}
+{"_id":147695,"name":"Qirmizi Bazar","country":"AZ","coord":{"lon":46.948841,"lat":39.678329}}
+{"_id":147727,"name":"Kijoba","country":"AZ","coord":{"lon":48.816669,"lat":38.53278}}
+{"_id":148449,"name":"Xocalı Rayonu","country":"AZ","coord":{"lon":46.75,"lat":39.833328}}
+{"_id":147774,"name":"Xocali","country":"AZ","coord":{"lon":46.790279,"lat":39.912971}}
+{"_id":148107,"name":"Fizuli Rayon","country":"AZ","coord":{"lon":47.333328,"lat":39.583328}}
+{"_id":148003,"name":"Horadiz","country":"AZ","coord":{"lon":47.335312,"lat":39.448769}}
+{"_id":147613,"name":"Lankaran Rayon","country":"AZ","coord":{"lon":48.755508,"lat":38.70071}}
+{"_id":148088,"name":"Haftoni","country":"AZ","coord":{"lon":48.76223,"lat":38.763248}}
+{"_id":148105,"name":"Hadrut","country":"AZ","coord":{"lon":47.031799,"lat":39.52002}}
+{"_id":148141,"name":"Jebrail","country":"AZ","coord":{"lon":47.028339,"lat":39.39917}}
+{"_id":148375,"name":"Severo-Vostotchnyi Bank","country":"AZ","coord":{"lon":49.247921,"lat":39.411171}}
+{"_id":148450,"name":"Askyaran","country":"AZ","coord":{"lon":46.832779,"lat":39.936668}}
+{"_id":393443,"name":"Sovetabad","country":"AZ","coord":{"lon":49.214142,"lat":39.33667}}
+{"_id":584562,"name":"Zyrya","country":"AZ","coord":{"lon":50.291698,"lat":40.3661}}
+{"_id":584583,"name":"Zardab Rayon","country":"AZ","coord":{"lon":47.75,"lat":40.25}}
+{"_id":584586,"name":"Zardob","country":"AZ","coord":{"lon":47.708328,"lat":40.21833}}
+{"_id":584715,"name":"Xudat","country":"AZ","coord":{"lon":48.681,"lat":41.630959}}
+{"_id":586771,"name":"Dashkasan Rayon","country":"AZ","coord":{"lon":46,"lat":40.416672}}
+{"_id":584724,"name":"Verkhniy Dashkesan","country":"AZ","coord":{"lon":46.071369,"lat":40.492279}}
+{"_id":584792,"name":"Turkan","country":"AZ","coord":{"lon":50.215,"lat":40.363892}}
+{"_id":584861,"name":"Tovuz Rayon","country":"AZ","coord":{"lon":45.75,"lat":41}}
+{"_id":584821,"name":"Tovuz","country":"AZ","coord":{"lon":45.628891,"lat":40.992222}}
+{"_id":828306,"name":"Khizi Rayon","country":"AZ","coord":{"lon":49.166672,"lat":40.75}}
+{"_id":584991,"name":"Suraabad","country":"AZ","coord":{"lon":49.468739,"lat":40.819241}}
+{"_id":587245,"name":"Absheron Rayon","country":"AZ","coord":{"lon":49.333328,"lat":40.416672}}
+{"_id":585145,"name":"Saray","country":"AZ","coord":{"lon":49.716389,"lat":40.532219}}
+{"_id":585150,"name":"Samur","country":"AZ","coord":{"lon":48.430248,"lat":41.632542}}
+{"_id":585223,"name":"Qobustan","country":"AZ","coord":{"lon":49.412048,"lat":40.082378}}
+{"_id":585738,"name":"Qabala Rayon","country":"AZ","coord":{"lon":47.833328,"lat":40.916672}}
+{"_id":585231,"name":"Qutqashen","country":"AZ","coord":{"lon":47.845829,"lat":40.981392}}
+{"_id":585236,"name":"Puta","country":"AZ","coord":{"lon":49.660278,"lat":40.296669}}
+{"_id":585388,"name":"Nardaran","country":"AZ","coord":{"lon":50.005562,"lat":40.55611}}
+{"_id":828300,"name":"Naftalan City","country":"AZ","coord":{"lon":46.716671,"lat":40.48333}}
+{"_id":585400,"name":"Naftalan","country":"AZ","coord":{"lon":46.825001,"lat":40.506672}}
+{"_id":828301,"name":"Gobustan Rayon","country":"AZ","coord":{"lon":49,"lat":40.5}}
+{"_id":585570,"name":"Marazy","country":"AZ","coord":{"lon":48.927261,"lat":40.53371}}
+{"_id":586112,"name":"Goranboy Rayon","country":"AZ","coord":{"lon":46.666672,"lat":40.583328}}
+{"_id":585666,"name":"Qizilhacili","country":"AZ","coord":{"lon":46.840981,"lat":40.574558}}
+{"_id":585838,"name":"Qobu","country":"AZ","coord":{"lon":49.713058,"lat":40.40472}}
+{"_id":585892,"name":"Kilyazi","country":"AZ","coord":{"lon":49.342331,"lat":40.870979}}
+{"_id":585909,"name":"Khyzy","country":"AZ","coord":{"lon":49.081268,"lat":40.905762}}
+{"_id":585915,"name":"Khirdalan","country":"AZ","coord":{"lon":49.75502,"lat":40.448078}}
+{"_id":585940,"name":"Khodzhi-Gasan","country":"AZ","coord":{"lon":49.772091,"lat":40.413479}}
+{"_id":586031,"name":"Korgoz","country":"AZ","coord":{"lon":49.619999,"lat":40.303059}}
+{"_id":828302,"name":"Samukh Rayon","country":"AZ","coord":{"lon":46.416672,"lat":40.916672}}
+{"_id":586135,"name":"Qarayeri","country":"AZ","coord":{"lon":46.306591,"lat":40.78862}}
+{"_id":586265,"name":"Vurgun","country":"AZ","coord":{"lon":45.471619,"lat":41.094231}}
+{"_id":586047,"name":"Kəlbəcər Rayonu","country":"AZ","coord":{"lon":46.166672,"lat":40.083328}}
+{"_id":586268,"name":"Kerbakhiar","country":"AZ","coord":{"lon":46.03833,"lat":40.10667}}
+{"_id":586289,"name":"Qala","country":"AZ","coord":{"lon":50.168121,"lat":40.441818}}
+{"_id":586320,"name":"Ismayilli Rayon","country":"AZ","coord":{"lon":48.166672,"lat":40.833328}}
+{"_id":586318,"name":"Ismayilli","country":"AZ","coord":{"lon":48.16375,"lat":40.778969}}
+{"_id":586368,"name":"Gyuzdek","country":"AZ","coord":{"lon":49.681938,"lat":40.374439}}
+{"_id":586430,"name":"Goranboy","country":"AZ","coord":{"lon":46.789719,"lat":40.610279}}
+{"_id":627535,"name":"Gadabay Rayon","country":"AZ","coord":{"lon":45.666672,"lat":40.5}}
+{"_id":586573,"name":"Kyadabek","country":"AZ","coord":{"lon":45.816109,"lat":40.565559}}
+{"_id":586631,"name":"Corat","country":"AZ","coord":{"lon":49.70639,"lat":40.572498}}
+{"_id":586652,"name":"Ceyranbatan","country":"AZ","coord":{"lon":49.659721,"lat":40.540829}}
+{"_id":586692,"name":"Dzagam","country":"AZ","coord":{"lon":45.885639,"lat":40.903301}}
+{"_id":586736,"name":"Digah","country":"AZ","coord":{"lon":49.874779,"lat":40.492569}}
+{"_id":586765,"name":"Yukhary-Dashkesan","country":"AZ","coord":{"lon":46.077221,"lat":40.49472}}
+{"_id":586792,"name":"Dolyar","country":"AZ","coord":{"lon":46.034931,"lat":40.862782}}
+{"_id":586845,"name":"Cinarli","country":"AZ","coord":{"lon":46.9156,"lat":41.472301}}
+{"_id":586967,"name":"Binagadi","country":"AZ","coord":{"lon":49.827831,"lat":40.466019}}
+{"_id":586971,"name":"Bilajer","country":"AZ","coord":{"lon":50.037781,"lat":40.568062}}
+{"_id":587033,"name":"Basqal","country":"AZ","coord":{"lon":48.391041,"lat":40.755199}}
+{"_id":585031,"name":"Shaki Rayon","country":"AZ","coord":{"lon":47.166672,"lat":41.083328}}
+{"_id":587045,"name":"Bas Goynuk","country":"AZ","coord":{"lon":47.113331,"lat":41.322781}}
+{"_id":587010,"name":"Balakan Rayon","country":"AZ","coord":{"lon":46.416672,"lat":41.75}}
+{"_id":587070,"name":"Belokany","country":"AZ","coord":{"lon":46.408329,"lat":41.72583}}
+{"_id":587071,"name":"Balakhani","country":"AZ","coord":{"lon":49.91893,"lat":40.46344}}
+{"_id":587207,"name":"Artyom","country":"AZ","coord":{"lon":50.333038,"lat":40.47226}}
+{"_id":587272,"name":"Altiagac","country":"AZ","coord":{"lon":48.934769,"lat":40.859268}}
+{"_id":587319,"name":"Aliabad","country":"AZ","coord":{"lon":46.635281,"lat":41.482239}}
+{"_id":587379,"name":"Martakert","country":"AZ","coord":{"lon":46.820969,"lat":40.2104}}
+{"_id":807231,"name":"Mughan","country":"AZ","coord":{"lon":48.818859,"lat":40.099018}}
+{"_id":823981,"name":"Qabaqcol","country":"AZ","coord":{"lon":46.264721,"lat":41.720001}}
+{"_id":584650,"name":"Yevlakh Rayon","country":"AZ","coord":{"lon":47,"lat":40.666672}}
+{"_id":824050,"name":"Aran","country":"AZ","coord":{"lon":46.975559,"lat":40.625278}}
+{"_id":863732,"name":"Ramana","country":"AZ","coord":{"lon":49.98056,"lat":40.442219}}
+{"_id":863771,"name":"Eibat","country":"AZ","coord":{"lon":49.77528,"lat":40.338612}}
+{"_id":863761,"name":"Badamdar","country":"AZ","coord":{"lon":49.80389,"lat":40.339439}}

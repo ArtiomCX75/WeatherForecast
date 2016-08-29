@@ -1,0 +1,33 @@
+{"_id":285728,"name":"Ar Riqqah","country":"KW","coord":{"lon":48.094719,"lat":29.14583}}
+{"_id":285798,"name":"Muḩāfaz̧at Jahrā’","country":"KW","coord":{"lon":47.666672,"lat":29.33333}}
+{"_id":285603,"name":"Janub as Surrah","country":"KW","coord":{"lon":47.978062,"lat":29.269171}}
+{"_id":285822,"name":"Al Bida�?","country":"KW","coord":{"lon":48.086941,"lat":29.3025}}
+{"_id":285663,"name":"Bayan","country":"KW","coord":{"lon":48.048809,"lat":29.3032}}
+{"_id":285704,"name":"As Salimiyah","country":"KW","coord":{"lon":48.076111,"lat":29.333891}}
+{"_id":285841,"name":"Muḩāfaz̧at al Aḩmadī","country":"KW","coord":{"lon":48,"lat":29}}
+{"_id":285778,"name":"Al Manqaf","country":"KW","coord":{"lon":48.132778,"lat":29.096109}}
+{"_id":285782,"name":"Al Mahbulah","country":"KW","coord":{"lon":48.13028,"lat":29.145}}
+{"_id":285799,"name":"Al Jahra","country":"KW","coord":{"lon":47.658058,"lat":29.3375}}
+{"_id":285811,"name":"Al Fahahil","country":"KW","coord":{"lon":48.13028,"lat":29.0825}}
+{"_id":285812,"name":"Al Fintas","country":"KW","coord":{"lon":48.121109,"lat":29.173889}}
+{"_id":285856,"name":"Ad Dasmah","country":"KW","coord":{"lon":48.001389,"lat":29.365}}
+{"_id":387958,"name":"Salwa","country":"KW","coord":{"lon":48.078609,"lat":29.29583}}
+{"_id":388065,"name":"Ar Rabiyah","country":"KW","coord":{"lon":47.93306,"lat":29.295}}
+{"_id":285747,"name":"An Nijfah","country":"KW","coord":{"lon":48.075829,"lat":29.246389}}
+{"_id":412800,"name":"Sabah as Salim","country":"KW","coord":{"lon":48.05722,"lat":29.257219}}
+{"_id":285570,"name":"State of Kuwait","country":"KW","coord":{"lon":47.75,"lat":29.5}}
+{"_id":387897,"name":"Al Wafrah","country":"KW","coord":{"lon":48.053059,"lat":28.554171}}
+{"_id":285375,"name":"�?Ushaysh al Jahrā’","country":"KW","coord":{"lon":47.663891,"lat":29.31583}}
+{"_id":6942029,"name":"Highway of Death","country":"KW","coord":{"lon":47.651798,"lat":29.384199}}
+{"_id":285815,"name":"Al Farwaniyah","country":"KW","coord":{"lon":47.958611,"lat":29.2775}}
+{"_id":285628,"name":"Muḩāfaz̧at Ḩawallī","country":"KW","coord":{"lon":47.997219,"lat":29.283331}}
+{"_id":285787,"name":"Kuwait City","country":"KW","coord":{"lon":47.978329,"lat":29.36972}}
+{"_id":285629,"name":"Ḩawallī","country":"KW","coord":{"lon":48.02861,"lat":29.332781}}
+{"_id":285839,"name":"Al Aḩmadī","country":"KW","coord":{"lon":48.083889,"lat":29.076941}}
+{"_id":285788,"name":"Muḩāfaz̧at al �?Āşimah","country":"KW","coord":{"lon":47.916672,"lat":29.33333}}
+{"_id":388088,"name":"Al �?Abbāsīyah","country":"KW","coord":{"lon":47.93111,"lat":29.25028}}
+{"_id":387990,"name":"Al Qiblah","country":"KW","coord":{"lon":47.971668,"lat":29.37361}}
+{"_id":285673,"name":"Az Zawr","country":"KW","coord":{"lon":48.274719,"lat":29.442499}}
+{"_id":285721,"name":"Ash Shamiyah","country":"KW","coord":{"lon":47.96167,"lat":29.347219}}
+{"_id":285760,"name":"Al Wafrah","country":"KW","coord":{"lon":47.930561,"lat":28.63917}}
+{"_id":285810,"name":"Al Funaytis","country":"KW","coord":{"lon":48.101669,"lat":29.225281}}

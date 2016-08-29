@@ -1,0 +1,40 @@
+{"_id":161943,"name":"Gumdag","country":"TM","coord":{"lon":54.590561,"lat":39.206108}}
+{"_id":161974,"name":"Gazanjyk","country":"TM","coord":{"lon":55.515362,"lat":39.244629}}
+{"_id":162099,"name":"Buzmeyin","country":"TM","coord":{"lon":58.205589,"lat":38.050671}}
+{"_id":601465,"name":"Daşoguz Welaýaty","country":"TM","coord":{"lon":58.5,"lat":41}}
+{"_id":1219651,"name":"Lebap Welaýaty","country":"TM","coord":{"lon":63,"lat":39}}
+{"_id":1218666,"name":"Mary Welaýaty","country":"TM","coord":{"lon":62.5,"lat":37}}
+{"_id":1219762,"name":"Bayramaly","country":"TM","coord":{"lon":62.167149,"lat":37.618519}}
+{"_id":162181,"name":"Ahal Welaýaty","country":"TM","coord":{"lon":59.75,"lat":38.25}}
+{"_id":162183,"name":"Ashgabat","country":"TM","coord":{"lon":58.383331,"lat":37.950001}}
+{"_id":162152,"name":"Balkan Welaýaty","country":"TM","coord":{"lon":54.5,"lat":40}}
+{"_id":601594,"name":"Turkmenbasy","country":"TM","coord":{"lon":52.955181,"lat":40.02216}}
+{"_id":1514801,"name":"Darganata","country":"TM","coord":{"lon":62.1586,"lat":40.48204}}
+{"_id":161901,"name":"Kaka","country":"TM","coord":{"lon":59.614311,"lat":37.348209}}
+{"_id":162158,"name":"Baherden","country":"TM","coord":{"lon":57.43158,"lat":38.436241}}
+{"_id":1219392,"name":"Gowurdak","country":"TM","coord":{"lon":66.046562,"lat":37.812439}}
+{"_id":1514792,"name":"Gazojak","country":"TM","coord":{"lon":61.403599,"lat":41.187462}}
+{"_id":1218197,"name":"Turkmenistan","country":"TM","coord":{"lon":60,"lat":40}}
+{"_id":1219264,"name":"Imeni Molotova","country":"TM","coord":{"lon":63.616669,"lat":39.066669}}
+{"_id":601456,"name":"Tezedurmysh","country":"TM","coord":{"lon":59.789581,"lat":41.78492}}
+{"_id":1219899,"name":"Amansha","country":"TM","coord":{"lon":61.900002,"lat":37.633331}}
+{"_id":161808,"name":"Keshi","country":"TM","coord":{"lon":58.33857,"lat":37.965511}}
+{"_id":161616,"name":"Balkanabat","country":"TM","coord":{"lon":54.36713,"lat":39.51075}}
+{"_id":162199,"name":"Annau","country":"TM","coord":{"lon":58.515999,"lat":37.887569}}
+{"_id":601475,"name":"Tagta","country":"TM","coord":{"lon":59.916401,"lat":41.65041}}
+{"_id":601608,"name":"Koeneuergench","country":"TM","coord":{"lon":59.154419,"lat":42.327728}}
+{"_id":601661,"name":"Boldumsaz","country":"TM","coord":{"lon":59.671009,"lat":42.128239}}
+{"_id":601734,"name":"Dasoguz","country":"TM","coord":{"lon":59.966621,"lat":41.83625}}
+{"_id":1218021,"name":"Yoloten","country":"TM","coord":{"lon":62.359749,"lat":37.298859}}
+{"_id":1218239,"name":"Tejen","country":"TM","coord":{"lon":60.50544,"lat":37.383381}}
+{"_id":1218420,"name":"Seydi","country":"TM","coord":{"lon":62.913738,"lat":39.481602}}
+{"_id":1218436,"name":"Sayat","country":"TM","coord":{"lon":63.880348,"lat":38.78392}}
+{"_id":1218667,"name":"Mary","country":"TM","coord":{"lon":61.830311,"lat":37.593781}}
+{"_id":1219002,"name":"Atamyrat","country":"TM","coord":{"lon":65.210579,"lat":37.835739}}
+{"_id":1219649,"name":"Turkmenabat","country":"TM","coord":{"lon":63.578621,"lat":39.07328}}
+{"_id":161931,"name":"Gyzylarbat","country":"TM","coord":{"lon":56.275749,"lat":38.97644}}
+{"_id":161983,"name":"Pewrize","country":"TM","coord":{"lon":58.092369,"lat":37.916771}}
+{"_id":601551,"name":"Akdepe","country":"TM","coord":{"lon":59.378769,"lat":42.05513}}
+{"_id":1218612,"name":"Murgab","country":"TM","coord":{"lon":61.97142,"lat":37.496559}}
+{"_id":1219377,"name":"Serhetabat","country":"TM","coord":{"lon":62.343819,"lat":35.279919}}
+{"_id":1219431,"name":"Farap","country":"TM","coord":{"lon":63.611641,"lat":39.170368}}

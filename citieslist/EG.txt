@@ -1,0 +1,192 @@
+{"_id":360542,"name":"Al Qurayn","country":"EG","coord":{"lon":31.73514,"lat":30.61618}}
+{"_id":361495,"name":"Al Ayyat","country":"EG","coord":{"lon":31.2575,"lat":29.61972}}
+{"_id":362882,"name":"Abu al Matamir","country":"EG","coord":{"lon":30.174379,"lat":30.910179}}
+{"_id":350789,"name":"Qalyub","country":"EG","coord":{"lon":31.205601,"lat":30.17922}}
+{"_id":355795,"name":"Halwan","country":"EG","coord":{"lon":31.30084,"lat":29.84144}}
+{"_id":356933,"name":"Farshut","country":"EG","coord":{"lon":32.163288,"lat":26.054939}}
+{"_id":356945,"name":"Faraskur","country":"EG","coord":{"lon":31.715071,"lat":31.329769}}
+{"_id":356989,"name":"Faqus","country":"EG","coord":{"lon":31.801821,"lat":30.730061}}
+{"_id":358095,"name":"Diyarb Najm","country":"EG","coord":{"lon":31.439251,"lat":30.754219}}
+{"_id":358108,"name":"Disuq","country":"EG","coord":{"lon":30.64649,"lat":31.133051}}
+{"_id":358115,"name":"Dishna","country":"EG","coord":{"lon":32.475979,"lat":26.12467}}
+{"_id":358172,"name":"Dikirnis","country":"EG","coord":{"lon":31.594271,"lat":31.088711}}
+{"_id":358269,"name":"Dayrut","country":"EG","coord":{"lon":30.80764,"lat":27.556021}}
+{"_id":358274,"name":"Dayr Mawas","country":"EG","coord":{"lon":30.846621,"lat":27.64176}}
+{"_id":358970,"name":"Basyun","country":"EG","coord":{"lon":30.813379,"lat":30.93976}}
+{"_id":359173,"name":"Bani Suwayf","country":"EG","coord":{"lon":31.097851,"lat":29.074409}}
+{"_id":359280,"name":"Banha","country":"EG","coord":{"lon":31.178579,"lat":30.459061}}
+{"_id":359576,"name":"Awsim","country":"EG","coord":{"lon":31.13571,"lat":30.12303}}
+{"_id":359710,"name":"At Tall al Kabir","country":"EG","coord":{"lon":31.78525,"lat":30.544479}}
+{"_id":359797,"name":"Muḩāfaz̧at as Suways","country":"EG","coord":{"lon":32.299999,"lat":29.700001}}
+{"_id":360048,"name":"Ashmun","country":"EG","coord":{"lon":30.976351,"lat":30.298571}}
+{"_id":360464,"name":"Al Wasitah","country":"EG","coord":{"lon":31.205561,"lat":29.33778}}
+{"_id":7603259,"name":"Muḩāfaz̧at al Uqşur","country":"EG","coord":{"lon":32.650002,"lat":25.700001}}
+{"_id":360531,"name":"Al Qusayr","country":"EG","coord":{"lon":34.277931,"lat":26.104259}}
+{"_id":360612,"name":"Al Qanayat","country":"EG","coord":{"lon":31.460991,"lat":30.618799}}
+{"_id":360615,"name":"Al Qanatir al Khayriyah","country":"EG","coord":{"lon":31.13703,"lat":30.19327}}
+{"_id":360754,"name":"Al Manzilah","country":"EG","coord":{"lon":31.937,"lat":31.15815}}
+{"_id":360928,"name":"Al Khankah","country":"EG","coord":{"lon":31.36812,"lat":30.21035}}
+{"_id":360995,"name":"Al Jizah","country":"EG","coord":{"lon":31.21093,"lat":30.00808}}
+{"_id":361103,"name":"Al Ibrahimiyah","country":"EG","coord":{"lon":31.56299,"lat":30.718769}}
+{"_id":361179,"name":"Al Hawamidiyah","country":"EG","coord":{"lon":31.25,"lat":29.9}}
+{"_id":361329,"name":"Al Fashn","country":"EG","coord":{"lon":30.899481,"lat":28.82431}}
+{"_id":361394,"name":"Al Bawiti","country":"EG","coord":{"lon":28.86591,"lat":28.34919}}
+{"_id":361435,"name":"Al Balyana","country":"EG","coord":{"lon":32.003471,"lat":26.23568}}
+{"_id":361457,"name":"Al Bajur","country":"EG","coord":{"lon":31.03681,"lat":30.43026}}
+{"_id":361478,"name":"Al Badari","country":"EG","coord":{"lon":31.415541,"lat":26.992571}}
+{"_id":361546,"name":"Al Arish","country":"EG","coord":{"lon":33.798439,"lat":31.13159}}
+{"_id":361661,"name":"Akhmim","country":"EG","coord":{"lon":31.745029,"lat":26.56217}}
+{"_id":361702,"name":"Aja","country":"EG","coord":{"lon":31.29151,"lat":30.94154}}
+{"_id":361827,"name":"Ad Dilinjat","country":"EG","coord":{"lon":30.536329,"lat":30.827909}}
+{"_id":362277,"name":"Abu Qurqas","country":"EG","coord":{"lon":30.838409,"lat":27.9312}}
+{"_id":362485,"name":"Abu Kabir","country":"EG","coord":{"lon":31.67148,"lat":30.72508}}
+{"_id":362973,"name":"Abnub","country":"EG","coord":{"lon":31.151051,"lat":27.2696}}
+{"_id":419435,"name":"Az Zarqa","country":"EG","coord":{"lon":31.63554,"lat":31.20829}}
+{"_id":7521348,"name":"Ain Sukhna","country":"EG","coord":{"lon":32.316711,"lat":29.60018}}
+{"_id":359678,"name":"Tor","country":"EG","coord":{"lon":33.625401,"lat":28.23638}}
+{"_id":7910966,"name":"Beheira","country":"EG","coord":{"lon":30.34355,"lat":30.51478}}
+{"_id":346030,"name":"Zifta","country":"EG","coord":{"lon":31.244249,"lat":30.714199}}
+{"_id":347236,"name":"Toukh","country":"EG","coord":{"lon":31.20071,"lat":30.353939}}
+{"_id":347542,"name":"Tamiyah","country":"EG","coord":{"lon":30.961189,"lat":29.476391}}
+{"_id":347634,"name":"Tahta","country":"EG","coord":{"lon":31.50214,"lat":26.7693}}
+{"_id":347749,"name":"Sumusta as Sultani","country":"EG","coord":{"lon":30.85,"lat":28.91667}}
+{"_id":348112,"name":"Sidi Salim","country":"EG","coord":{"lon":30.78665,"lat":31.271049}}
+{"_id":349114,"name":"Shirbin","country":"EG","coord":{"lon":31.521271,"lat":31.19544}}
+{"_id":349156,"name":"Shibin al Qanatir","country":"EG","coord":{"lon":31.320181,"lat":30.312691}}
+{"_id":349715,"name":"Samannud","country":"EG","coord":{"lon":31.24332,"lat":30.960329}}
+{"_id":349717,"name":"Samalut","country":"EG","coord":{"lon":30.71007,"lat":28.31214}}
+{"_id":350370,"name":"Quwaysina","country":"EG","coord":{"lon":31.15777,"lat":30.564819}}
+{"_id":350376,"name":"Qutur","country":"EG","coord":{"lon":30.956141,"lat":30.97225}}
+{"_id":350422,"name":"Kousa","country":"EG","coord":{"lon":32.763618,"lat":25.91407}}
+{"_id":352344,"name":"Minyat an Nasr","country":"EG","coord":{"lon":31.6399,"lat":31.12294}}
+{"_id":352354,"name":"Minuf","country":"EG","coord":{"lon":30.931641,"lat":30.46579}}
+{"_id":352628,"name":"Matay","country":"EG","coord":{"lon":30.77924,"lat":28.418989}}
+{"_id":352679,"name":"Mashtul as Suq","country":"EG","coord":{"lon":31.3776,"lat":30.360559}}
+{"_id":352913,"name":"Manfalut","country":"EG","coord":{"lon":30.970039,"lat":27.3104}}
+{"_id":353219,"name":"Madinat Sittah Uktubar","country":"EG","coord":{"lon":31.049999,"lat":29.816669}}
+{"_id":353828,"name":"Kawm Hamadah","country":"EG","coord":{"lon":30.69733,"lat":30.76096}}
+{"_id":354105,"name":"Kafr Saqr","country":"EG","coord":{"lon":31.62575,"lat":30.79336}}
+{"_id":354502,"name":"Kafr ash Shaykh","country":"EG","coord":{"lon":30.940121,"lat":31.1143}}
+{"_id":354775,"name":"Kafr ad Dawwar","country":"EG","coord":{"lon":30.128429,"lat":31.13385}}
+{"_id":354981,"name":"Juhaynah","country":"EG","coord":{"lon":31.497601,"lat":26.673189}}
+{"_id":355392,"name":"Izbat al Burj","country":"EG","coord":{"lon":31.841061,"lat":31.5084}}
+{"_id":355420,"name":"Itsa","country":"EG","coord":{"lon":30.78944,"lat":29.2376}}
+{"_id":355648,"name":"Ibshaway","country":"EG","coord":{"lon":30.681419,"lat":29.35804}}
+{"_id":355939,"name":"Hihya","country":"EG","coord":{"lon":31.588011,"lat":30.671301}}
+{"_id":356000,"name":"Hawsh Isa","country":"EG","coord":{"lon":30.29018,"lat":30.9128}}
+{"_id":356806,"name":"Fuwah","country":"EG","coord":{"lon":30.55018,"lat":31.202909}}
+{"_id":358600,"name":"Bush","country":"EG","coord":{"lon":31.127331,"lat":29.148161}}
+{"_id":358821,"name":"Bilqas Qism Awwal","country":"EG","coord":{"lon":31.357981,"lat":31.21452}}
+{"_id":359953,"name":"Ash Shuhada","country":"EG","coord":{"lon":30.89875,"lat":30.59618}}
+{"_id":360526,"name":"Al Qusiyah","country":"EG","coord":{"lon":30.818411,"lat":27.440201}}
+{"_id":360686,"name":"Al Minya","country":"EG","coord":{"lon":30.750299,"lat":28.10988}}
+{"_id":360716,"name":"Al Matariyah","country":"EG","coord":{"lon":32.031078,"lat":31.182871}}
+{"_id":360773,"name":"Al Manshah","country":"EG","coord":{"lon":31.803499,"lat":26.47686}}
+{"_id":361029,"name":"Al Jamaliyah","country":"EG","coord":{"lon":31.865179,"lat":31.180861}}
+{"_id":361213,"name":"Al Hamul","country":"EG","coord":{"lon":31.147659,"lat":31.31146}}
+{"_id":6692512,"name":"El Gouna","country":"EG","coord":{"lon":33.678249,"lat":27.394171}}
+{"_id":6692518,"name":"Makadi Bay","country":"EG","coord":{"lon":33.899521,"lat":26.99123}}
+{"_id":357994,"name":"Arab Republic of Egypt","country":"EG","coord":{"lon":30,"lat":27}}
+{"_id":360688,"name":"Muḩāfaz̧at al Minyā","country":"EG","coord":{"lon":30,"lat":28.1}}
+{"_id":432887,"name":"Al Amal (Nimrah Thamāniyah)","country":"EG","coord":{"lon":30.603649,"lat":28.1054}}
+{"_id":361323,"name":"Muḩāfaz̧at al Fayyūm","country":"EG","coord":{"lon":30.5,"lat":29.299999}}
+{"_id":359416,"name":"Bāhā","country":"EG","coord":{"lon":31.012251,"lat":29.139429}}
+{"_id":361056,"name":"Muḩāfaz̧at al Ismā�?īlīyah","country":"EG","coord":{"lon":32.400002,"lat":30.6}}
+{"_id":349598,"name":"Sarābiyūm","country":"EG","coord":{"lon":32.291111,"lat":30.375561}}
+{"_id":361370,"name":"Muḩāfaz̧at al Buḩayrah","country":"EG","coord":{"lon":30.200001,"lat":30.6}}
+{"_id":408911,"name":"Al Wiḩdah","country":"EG","coord":{"lon":30.07633,"lat":30.581699}}
+{"_id":357678,"name":"�?Izbat Abū �?Aţwah","country":"EG","coord":{"lon":32.260559,"lat":30.5644}}
+{"_id":358448,"name":"Damanhur","country":"EG","coord":{"lon":30.469139,"lat":31.039169}}
+{"_id":355182,"name":"Muḩāfaz̧at Janūb Sīnā’","country":"EG","coord":{"lon":33.799999,"lat":29}}
+{"_id":349340,"name":"Sharm ash Shaykh","country":"EG","coord":{"lon":34.304989,"lat":27.85183}}
+{"_id":360631,"name":"Muḩāfaz̧at al Qāhirah","country":"EG","coord":{"lon":31.65,"lat":30.049999}}
+{"_id":7922173,"name":"Al �?Atabah","country":"EG","coord":{"lon":31.251961,"lat":30.050699}}
+{"_id":361059,"name":"Muḩāfaz̧at al Iskandarīyah","country":"EG","coord":{"lon":29.75,"lat":31}}
+{"_id":361058,"name":"Alexandria","country":"EG","coord":{"lon":29.955271,"lat":31.215639}}
+{"_id":360015,"name":"Ash Shāţibī","country":"EG","coord":{"lon":29.91667,"lat":31.200001}}
+{"_id":361320,"name":"Al Fayyum","country":"EG","coord":{"lon":30.841801,"lat":29.30995}}
+{"_id":361294,"name":"Muḩāfaz̧at al Gharbīyah","country":"EG","coord":{"lon":31,"lat":30.9}}
+{"_id":347497,"name":"Tanda","country":"EG","coord":{"lon":31.001921,"lat":30.788469}}
+{"_id":361468,"name":"Muḩāfaz̧at al Baḩr al Aḩmar","country":"EG","coord":{"lon":33.788448,"lat":27.186239}}
+{"_id":6692521,"name":"Port el Ghalib","country":"EG","coord":{"lon":33.82682,"lat":27.25425}}
+{"_id":354365,"name":"Kafr az Zayyat","country":"EG","coord":{"lon":30.81805,"lat":30.8248}}
+{"_id":360016,"name":"Muḩāfaz̧at ash Sharqīyah","country":"EG","coord":{"lon":31.799999,"lat":30.700001}}
+{"_id":359493,"name":"Az Zaqaziq","country":"EG","coord":{"lon":31.502001,"lat":30.587681}}
+{"_id":360621,"name":"Muḩāfaz̧at al Qalyūbīyah","country":"EG","coord":{"lon":31.25,"lat":30.299999}}
+{"_id":351022,"name":"Nişf Atrīb","country":"EG","coord":{"lon":31.183331,"lat":30.466669}}
+{"_id":350546,"name":"Muḩāfaz̧at Qinā","country":"EG","coord":{"lon":32.75,"lat":25.799999}}
+{"_id":350550,"name":"Qina","country":"EG","coord":{"lon":32.726711,"lat":26.164181}}
+{"_id":357542,"name":"�?Ezbet el-Auqât","country":"EG","coord":{"lon":31.30526,"lat":29.865339}}
+{"_id":359781,"name":"Muḩāfaz̧at Asyūţ","country":"EG","coord":{"lon":31.1,"lat":27.200001}}
+{"_id":359783,"name":"Asyut","country":"EG","coord":{"lon":31.18368,"lat":27.18096}}
+{"_id":347794,"name":"Muḩāfaz̧at Sūhāj","country":"EG","coord":{"lon":31.700001,"lat":26.5}}
+{"_id":347796,"name":"Suhaj","country":"EG","coord":{"lon":31.69478,"lat":26.55695}}
+{"_id":358044,"name":"Muḩāfaz̧at Dumyāţ","country":"EG","coord":{"lon":31.75,"lat":31.35}}
+{"_id":358048,"name":"Damietta","country":"EG","coord":{"lon":31.81332,"lat":31.416479}}
+{"_id":359787,"name":"Muḩāfaz̧at Aswān","country":"EG","coord":{"lon":32.900002,"lat":23.299999}}
+{"_id":359792,"name":"Aswan","country":"EG","coord":{"lon":32.90704,"lat":24.09343}}
+{"_id":358617,"name":"Muḩāfaz̧at Būr Sa�?īd","country":"EG","coord":{"lon":32.299999,"lat":31.1}}
+{"_id":412814,"name":"Syria","country":"EG","coord":{"lon":32.299999,"lat":31.26667}}
+{"_id":351483,"name":"Naj�? al Khuţbah","country":"EG","coord":{"lon":32.633331,"lat":25.683331}}
+{"_id":361849,"name":"Muḩāfaz̧at ad Daqahlīyah","country":"EG","coord":{"lon":31.6,"lat":31.1}}
+{"_id":347591,"name":"Talkha","country":"EG","coord":{"lon":31.377871,"lat":31.0539}}
+{"_id":349852,"name":"Sāḩil Ţahţā","country":"EG","coord":{"lon":31.5,"lat":26.76667}}
+{"_id":359212,"name":"Bani Mazar","country":"EG","coord":{"lon":30.8004,"lat":28.503599}}
+{"_id":359171,"name":"Muḩāfaz̧at Banī Suwayf","country":"EG","coord":{"lon":30.6,"lat":28.9}}
+{"_id":361024,"name":"Al Janādilah","country":"EG","coord":{"lon":31.08333,"lat":29.066669}}
+{"_id":360829,"name":"Al Mahallah al Kubra","country":"EG","coord":{"lon":31.164989,"lat":30.974501}}
+{"_id":360689,"name":"Muḩāfaz̧at al Minūfīyah","country":"EG","coord":{"lon":31,"lat":30.5}}
+{"_id":347612,"name":"Tala","country":"EG","coord":{"lon":30.942921,"lat":30.68025}}
+{"_id":353223,"name":"Madīnat as Sādāt","country":"EG","coord":{"lon":30.508711,"lat":30.36742}}
+{"_id":362004,"name":"Abu Tij","country":"EG","coord":{"lon":31.31897,"lat":27.044109}}
+{"_id":7916170,"name":"Masākin al Akhshāb wa ash Shāy","country":"EG","coord":{"lon":31.23937,"lat":30.125549}}
+{"_id":354076,"name":"Kafr Shukr","country":"EG","coord":{"lon":31.24444,"lat":30.549721}}
+{"_id":358620,"name":"Bur Safajah","country":"EG","coord":{"lon":33.936508,"lat":26.729179}}
+{"_id":349158,"name":"Shibin al Kawm","country":"EG","coord":{"lon":31.009041,"lat":30.55258}}
+{"_id":352951,"name":"Mallawi","country":"EG","coord":{"lon":30.84165,"lat":27.7314}}
+{"_id":360761,"name":"Al Mansurah","country":"EG","coord":{"lon":31.38069,"lat":31.036369}}
+{"_id":362610,"name":"Abū Ḩammād al Maḩaţţah","country":"EG","coord":{"lon":31.66667,"lat":30.533331}}
+{"_id":355628,"name":"Idku","country":"EG","coord":{"lon":30.299009,"lat":31.307819}}
+{"_id":350203,"name":"Rosetta","country":"EG","coord":{"lon":30.416389,"lat":31.40444}}
+{"_id":351434,"name":"Naj Hammadi","country":"EG","coord":{"lon":32.241421,"lat":26.04949}}
+{"_id":355026,"name":"Jirja","country":"EG","coord":{"lon":31.891609,"lat":26.338261}}
+{"_id":360997,"name":"Muḩāfaz̧at al Jīzah","country":"EG","coord":{"lon":31.05286,"lat":29.997761}}
+{"_id":359900,"name":"As Saff","country":"EG","coord":{"lon":31.281111,"lat":29.56472}}
+{"_id":358840,"name":"Bilbays","country":"EG","coord":{"lon":31.562229,"lat":30.420389}}
+{"_id":346315,"name":"Wāsiţ","country":"EG","coord":{"lon":34.67083,"lat":29.029169}}
+{"_id":353802,"name":"Kawm Umbu","country":"EG","coord":{"lon":32.946259,"lat":24.47669}}
+{"_id":355015,"name":"Jizayy","country":"EG","coord":{"lon":30.84684,"lat":30.463051}}
+{"_id":354500,"name":"Muḩāfaz̧at Kafr ash Shaykh","country":"EG","coord":{"lon":30.9,"lat":31.299999}}
+{"_id":359304,"name":"Balṭîm","country":"EG","coord":{"lon":31.09094,"lat":31.55463}}
+{"_id":411165,"name":"Idfu","country":"EG","coord":{"lon":32.874722,"lat":24.98028}}
+{"_id":352603,"name":"Muḩāfaz̧at Maţrūḩ","country":"EG","coord":{"lon":27.5,"lat":29.700001}}
+{"_id":352733,"name":"Marsa Matruh","country":"EG","coord":{"lon":27.245279,"lat":31.352539}}
+{"_id":7522531,"name":"testing","country":"EG","coord":{"lon":31.40551,"lat":30.12191}}
+{"_id":359927,"name":"Aşlān","country":"EG","coord":{"lon":31.04417,"lat":29.48028}}
+{"_id":355005,"name":"Al Jubayl","country":"EG","coord":{"lon":33.631371,"lat":28.1984}}
+{"_id":351388,"name":"Naj�? Tinjār","country":"EG","coord":{"lon":32.866669,"lat":24}}
+{"_id":7280514,"name":"Naama","country":"EG","coord":{"lon":34.329529,"lat":27.913811}}
+{"_id":414338,"name":"�?Uqrat Şafḩah","country":"EG","coord":{"lon":33.87167,"lat":28.664721}}
+{"_id":410366,"name":"Al Manākh","country":"EG","coord":{"lon":32.27438,"lat":31.26573}}
+{"_id":361133,"name":"Al Ḩubayl","country":"EG","coord":{"lon":32.666672,"lat":25.66667}}
+{"_id":361291,"name":"Al Ghardaqah","country":"EG","coord":{"lon":33.812908,"lat":27.25738}}
+{"_id":362041,"name":"Abu Sunbul","country":"EG","coord":{"lon":31.61624,"lat":22.345699}}
+{"_id":358333,"name":"Dawwār Abū al �?Āşī","country":"EG","coord":{"lon":29.683331,"lat":30.9}}
+{"_id":415505,"name":"�?Izbat Nādī aş Şayd","country":"EG","coord":{"lon":29.936859,"lat":31.17889}}
+{"_id":359256,"name":"Banī Ghālib","country":"EG","coord":{"lon":31.049351,"lat":27.198879}}
+{"_id":349401,"name":"Muḩāfaz̧at Shamāl Sīnā’","country":"EG","coord":{"lon":33.700001,"lat":30.5}}
+{"_id":357790,"name":"El-Qushlâqât","country":"EG","coord":{"lon":33.816669,"lat":31.133329}}
+{"_id":355449,"name":"Isna","country":"EG","coord":{"lon":32.55402,"lat":25.29336}}
+{"_id":358619,"name":"Port Said","country":"EG","coord":{"lon":32.284119,"lat":31.25654}}
+{"_id":359796,"name":"Suez","country":"EG","coord":{"lon":32.526272,"lat":29.973709}}
+{"_id":360502,"name":"Luxor","country":"EG","coord":{"lon":32.642101,"lat":25.698931}}
+{"_id":360630,"name":"Cairo","country":"EG","coord":{"lon":31.24967,"lat":30.06263}}
+{"_id":361055,"name":"Ismailia","country":"EG","coord":{"lon":32.272251,"lat":30.604271}}
+{"_id":347863,"name":"Siwah","country":"EG","coord":{"lon":25.51952,"lat":29.20409}}
+{"_id":360483,"name":"Muḩāfaz̧at al Wādī al Jadīd","country":"EG","coord":{"lon":28.9,"lat":24.799999}}
+{"_id":350661,"name":"Qasr al Farafirah","country":"EG","coord":{"lon":27.96979,"lat":27.056801}}
+{"_id":350893,"name":"Nuwaybia","country":"EG","coord":{"lon":34.663399,"lat":29.04681}}
+{"_id":352736,"name":"Marsa Alam","country":"EG","coord":{"lon":34.891811,"lat":25.075729}}
+{"_id":358245,"name":"Dhahab","country":"EG","coord":{"lon":34.513378,"lat":28.50098}}
+{"_id":360923,"name":"Al Kharijah","country":"EG","coord":{"lon":30.54635,"lat":25.451401}}
+{"_id":361612,"name":"Al Alamayn","country":"EG","coord":{"lon":28.955021,"lat":30.83007}}

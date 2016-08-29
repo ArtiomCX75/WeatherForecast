@@ -1,0 +1,80 @@
+{"_id":2208655,"name":"Zaltan","country":"LY","coord":{"lon":11.86647,"lat":32.94701}}
+{"_id":2214845,"name":"Sha�?bīyat Mişrātah","country":"LY","coord":{"lon":14.41667,"lat":31.41667}}
+{"_id":7602693,"name":"Sha�?bīyat Wādī al Ḩayāt","country":"LY","coord":{"lon":12.85,"lat":26.549999}}
+{"_id":88380,"name":"Az Zuwaytinah","country":"LY","coord":{"lon":20.12022,"lat":30.9522}}
+{"_id":88834,"name":"Al Aquriyah","country":"LY","coord":{"lon":20.579109,"lat":32.534142}}
+{"_id":88904,"name":"Sha�?bīyat al Marj","country":"LY","coord":{"lon":21.316669,"lat":31.933331}}
+{"_id":89087,"name":"Al Abyar","country":"LY","coord":{"lon":20.596531,"lat":32.189999}}
+{"_id":7602692,"name":"Sha�?bīyat al Wāḩāt","country":"LY","coord":{"lon":21.200001,"lat":28.933331}}
+{"_id":2593778,"name":"Sha�?bīyat an Nuqāţ al Khams","country":"LY","coord":{"lon":11.81667,"lat":32.716671}}
+{"_id":2208425,"name":"Zuwarah","country":"LY","coord":{"lon":12.08199,"lat":32.931198}}
+{"_id":2208485,"name":"Zlitan","country":"LY","coord":{"lon":14.56874,"lat":32.467381}}
+{"_id":2208791,"name":"Yafran","country":"LY","coord":{"lon":12.52859,"lat":32.06329}}
+{"_id":2209055,"name":"Waddan","country":"LY","coord":{"lon":16.13904,"lat":29.1614}}
+{"_id":7602691,"name":"Sha�?bīyat al Marqab","country":"LY","coord":{"lon":14,"lat":32.5}}
+{"_id":2210221,"name":"Tarhuna","country":"LY","coord":{"lon":13.6332,"lat":32.43502}}
+{"_id":2210245,"name":"Sha�?bīyat Ţarābulus","country":"LY","coord":{"lon":13.18472,"lat":32.889721}}
+{"_id":2210394,"name":"Tagiura","country":"LY","coord":{"lon":13.35056,"lat":32.881672}}
+{"_id":2210560,"name":"Surman","country":"LY","coord":{"lon":12.57159,"lat":32.75668}}
+{"_id":2212771,"name":"Sabratah","country":"LY","coord":{"lon":12.48845,"lat":32.79335}}
+{"_id":2214433,"name":"Nalut","country":"LY","coord":{"lon":10.9812,"lat":31.868481}}
+{"_id":2214827,"name":"Mizdah","country":"LY","coord":{"lon":12.98013,"lat":31.445141}}
+{"_id":2215163,"name":"Masallatah","country":"LY","coord":{"lon":14,"lat":32.616669}}
+{"_id":2216885,"name":"Zawiya","country":"LY","coord":{"lon":12.72778,"lat":32.75222}}
+{"_id":7602689,"name":"Sha�?bīyat al Jabal al Gharbī","country":"LY","coord":{"lon":13,"lat":30.46666}}
+{"_id":2217362,"name":"Gharyan","country":"LY","coord":{"lon":13.02028,"lat":32.172218}}
+{"_id":2218478,"name":"Birak","country":"LY","coord":{"lon":14.27138,"lat":27.549561}}
+{"_id":2218840,"name":"Bani Walid","country":"LY","coord":{"lon":13.99422,"lat":31.75662}}
+{"_id":2219235,"name":"Awbari","country":"LY","coord":{"lon":12.78049,"lat":26.59206}}
+{"_id":2219905,"name":"Al Khums","country":"LY","coord":{"lon":14.26191,"lat":32.648609}}
+{"_id":2219960,"name":"Al Jadid","country":"LY","coord":{"lon":14.4,"lat":27.049999}}
+{"_id":2220082,"name":"Al Fuqahā’","country":"LY","coord":{"lon":16.38492,"lat":27.833731}}
+{"_id":81604,"name":"Suluq","country":"LY","coord":{"lon":20.25205,"lat":31.66818}}
+{"_id":88562,"name":"At Taj","country":"LY","coord":{"lon":23.2857,"lat":24.20487}}
+{"_id":88835,"name":"Al Qubbah","country":"LY","coord":{"lon":22.242371,"lat":32.76162}}
+{"_id":2218972,"name":"Sha�?bīyat az Zāwiyah","country":"LY","coord":{"lon":12.58333,"lat":32.666672}}
+{"_id":2218963,"name":"Az Zintan","country":"LY","coord":{"lon":12.25195,"lat":31.92231}}
+{"_id":2215636,"name":"Libya","country":"LY","coord":{"lon":17,"lat":25}}
+{"_id":2212774,"name":"Sha�?bīyat Sabhā","country":"LY","coord":{"lon":15.01664,"lat":27.183319}}
+{"_id":2212775,"name":"Sabha","country":"LY","coord":{"lon":14.42832,"lat":27.037661}}
+{"_id":2214812,"name":"Mu�?askar Jālū","country":"LY","coord":{"lon":13.16667,"lat":32.866669}}
+{"_id":2214813,"name":"Bāb al �?Azīzīyah","country":"LY","coord":{"lon":13.175,"lat":32.875}}
+{"_id":88319,"name":"Benghazi","country":"LY","coord":{"lon":20.066669,"lat":32.116669}}
+{"_id":88823,"name":"Al �?Urūbah","country":"LY","coord":{"lon":20.066669,"lat":32.116669}}
+{"_id":87204,"name":"Sha�?bīyat Darnah","country":"LY","coord":{"lon":22.533331,"lat":32.049999}}
+{"_id":87205,"name":"Darnah","country":"LY","coord":{"lon":22.63669,"lat":32.76704}}
+{"_id":2210553,"name":"Sha�?bīyat Surt","country":"LY","coord":{"lon":16.5,"lat":30.33333}}
+{"_id":2210554,"name":"Surt","country":"LY","coord":{"lon":16.588659,"lat":31.20892}}
+{"_id":443289,"name":"Sha�?bīyat al Jabal al Akhḑar","country":"LY","coord":{"lon":21.75,"lat":32.200001}}
+{"_id":89055,"name":"Al Bayda","country":"LY","coord":{"lon":21.75506,"lat":32.762718}}
+{"_id":7602688,"name":"Sha�?bīyat al Buţnān","country":"LY","coord":{"lon":24.16667,"lat":30.23333}}
+{"_id":81302,"name":"Tobruk","country":"LY","coord":{"lon":23.976391,"lat":32.083611}}
+{"_id":2214432,"name":"Sha�?bīyat Nālūt","country":"LY","coord":{"lon":10.85,"lat":30.33333}}
+{"_id":2217440,"name":"Ghadamis","country":"LY","coord":{"lon":9.50072,"lat":30.133659}}
+{"_id":2219944,"name":"Sha�?bīyat al Jufrah","country":"LY","coord":{"lon":17.41667,"lat":28}}
+{"_id":2216645,"name":"Hun","country":"LY","coord":{"lon":15.94772,"lat":29.126841}}
+{"_id":2218587,"name":"Bin Ghashīr","country":"LY","coord":{"lon":13.17389,"lat":32.687778}}
+{"_id":2216746,"name":"Ḩijārah","country":"LY","coord":{"lon":14.45642,"lat":27.023001}}
+{"_id":88603,"name":"Aş Şafşaf","country":"LY","coord":{"lon":21.94923,"lat":32.777458}}
+{"_id":2214234,"name":"Qabīlat Awlād Dhiyāb","country":"LY","coord":{"lon":13.27083,"lat":32.902222}}
+{"_id":85820,"name":"Kamb al �?Ajjāj","country":"LY","coord":{"lon":20.25659,"lat":32.097271}}
+{"_id":88962,"name":"Al Jawf","country":"LY","coord":{"lon":23.29093,"lat":24.1989}}
+{"_id":2217350,"name":"Sha�?bīyat Ghāt","country":"LY","coord":{"lon":10.33333,"lat":26.1}}
+{"_id":2217351,"name":"Ghat","country":"LY","coord":{"lon":10.17278,"lat":24.96472}}
+{"_id":2214602,"name":"Sha�?bīyat Murzuq","country":"LY","coord":{"lon":15.48333,"lat":25.183331}}
+{"_id":2214603,"name":"Murzuq","country":"LY","coord":{"lon":13.91839,"lat":25.91552}}
+{"_id":88635,"name":"Ash Shawāshinah","country":"LY","coord":{"lon":21.29417,"lat":29.171671}}
+{"_id":88903,"name":"Al Marj","country":"LY","coord":{"lon":20.831739,"lat":32.48798}}
+{"_id":89113,"name":"Ajdabiya","country":"LY","coord":{"lon":20.226259,"lat":30.755449}}
+{"_id":2210247,"name":"Tripoli","country":"LY","coord":{"lon":13.18746,"lat":32.875191}}
+{"_id":2214846,"name":"Misratah","country":"LY","coord":{"lon":15.09254,"lat":32.375351}}
+{"_id":80509,"name":"Bardiyah","country":"LY","coord":{"lon":25.086531,"lat":31.756149}}
+{"_id":86049,"name":"Gialo","country":"LY","coord":{"lon":21.549999,"lat":29.033331}}
+{"_id":88533,"name":"Awjilah","country":"LY","coord":{"lon":21.28694,"lat":29.108061}}
+{"_id":88930,"name":"Al Kufrah","country":"LY","coord":{"lon":23.269621,"lat":24.16667}}
+{"_id":88967,"name":"Al Jaghbub","country":"LY","coord":{"lon":24.51676,"lat":29.74262}}
+{"_id":2215210,"name":"Al Burayqah","country":"LY","coord":{"lon":19.57386,"lat":30.40624}}
+{"_id":2216432,"name":"Giado","country":"LY","coord":{"lon":12.02034,"lat":31.958151}}
+{"_id":2218970,"name":"Az Zawiyah","country":"LY","coord":{"lon":12.72764,"lat":32.757099}}
+{"_id":2220139,"name":"Al Aziziyah","country":"LY","coord":{"lon":13.0175,"lat":32.53194}}
+{"_id":2220309,"name":"Idri","country":"LY","coord":{"lon":13.26667,"lat":27.5}}

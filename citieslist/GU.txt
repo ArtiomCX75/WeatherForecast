@@ -1,0 +1,49 @@
+{"_id":4038796,"name":"Yigo Municipality","country":"GU","coord":{"lon":144.88913,"lat":13.53603}}
+{"_id":7267913,"name":"Andersen AFB Housing Areas","country":"GU","coord":{"lon":144.922318,"lat":13.55691}}
+{"_id":4038661,"name":"Tamuning-Tumon-Harmon Municipality","country":"GU","coord":{"lon":144.780945,"lat":13.48759}}
+{"_id":4041694,"name":"Perezville","country":"GU","coord":{"lon":144.778778,"lat":13.50403}}
+{"_id":4038659,"name":"Tamuning-Tumon-Harmon Village","country":"GU","coord":{"lon":144.781387,"lat":13.48773}}
+{"_id":4038794,"name":"Yigo Village","country":"GU","coord":{"lon":144.88855,"lat":13.53605}}
+{"_id":4044019,"name":"Hagåtña Municipality","country":"GU","coord":{"lon":144.757874,"lat":13.47279}}
+{"_id":4043547,"name":"Guam Government House","country":"GU","coord":{"lon":144.749786,"lat":13.47191}}
+{"_id":4043877,"name":"Dededo Municipality","country":"GU","coord":{"lon":144.838974,"lat":13.51776}}
+{"_id":4043909,"name":"Dededo Village","country":"GU","coord":{"lon":144.839096,"lat":13.51777}}
+{"_id":7268049,"name":"Mangilao Village","country":"GU","coord":{"lon":144.801086,"lat":13.44761}}
+{"_id":4043988,"name":"Guam","country":"GU","coord":{"lon":144.731506,"lat":13.481}}
+{"_id":4038652,"name":"Talofofo Municipality","country":"GU","coord":{"lon":144.758804,"lat":13.35522}}
+{"_id":4038813,"name":"Ypan","country":"GU","coord":{"lon":144.768723,"lat":13.35363}}
+{"_id":4043416,"name":"Mangilao Municipality","country":"GU","coord":{"lon":144.800705,"lat":13.44766}}
+{"_id":7871084,"name":"Tai","country":"GU","coord":{"lon":144.791245,"lat":13.4417}}
+{"_id":4038597,"name":"Socio","country":"GU","coord":{"lon":144.789886,"lat":13.48946}}
+{"_id":4044012,"name":"Hagatna","country":"GU","coord":{"lon":144.748856,"lat":13.47567}}
+{"_id":4038473,"name":"Piti Village","country":"GU","coord":{"lon":144.693314,"lat":13.46256}}
+{"_id":4038554,"name":"Santa Rita Village","country":"GU","coord":{"lon":144.672256,"lat":13.38608}}
+{"_id":4038588,"name":"Sinajana Village","country":"GU","coord":{"lon":144.754059,"lat":13.46334}}
+{"_id":4038647,"name":"Talofofo Village","country":"GU","coord":{"lon":144.758347,"lat":13.35513}}
+{"_id":4038809,"name":"Yona Village","country":"GU","coord":{"lon":144.776978,"lat":13.40974}}
+{"_id":4043399,"name":"Merizo Village","country":"GU","coord":{"lon":144.669083,"lat":13.26584}}
+{"_id":4043499,"name":"Inarajan Village","country":"GU","coord":{"lon":144.748444,"lat":13.27363}}
+{"_id":4043525,"name":"Agana Heights Village","country":"GU","coord":{"lon":144.747955,"lat":13.46559}}
+{"_id":4043615,"name":"Chalan Pago-Ordot Village","country":"GU","coord":{"lon":144.759018,"lat":13.44741}}
+{"_id":4043656,"name":"Barrigada Village","country":"GU","coord":{"lon":144.799011,"lat":13.46913}}
+{"_id":4043804,"name":"Agat Village","country":"GU","coord":{"lon":144.658524,"lat":13.38855}}
+{"_id":4043812,"name":"Asan-Maina Village","country":"GU","coord":{"lon":144.716537,"lat":13.47215}}
+{"_id":4044121,"name":"Mangilao Mayors Office","country":"GU","coord":{"lon":144.801437,"lat":13.44689}}
+{"_id":7267954,"name":"Sinajana Mayors Office","country":"GU","coord":{"lon":144.754608,"lat":13.46274}}
+{"_id":7267962,"name":"Umatac Mayors Office","country":"GU","coord":{"lon":144.6633,"lat":13.29851}}
+{"_id":7840191,"name":"Dededo Mayors Office","country":"GU","coord":{"lon":144.839127,"lat":13.51744}}
+{"_id":7854557,"name":"Yona Mayors Office","country":"GU","coord":{"lon":144.775436,"lat":13.40983}}
+{"_id":7869842,"name":"Talofofo Mayors Office","country":"GU","coord":{"lon":144.75589,"lat":13.3548}}
+{"_id":7869850,"name":"Merizo Mayors Office","country":"GU","coord":{"lon":144.6745,"lat":13.27126}}
+{"_id":7869852,"name":"Asan-Maina Mayors Office","country":"GU","coord":{"lon":144.716568,"lat":13.47188}}
+{"_id":7870492,"name":"Inarajan Mayors Office","country":"GU","coord":{"lon":144.76207,"lat":13.29987}}
+{"_id":7870639,"name":"Agat Mayors Office","country":"GU","coord":{"lon":144.659286,"lat":13.38801}}
+{"_id":7871342,"name":"Yigo Mayors Office","country":"GU","coord":{"lon":144.893097,"lat":13.53565}}
+{"_id":7871406,"name":"Barrigada Mayors Office","country":"GU","coord":{"lon":144.799606,"lat":13.46912}}
+{"_id":7871474,"name":"Tamuning-Tumon-Harmon Mayors Office","country":"GU","coord":{"lon":144.780777,"lat":13.48715}}
+{"_id":7873865,"name":"Mongmong-Toto-Maite Mayors Office","country":"GU","coord":{"lon":144.782181,"lat":13.46796}}
+{"_id":7873866,"name":"Mongmong-Toto-Maite Village","country":"GU","coord":{"lon":144.782135,"lat":13.46857}}
+{"_id":7873868,"name":"Hagatna Mayors Office","country":"GU","coord":{"lon":144.758026,"lat":13.47215}}
+{"_id":7873952,"name":"Agana Heights Mayors Office","country":"GU","coord":{"lon":144.747574,"lat":13.46494}}
+{"_id":7874008,"name":"Hagatna Village","country":"GU","coord":{"lon":144.758026,"lat":13.47279}}
+{"_id":7874392,"name":"Chalan Pago-Ordot Mayors Office","country":"GU","coord":{"lon":144.758987,"lat":13.44682}}
