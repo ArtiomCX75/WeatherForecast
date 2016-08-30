@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="wd_v">
+        <item>"данных нет"</item>
+        <item>гроза с небольшим дождем</item>
+        <item>гроза с дождем</item>
+        <item>гроза с ливнемn</item>
+        <item>небольшая гроза</item>
+        <item>гроза</item>
+        <item>сильная гроза</item>
+        <item>гроза (ragged thunderstorm)</item>
+        <item>гроза с небольшой моросью</item>
+        <item>гроза с моросью</item>
+        <item>гроза с сильной моросью</item>
+        <item>небольшая морось</item>
+        <item>морось</item>
+        <item>сильная морось</item>
+        <item>небольшой моросящий дождь</item>
+        <item>моросящий дождь</item>
+        <item>сильный моросящий дождь</item>
+        <item>ливень и морось</item>
+        <item>сильный ливень и морось</item>
+        <item>сильный морось</item>
+        <item>небольшой дождь</item>
+        <item>умеренный дождь</item>
+        <item>сильный дождь</item>
+        <item>очень сильный дождь</item>
+        <item>экстримально сильный дождь</item>
+        <item>ледяной дождь</item>
+        <item>небольшой ливень</item>
+        <item>ливень</item>
+        <item>сильный ливень</item>
+        <item>ливень (ragged shower rain)</item>
+        <item>небольшой снег</item>
+        <item>снег</item>
+        <item>сильный снег</item>
+        <item>мокрый снег</item>
+        <item>сильный мокрый снег</item>
+        <item>небольшой дождь со снегом</item>
+        <item>дождь со снегом</item>
+        <item>небольшой снегопад</item>
+        <item>снегопад</item>
+        <item>сильный снегопад</item>
+        <item>дымка</item>
+        <item>дым</item>
+        <item>мгла</item>
+        <item>песчаная или пылевая буря</item>
+        <item>туман</item>
+        <item>sand</item>
+        <item>dust</item>
+        <item>вылканический пепел</item>
+        <item>шквалы</item>
+        <item>ясное небо</item>
+        <item>ясное небо</item>
+        <item>небольшая облачность</item>
+        <item>рассеянные облака</item>
+        <item>переменная облачность</item>
+        <item>пасмурно</item>
+        <item>торнадо</item>
+        <item>тропический шторм</item>
+        <item>ураган</item>
+        <item>прохладно</item>
+        <item>жарко</item>
+        <item>ветрено</item>
+        <item>град</item>
+        <item>затишье</item>
+        <item>легкий ветер</item>
+        <item>слабый ветер</item>
+        <item>умеренный ветер</item>
+        <item>свежий ветер</item>
+        <item>сильный ветер</item>
+        <item>сильный штормовой ветер</item>
+        <item>шторм</item>
+        <item>суровый шторм</item>
+        <item>буря</item>
+        <item>сильный шторм</item>
+        <!--weather main><-->
+        <item>облачно</item>
+        <item>ясно</item>
+        <item>дождь</item>
+    </array>
+</resources>

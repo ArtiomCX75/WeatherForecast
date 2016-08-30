@@ -1,5 +1,6 @@
 package com.faa1192.weatherforecast.Preferred;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -23,10 +24,12 @@ import com.faa1192.weatherforecast.Updatable;
 //Активити содержащее список городов добавленных в избранное
 public class PrefCitiesActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout swipeRefreshLayout;
+    public static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = getApplicationContext();
         Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.pull_for_refresh), Toast.LENGTH_SHORT).show();
         Toast.makeText(PrefCitiesActivity.this,  getResources().getString(R.string.hold_for_delete), Toast.LENGTH_SHORT).show();
         PrefCityDBHelper.init(getApplicationContext()).updateAllDataFromWeb();
