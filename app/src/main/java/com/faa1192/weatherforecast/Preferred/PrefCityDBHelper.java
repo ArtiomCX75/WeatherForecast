@@ -15,11 +15,16 @@ import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 import com.faa1192.weatherforecast.Weather.WeatherData;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 //хелпер для работы с базой городов добавленных в избранное
 public class PrefCityDBHelper extends SQLiteOpenHelper {
@@ -122,14 +127,11 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             String urlString = "http://api.openweathermap.org/data/2.5/weather?id=" + city[0].id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric";
             Log.e("my", "url:" + urlString);
             try {
-                URL url = new URL(urlString);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                inputStream = httpURLConnection.getInputStream();
-                byte data[] = new byte[500];
-                inputStream.read(data);
-                for (byte dataByte : data) {
-                    resultString += (char) dataByte;
-                }
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder().url(urlString).build();
+                Response response = client.newCall(request).execute();
+                BufferedReader br  = new BufferedReader(response.body().charStream());
+                resultString  = br.readLine();
                 success = true;
             } catch (Exception e) {
                 for (int i = 0; i < e.getStackTrace().length; i++) {

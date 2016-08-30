@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.AddCityActivity;
 import com.faa1192.weatherforecast.Cities.City;
+import com.faa1192.weatherforecast.Cities.CityDBHelper;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 
@@ -41,7 +42,7 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(R.string.favorites);
         actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange_dark)));
-        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fabpref);
         floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.orange_light)));
         floatingActionButton.setOnClickListener(addListener);
         floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
