@@ -13,10 +13,7 @@ import android.view.ViewGroup;
 import com.faa1192.weatherforecast.R;
 
 import java.util.ArrayList;
-
-/**
- * Created by faa11 on 30.08.2016.
- */
+//Фрагмент со списком стран
 public class CountriesListFragment extends Fragment {
     //   https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/move_citieslist_to_server/citieslist/list.txt
 

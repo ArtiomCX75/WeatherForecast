@@ -19,10 +19,10 @@ import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
-//адптер для recycler view в класса CitiesListFragment
+//адптер для recycler view класса CountriesListFragment
 public class CountryInListAdapter extends RecyclerView.Adapter<CountryInListAdapter.ViewHolder> {
-    protected final List<String> countriesList;
-    protected final Context context;
+    private final List<String> countriesList;
+    private final Context context;
 
     public CountryInListAdapter(List<String> countriesList, Context context) {
         this.countriesList = countriesList;

@@ -27,7 +27,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Cities.AddCityActivity" />
         </activity>
-        <activity android:name=".Countries.CountiesActivity">
+        <activity android:name=".Countries.CountriesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Cities.AddCityActivity" />

@@ -225,7 +225,7 @@ public class WeatherData {
         return windSpeed.isEmpty() ? hm.get(noData) : windSpeed;
     }
 
-    //Данные старые, если им больше часа. Сравнение со временем приходящим с сервера, а не со временем фактического получения данных
+    //Данные считаются старыми, если им больше часа. Сравнение со временем приходящим с сервера, а не со временем фактического получения данных
     public boolean isActualData() {
         Long curenttime = new Date().getTime() / 1000;
         //Log.e("my", "TIME:" + (curenttime - time) + ""); //fordebug

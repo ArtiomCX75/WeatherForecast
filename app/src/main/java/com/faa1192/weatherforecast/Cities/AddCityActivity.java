@@ -12,13 +12,13 @@ import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.faa1192.weatherforecast.Countries.CountiesActivity;
+import com.faa1192.weatherforecast.Countries.CountriesActivity;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 
 //Активити содержащее список всех городов
-public class AddCityActivity extends AppCompatActivity implements Updatable{
-    SearchView searchView;
+public class AddCityActivity extends AppCompatActivity implements Updatable {
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +46,8 @@ public class AddCityActivity extends AppCompatActivity implements Updatable{
         View.OnClickListener addListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(AddCityActivity.this,  getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), CountiesActivity.class);
+                Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), CountriesActivity.class);
                 startActivityForResult(intent, 1);
             }
         };
@@ -59,11 +59,11 @@ public class AddCityActivity extends AppCompatActivity implements Updatable{
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(resultCode!=-1)
+        if (resultCode != -1)
             return;
         String country = data.getStringExtra("country");
-        Toast.makeText(AddCityActivity.this,  getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
-       // Toast.makeText(AddCityActivity.this, "c: "+country, Toast.LENGTH_SHORT).show();
+        Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
+        // Toast.makeText(AddCityActivity.this, "c: "+country, Toast.LENGTH_SHORT).show();
         CityDBHelper.init(AddCityActivity.this).downloadCountry(country);
         //Toast.makeText(this, getResources().getString((R.string.added_city)) + city.name, Toast.LENGTH_SHORT).show();
 
