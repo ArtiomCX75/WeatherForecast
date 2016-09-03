@@ -40,6 +40,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
             String name = cursor.getString(1);
             cityList.add(new City(id, name));
         }
+        cursor.close();
         return cityList;
     }
 

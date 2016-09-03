@@ -19,10 +19,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/searchview_background"
-        android:elevation="14dp"
+        android:elevation="12dp"
         android:imeOptions="flagNoExtractUi"
         android:inputType="textCapWords"
-        android:queryHint="Введите название города" />
+        android:queryHint="Введите название города"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
 
     <fragment
         android:id="@+id/fragment_city_list"

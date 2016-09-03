@@ -47,7 +47,9 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     public City getCity(int id) {
         Cursor cursor = this.getWritableDatabase().query("PREFCITY", new String[]{"_id", "NAME", "DATA"}, "_id=" + id, null, null, null, null);
         cursor.moveToFirst();
-        return new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
+        City city =  new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
+        cursor.close();
+        return city;
     }
 
     //Получение списка городов из избранного
@@ -60,6 +62,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             WeatherData weatherData = new WeatherData(cursor.getString(2));
             cityList.add(new City(id, name, weatherData));
         }
+        cursor.close();
         return cityList;
     }
 
@@ -70,6 +73,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             City city = new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
             updateDataFromWeb(city);
         }
+        cursor.close();
     }
 
     //Загрузка данных о погоде с инета, если данные неактуальны

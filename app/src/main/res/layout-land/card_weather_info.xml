@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     card_view:cardBackgroundColor="@color/cardview_light_background"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="4dp"
-    tools:context=".Weather.WeatherInfoFragment">
+    tools:context=".Weather.WeatherInfoFragment"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="1dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="12dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:gravity="center"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,41 +46,41 @@
                     android:id="@+id/extra_city_humidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_pressure"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_temp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_sunrise"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_sunset"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -86,41 +93,41 @@
                     android:id="@+id/extra_city_wind_speed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_wind_deg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_weather_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_weather_main"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/extra_city_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
