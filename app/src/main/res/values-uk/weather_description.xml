@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="wd_v">
+                <item>"даних немає"</item>
+                <item>гроза з невеликим дощем</item>
+                <item>гроза з дощем</item>
+                <item>гроза з лівнем</item>
+                <item>невелика гроза</item>
+                <item>гроза</item>
+                <item>сильна гроза</item>
+                <item>гроза (ragged thunderstorm)</item>
+                <item>гроза з невеликою мрякою</item>
+                <item>гроза з мрякою</item>
+                <item>гроза з сильною мрякою</item>
+                <item>невелика мряка</item>
+                <item>мряка</item>
+                <item>сильна мряка</item>
+                <item>невеликий дрібний дощ</item>
+                <item>дрібний дощ</item>
+                <item>сильний дощ, що мрячить</item>
+                <item>злива і мряка</item>
+                <item>сильна злива і мряка</item>
+                <item>сильний мряка</item>
+                <item>невеликий дощ</item>
+                <item>помірний дощ</item>
+                <item>сильний дощ</item>
+                <item>дуже сильний дощ</item>
+                <item>екстримальний дощ</item>
+                <item>крижаний дощ</item>
+                <item>невелика злива</item>
+                <item>злива</item>
+                <item>сильна злива</item>
+                <item>злива (ragged shower rain)</item>
+                <item>невеликий сніг</item>
+                <item>сніг</item>
+                <item>сильний сніг</item>
+                <item>мокрий сніг</item>
+                <item>сильний мокрий сніг</item>
+                <item>невеликий дощ зі снігом</item>
+                <item>дощ зі снігом</item>
+                <item>невеликий снігопад</item>
+                <item>снігопад</item>
+                <item>сильний снігопад</item>
+                <item>димка</item>
+                <item>дим</item>
+                <item>імла</item>
+                <item>піщана або пилова буря</item>
+                <item>туман</item>
+                <item>sand</item>
+                <item>dust</item>
+                <item>вилканіческій попіл</item>
+                <item>шквали</item>
+                <item>ясне небо</item>
+                <item>ясне небо</item>
+                <item>невелика хмарність</item>
+                <item>розсіяні хмари</item>
+                <item>мінлива хмарність</item>
+                <item>похмуро</item>
+                <item>торнадо</item>
+                <item>тропічний шторм</item>
+                <item>ураган</item>
+                <item>прохолодно</item>
+                <item>жарко</item>
+                <item>вітряно</item>
+                <item>град</item>
+                <item>затишшя</item>
+                <item>легкий вітер</item>
+                <item>слабкий вітер</item>
+                <item>помірний вітер</item>
+                <item>свіжий вітер</item>
+                <item>сильний вітер</item>
+                <item>сильний штормовий вітер</item>
+                <item>шторм</item>
+                <item>суворий шторм</item>
+                <item>буря</item>
+                <item>сильний шторм</item>
+                <!--weather main><-->
+                <item>хмарно</item>
+                <item>ясно</item>
+                <item>дощ</item>
+            </array>
+</resources>
