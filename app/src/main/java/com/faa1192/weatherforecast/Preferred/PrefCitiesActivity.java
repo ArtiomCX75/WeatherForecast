@@ -39,6 +39,7 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
                 Toast.makeText(PrefCitiesActivity.this,  getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), AddCityActivity.class);
                 startActivityForResult(intent, 1);
+                overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
             }
         };
         ActionBar actionBar = getSupportActionBar();

@@ -47,6 +47,7 @@ public class CityWithTempAdapter extends CityInListAdapter {
                 City selectedCity = cityList.get(position);
                 intent.putExtras(selectedCity.toBundle());
                 context.startActivity(intent);
+                ((PrefCitiesActivity) context).overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
             }
         });
         cardView.findViewWithTag("lin_layout").setOnLongClickListener(new View.OnLongClickListener() {
