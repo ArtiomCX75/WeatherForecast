@@ -20,4 +20,7 @@
     <string name="weather_main">"Short description: "</string>
     <string name="actual_time">"Actual time: "</string>
     <string name="your_cities">"Your cities"</string>
+    <string name="adding_cities">"Download cities"</string>
+    <string name="choose_country">"Choose country"</string>
+    <string name="downloading">"Downloading (about 5 min)"</string>
 </resources>

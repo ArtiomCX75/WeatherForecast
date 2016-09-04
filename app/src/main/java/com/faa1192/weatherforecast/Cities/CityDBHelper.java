@@ -89,6 +89,17 @@ public class CityDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        super.onDowngrade(db, oldVersion, newVersion);
+        try {
+            db.execSQL("DROP TABLE " + TABLE_NAME);
+        } catch (SQLException e) {
+            Log.e("my", "sql exception. db doesn't exist");
+        }
+        onCreate(db);
+    }
+
     public void downloadCountry(String str) {
         CitiesOfCountry coc = new CitiesOfCountry();
         coc.execute(str);
@@ -109,7 +120,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
         protected Void doInBackground(String... strings) {
             success = false;
             countryName = strings[0];
-            String urlString = "https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/move_citieslist_to_server/citieslist/" + countryName + ".txt";
+            String urlString = "https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/" + countryName + ".txt";
             Log.e("my", "url:" + urlString);
             try {
                 OkHttpClient client = new OkHttpClient();

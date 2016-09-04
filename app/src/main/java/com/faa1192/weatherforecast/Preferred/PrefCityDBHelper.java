@@ -194,7 +194,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);");
         try {
-            ContentValues contentValues = new ContentValues();
+        /*    ContentValues contentValues = new ContentValues();
             contentValues.put("_id", 551487);
             contentValues.put("NAME", "Kazan");
             db.insert(TABLE_NAME, null, contentValues);
@@ -216,7 +216,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             contentValues = new ContentValues();
             contentValues.put("_id", 521118);
             contentValues.put("NAME", "Nizhnekamsk");
-            db.insert(TABLE_NAME, null, contentValues);
+            db.insert(TABLE_NAME, null, contentValues);*/
         } catch (SQLException e) {
             Log.e("my", "Error while creating table prefcity");
         }
@@ -224,6 +224,17 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+        try {
+            db.execSQL("DROP TABLE " + TABLE_NAME);
+        } catch (SQLException e) {
+            Log.e("my", "sql exception. db doesn't exist");
+        }
+        onCreate(db);
+    }
+
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        super.onDowngrade(db, oldVersion, newVersion);
         try {
             db.execSQL("DROP TABLE " + TABLE_NAME);
         } catch (SQLException e) {

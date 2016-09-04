@@ -59,6 +59,7 @@ public class CountryInListAdapter extends RecyclerView.Adapter<CountryInListAdap
                 Activity activity = (Activity) context;
                 activity.setResult(RESULT_OK, intent);
                 activity.finish();
+                ((CountriesActivity) context).overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
             }
         });
     }

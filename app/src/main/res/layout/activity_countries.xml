@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:background="@color/orange_light"
             android:gravity="center"
-            android:text="@string/your_cities"
+            android:text="@string/choose_country"
             android:textColor="@android:color/white" />
 
         <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"

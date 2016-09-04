@@ -60,4 +60,9 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         fragment.setInfo(PrefCityDBHelper.init(this).getCity(city.id));
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
+    }
 }

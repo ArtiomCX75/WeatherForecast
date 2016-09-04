@@ -51,6 +51,7 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
                 Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), CountriesActivity.class);
                 startActivityForResult(intent, 1);
+                overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
             }
         };
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fabcity);
@@ -64,11 +65,10 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
         if (resultCode != -1)
             return;
         String country = data.getStringExtra("country");
-        Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
+        Toast.makeText(AddCityActivity.this, getResources().getString(R.string.downloading), Toast.LENGTH_SHORT).show();
         // Toast.makeText(AddCityActivity.this, "c: "+country, Toast.LENGTH_SHORT).show();
         CityDBHelper.init(AddCityActivity.this).downloadCountry(country);
         //Toast.makeText(this, getResources().getString((R.string.added_city)) + city.name, Toast.LENGTH_SHORT).show();
-
         AddCityActivity.this.update();
     }
 
@@ -78,5 +78,11 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
         RecyclerView rv = (RecyclerView) citiesListFragment.getView();
         CityInListAdapter cityInListAdapter = new CityInListAdapter(CityDBHelper.init(AddCityActivity.this).getCityList(searchView.getQuery().toString()), AddCityActivity.this);
         rv.setAdapter(cityInListAdapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
     }
 }

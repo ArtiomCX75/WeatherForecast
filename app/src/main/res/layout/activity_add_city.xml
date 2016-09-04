@@ -5,37 +5,37 @@
     android:background="@color/yellow_light"
     android:gravity="center|top"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/orange_light"
-        android:gravity="center"
-        android:text="Выберите город:"
-        android:textColor="@android:color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_light"
+            android:gravity="center"
+            android:text="Выберите город:"
+            android:textColor="@android:color/white" />
 
-    <android.support.v7.widget.SearchView
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/searchview_background"
-        android:elevation="12dp"
-        android:inputType="textCapWords"
-        android:queryHint="Введите название города"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        />
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/searchview_background"
+            android:elevation="12dp"
+            android:inputType="textCapWords"
+            android:queryHint="Введите название города" />
 
-    <fragment
-        android:id="@+id/fragment_city_list"
-        android:name="com.faa1192.weatherforecast.Cities.CitiesListFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        <fragment
+            android:id="@+id/fragment_city_list"
+            android:name="com.faa1192.weatherforecast.Cities.CitiesListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
 
     </LinearLayout>
 

@@ -86,4 +86,10 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
             }
         }, 3000);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
+    }
 }

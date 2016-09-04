@@ -20,4 +20,7 @@
     <string name="weather_main">"Краткое описание: "</string>
     <string name="actual_time">"Данные актуальны на: "</string>
     <string name="your_cities">"Ваши города</string>
+    <string name="adding_cities">"Загрузить города"</string>
+    <string name="choose_country">"Выберите страну"</string>
+    <string name="downloading">"Загрузка (~5 минут)"</string>
 </resources>
