@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.view.View;
+//import android.widget.SearchView;
 
 import com.faa1192.weatherforecast.R;
 
@@ -36,6 +38,9 @@ public class AddCityActivity extends AppCompatActivity {
                 return false;
             }
         });
+        searchView.setFocusable(false);
+
+
     }
 
     //Обновление адаптера во время поиска
