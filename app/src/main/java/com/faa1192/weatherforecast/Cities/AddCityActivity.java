@@ -12,6 +12,7 @@ import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.widget.Toast;
 
+
 import com.faa1192.weatherforecast.Countries.CountriesActivity;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
@@ -43,6 +44,7 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
                 return false;
             }
         });
+        searchView.setFocusable(false);
         View.OnClickListener addListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {

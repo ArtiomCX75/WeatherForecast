@@ -58,6 +58,7 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
                 Activity activity = (Activity) context;
                 activity.setResult(RESULT_OK, intent);
                 activity.finish();
+                activity.overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
             }
         });
     }
