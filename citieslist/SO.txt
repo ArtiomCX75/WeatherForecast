@@ -1,0 +1,78 @@
+{"_id":6268943,"name":"Gobolka Awdal","country":"SO","coord":{"lon":43.5,"lat":10.5}}
+{"_id":53654,"name":"Mogadishu","country":"SO","coord":{"lon":45.34375,"lat":2.03711}}
+{"_id":50360,"name":"Gobolka Woqooyi Galbeed","country":"SO","coord":{"lon":44.5,"lat":10}}
+{"_id":61993,"name":"Dalooldho","country":"SO","coord":{"lon":44.06229,"lat":9.59271}}
+{"_id":64661,"name":"Gobolka Bari","country":"SO","coord":{"lon":50,"lat":10}}
+{"_id":64013,"name":"Boosaaso","country":"SO","coord":{"lon":49.18158,"lat":11.28421}}
+{"_id":53477,"name":"Gobolka Nugaal","country":"SO","coord":{"lon":49,"lat":8.16667}}
+{"_id":58933,"name":"Garoowe","country":"SO","coord":{"lon":48.484459,"lat":8.40536}}
+{"_id":53707,"name":"Gobolka Mudug","country":"SO","coord":{"lon":48,"lat":7}}
+{"_id":59611,"name":"Gaalkacyo","country":"SO","coord":{"lon":47.430828,"lat":6.76972}}
+{"_id":57000,"name":"Hobyo","country":"SO","coord":{"lon":48.526798,"lat":5.3505}}
+{"_id":58802,"name":"Gobolka Gedo","country":"SO","coord":{"lon":42,"lat":3}}
+{"_id":54715,"name":"Luuq","country":"SO","coord":{"lon":42.544498,"lat":3.79376}}
+{"_id":64435,"name":"Berbera","country":"SO","coord":{"lon":45.01432,"lat":10.43959}}
+{"_id":53172,"name":"Qaloocan","country":"SO","coord":{"lon":44.04784,"lat":9.52943}}
+{"_id":60147,"name":"El Dubat","country":"SO","coord":{"lon":49.083328,"lat":9.51667}}
+{"_id":56083,"name":"Gobolka Jubbada Hoose","country":"SO","coord":{"lon":42,"lat":0}}
+{"_id":55671,"name":"Kismaayo","country":"SO","coord":{"lon":42.545361,"lat":-0.35817}}
+{"_id":56084,"name":"Gobolka Jubbada Dhexe","country":"SO","coord":{"lon":42.666672,"lat":1.33333}}
+{"_id":51967,"name":"Gobolka Shabeellaha Dhexe","country":"SO","coord":{"lon":46,"lat":3}}
+{"_id":56335,"name":"Jawhar","country":"SO","coord":{"lon":45.500481,"lat":2.78087}}
+{"_id":56399,"name":"Jamaame","country":"SO","coord":{"lon":42.744968,"lat":0.06968}}
+{"_id":63571,"name":"Buurhakaba","country":"SO","coord":{"lon":44.07806,"lat":2.80257}}
+{"_id":64460,"name":"Beledweyne","country":"SO","coord":{"lon":45.203609,"lat":4.73583}}
+{"_id":65785,"name":"Afgooye","country":"SO","coord":{"lon":45.121201,"lat":2.1381}}
+{"_id":6268947,"name":"Gobolka Sool","country":"SO","coord":{"lon":47.5,"lat":8.66667}}
+{"_id":400769,"name":"Laascaanood","country":"SO","coord":{"lon":47.359711,"lat":8.47738}}
+{"_id":59362,"name":"Gobolka Galguduud","country":"SO","coord":{"lon":47,"lat":5}}
+{"_id":65893,"name":"Cadayo","country":"SO","coord":{"lon":46.372108,"lat":4.39024}}
+{"_id":57060,"name":"Gobolka Hiiraan","country":"SO","coord":{"lon":45.5,"lat":4}}
+{"_id":62660,"name":"Cheli Gu","country":"SO","coord":{"lon":45.083328,"lat":4.43333}}
+{"_id":60628,"name":"Doon","country":"SO","coord":{"lon":43.123329,"lat":11.23861}}
+{"_id":64833,"name":"Gobolka Banaadir","country":"SO","coord":{"lon":45.400002,"lat":2.11667}}
+{"_id":51230,"name":"Gobolka Togdheer","country":"SO","coord":{"lon":45.416672,"lat":9.33333}}
+{"_id":63795,"name":"Burco","country":"SO","coord":{"lon":45.53363,"lat":9.52212}}
+{"_id":52187,"name":"Gobolka Sanaag","country":"SO","coord":{"lon":48,"lat":10.5}}
+{"_id":62691,"name":"Ceerigaabo","country":"SO","coord":{"lon":47.36795,"lat":10.61616}}
+{"_id":56505,"name":"Iskushuban","country":"SO","coord":{"lon":50.23,"lat":10.2837}}
+{"_id":51966,"name":"Gobolka Shabeellaha Hoose","country":"SO","coord":{"lon":44.416672,"lat":1.83333}}
+{"_id":50672,"name":"Wanlaweyn","country":"SO","coord":{"lon":44.893799,"lat":2.6185}}
+{"_id":52867,"name":"Qoryooley","country":"SO","coord":{"lon":44.529991,"lat":1.78784}}
+{"_id":53157,"name":"Qandala","country":"SO","coord":{"lon":49.872822,"lat":11.47197}}
+{"_id":56166,"name":"Jilib","country":"SO","coord":{"lon":42.785351,"lat":0.48829}}
+{"_id":57289,"name":"Hargeysa","country":"SO","coord":{"lon":44.064999,"lat":9.56}}
+{"_id":62788,"name":"Ceeldheer","country":"SO","coord":{"lon":47.180641,"lat":3.84878}}
+{"_id":64538,"name":"Gobolka Bay","country":"SO","coord":{"lon":43.5,"lat":3}}
+{"_id":63689,"name":"Buulobarde","country":"SO","coord":{"lon":45.56744,"lat":3.85375}}
+{"_id":65170,"name":"Baardheere","country":"SO","coord":{"lon":42.27644,"lat":2.34464}}
+{"_id":51537,"name":"Somalia","country":"SO","coord":{"lon":48,"lat":6}}
+{"_id":60207,"name":"El Ad","country":"SO","coord":{"lon":49.150002,"lat":11.28333}}
+{"_id":60019,"name":"Eyl","country":"SO","coord":{"lon":49.816399,"lat":7.9803}}
+{"_id":64480,"name":"Behelidle","country":"SO","coord":{"lon":42.316669,"lat":2.31667}}
+{"_id":63081,"name":"Caluula","country":"SO","coord":{"lon":50.756939,"lat":11.96611}}
+{"_id":64536,"name":"Baydhabo","country":"SO","coord":{"lon":43.649799,"lat":3.11383}}
+{"_id":49593,"name":"Yeed","country":"SO","coord":{"lon":43.033329,"lat":4.55}}
+{"_id":49747,"name":"Xuddur","country":"SO","coord":{"lon":43.88945,"lat":4.12129}}
+{"_id":50064,"name":"Xarardheere","country":"SO","coord":{"lon":47.857498,"lat":4.6544}}
+{"_id":50814,"name":"Waajid","country":"SO","coord":{"lon":43.246281,"lat":3.80958}}
+{"_id":51299,"name":"Tayeeglow","country":"SO","coord":{"lon":44.51112,"lat":4.01897}}
+{"_id":52381,"name":"Saacow","country":"SO","coord":{"lon":42.440659,"lat":1.62794}}
+{"_id":53372,"name":"Oodweyne","country":"SO","coord":{"lon":45.063969,"lat":9.4092}}
+{"_id":54225,"name":"Marka","country":"SO","coord":{"lon":44.77166,"lat":1.71594}}
+{"_id":54460,"name":"Mahaddayweyne","country":"SO","coord":{"lon":45.534698,"lat":2.9726}}
+{"_id":54746,"name":"Lughaye","country":"SO","coord":{"lon":43.94397,"lat":10.68573}}
+{"_id":55223,"name":"Laasqoray","country":"SO","coord":{"lon":48.196701,"lat":11.1595}}
+{"_id":56414,"name":"Jalalaqsi","country":"SO","coord":{"lon":45.599602,"lat":3.3766}}
+{"_id":58994,"name":"Garbahaarrey","country":"SO","coord":{"lon":42.220909,"lat":3.32892}}
+{"_id":60457,"name":"Dujuuma","country":"SO","coord":{"lon":42.573769,"lat":1.25311}}
+{"_id":60928,"name":"Dusa Marreb","country":"SO","coord":{"lon":46.386108,"lat":5.535}}
+{"_id":62821,"name":"Ceelbuur","country":"SO","coord":{"lon":46.617599,"lat":4.68501}}
+{"_id":62854,"name":"Ceek","country":"SO","coord":{"lon":45.358238,"lat":8.99907}}
+{"_id":63344,"name":"Cadale","country":"SO","coord":{"lon":46.322201,"lat":2.7603}}
+{"_id":63580,"name":"Buur Gaabo","country":"SO","coord":{"lon":41.83736,"lat":-1.21933}}
+{"_id":63949,"name":"Buaale","country":"SO","coord":{"lon":42.583328,"lat":1.08333}}
+{"_id":64412,"name":"Bereeda","country":"SO","coord":{"lon":51.057949,"lat":11.87037}}
+{"_id":64670,"name":"Bargaal","country":"SO","coord":{"lon":51.077301,"lat":11.28636}}
+{"_id":64814,"name":"Bandarbeyla","country":"SO","coord":{"lon":50.812199,"lat":9.4942}}
+{"_id":8045596,"name":"Baki","country":"SO","coord":{"lon":43.385311,"lat":9.89206}}

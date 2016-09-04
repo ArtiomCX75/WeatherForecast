@@ -20,9 +20,14 @@
         <activity android:name=".Weather.WeatherInfoActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Cities.AddCityActivity" />
+                android:value=".Preferred.PrefCitiesActivity" />
         </activity>
         <activity android:name=".Cities.AddCityActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Preferred.PrefCitiesActivity" />
+        </activity>
+        <activity android:name=".Countries.CountriesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Cities.AddCityActivity" />

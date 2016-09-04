@@ -19,7 +19,7 @@ import com.faa1192.weatherforecast.Weather.WeatherInfoActivity;
 
 import java.util.List;
 
-//адптер для recycler view в класса PrefCitiesListFragment
+//адптер для recycler view класса PrefCitiesListFragment
 public class CityWithTempAdapter extends CityInListAdapter {
 
 

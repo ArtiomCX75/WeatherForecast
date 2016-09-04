@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.faa1192.weatherforecast.Cities.City;
 import com.faa1192.weatherforecast.R;
 
-//ФРагмент с данными о погоде конкретного города
+//Фрагмент с данными о погоде конкретного города
 public class WeatherInfoFragment extends Fragment {
 
     public WeatherInfoFragment() {

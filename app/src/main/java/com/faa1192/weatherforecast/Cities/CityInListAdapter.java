@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
 import com.faa1192.weatherforecast.R;
@@ -18,7 +17,7 @@ import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
-//адптер для recycler view в класса CitiesListFragment
+//адптер для recycler view класса CitiesListFragment
 public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.ViewHolder> {
     protected final List<City> cityList;
     protected final Context context;
@@ -47,7 +46,7 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final CardView cardView = holder.cardView;
         TextView cityInfoTextView = (TextView) cardView.findViewById(R.id.city_info_text);
-        cityInfoTextView.setText(cityList.get(position).name);
+        cityInfoTextView.setText(cityList.get(position).country + ": " + cityList.get(position).name);
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

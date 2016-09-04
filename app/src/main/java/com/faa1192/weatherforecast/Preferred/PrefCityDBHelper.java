@@ -15,16 +15,20 @@ import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 import com.faa1192.weatherforecast.Weather.WeatherData;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 //хелпер для работы с базой городов добавленных в избранное
 public class PrefCityDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "pref_city_db";
-    private static final int DB_VERSION = 1;
+    private static final String TABLE_NAME = "PREFCITY";
+    private static final int DB_VERSION = 2;
     private static Context context;
     private static PrefCityDBHelper dbHelper;
 
@@ -40,16 +44,21 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     }
 
     private Cursor getCursor() {
-        return this.getWritableDatabase().query("PREFCITY", new String[]{"_id", "NAME", "DATA"}, null, null, null, null, "Name");
+        return this.getWritableDatabase().query(TABLE_NAME, new String[]{"_id", "NAME", "country", "lon", "lat", "DATA"}, null, null, null, null, "Name");
     }
 
     //Получение города из избранного по ид
     public City getCity(int id) {
-        Cursor cursor = this.getWritableDatabase().query("PREFCITY", new String[]{"_id", "NAME", "DATA"}, "_id=" + id, null, null, null, null);
+        Cursor cursor = this.getWritableDatabase().query(TABLE_NAME, new String[]{"_id", "NAME", "country", "lon", "lat", "DATA"}, "_id=" + id, null, null, null, null);
         cursor.moveToFirst();
-        City city =  new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
+        int _id = cursor.getInt(0);
+        String name = cursor.getString(1);
+        String country = cursor.getString(2);
+        String lon = cursor.getString(3);
+        String lat = cursor.getString(4);
+        WeatherData weatherData = new WeatherData(cursor.getString(5));
         cursor.close();
-        return city;
+        return new City(_id, name, country, lon, lat, weatherData);
     }
 
     //Получение списка городов из избранного
@@ -59,8 +68,11 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
-            WeatherData weatherData = new WeatherData(cursor.getString(2));
-            cityList.add(new City(id, name, weatherData));
+            String country = cursor.getString(2);
+            String lon = cursor.getString(3);
+            String lat = cursor.getString(4);
+            WeatherData weatherData = new WeatherData(cursor.getString(5));
+            cityList.add(new City(id, name, country, lon, lat, weatherData));
         }
         cursor.close();
         return cityList;
@@ -70,7 +82,13 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     public void updateAllDataFromWeb() {
         Cursor cursor = new PrefCityDBHelper(context).getCursor();
         while (cursor.moveToNext()) {
-            City city = new City(Integer.valueOf(cursor.getString(0)), cursor.getString(1), new WeatherData(cursor.getString(2)));
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            String country = cursor.getString(2);
+            String lon = cursor.getString(3);
+            String lat = cursor.getString(4);
+            WeatherData weatherData = new WeatherData(cursor.getString(5));
+            City city = new City(id, name, country, lon, lat, weatherData);
             updateDataFromWeb(city);
         }
         cursor.close();
@@ -93,7 +111,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     //удаление города из избранного
     public void delFromDbPref(City city) {
         try {
-            PrefCityDBHelper.init(context).getWritableDatabase().delete("PREFCITY", "_id=" + city.id, null);
+            PrefCityDBHelper.init(context).getWritableDatabase().delete(TABLE_NAME, "_id=" + city.id, null);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -104,9 +122,12 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
         try {
             ContentValues contentValues = new ContentValues();
             contentValues.put("_id", city.id);
-            contentValues.put("NAME", city.name);
+            contentValues.put("name", city.name);
+            contentValues.put("country", city.country);
+            contentValues.put("lon", city.lon);
+            contentValues.put("lat", city.lat);
             contentValues.put("DATA", city.data.getJsonString());
-            getWritableDatabase().insert("PREFCITY", null, contentValues);
+            getWritableDatabase().insert(TABLE_NAME, null, contentValues);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -115,7 +136,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     //класс для работы с инетом
     private class WebUpdateHelper extends AsyncTask<City, Void, Void> {
         String resultString = "";
-        InputStream inputStream;
+      //  InputStream inputStream;
         City city;
         boolean success;
 
@@ -126,14 +147,11 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             String urlString = "http://api.openweathermap.org/data/2.5/weather?id=" + city[0].id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric";
             Log.e("my", "url:" + urlString);
             try {
-                URL url = new URL(urlString);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                inputStream = httpURLConnection.getInputStream();
-                byte data[] = new byte[500];
-                inputStream.read(data);
-                for (byte dataByte : data) {
-                    resultString += (char) dataByte;
-                }
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder().url(urlString).build();
+                Response response = client.newCall(request).execute();
+                BufferedReader br = new BufferedReader(response.body().charStream());
+                resultString = br.readLine();
                 success = true;
             } catch (Exception e) {
                 for (int i = 0; i < e.getStackTrace().length; i++) {
@@ -152,8 +170,8 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                     city.data = new WeatherData(resultString);
                     ContentValues contentValues = new ContentValues();
                     contentValues.put("DATA", weatherData.getJsonString());
-                    dbHelper.getWritableDatabase().update("PREFCITY", contentValues, "_id = " + city.id, null);
-                //    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
+                    dbHelper.getWritableDatabase().update(TABLE_NAME, contentValues, "_id = " + city.id, null);
+                    //    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
                     ((Updatable) context).update();
                 } else {
                     Toast.makeText(context, context.getResources().getString(R.string.connection_error), Toast.LENGTH_SHORT).show();
@@ -174,31 +192,31 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE PREFCITY (_id TEXT PRIMARY KEY, NAME TEXT, DATA TEXT);");
+        db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);");
         try {
             ContentValues contentValues = new ContentValues();
             contentValues.put("_id", 551487);
             contentValues.put("NAME", "Kazan");
-            db.insert("PREFCITY", null, contentValues);
+            db.insert(TABLE_NAME, null, contentValues);
             contentValues = new ContentValues();
             contentValues.put("_id", 524901);
             contentValues.put("NAME", "Moscow");
-            db.insert("PREFCITY", null, contentValues);
+            db.insert(TABLE_NAME, null, contentValues);
 
             contentValues = new ContentValues();
             contentValues.put("_id", 582432);
             contentValues.put("NAME", "Almetyevsk");
-            db.insert("PREFCITY", null, contentValues);
+            db.insert(TABLE_NAME, null, contentValues);
 
             contentValues = new ContentValues();
             contentValues.put("_id", 570990);
             contentValues.put("NAME", "Bolgar");
-            db.insert("PREFCITY", null, contentValues);
+            db.insert(TABLE_NAME, null, contentValues);
 
             contentValues = new ContentValues();
             contentValues.put("_id", 521118);
             contentValues.put("NAME", "Nizhnekamsk");
-            db.insert("PREFCITY", null, contentValues);
+            db.insert(TABLE_NAME, null, contentValues);
         } catch (SQLException e) {
             Log.e("my", "Error while creating table prefcity");
         }
@@ -206,7 +224,11 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE PREFCITY");
+        try {
+            db.execSQL("DROP TABLE " + TABLE_NAME);
+        } catch (SQLException e) {
+            Log.e("my", "sql exception. db doesn't exist");
+        }
         onCreate(db);
     }
 }
