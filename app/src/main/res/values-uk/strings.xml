@@ -7,7 +7,7 @@
         <string name = "pull_for_refresh">Потягніть для оновлення</string>
         <string name = "hold_for_delete">Утримуйте для видалення</string>
         <string name = "connection_error">Помилка з&#8217;єднання</string>
-        <string name = "weather_in_city">"Погода в місті: "</string>
+        <string name = "weather_in_city">"Погода в м. "</string>
         <string name = "name_of_city">"Назва: "</string>
         <string name = "humidity">"Вологість: "</string>
         <string name = "pressure">"Тиск: "</string>
@@ -16,11 +16,13 @@
         <string name = "sunset">"Захід сонця: "</string>
         <string name = "wind_speed">"Швидкість вітру: "</string>
         <string name = "wind_direction">"Напрямок вітру: "</string>
-        <string name = "weather_description">"Детальний опис: "</string>
+        <string name = "weather_description">"Опис: "</string>
         <string name = "weather_main">"Короткий опис: "</string>
-        <string name = "actual_time">"Дані актуальні на: "</string>
+        <string name = "actual_time">"Актуальність: "</string>
         <string name = "your_cities">"Ваші міста</string>
         <string name = "adding_cities">"Завантажити міста"</string>
         <string name = "choose_country">"Оберіть країну"</string>
         <string name = "downloading">"Завантаження (~ 5 хвилин)"</string>
+    <string name="RU">"Росія"</string>
+    <string name="UA">"Україна"</string>
 </resources>

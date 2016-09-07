@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.faa1192.weatherforecast.Countries.Country;
 import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
 import com.faa1192.weatherforecast.R;
 
@@ -19,7 +20,7 @@ import static android.app.Activity.RESULT_OK;
 
 //адптер для recycler view класса CitiesListFragment
 public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.ViewHolder> {
-    protected final List<City> cityList;
+    public final List<City> cityList;
     protected final Context context;
 
     public CityInListAdapter(List<City> cityList, Context context) {
@@ -45,8 +46,10 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final CardView cardView = holder.cardView;
-        TextView cityInfoTextView = (TextView) cardView.findViewById(R.id.city_info_text);
-        cityInfoTextView.setText(cityList.get(position).country + ": " + cityList.get(position).name);
+        TextView textView = (TextView) cardView.findViewById(R.id.city_in_list_name);
+        textView.setText(cityList.get(position).getShortName());//country + ": " + cityList.get(position).name);
+        textView = (TextView) cardView.findViewById(R.id.city_in_list_name_extra);
+        textView.setText((cityList.get(position).getExtraName().length()==0)?(new Country(context).getName(cityList.get(position).country)):(cityList.get(position).getExtraName()+", "+new Country(context).getName(cityList.get(position).country)));
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

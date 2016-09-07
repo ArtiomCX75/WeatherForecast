@@ -21,7 +21,7 @@ public class CitiesListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycle_view_cities, container, false);
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycle_view, container, false);
         CityInListAdapter cityInListAdapter = new CityInListAdapter(CityDBHelper.init(getActivity()).getCityList(""), getContext());
         recyclerView.setAdapter(cityInListAdapter);
         int orientation = getActivity().getResources().getConfiguration().orientation;

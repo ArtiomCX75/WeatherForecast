@@ -7,7 +7,7 @@
     <string name="pull_for_refresh">"Pull for refresh"</string>
     <string name="hold_for_delete">"Hold for delete"</string>
     <string name="connection_error">"Connection error"</string>
-    <string name="weather_in_city">"Weather in city: "</string>
+    <string name="weather_in_city">"Weather in "</string>
     <string name="name_of_city">"Name: "</string>
     <string name="humidity">"Humidity: "</string>
     <string name="pressure">"Pressure: "</string>
@@ -23,4 +23,6 @@
     <string name="adding_cities">"Download cities"</string>
     <string name="choose_country">"Choose country"</string>
     <string name="downloading">"Downloading (about 5 min)"</string>
+    <string name="RU">"Russia"</string>
+    <string name="UA">"Ukraine"</string>
 </resources>

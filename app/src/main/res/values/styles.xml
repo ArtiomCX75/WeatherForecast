@@ -2,6 +2,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowNoTitle">true</item>
-        <item name="android:textColorPrimary">#FF8F00</item>
+    </style>
+
+    <style name="text_style_weather_desc">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/sec_text</item>
     </style>
 </resources>

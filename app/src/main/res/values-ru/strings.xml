@@ -7,7 +7,7 @@
     <string name="pull_for_refresh">Потяните для обновления</string>
     <string name="hold_for_delete">Удержите для удаления</string>
     <string name="connection_error">Ошибка соединения</string>
-    <string name="weather_in_city">"Погода в городе: "</string>
+    <string name="weather_in_city">"Погода в г. "</string>
     <string name="name_of_city">"Название: "</string>
     <string name="humidity">"Влажность: "</string>
     <string name="pressure">"Давление: "</string>
@@ -16,11 +16,13 @@
     <string name="sunset">"Закат: "</string>
     <string name="wind_speed">"Скорость ветра: "</string>
     <string name="wind_direction">"Направление ветра: "</string>
-    <string name="weather_description">"Подробное описание: "</string>
+    <string name="weather_description">"Описание: "</string>
     <string name="weather_main">"Краткое описание: "</string>
-    <string name="actual_time">"Данные актуальны на: "</string>
+    <string name="actual_time">"Актуальность: "</string>
     <string name="your_cities">"Ваши города</string>
     <string name="adding_cities">"Загрузить города"</string>
     <string name="choose_country">"Выберите страну"</string>
     <string name="downloading">"Загрузка (~5 минут)"</string>
+    <string name="RU">"Россия"</string>
+    <string name="UA">"Украина"</string>
 </resources>

@@ -101,6 +101,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
     }
 
     public void downloadCountry(String str) {
+        // TODO: 07.09.2016 delete old cities from country
         CitiesOfCountry coc = new CitiesOfCountry();
         coc.execute(str);
     }

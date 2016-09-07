@@ -16,7 +16,6 @@ import com.faa1192.weatherforecast.Updatable;
 import com.faa1192.weatherforecast.Weather.WeatherData;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -136,7 +135,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     //класс для работы с инетом
     private class WebUpdateHelper extends AsyncTask<City, Void, Void> {
         String resultString = "";
-      //  InputStream inputStream;
+        //  InputStream inputStream;
         City city;
         boolean success;
 

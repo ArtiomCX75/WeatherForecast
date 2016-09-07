@@ -19,7 +19,7 @@ public class WeatherInfoFragment extends Fragment {
 
     //Заполнение информации о погоде
     public void setInfo(City city) {
-        ((TextView) getActivity().findViewById(R.id.extra_city_name)).setText(getResources().getString(R.string.name_of_city) + city.name);
+        //     ((TextView) getActivity().findViewById(R.id.extra_city_name)).setText(getResources().getString(R.string.name_of_city) + city.name);
         ((TextView) getActivity().findViewById(R.id.extra_city_humidity)).setText(getResources().getString(R.string.humidity) + city.data.getHumidity());
         ((TextView) getActivity().findViewById(R.id.extra_city_pressure)).setText(getResources().getString(R.string.pressure) + city.data.getPressure());
         ((TextView) getActivity().findViewById(R.id.extra_city_temp)).setText(getResources().getString(R.string.temperature) + city.data.getTemp());
@@ -28,7 +28,7 @@ public class WeatherInfoFragment extends Fragment {
         ((TextView) getActivity().findViewById(R.id.extra_city_wind_speed)).setText(getResources().getString(R.string.wind_speed) + city.data.getWindSpeed());
         ((TextView) getActivity().findViewById(R.id.extra_city_wind_deg)).setText(getResources().getString(R.string.wind_direction) + city.data.getWindDeg());
         ((TextView) getActivity().findViewById(R.id.extra_city_weather_description)).setText(getResources().getString(R.string.weather_description) + city.data.getWeatherDescription());
-        ((TextView) getActivity().findViewById(R.id.extra_city_weather_main)).setText(getResources().getString(R.string.weather_main) + city.data.getWeatherMain());
+        //    ((TextView) getActivity().findViewById(R.id.extra_city_weather_main)).setText(getResources().getString(R.string.weather_main) + city.data.getWeatherMain());
         ((TextView) getActivity().findViewById(R.id.extra_city_time)).setText(getResources().getString(R.string.actual_time) + city.data.getTime());
     }
 

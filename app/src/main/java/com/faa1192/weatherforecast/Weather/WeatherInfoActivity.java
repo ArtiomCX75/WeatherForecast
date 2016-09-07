@@ -1,14 +1,16 @@
 package com.faa1192.weatherforecast.Weather;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.City;
@@ -31,9 +33,12 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         final WeatherInfoFragment fragment = (WeatherInfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3);
         fragment.setInfo(city);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange_dark)));
-        actionBar.setTitle(getResources().getString(R.string.weather_in_city) + city.name);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.col_pr_dark)));
+        actionBar.setTitle(Html.fromHtml("<font color=\"" + getResources().getColor(R.color.pr_text) + "\">" + getResources().getString(R.string.weather_in_city) + city.name + "</font>"));
+        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_back_arrow);
+        upArrow.setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP);
+        actionBar.setHomeAsUpIndicator(upArrow);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher_weather_data);
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 255, 100, 0), Color.argb(255, 255, 0, 100), Color.argb(255, 255, 100, 100));
@@ -63,6 +68,6 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
+        overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
     }
 }

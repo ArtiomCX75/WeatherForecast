@@ -1,14 +1,16 @@
 package com.faa1192.weatherforecast.Preferred;
 
+
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.faa1192.weatherforecast.Cities.City;
@@ -36,10 +38,10 @@ public class CityWithTempAdapter extends CityInListAdapter {
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         CardView cardView = holder.cardView;
-        TextView textView = (TextView) cardView.findViewById(R.id.city_info_text);
+        TextView textView = (TextView) cardView.findViewById(R.id.city_wt_name);
         textView.setText(cityList.get(position).name);
-        textView = (TextView) cardView.findViewById(R.id.city_info_temp);
-        textView.setText(cityList.get(position).data.getTemp());
+        textView = (TextView) cardView.findViewById(R.id.city_wt_temp);
+        textView.setText(cityList.get(position).data.getTemp() + ",  " + cityList.get(position).data.getWeatherMain());
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,12 +49,13 @@ public class CityWithTempAdapter extends CityInListAdapter {
                 City selectedCity = cityList.get(position);
                 intent.putExtras(selectedCity.toBundle());
                 context.startActivity(intent);
-                ((PrefCitiesActivity) context).overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
+                ((PrefCitiesActivity) context).overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
             }
         });
         cardView.findViewWithTag("lin_layout").setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Удаление города")
                         .setMessage("Удалить город \"" + cityList.get(position).name + "\"?")
@@ -62,7 +65,7 @@ public class CityWithTempAdapter extends CityInListAdapter {
                                     public void onClick(DialogInterface dialog, int id) {
                                         dialog.cancel();
                                     }
-                                }).setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                                }).setPositiveButton("ДА", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         PrefCityDBHelper.init(context).delFromDbPref(cityList.get(position));
                         try {
@@ -74,6 +77,13 @@ public class CityWithTempAdapter extends CityInListAdapter {
                     }
                 });
                 AlertDialog alert = builder.create();
+
+
+                Button b = new Button(context);
+                b.setTextColor(context.getResources().getColor(R.color.orange_dark1));
+                // b.setText("ololo");
+                // alert.setView(b);
+
                 alert.show();
                 return true;
             }

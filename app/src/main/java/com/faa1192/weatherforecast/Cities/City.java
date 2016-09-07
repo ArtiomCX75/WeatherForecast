@@ -90,4 +90,17 @@ public class City {
     public static City fromBundle(Bundle bundle) {
         return new City(bundle.getInt("id"), bundle.getString("name"), bundle.getString("country"), bundle.getString("lon"), bundle.getString("lat"), new WeatherData(bundle.getString("data")));
     }
+
+    public String getShortName(){
+        if(name.contains("(")){
+            return name.substring(0, name.indexOf("("));
+        }
+     return name;
+    }
+
+    public String getExtraName(){
+        if(getShortName().length()==name.length())
+            return "";
+        return name.substring(getShortName().length(), name.length());
+    }
 }

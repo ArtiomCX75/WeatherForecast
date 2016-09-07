@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view_list"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    card_view:cardCornerRadius="4dp"
-    card_view:cardElevation="2dp"
-    android:layout_marginTop="1dp"
+    android:layout_height="96dp"
     android:layout_marginBottom="1dp"
-    card_view:cardUseCompatPadding="true"
-    card_view:contentPadding="12dp"
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
-    >
+    android:layout_marginTop="1dp"
+    card_view:cardBackgroundColor="@color/cards_bg"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,15 +19,44 @@
         android:orientation="vertical"
         android:tag="lin_layout">
 
-        <TextView
-            android:id="@+id/city_info_text"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
+            android:background="@color/col_pr"
+            android:orientation="vertical"
 
-            android:layout_marginLeft="12dp"
-            android:layout_marginStart="12dp"
-            android:gravity="center"
-            android:textSize="24sp" />
+            >
 
+            <TextView
+                android:id="@+id/city_in_list_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/pr_text"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/city_in_list_name_extra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:textColor="@color/sec_text"
+                android:textSize="18sp" />
+        </LinearLayout>
     </LinearLayout>
+
 </android.support.v7.widget.CardView>

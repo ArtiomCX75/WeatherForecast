@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3f51b5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="orange_dark">#FF9800</color>
-    <color name="orange_light">#FFC107</color>
-    <color name="yellow_light">#FFEB3B</color>
+    <color name="colorPrimary1">#3f51b5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccent1">#FF4081</color>
+    <color name="orange_dark1">#FF9800</color>
+    <color name="orange_light1">#FFC107</color>
+    <color name="yellow_light1">#FFEB3B</color>
+
+    <color name="green1">#ff0000</color>
+
+    <color name="yellowA700">#FFD600</color>
+    <color name="yellow400">#ffee58</color>
+    <color name="yellow50">#FFFDE7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey200">#EEEEEE</color>
+    <color name="grey800">#424242</color>
+    <color name="grey600">#757575</color>
+
+    <color name="androidtextColorPrimary">#FF8F00</color>
+
+    <color name="col_pr_dark">@color/yellowA700</color>
+    <color name="col_pr">@color/yellow400</color>
+    <color name="bg">@color/grey200</color>
+    <color name="cards_bg">@color/white</color>
+    <color name="dialogs_bg">@color/green1</color>
+    <color name="pr_text">@color/grey800</color>
+    <color name="sec_text">@color/grey600</color>
+    <color name="disabled_hint_text">@color/grey200</color>
+
+
 </resources>

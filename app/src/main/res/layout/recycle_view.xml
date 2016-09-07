@@ -4,5 +4,6 @@
     android:id="@+id/recycle_view_cities"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     android:scrollbars="vertical"
     tools:layout="@layout/card_city_with_temp" />

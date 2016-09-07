@@ -8,6 +8,7 @@
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
     android:layout_marginTop="1dp"
+    card_view:cardBackgroundColor="@color/cards_bg"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="2dp"
     card_view:cardUseCompatPadding="true"
@@ -27,6 +28,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:gravity="center"
+            android:textColor="@color/pr_text"
             android:textSize="20sp" />
 
     </LinearLayout>
