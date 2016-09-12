@@ -74,22 +74,25 @@ public class CountriesListFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Object o) {
-            if (success) {
-                CountryInListAdapter countryInListAdapter = new CountryInListAdapter(list, getContext());
-                CountriesListFragment clf = (CountriesListFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragment_coun);
-                RecyclerView recyclerView = (RecyclerView) clf.getView();
+            try {
+                if (success) {
+                    CountryInListAdapter countryInListAdapter = new CountryInListAdapter(list, getContext());
+                    CountriesListFragment clf = (CountriesListFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragment_coun);
+                    RecyclerView recyclerView = (RecyclerView) clf.getView();
 
-                int orientation = getActivity().getResources().getConfiguration().orientation;
-                if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-                    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-                    linearLayoutManager.setSmoothScrollbarEnabled(true);
-                    recyclerView.setLayoutManager(linearLayoutManager);
-                } else {
-                    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, Configuration.ORIENTATION_PORTRAIT);
-                    recyclerView.setLayoutManager(staggeredGridLayoutManager);
+                    int orientation = getActivity().getResources().getConfiguration().orientation;
+                    if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+                        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+                        linearLayoutManager.setSmoothScrollbarEnabled(true);
+                        recyclerView.setLayoutManager(linearLayoutManager);
+                    } else {
+                        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, Configuration.ORIENTATION_PORTRAIT);
+                        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+                    }
+                    recyclerView.setAdapter(countryInListAdapter);
                 }
-                recyclerView.setAdapter(countryInListAdapter);
             }
+            catch (Exception e){}
         }
     }
 
