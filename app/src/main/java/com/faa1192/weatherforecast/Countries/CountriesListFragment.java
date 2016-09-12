@@ -43,7 +43,7 @@ public class CountriesListFragment extends Fragment {
     public void update() {
         DownloadList dl = new DownloadList();
         dl.execute();
-        getResources().getString(R.string.RU);
+        //getResources().getString(R.string.RU);
     }
 
     class DownloadList extends AsyncTask {

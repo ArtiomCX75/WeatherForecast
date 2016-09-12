@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.widget.ProgressBar;
 
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
@@ -43,16 +44,16 @@ public class CountriesActivity extends AppCompatActivity implements Updatable, S
         actionBar.setHomeAsUpIndicator(upArrow);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher);
         swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 255, 100, 0), Color.argb(255, 255, 0, 100), Color.argb(255, 255, 100, 100));
+        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 0, 255, 0), Color.argb(255, 0, 0, 255));
+        ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_IN);
     }
 
     @Override
     public void update() {
         CountriesListFragment fragment = (CountriesListFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_coun);
-        RecyclerView recyclerView = (RecyclerView) fragment.getView();
+      //  RecyclerView recyclerView = (RecyclerView) fragment.getView();
         fragment.update();
-        // CountryInListAdapter countryInListAdapter = new CountryInListAdapter(PrefCityDBHelper.init(PrefCitiesActivity.this).getCityList(), PrefCitiesActivity.this);
-        //recyclerView.setAdapter(cityWithTempAdapter);
     }
 
     public void onRefresh() {

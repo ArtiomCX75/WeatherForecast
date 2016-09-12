@@ -57,7 +57,7 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
                 City chosenCity = cityList.get(position);
                 PrefCityDBHelper.init(context).addToDbPref(chosenCity);
                 PrefCityDBHelper.init(context).updateDataFromWeb(chosenCity);
-                Toast.makeText(context, context.getResources().getString((R.string.added_city)) + chosenCity.name, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString((R.string.added_city)) + chosenCity.getShortName(), Toast.LENGTH_SHORT).show();
                 Activity activity = (Activity) context;
                 activity.setResult(RESULT_OK);
                 activity.finish();

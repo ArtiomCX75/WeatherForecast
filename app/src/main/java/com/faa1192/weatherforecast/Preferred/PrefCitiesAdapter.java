@@ -37,7 +37,7 @@ public class PrefCitiesAdapter extends CityInListAdapter {
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         CardView cardView = holder.cardView;
         TextView textView = (TextView) cardView.findViewById(R.id.city_wt_name);
-        textView.setText(cityList.get(position).name);
+        textView.setText(cityList.get(position).getShortName());
         textView = (TextView) cardView.findViewById(R.id.city_wt_temp);
         textView.setText(cityList.get(position).data.getTemp() + ",  " + cityList.get(position).data.getWeatherMain());
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,7 @@ public class PrefCitiesAdapter extends CityInListAdapter {
                 String yes = context.getResources().getString(R.string.yes);
                 String no = context.getResources().getString(R.string.no);
                 builder.setTitle(allertTitle)
-                        .setMessage(String.format(allerMessage, cityList.get(position).name))
+                        .setMessage(String.format(allerMessage, cityList.get(position).getShortName()))
                         .setCancelable(true)
                         .setNegativeButton(no,
                                 new DialogInterface.OnClickListener() {

@@ -34,13 +34,13 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.col_pr_dark)));
-        actionBar.setTitle(Html.fromHtml("<font color=\"" + getResources().getColor(R.color.pr_text) + "\">" + getResources().getString(R.string.weather_in_city) + city.name + "</font>"));
+        actionBar.setTitle(Html.fromHtml("<font color=\"" + getResources().getColor(R.color.pr_text) + "\">" + getResources().getString(R.string.weather_in_city) + city.getShortName() + "</font>"));
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_back_arrow);
         upArrow.setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP);
         actionBar.setHomeAsUpIndicator(upArrow);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher_weather_data);
         swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 255, 100, 0), Color.argb(255, 255, 0, 100), Color.argb(255, 255, 100, 100));
+        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 0, 255, 0), Color.argb(255, 0, 0, 255));
     }
 
     //Обновление данных о погоде с инета

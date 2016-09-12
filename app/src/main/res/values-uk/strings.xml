@@ -36,6 +36,7 @@
     <string name="minute">"м"</string>
     <string name="second">"с"</string>
     <string name="mm">"мм"</string>
+    <string name="m_per_sec">"м/с"</string>
 
     <string name="N">"Пн"</string>
     <string name="NE">"ПнС"</string>

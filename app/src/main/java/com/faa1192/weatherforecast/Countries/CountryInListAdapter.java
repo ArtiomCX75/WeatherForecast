@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,6 +56,9 @@ public class CountryInListAdapter extends RecyclerView.Adapter<CountryInListAdap
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ProgressBar progressBar = (ProgressBar) ((CountriesActivity) context).findViewById(R.id.progressBar);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                progressBar.setLayoutParams(lp);
                 String chosenCountry = countriesList.get(position);
                 // Intent intent = new Intent();
                 Activity activity = (Activity) context;

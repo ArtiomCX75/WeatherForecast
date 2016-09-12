@@ -148,7 +148,7 @@ public class WeatherData {
     }
 
     public String getPressure() {
-        return pressure.isEmpty() ? hm.get(noData) : (((Double) (Double.valueOf(pressure) * 0.7500637554192)).toString()).substring(0, 6) + " " + context.getResources().getString(R.string.mm);
+        return pressure.isEmpty() ? hm.get(noData) : (((Double) (Double.valueOf(pressure) * 0.7500637554192)).toString()).substring(0, 6) + context.getResources().getString(R.string.mm);
     }
 
     public String getSunrise() {
@@ -223,7 +223,7 @@ public class WeatherData {
     }
 
     public String getWindSpeed() {
-        return windSpeed.isEmpty() ? hm.get(noData) : windSpeed;
+        return windSpeed.isEmpty() ? hm.get(noData) : windSpeed+context.getResources().getString(R.string.m_per_sec);
     }
 
     //Данные считаются старыми, если им больше часа. Сравнение со временем приходящим с сервера, а не со временем фактического получения данных

@@ -61,7 +61,7 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher);
         swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 255, 100, 0), Color.argb(255, 255, 0, 100), Color.argb(255, 255, 100, 100));
+        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 0, 255, 0), Color.argb(255, 0, 0, 255));
     }
 
     @Override

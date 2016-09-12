@@ -15,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Countries.CountriesActivity;
+import com.faa1192.weatherforecast.Preferred.PrefCitiesActivity;
 import com.faa1192.weatherforecast.R;
 
 import java.io.BufferedReader;
@@ -46,7 +47,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
     private Cursor getCursor(String query) {
         return this.getWritableDatabase().rawQuery(
                 "select * from (select * from (select * from " + TABLE_NAME + " where Name like 'А%' or Name like 'Б%' or Name like 'В%' or Name like 'Г%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ґ%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Д%' or Name like 'Е%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Є%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ж%' or Name like 'З%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'И%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'І%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ї%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Й' or Name like 'К%' or Name like 'Л%' or Name like 'М%' or Name like 'Н%' or Name like 'О%' or Name like 'П%' or Name like 'Р%' or Name like 'С%' or Name like 'Т%' or Name like 'У%' or Name like 'Ф%' or Name like 'Х%' or Name like 'Ц%' or Name like 'Ч%' or Name like 'Ш%' or Name like 'Щ%' or Name like 'Ъ%' or Name like 'Ы%' or Name like 'Ь%' or Name like 'Э%' or Name like 'Ю%' or Name like 'Я%' order by Name )) where Name like '%" + query + "%' ", null);
-        }
+    }
 
     public List<City> getCityList(String query) {
         Cursor cursor = getCursor(query);
@@ -136,15 +137,17 @@ public class CityDBHelper extends SQLiteOpenHelper {
                 }
                 try {
                     Log.e("my", "success");
+                    SQLiteDatabase db = CityDBHelper.this.getWritableDatabase();
+                    ContentValues contentValues = new ContentValues();
+                    City city;
                     for (int i = 0; i < list.size(); i++) {
-                        ContentValues contentValues = new ContentValues();
-                        City city = new City(list.get(i));
+                        city = new City(list.get(i));
                         contentValues.put("_id", city.id);
                         contentValues.put("name", city.name);
                         contentValues.put("country", city.country);
                         contentValues.put("lon", city.lon);
                         contentValues.put("lat", city.lat);
-                        CityDBHelper.this.getWritableDatabase().insert(TABLE_NAME, null, contentValues);
+                        db.insert(TABLE_NAME, null, contentValues);
                         publishProgress((Integer) (i * 100) / list.size());
                     }
                     Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
@@ -178,7 +181,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
             ((ProgressBar) ((Activity) context).findViewById(R.id.progressBar)).setVisibility(View.INVISIBLE);
-            Intent intent = new Intent(context, AddCityActivity.class);
+            Intent intent = new Intent(context, PrefCitiesActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);

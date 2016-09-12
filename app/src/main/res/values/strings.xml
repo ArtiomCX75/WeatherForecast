@@ -36,6 +36,7 @@
     <string name="minute">"m"</string>
     <string name="second">"s"</string>
     <string name="mm">"mm"</string>
+    <string name="m_per_sec">"m/s"</string>
 
     <string name="N">"N"</string>
     <string name="NE">"NE"</string>
