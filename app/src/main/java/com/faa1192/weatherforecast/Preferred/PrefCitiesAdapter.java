@@ -1,6 +1,5 @@
 package com.faa1192.weatherforecast.Preferred;
 
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.faa1192.weatherforecast.Cities.City;
@@ -22,10 +20,10 @@ import com.faa1192.weatherforecast.Weather.WeatherInfoActivity;
 import java.util.List;
 
 //адптер для recycler view класса PrefCitiesListFragment
-public class CityWithTempAdapter extends CityInListAdapter {
+public class PrefCitiesAdapter extends CityInListAdapter {
 
 
-    public CityWithTempAdapter(List<City> cities, Context context) {
+    public PrefCitiesAdapter(List<City> cities, Context context) {
         super(cities, context);
     }
 
@@ -57,15 +55,19 @@ public class CityWithTempAdapter extends CityInListAdapter {
             public boolean onLongClick(View view) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Удаление города")
-                        .setMessage("Удалить город \"" + cityList.get(position).name + "\"?")
+                String allertTitle = context.getResources().getString(R.string.del_city_title);
+                String allerMessage = context.getResources().getString(R.string.del_city_question);
+                String yes = context.getResources().getString(R.string.yes);
+                String no = context.getResources().getString(R.string.no);
+                builder.setTitle(allertTitle)
+                        .setMessage(String.format(allerMessage, cityList.get(position).name))
                         .setCancelable(true)
-                        .setNegativeButton("Нет",
+                        .setNegativeButton(no,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         dialog.cancel();
                                     }
-                                }).setPositiveButton("ДА", new DialogInterface.OnClickListener() {
+                                }).setPositiveButton(yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         PrefCityDBHelper.init(context).delFromDbPref(cityList.get(position));
                         try {
@@ -77,13 +79,6 @@ public class CityWithTempAdapter extends CityInListAdapter {
                     }
                 });
                 AlertDialog alert = builder.create();
-
-
-                Button b = new Button(context);
-                b.setTextColor(context.getResources().getColor(R.color.orange_dark1));
-                // b.setText("ololo");
-                // alert.setView(b);
-
                 alert.show();
                 return true;
             }

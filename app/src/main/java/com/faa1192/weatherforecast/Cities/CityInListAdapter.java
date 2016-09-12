@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Countries.Country;
 import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
@@ -54,12 +55,11 @@ public class CityInListAdapter extends RecyclerView.Adapter<CityInListAdapter.Vi
             @Override
             public void onClick(View view) {
                 City chosenCity = cityList.get(position);
-                Intent intent = new Intent();
-                intent.putExtras(chosenCity.toBundle());
                 PrefCityDBHelper.init(context).addToDbPref(chosenCity);
                 PrefCityDBHelper.init(context).updateDataFromWeb(chosenCity);
+                Toast.makeText(context, context.getResources().getString((R.string.added_city)) + chosenCity.name, Toast.LENGTH_SHORT).show();
                 Activity activity = (Activity) context;
-                activity.setResult(RESULT_OK, intent);
+                activity.setResult(RESULT_OK);
                 activity.finish();
                 activity.overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
             }

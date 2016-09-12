@@ -101,6 +101,6 @@ public class City {
     public String getExtraName(){
         if(getShortName().length()==name.length())
             return "";
-        return name.substring(getShortName().length(), name.length());
+        return name.substring(getShortName().length()+1, name.length()-1);
     }
 }

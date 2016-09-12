@@ -16,10 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.View;
-import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.AddCityActivity;
-import com.faa1192.weatherforecast.Cities.City;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 
@@ -34,13 +32,13 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
 
         context = getApplicationContext();
         setContentView(R.layout.activity_pref_list);
-        Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.pull_for_refresh), Toast.LENGTH_SHORT).show();
-        Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.hold_for_delete), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.pull_for_refresh), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.hold_for_delete), Toast.LENGTH_SHORT).show();
         PrefCityDBHelper.init(getApplicationContext()).updateAllDataFromWeb();
         View.OnClickListener addListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), AddCityActivity.class);
                 startActivityForResult(intent, 1);
                 overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
@@ -70,8 +68,8 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != -1)
             return;
-        City city = City.fromBundle(data.getExtras());
-        Toast.makeText(this, getResources().getString((R.string.added_city)) + city.name, Toast.LENGTH_SHORT).show();
+        //   City city = City.fromBundle(data.getExtras());
+        //   Toast.makeText(this, getResources().getString((R.string.added_city)) + city.name, Toast.LENGTH_SHORT).show();
         PrefCitiesActivity.this.update();
     }
 
@@ -80,8 +78,8 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
     public void update() {
         PrefCitiesListFragment fragment = (PrefCitiesListFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_pref);
         RecyclerView recyclerView = (RecyclerView) fragment.getView();
-        CityWithTempAdapter cityWithTempAdapter = new CityWithTempAdapter(PrefCityDBHelper.init(PrefCitiesActivity.this).getCityList(), PrefCitiesActivity.this);
-        recyclerView.setAdapter(cityWithTempAdapter);
+        PrefCitiesAdapter prefCitiesAdapter = new PrefCitiesAdapter(PrefCityDBHelper.init(PrefCitiesActivity.this).getCityList(), PrefCitiesActivity.this);
+        recyclerView.setAdapter(prefCitiesAdapter);
     }
 
     //Обновление данных о погоде (с инета)

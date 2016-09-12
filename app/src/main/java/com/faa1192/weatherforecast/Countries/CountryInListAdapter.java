@@ -1,8 +1,8 @@
 package com.faa1192.weatherforecast.Countries;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.faa1192.weatherforecast.Cities.CityDBHelper;
 import com.faa1192.weatherforecast.R;
 
 import java.util.List;
@@ -46,19 +48,25 @@ public class CountryInListAdapter extends RecyclerView.Adapter<CountryInListAdap
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final CardView cardView = holder.cardView;
 
-        TextView countyTextView = (TextView) cardView.findViewById(R.id.country_info_text);
+        final TextView countyTextView = (TextView) cardView.findViewById(R.id.country_info_text);
         countyTextView.setText(new Country(context).getName(countriesList.get(position)));
         Log.e("my", "COUNTRY " + countriesList.get(position));
         cardView.findViewWithTag("lin_layout").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String chosenCountry = countriesList.get(position);
-                Intent intent = new Intent();
-                intent.putExtra("country", chosenCountry);
+                // Intent intent = new Intent();
                 Activity activity = (Activity) context;
-                activity.setResult(RESULT_OK, intent);
-                activity.finish();
-                ((CountriesActivity) context).overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
+                activity.setResult(RESULT_OK);
+                //String country = data.getStringExtra("country");
+                Toast.makeText(context, context.getResources().getString(R.string.downloading_5_min), Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle(context.getResources().getString(R.string.downloading))
+                        .setMessage(context.getResources().getString(R.string.wait_pls))
+                        .setCancelable(false);
+                AlertDialog alert = builder.create();
+                alert.show();
+                CityDBHelper.init(context).downloadCountry(chosenCountry);
             }
         });
     }

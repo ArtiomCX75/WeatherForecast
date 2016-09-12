@@ -8,4 +8,9 @@
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/sec_text</item>
     </style>
+
+    <style name="AppThemeNoAppbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>
+

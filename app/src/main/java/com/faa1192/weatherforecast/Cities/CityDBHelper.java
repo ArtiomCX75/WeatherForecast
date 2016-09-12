@@ -1,17 +1,21 @@
 package com.faa1192.weatherforecast.Cities;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.faa1192.weatherforecast.Countries.CountriesActivity;
 import com.faa1192.weatherforecast.R;
-import com.faa1192.weatherforecast.Updatable;
 
 import java.io.BufferedReader;
 import java.util.ArrayList;
@@ -40,8 +44,9 @@ public class CityDBHelper extends SQLiteOpenHelper {
     }
 
     private Cursor getCursor(String query) {
-        return this.getWritableDatabase().query(TABLE_NAME, new String[]{"_id", "NAME", "country", "lon", "lat"}, "Name like '%" + query + "%'", null, null, null, "Name");
-    }
+        return this.getWritableDatabase().rawQuery(
+                "select * from (select * from (select * from " + TABLE_NAME + " where Name like 'А%' or Name like 'Б%' or Name like 'В%' or Name like 'Г%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ґ%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Д%' or Name like 'Е%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Є%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ж%' or Name like 'З%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'И%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'І%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ї%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Й' or Name like 'К%' or Name like 'Л%' or Name like 'М%' or Name like 'Н%' or Name like 'О%' or Name like 'П%' or Name like 'Р%' or Name like 'С%' or Name like 'Т%' or Name like 'У%' or Name like 'Ф%' or Name like 'Х%' or Name like 'Ц%' or Name like 'Ч%' or Name like 'Ш%' or Name like 'Щ%' or Name like 'Ъ%' or Name like 'Ы%' or Name like 'Ь%' or Name like 'Э%' or Name like 'Ю%' or Name like 'Я%' order by Name )) where Name like '%" + query + "%' ", null);
+        }
 
     public List<City> getCityList(String query) {
         Cursor cursor = getCursor(query);
@@ -61,22 +66,6 @@ public class CityDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT);");
-        /*try {
-//            String[] ids = context.getResources().getStringArray(R.array.city_id_array);
-//            String[] names = context.getResources().getStringArray(R.array.city_name_array);
-            for (int i = 0; i < ids.length; i++) {
-                ContentValues cv = new ContentValues();
-                cv.put("_id", ids[i]);
-                cv.put("NAME", names[i]);
-                db.insert("CITY", null, cv);
-
-            }
-            //  this.db = db;
-            //CitiesOfCountry coc = new CitiesOfCountry();
-            //coc.execute("UA");
-        } catch (SQLException e) {
-            Log.e("my", "Error while creating table " + TABLE_NAME);
-        }*/
     }
 
     @Override
@@ -101,21 +90,21 @@ public class CityDBHelper extends SQLiteOpenHelper {
     }
 
     public void downloadCountry(String str) {
-        // TODO: 07.09.2016 delete old cities from country
         CitiesOfCountry coc = new CitiesOfCountry();
         coc.execute(str);
     }
 
     //Загрузка городов с инета
-    private class CitiesOfCountry extends AsyncTask<String, Void, Void> {
-        // String resultString = "";
-        //  InputStream inputStream;
-        //   byte data[];
+    private class CitiesOfCountry extends AsyncTask<String, Integer, Void> {
         String countryName = "";
         ArrayList<String> list = new ArrayList<>();
-
-        // City city;
         boolean success;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            ((Activity) context).findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+        }
 
         @Override
         protected Void doInBackground(String... strings) {
@@ -139,16 +128,9 @@ public class CityDBHelper extends SQLiteOpenHelper {
                     Log.e("my", e.getStackTrace()[i].toString());
                 }
             }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-
             if (success) {
                 try {
-                    CityDBHelper.this.getWritableDatabase().execSQL("DELETE " + TABLE_NAME + " WHERE country = '" + countryName + "'");
+                    CityDBHelper.this.getWritableDatabase().execSQL("DELETE from " + TABLE_NAME + " WHERE country = '" + countryName + "'");
                 } catch (SQLException e) {
                     Log.e("my", "sql exception. db doesn't exist");
                 }
@@ -163,23 +145,44 @@ public class CityDBHelper extends SQLiteOpenHelper {
                         contentValues.put("lon", city.lon);
                         contentValues.put("lat", city.lat);
                         CityDBHelper.this.getWritableDatabase().insert(TABLE_NAME, null, contentValues);
+                        publishProgress((Integer) (i * 100) / list.size());
                     }
+                    Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
                     Log.e("my", "add " + list.size());
-                    ((Updatable) context).update();
                 } catch (SQLException e) {
                     Log.e("my", "sql exception");
                     for (int i = 0; i < e.getStackTrace().length && i < 2; i++) {
                         Log.e("my", e.getStackTrace()[i].toString());
                     }
                 } catch (Exception e) {
-                    Log.e("my", "prefcitydbhelper: cannot be cast to updatable"); // не критично
+                    Log.e("my", "citydbhelper: cannot be cast to updatable"); // не критично
                     for (int i = 0; i < e.getStackTrace().length; i++) {
                         //Log.e("my", e.getStackTrace()[i].toString());
                     }
                 }
-            } else {
+            } else
+
+            {
                 Toast.makeText(context, context.getResources().getString(R.string.connection_error), Toast.LENGTH_SHORT).show();
             }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            ((ProgressBar) ((Activity) context).findViewById(R.id.progressBar)).setProgress(values[0]);
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            ((ProgressBar) ((Activity) context).findViewById(R.id.progressBar)).setVisibility(View.INVISIBLE);
+            Intent intent = new Intent(context, AddCityActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+            ((CountriesActivity) context).overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
         }
     }
 }

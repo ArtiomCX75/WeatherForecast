@@ -22,7 +22,27 @@
     <string name="your_cities">"Ваши города</string>
     <string name="adding_cities">"Загрузить города"</string>
     <string name="choose_country">"Выберите страну"</string>
-    <string name="downloading">"Загрузка (~5 минут)"</string>
+    <string name="downloading">Загрузка</string>
+    <string name="downloading_5_min">"Загрузка (~5 минут)"</string>
+    <string name="del_city_title">"Удаление"</string>
+    <string name="del_city_question"  formatted="false">"Удалить город %1$s?"</string>
+    <string name="yes">"Да"</string>
+    <string name="no">"Нет"</string>
+
     <string name="RU">"Россия"</string>
     <string name="UA">"Украина"</string>
+
+    <string name="hour">"ч"</string>
+    <string name="minute">"м"</string>
+    <string name="second">"с"</string>
+    <string name="mm">"мм"</string>
+
+    <string name="N">"С"</string>
+    <string name="NE">"СВ"</string>
+    <string name="E">"В"</string>
+    <string name="SE">"ЮВ"</string>
+    <string name="S">"Ю"</string>
+    <string name="SW">"ЮЗ"</string>
+    <string name="W">"З"</string>
+    <string name="NW">"СЗ"</string>
 </resources>

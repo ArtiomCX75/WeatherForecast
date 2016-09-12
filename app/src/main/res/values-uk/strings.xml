@@ -1,28 +1,48 @@
 <resources>
-        <string name = "app_name">Прогноз погоди</string>
-        <string name = "adding_city">Додавання міста</string>
-        <string name = "added_city">"Додано місто: "</string>
-        <string name = "wait_pls">"Зачекайте&#8230;"</string>
-        <string name = "favorites">Обране</string>
-        <string name = "pull_for_refresh">Потягніть для оновлення</string>
-        <string name = "hold_for_delete">Утримуйте для видалення</string>
-        <string name = "connection_error">Помилка з&#8217;єднання</string>
-        <string name = "weather_in_city">"Погода в м. "</string>
-        <string name = "name_of_city">"Назва: "</string>
-        <string name = "humidity">"Вологість: "</string>
-        <string name = "pressure">"Тиск: "</string>
-        <string name = "temperature">"Температура: "</string>
-        <string name = "sunrise">"Схід сонця: "</string>
-        <string name = "sunset">"Захід сонця: "</string>
-        <string name = "wind_speed">"Швидкість вітру: "</string>
-        <string name = "wind_direction">"Напрямок вітру: "</string>
-        <string name = "weather_description">"Опис: "</string>
-        <string name = "weather_main">"Короткий опис: "</string>
-        <string name = "actual_time">"Актуальність: "</string>
-        <string name = "your_cities">"Ваші міста</string>
-        <string name = "adding_cities">"Завантажити міста"</string>
-        <string name = "choose_country">"Оберіть країну"</string>
-        <string name = "downloading">"Завантаження (~ 5 хвилин)"</string>
+    <string name="app_name">Прогноз погоди</string>
+    <string name="adding_city">Додавання міста</string>
+    <string name="added_city">"Додано місто: "</string>
+    <string name="wait_pls">"Зачекайте&#8230;"</string>
+    <string name="favorites">Обране</string>
+    <string name="pull_for_refresh">Потягніть для оновлення</string>
+    <string name="hold_for_delete">Утримуйте для видалення</string>
+    <string name="connection_error">Помилка з&#8217;єднання</string>
+    <string name="weather_in_city">"Погода в м. "</string>
+    <string name="name_of_city">"Назва: "</string>
+    <string name="humidity">"Вологість: "</string>
+    <string name="pressure">"Тиск: "</string>
+    <string name="temperature">"Температура: "</string>
+    <string name="sunrise">"Схід сонця: "</string>
+    <string name="sunset">"Захід сонця: "</string>
+    <string name="wind_speed">"Швидкість вітру: "</string>
+    <string name="wind_direction">"Напрямок вітру: "</string>
+    <string name="weather_description">"Опис: "</string>
+    <string name="weather_main">"Короткий опис: "</string>
+    <string name="actual_time">"Актуальність: "</string>
+    <string name="your_cities">"Ваші міста</string>
+    <string name="adding_cities">"Завантажити міста"</string>
+    <string name="choose_country">"Оберіть країну"</string>
+    <string name="downloading">Завантаження</string>
+    <string name="downloading_5_min">"Завантаження (~ 5 хвилин)"</string>
+    <string name="del_city_title">"Видалення"</string>
+    <string name="del_city_question" formatted="false">"Видалити місто %1$s?"</string>
+    <string name="yes">"Так"</string>
+    <string name="no">"Ні"</string>
+
     <string name="RU">"Росія"</string>
     <string name="UA">"Україна"</string>
+
+    <string name="hour">"г"</string>
+    <string name="minute">"м"</string>
+    <string name="second">"с"</string>
+    <string name="mm">"мм"</string>
+
+    <string name="N">"Пн"</string>
+    <string name="NE">"ПнС"</string>
+    <string name="E">"С"</string>
+    <string name="SE">"ПдС"</string>
+    <string name="S">"Пд"</string>
+    <string name="SW">"ПдЗ"</string>
+    <string name="W">"З"</string>
+    <string name="NW">"ПнЗ"</string>
 </resources>

@@ -11,7 +11,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.City;
 import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
@@ -26,7 +25,7 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(WeatherInfoActivity.this, R.string.pull_for_refresh, Toast.LENGTH_SHORT).show();
+        //  Toast.makeText(WeatherInfoActivity.this, R.string.pull_for_refresh, Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_weather_info);
         Intent intent = getIntent();
         city = City.fromBundle(intent.getExtras());

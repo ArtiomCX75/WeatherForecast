@@ -1,5 +1,7 @@
 package com.faa1192.weatherforecast.Countries;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
@@ -12,9 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 
-import com.faa1192.weatherforecast.Preferred.CityWithTempAdapter;
-import com.faa1192.weatherforecast.Preferred.PrefCitiesListFragment;
-import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 
@@ -22,14 +21,22 @@ import com.faa1192.weatherforecast.Updatable;
 public class CountriesActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout swipeRefreshLayout;
 
+    private int getScreenOrientation() {
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+            return ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
+        else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+            return ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+        return -1;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countries);
+        setRequestedOrientation(((getScreenOrientation() == 0) ? (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) : (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)));
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.col_pr_dark)));
-        actionBar.setTitle(Html.fromHtml("<font color=\""+getResources().getColor(R.color.pr_text)+"\">" + getString(R.string.adding_cities) + "</font>"));
-
+        actionBar.setTitle(Html.fromHtml("<font color=\"" + getResources().getColor(R.color.pr_text) + "\">" + getString(R.string.adding_cities) + "</font>"));
         actionBar.setDisplayHomeAsUpEnabled(true);
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_back_arrow);
         upArrow.setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP);
@@ -62,7 +69,6 @@ public class CountriesActivity extends AppCompatActivity implements Updatable, S
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
+        overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
     }
-
 }

@@ -4,28 +4,29 @@
     android:id="@+id/activity_weather_info_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Weather.WeatherInfoActivity"
-    android:orientation="vertical"
-    android:gravity="end"
     android:background="@color/col_pr"
-    android:padding="5dp">
+    android:gravity="end"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".Weather.WeatherInfoActivity">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/refresher_weather_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="com.faa1192.weatherforecast.Weather.WeatherInfoFragment"
-        android:id="@+id/fragment3"
-        tools:layout="@layout/card_weather_info" />
+
+            <fragment
+                android:id="@+id/fragment3"
+                android:name="com.faa1192.weatherforecast.Weather.WeatherInfoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/card_weather_info" />
         </ScrollView>
     </android.support.v4.widget.SwipeRefreshLayout>
 

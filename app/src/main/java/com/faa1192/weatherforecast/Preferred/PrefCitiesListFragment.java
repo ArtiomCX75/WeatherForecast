@@ -18,8 +18,8 @@ public class PrefCitiesListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycle_view, container, false);
-        CityWithTempAdapter cityWithTempAdapter = new CityWithTempAdapter(PrefCityDBHelper.init(getContext()).getCityList(), getContext());
-        recyclerView.setAdapter(cityWithTempAdapter);
+        PrefCitiesAdapter prefCitiesAdapter = new PrefCitiesAdapter(PrefCityDBHelper.init(getContext()).getCityList(), getContext());
+        recyclerView.setAdapter(prefCitiesAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
@@ -34,9 +34,9 @@ public class PrefCitiesListFragment extends Fragment {
                 //  Toast.makeText(getActivity(), "sw: "+direction+"="+viewHolder, Toast.LENGTH_LONG).show();
                 PrefCitiesListFragment fragment = (PrefCitiesListFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragment_pref);
                 RecyclerView recyclerView = (RecyclerView) fragment.getView();
-                CityWithTempAdapter cwta = (CityWithTempAdapter) recyclerView.getAdapter();
+                PrefCitiesAdapter cwta = (PrefCitiesAdapter) recyclerView.getAdapter();
                 PrefCityDBHelper.init(getActivity()).delFromDbPref(cwta.cityList.get(viewHolder.getAdapterPosition()));
-                cwta = new CityWithTempAdapter(PrefCityDBHelper.init(getActivity()).getCityList(), getActivity());
+                cwta = new PrefCitiesAdapter(PrefCityDBHelper.init(getActivity()).getCityList(), getActivity());
                 recyclerView.setAdapter(cwta);
             }
         };

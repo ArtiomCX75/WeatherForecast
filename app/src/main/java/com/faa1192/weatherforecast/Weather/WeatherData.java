@@ -28,9 +28,10 @@ public class WeatherData {
     private Long time = 0L; //актуальное время сведений о погоде (приходит с сервера)
     private final String noData = "no_data";
     private static HashMap<String, String> hm = new HashMap<>();
+    public static Context context;
 
     static {
-        Context context = PrefCitiesActivity.context;
+        context = PrefCitiesActivity.context;
         String[] key = context.getResources().getStringArray(R.array.wd_k);
         String[] value = context.getResources().getStringArray(R.array.wd_v);
         for (int i = 0; i < key.length; i++) {
@@ -147,7 +148,7 @@ public class WeatherData {
     }
 
     public String getPressure() {
-        return pressure.isEmpty() ? hm.get(noData) : (((Double) (Double.valueOf(pressure) * 0.7500637554192)).toString()).substring(0, 6) + "mm";
+        return pressure.isEmpty() ? hm.get(noData) : (((Double) (Double.valueOf(pressure) * 0.7500637554192)).toString()).substring(0, 6) + " " + context.getResources().getString(R.string.mm);
     }
 
     public String getSunrise() {
@@ -191,31 +192,31 @@ public class WeatherData {
             int side = (int) angle / 45;
             switch (side) {
                 case 0:
-                    response = "N";
+                    response = context.getResources().getString(R.string.N);
                     break;
                 case 1:
-                    response = "NE";
+                    response = context.getResources().getString(R.string.NE);
                     break;
                 case 2:
-                    response = "E";
+                    response = context.getResources().getString(R.string.E);
                     break;
                 case 3:
-                    response = "SE";
+                    response = context.getResources().getString(R.string.SE);
                     break;
                 case 4:
-                    response = "S";
+                    response = context.getResources().getString(R.string.S);
                     break;
                 case 5:
-                    response = "SW";
+                    response = context.getResources().getString(R.string.SW);
                     break;
                 case 6:
-                    response = "W";
+                    response = context.getResources().getString(R.string.W);
                     break;
                 case 7:
-                    response = "NW";
+                    response = context.getResources().getString(R.string.NW);
                     break;
                 default:
-                    response = "N";
+                    response = context.getResources().getString(R.string.N);
             }
             return response;
         }
@@ -241,7 +242,6 @@ public class WeatherData {
         int min = (timeInt / 60) % 60;
         int sec = timeInt % 60;
         int timeZone = +3;
-        return (hour + timeZone) % 24 + "h " + min + "m " + sec + "s";
+        return (hour + timeZone) % 24 + context.getResources().getString(R.string.hour) + " " + min + context.getResources().getString(R.string.minute) + " " + sec + context.getResources().getString(R.string.second);
     }
-
 }

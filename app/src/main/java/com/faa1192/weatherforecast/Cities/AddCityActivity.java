@@ -54,7 +54,7 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
         View.OnClickListener addListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), CountriesActivity.class);
                 startActivityForResult(intent, 1);
                 overridePendingTransition(R.anim.alpha_on,R.anim.alpha_off);
@@ -71,11 +71,6 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != -1)
             return;
-        String country = data.getStringExtra("country");
-        Toast.makeText(AddCityActivity.this, getResources().getString(R.string.downloading), Toast.LENGTH_SHORT).show();
-        // Toast.makeText(AddCityActivity.this, "c: "+country, Toast.LENGTH_SHORT).show();
-        CityDBHelper.init(AddCityActivity.this).downloadCountry(country);
-        //Toast.makeText(this, getResources().getString((R.string.added_city)) + city.name, Toast.LENGTH_SHORT).show();
         AddCityActivity.this.update();
     }
 
@@ -83,7 +78,7 @@ public class AddCityActivity extends AppCompatActivity implements Updatable {
     public void update() {
         CitiesListFragment citiesListFragment = (CitiesListFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_city_list);
         RecyclerView rv = (RecyclerView) citiesListFragment.getView();
-        CityInListAdapter cityInListAdapter = new CityInListAdapter(CityDBHelper.init(AddCityActivity.this).getCityList(searchView.getQuery().toString()), AddCityActivity.this);
+        CityInListAdapter cityInListAdapter = new CityInListAdapter(CityDBHelper.init(AddCityActivity.this).getCityList(searchView.getQuery().toString().trim()), AddCityActivity.this);
         rv.setAdapter(cityInListAdapter);
     }
 
