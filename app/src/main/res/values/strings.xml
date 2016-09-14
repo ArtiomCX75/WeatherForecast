@@ -28,6 +28,7 @@
     <string name="del_city_question" formatted="false">"Delete city %1$s?"</string>
     <string name="yes">"Yes"</string>
     <string name="no">"No"</string>
+    <string name="choose_the_city">"Choose the city</string>
 
     <string name="RU">"Russia"</string>
     <string name="UA">"Ukraine"</string>

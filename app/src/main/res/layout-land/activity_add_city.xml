@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:background="@color/col_pr_dark"
             android:gravity="center"
-            android:text="Выберите город:"
+            android:text="@string/choose_the_city"
             android:textColor="@color/sec_text"
             android:textSize="18sp" />
 
@@ -31,7 +31,7 @@
             android:elevation="12dp"
             android:imeOptions="flagNoExtractUi"
             android:inputType="textCapWords"
-            android:queryHint="Введите название города" />
+            />
 
 
         <fragment

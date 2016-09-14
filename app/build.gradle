@@ -5,7 +5,7 @@ android {
     buildToolsVersion '24.0.2'
     defaultConfig {
         applicationId "com.faa1192.weatherforecast"
-        minSdkVersion 11
+        minSdkVersion 14
         targetSdkVersion 24
         versionCode 2
         versionName "0.2"

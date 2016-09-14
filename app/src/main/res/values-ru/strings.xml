@@ -28,6 +28,7 @@
     <string name="del_city_question"  formatted="false">"Удалить город %1$s?"</string>
     <string name="yes">"Да"</string>
     <string name="no">"Нет"</string>
+    <string name="choose_the_city">"Выберите город"</string>
 
     <string name="RU">"Россия"</string>
     <string name="UA">"Украина"</string>
