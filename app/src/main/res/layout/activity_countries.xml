@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/col_pr"
     android:orientation="vertical">
 
@@ -18,17 +17,15 @@
             android:gravity="center"
             android:text="@string/choose_country"
             android:textColor="@color/sec_text"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
 
         <ProgressBar
+            android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:id="@+id/progressBar"
-            android:visibility="invisible"
             android:background="@color/col_pr_dark"
-            />
+            android:visibility="invisible" />
 
         <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/refresher"
@@ -43,8 +40,5 @@
                 android:layout_alignParentTop="true"
                 android:layout_gravity="center" />
         </android.support.v4.widget.SwipeRefreshLayout>
-
     </LinearLayout>
-
-
 </RelativeLayout>

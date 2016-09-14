@@ -29,5 +29,4 @@
                 tools:layout="@layout/card_weather_info" />
         </ScrollView>
     </android.support.v4.widget.SwipeRefreshLayout>
-
 </LinearLayout>

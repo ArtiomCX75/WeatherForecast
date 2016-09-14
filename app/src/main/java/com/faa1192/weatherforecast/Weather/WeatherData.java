@@ -27,8 +27,8 @@ public class WeatherData {
     private String weatherMain = ""; //краткое описание погоды
     private Long time = 0L; //актуальное время сведений о погоде (приходит с сервера)
     private final String noData = "no_data";
-    private static HashMap<String, String> hm = new HashMap<>();
-    public static Context context;
+    private static final HashMap<String, String> hm = new HashMap<>();
+    public static final Context context;
 
     static {
         context = PrefCitiesActivity.context;
@@ -135,10 +135,6 @@ public class WeatherData {
                 + "  weatherMain " + weatherMain;
     }
 
-    public String getCityName() {
-        return cityName.isEmpty() ? hm.get(noData) : cityName;
-    }
-
     public String getHumidity() {
         return humidity.isEmpty() ? hm.get(noData) : humidity + "%";
     }
@@ -186,7 +182,7 @@ public class WeatherData {
         if (windDeg.isEmpty())
             return hm.get(noData);
         else {
-            String response = "";
+            String response;
             double angle = Double.valueOf(windDeg);
             angle += 22.5;
             int side = (int) angle / 45;

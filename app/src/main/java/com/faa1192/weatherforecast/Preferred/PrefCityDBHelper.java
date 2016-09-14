@@ -191,8 +191,8 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);");
         try {
+            db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);");
         /*    ContentValues contentValues = new ContentValues();
             contentValues.put("_id", 551487);
             contentValues.put("NAME", "Kazan");

@@ -23,7 +23,7 @@ import okhttp3.Response;
 
 //Фрагмент со списком стран
 public class CountriesListFragment extends Fragment {
-    ArrayList<String> list = new ArrayList<>();
+    private final ArrayList<String> list = new ArrayList<>();
     //   https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/move_citieslist_to_server/citieslist/list.txt
 
     public CountriesListFragment() {

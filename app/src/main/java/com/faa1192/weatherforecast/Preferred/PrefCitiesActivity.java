@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.View;
+import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.AddCityActivity;
 import com.faa1192.weatherforecast.R;
@@ -61,7 +62,7 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher);
         swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 0, 255, 0), Color.argb(255, 0, 0, 255));
+        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 200, 0, 0), Color.argb(255, 0, 200, 0), Color.argb(255, 0, 0, 200));
     }
 
     @Override
@@ -100,5 +101,11 @@ public class PrefCitiesActivity extends AppCompatActivity implements Updatable, 
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        update();
     }
 }

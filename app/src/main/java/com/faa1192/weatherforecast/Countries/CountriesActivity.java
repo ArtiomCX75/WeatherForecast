@@ -1,5 +1,6 @@
 package com.faa1192.weatherforecast.Countries;
 
+import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -13,6 +14,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 
 import com.faa1192.weatherforecast.R;
@@ -44,7 +46,7 @@ public class CountriesActivity extends AppCompatActivity implements Updatable, S
         actionBar.setHomeAsUpIndicator(upArrow);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher);
         swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 0, 255, 0), Color.argb(255, 0, 0, 255));
+        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 200, 0, 0), Color.argb(255, 0, 200, 0), Color.argb(255, 0, 0, 200));
         ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_IN);
     }
@@ -71,5 +73,17 @@ public class CountriesActivity extends AppCompatActivity implements Updatable, S
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 }

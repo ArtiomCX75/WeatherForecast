@@ -40,7 +40,7 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         actionBar.setHomeAsUpIndicator(upArrow);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher_weather_data);
         swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 255, 0, 0), Color.argb(255, 0, 255, 0), Color.argb(255, 0, 0, 255));
+        swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 200, 0, 0), Color.argb(255, 0, 200, 0), Color.argb(255, 0, 0, 200));
     }
 
     //Обновление данных о погоде с инета

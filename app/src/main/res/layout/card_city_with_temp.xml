@@ -23,9 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:background="@color/col_pr"
-            android:orientation="vertical"
-
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/city_wt_name"

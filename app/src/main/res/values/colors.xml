@@ -29,5 +29,4 @@
     <color name="sec_text">@color/grey600</color>
     <color name="disabled_hint_text">@color/grey200</color>
 
-
 </resources>

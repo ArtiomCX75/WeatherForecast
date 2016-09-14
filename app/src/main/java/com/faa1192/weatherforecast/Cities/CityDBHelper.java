@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -98,7 +99,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
     //Загрузка городов с инета
     private class CitiesOfCountry extends AsyncTask<String, Integer, Void> {
         String countryName = "";
-        ArrayList<String> list = new ArrayList<>();
+        final ArrayList<String> list = new ArrayList<>();
         boolean success;
 
         @Override
@@ -136,6 +137,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
                     Log.e("my", "sql exception. db doesn't exist");
                 }
                 try {
+
                     Log.e("my", "success");
                     SQLiteDatabase db = CityDBHelper.this.getWritableDatabase();
                     ContentValues contentValues = new ContentValues();
@@ -148,21 +150,17 @@ public class CityDBHelper extends SQLiteOpenHelper {
                         contentValues.put("lon", city.lon);
                         contentValues.put("lat", city.lat);
                         db.insert(TABLE_NAME, null, contentValues);
-                        publishProgress((Integer) (i * 100) / list.size());
+                        publishProgress(i * 100 / list.size());
                     }
                     Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
                     Log.e("my", "add " + list.size());
-                } catch (SQLException e) {
-                    Log.e("my", "sql exception");
-                    for (int i = 0; i < e.getStackTrace().length && i < 2; i++) {
+                } catch (Exception e) {
+                    Log.e("my", "citydbhelper: cannot be cast to updatable or sql exeption"); // не критично
+                    for (int i = 0; i < e.getStackTrace().length; i++) {
                         Log.e("my", e.getStackTrace()[i].toString());
                     }
-                } catch (Exception e) {
-                    Log.e("my", "citydbhelper: cannot be cast to updatable"); // не критично
-                    for (int i = 0; i < e.getStackTrace().length; i++) {
-                        //Log.e("my", e.getStackTrace()[i].toString());
-                    }
                 }
+
             } else
 
             {
@@ -180,7 +178,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            ((ProgressBar) ((Activity) context).findViewById(R.id.progressBar)).setVisibility(View.INVISIBLE);
+            ((Activity) context).findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
             Intent intent = new Intent(context, PrefCitiesActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
