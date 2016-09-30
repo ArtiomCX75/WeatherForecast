@@ -7,15 +7,14 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Countries.CountriesActivity;
+import com.faa1192.weatherforecast.DBHelper;
 import com.faa1192.weatherforecast.Preferred.PrefCitiesActivity;
 import com.faa1192.weatherforecast.R;
 
@@ -28,30 +27,33 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 //хелпер для работы с базой всех городов
-public class CityDBHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "city_db";
-    private static final String TABLE_NAME = "CITY";
+public class CityDBHelper extends DBHelper {
+    protected CityDBHelper(Context context) {
+        super(context);
+    }
+    //  private static final String DB_NAME = "city_db";
+ //   private static final String TABLE_NAME = "CITY";
 
-    private static final int DB_VERSION = 2;
-    private final Context context;
+  //  private static final int DB_VERSION = 2;
+ //   private final Context context;
 
     // SQLiteDatabase db;
-    private CityDBHelper(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
-        this.context = context;
-    }
+ //   private CityDBHelper(Context context) {
+ //       super(context, DB_NAME, null, DB_VERSION);
+ //       this.context = context;
+ //   }
 
     public static CityDBHelper init(Context context) {
         return new CityDBHelper(context);
     }
 
-    private Cursor getCursor(String query) {
+    private Cursor getCursorC(String query) {
         return this.getWritableDatabase().rawQuery(
-                "select * from (select * from (select * from " + TABLE_NAME + " where Name like 'А%' or Name like 'Б%' or Name like 'В%' or Name like 'Г%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ґ%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Д%' or Name like 'Е%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Є%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ж%' or Name like 'З%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'И%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'І%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Ї%' order by Name ) UNION ALL select * from ( select * from " + TABLE_NAME + " where Name like 'Й' or Name like 'К%' or Name like 'Л%' or Name like 'М%' or Name like 'Н%' or Name like 'О%' or Name like 'П%' or Name like 'Р%' or Name like 'С%' or Name like 'Т%' or Name like 'У%' or Name like 'Ф%' or Name like 'Х%' or Name like 'Ц%' or Name like 'Ч%' or Name like 'Ш%' or Name like 'Щ%' or Name like 'Ъ%' or Name like 'Ы%' or Name like 'Ь%' or Name like 'Э%' or Name like 'Ю%' or Name like 'Я%' order by Name )) where Name like '%" + query + "%' ", null);
+                "select * from (select * from (select * from " + TABLE_LIST_CITY_NAME + " where Name like 'А%' or Name like 'Б%' or Name like 'В%' or Name like 'Г%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'Ґ%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'Д%' or Name like 'Е%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'Є%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'Ж%' or Name like 'З%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'И%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'І%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'Ї%' order by Name ) UNION ALL select * from ( select * from " + TABLE_LIST_CITY_NAME + " where Name like 'Й' or Name like 'К%' or Name like 'Л%' or Name like 'М%' or Name like 'Н%' or Name like 'О%' or Name like 'П%' or Name like 'Р%' or Name like 'С%' or Name like 'Т%' or Name like 'У%' or Name like 'Ф%' or Name like 'Х%' or Name like 'Ц%' or Name like 'Ч%' or Name like 'Ш%' or Name like 'Щ%' or Name like 'Ъ%' or Name like 'Ы%' or Name like 'Ь%' or Name like 'Э%' or Name like 'Ю%' or Name like 'Я%' order by Name )) where Name like '%" + query + "%' ", null);
     }
 
     public List<City> getCityList(String query) {
-        Cursor cursor = getCursor(query);
+        Cursor cursor = getCursorC(query);
         List<City> cityList = new ArrayList<>();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -65,31 +67,6 @@ public class CityDBHelper extends SQLiteOpenHelper {
         return cityList;
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT);");
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        try {
-            db.execSQL("DROP TABLE " + TABLE_NAME);
-        } catch (SQLException e) {
-            Log.e("my", "sql exception. db doesn't exist");
-        }
-        onCreate(db);
-    }
-
-    @Override
-    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        super.onDowngrade(db, oldVersion, newVersion);
-        try {
-            db.execSQL("DROP TABLE " + TABLE_NAME);
-        } catch (SQLException e) {
-            Log.e("my", "sql exception. db doesn't exist");
-        }
-        onCreate(db);
-    }
 
     public void downloadCountry(String str) {
         CitiesOfCountry coc = new CitiesOfCountry();
@@ -132,7 +109,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
             }
             if (success) {
                 try {
-                    CityDBHelper.this.getWritableDatabase().execSQL("DELETE from " + TABLE_NAME + " WHERE country = '" + countryName + "'");
+                    CityDBHelper.this.getWritableDatabase().execSQL("DELETE from " + TABLE_LIST_CITY_NAME + " WHERE country = '" + countryName + "'");
                 } catch (SQLException e) {
                     Log.e("my", "sql exception. db doesn't exist");
                 }
@@ -142,6 +119,7 @@ public class CityDBHelper extends SQLiteOpenHelper {
                     SQLiteDatabase db = CityDBHelper.this.getWritableDatabase();
                     ContentValues contentValues = new ContentValues();
                     City city;
+                    db.beginTransaction();
                     for (int i = 0; i < list.size(); i++) {
                         city = new City(list.get(i));
                         contentValues.put("_id", city.id);
@@ -149,9 +127,11 @@ public class CityDBHelper extends SQLiteOpenHelper {
                         contentValues.put("country", city.country);
                         contentValues.put("lon", city.lon);
                         contentValues.put("lat", city.lat);
-                        db.insert(TABLE_NAME, null, contentValues);
+                        db.insert(TABLE_LIST_CITY_NAME, null, contentValues);
                         publishProgress(i * 100 / list.size());
                     }
+                    db.setTransactionSuccessful();
+                    db.endTransaction();
                     Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
                     Log.e("my", "add " + list.size());
                 } catch (Exception e) {

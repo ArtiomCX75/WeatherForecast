@@ -11,6 +11,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.faa1192.weatherforecast.Cities.City;
+import com.faa1192.weatherforecast.DBHelper;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
 import com.faa1192.weatherforecast.Weather.WeatherData;
@@ -24,31 +25,24 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 //хелпер для работы с базой городов добавленных в избранное
-public class PrefCityDBHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "pref_city_db";
-    private static final String TABLE_NAME = "PREFCITY";
-    private static final int DB_VERSION = 2;
-    private static Context context;
-    private static PrefCityDBHelper dbHelper;
+public class PrefCityDBHelper extends DBHelper {
+
 
     private PrefCityDBHelper(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
-        PrefCityDBHelper.context = context;
-        dbHelper = this;
+        super(context);
     }
 
-    //Инициализация хелпера
     public static PrefCityDBHelper init(Context context) {
         return new PrefCityDBHelper(context);
     }
 
-    private Cursor getCursor() {
-        return this.getWritableDatabase().query(TABLE_NAME, new String[]{"_id", "NAME", "country", "lon", "lat", "DATA"}, null, null, null, null, "Name");
+    private Cursor getCursorPC() {
+        return this.getWritableDatabase().query(TABLE_PREF_NAME, new String[]{"_id", "NAME", "country", "lon", "lat", "DATA"}, null, null, null, null, "Name");
     }
 
     //Получение города из избранного по ид
     public City getCity(int id) {
-        Cursor cursor = this.getWritableDatabase().query(TABLE_NAME, new String[]{"_id", "NAME", "country", "lon", "lat", "DATA"}, "_id=" + id, null, null, null, null);
+        Cursor cursor = this.getWritableDatabase().query(TABLE_PREF_NAME, new String[]{"_id", "NAME", "country", "lon", "lat", "DATA"}, "_id=" + id, null, null, null, null);
         cursor.moveToFirst();
         int _id = cursor.getInt(0);
         String name = cursor.getString(1);
@@ -62,7 +56,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
 
     //Получение списка городов из избранного
     public List<City> getCityList() {
-        Cursor cursor = getCursor();
+        Cursor cursor = getCursorPC();
         List<City> cityList = new ArrayList<>();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -79,7 +73,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
 
     //Обновление данных о погоде в городах из избранного
     public void updateAllDataFromWeb() {
-        Cursor cursor = new PrefCityDBHelper(context).getCursor();
+        Cursor cursor = new PrefCityDBHelper(context).getCursorPC();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
@@ -110,7 +104,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
     //удаление города из избранного
     public void delFromDbPref(City city) {
         try {
-            PrefCityDBHelper.init(context).getWritableDatabase().delete(TABLE_NAME, "_id=" + city.id, null);
+            getWritableDatabase().delete(TABLE_PREF_NAME, "_id=" + city.id, null);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -126,7 +120,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
             contentValues.put("lon", city.lon);
             contentValues.put("lat", city.lat);
             contentValues.put("DATA", city.data.getJsonString());
-            getWritableDatabase().insert(TABLE_NAME, null, contentValues);
+            getWritableDatabase().insert(TABLE_PREF_NAME, null, contentValues);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -169,7 +163,7 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                     city.data = new WeatherData(resultString);
                     ContentValues contentValues = new ContentValues();
                     contentValues.put("DATA", weatherData.getJsonString());
-                    dbHelper.getWritableDatabase().update(TABLE_NAME, contentValues, "_id = " + city.id, null);
+                    dbHelper.getWritableDatabase().update(TABLE_PREF_NAME, contentValues, "_id = " + city.id, null);
                     //    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
                     ((Updatable) context).update();
                 } else {
@@ -187,58 +181,5 @@ public class PrefCityDBHelper extends SQLiteOpenHelper {
                 }
             }
         }
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        try {
-            db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);");
-        /*    ContentValues contentValues = new ContentValues();
-            contentValues.put("_id", 551487);
-            contentValues.put("NAME", "Kazan");
-            db.insert(TABLE_NAME, null, contentValues);
-            contentValues = new ContentValues();
-            contentValues.put("_id", 524901);
-            contentValues.put("NAME", "Moscow");
-            db.insert(TABLE_NAME, null, contentValues);
-
-            contentValues = new ContentValues();
-            contentValues.put("_id", 582432);
-            contentValues.put("NAME", "Almetyevsk");
-            db.insert(TABLE_NAME, null, contentValues);
-
-            contentValues = new ContentValues();
-            contentValues.put("_id", 570990);
-            contentValues.put("NAME", "Bolgar");
-            db.insert(TABLE_NAME, null, contentValues);
-
-            contentValues = new ContentValues();
-            contentValues.put("_id", 521118);
-            contentValues.put("NAME", "Nizhnekamsk");
-            db.insert(TABLE_NAME, null, contentValues);*/
-        } catch (SQLException e) {
-            Log.e("my", "Error while creating table prefcity");
-        }
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        try {
-            db.execSQL("DROP TABLE " + TABLE_NAME);
-        } catch (SQLException e) {
-            Log.e("my", "sql exception. db doesn't exist");
-        }
-        onCreate(db);
-    }
-
-    @Override
-    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        super.onDowngrade(db, oldVersion, newVersion);
-        try {
-            db.execSQL("DROP TABLE " + TABLE_NAME);
-        } catch (SQLException e) {
-            Log.e("my", "sql exception. db doesn't exist");
-        }
-        onCreate(db);
     }
 }
