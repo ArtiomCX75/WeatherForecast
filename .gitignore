@@ -90,4 +90,4 @@ $RECYCLE.BIN/
 *.lnk
 /.idea/*
 
-/app/google-services.apk
+/app/google-services.json
