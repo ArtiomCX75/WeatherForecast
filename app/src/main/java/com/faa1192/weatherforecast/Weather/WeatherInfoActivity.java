@@ -13,6 +13,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 
 import com.faa1192.weatherforecast.Cities.City;
 import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
@@ -23,11 +24,13 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 //Активити содержащее сведения о погоде в конкретном городе
 public class WeatherInfoActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener {
     private City city;
     private SwipeRefreshLayout swipeRefreshLayout;
+    FirebaseInstanceId firebaseInstanceId = FirebaseInstanceId.getInstance();
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -37,6 +40,7 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("MY", firebaseInstanceId.getToken());
         //  Toast.makeText(WeatherInfoActivity.this, R.string.pull_for_refresh, Toast.LENGTH_SHORT).show();
         ActivityWeatherInfoBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_weather_info);
         Intent intent = getIntent();

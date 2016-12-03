@@ -132,7 +132,7 @@ public class CityDBHelper extends DBHelper {
                     }
                     db.setTransactionSuccessful();
                     db.endTransaction();
-                    Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
+                //    Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
                     Log.e("my", "add " + list.size());
                 } catch (Exception e) {
                     Log.e("my", "citydbhelper: cannot be cast to updatable or sql exeption"); // не критично
@@ -158,11 +158,13 @@ public class CityDBHelper extends DBHelper {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            ((Activity) context).findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
+            /*((Activity) context).findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
             Intent intent = new Intent(context, PrefCitiesActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
+            */
+            ((Activity) context).finish();
             ((CountriesActivity) context).overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
         }
     }
