@@ -89,3 +89,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /.idea/*
+
+/app/google-services.apk

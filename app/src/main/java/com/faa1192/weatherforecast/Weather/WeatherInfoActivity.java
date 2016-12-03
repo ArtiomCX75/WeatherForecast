@@ -1,10 +1,12 @@
 package com.faa1192.weatherforecast.Weather;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -16,17 +18,27 @@ import com.faa1192.weatherforecast.Cities.City;
 import com.faa1192.weatherforecast.Preferred.PrefCityDBHelper;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
+import com.faa1192.weatherforecast.databinding.ActivityWeatherInfoBinding;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 //Активити содержащее сведения о погоде в конкретном городе
 public class WeatherInfoActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener {
     private City city;
     private SwipeRefreshLayout swipeRefreshLayout;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //  Toast.makeText(WeatherInfoActivity.this, R.string.pull_for_refresh, Toast.LENGTH_SHORT).show();
-        setContentView(R.layout.activity_weather_info);
+        ActivityWeatherInfoBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_weather_info);
         Intent intent = getIntent();
         city = City.fromBundle(intent.getExtras());
         final WeatherInfoFragment fragment = (WeatherInfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3);
@@ -38,9 +50,12 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_back_arrow);
         upArrow.setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP);
         actionBar.setHomeAsUpIndicator(upArrow);
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher_weather_data);
+        swipeRefreshLayout = binding.refresherWeatherData;
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 200, 0, 0), Color.argb(255, 0, 200, 0), Color.argb(255, 0, 0, 200));
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     //Обновление данных о погоде с инета
@@ -68,5 +83,41 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off);
+    }
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("WeatherInfo Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
     }
 }

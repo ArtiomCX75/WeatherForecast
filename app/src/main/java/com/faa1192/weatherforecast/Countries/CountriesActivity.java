@@ -3,6 +3,7 @@ package com.faa1192.weatherforecast.Countries;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
@@ -19,10 +20,12 @@ import android.widget.ProgressBar;
 
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
+import com.faa1192.weatherforecast.databinding.ActivityCountriesBinding;
 
 //Активити содержащее список всех стран
 public class CountriesActivity extends AppCompatActivity implements Updatable, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout swipeRefreshLayout;
+    ActivityCountriesBinding binding;
 
     private int getScreenOrientation() {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
@@ -35,7 +38,8 @@ public class CountriesActivity extends AppCompatActivity implements Updatable, S
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_countries);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_countries);
+//        setContentView(R.layout.activity_countries);
         setRequestedOrientation(((getScreenOrientation() == 0) ? (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) : (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)));
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.col_pr_dark)));
@@ -44,10 +48,10 @@ public class CountriesActivity extends AppCompatActivity implements Updatable, S
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_back_arrow);
         upArrow.setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP);
         actionBar.setHomeAsUpIndicator(upArrow);
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresher);
+        swipeRefreshLayout = binding.refresher;
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setColorSchemeColors(Color.argb(255, 200, 0, 0), Color.argb(255, 0, 200, 0), Color.argb(255, 0, 0, 200));
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        ProgressBar progressBar = binding.progressBar;
         progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.pr_text), PorterDuff.Mode.SRC_IN);
     }
 
