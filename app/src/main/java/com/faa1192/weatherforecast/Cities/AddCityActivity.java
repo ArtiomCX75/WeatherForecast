@@ -6,19 +6,18 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.text.Html;
 import android.view.View;
-import android.widget.Toast;
-
 
 import com.faa1192.weatherforecast.Countries.CountriesActivity;
 import com.faa1192.weatherforecast.R;
 import com.faa1192.weatherforecast.Updatable;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.RecyclerView;
 
 //Активити содержащее список всех городов
 public class AddCityActivity extends AppCompatActivity implements Updatable {

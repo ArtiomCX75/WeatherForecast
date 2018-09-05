@@ -118,6 +118,7 @@ public class WeatherData {
                 throw e;
             }
         } catch (Exception e) {
+            Log.e("my", "Данные о погоде некорректные");
             for (int i = 0; i < e.getStackTrace().length; i++) {
                 Log.e("my", e.getStackTrace()[i].toString());
             }
@@ -219,7 +220,7 @@ public class WeatherData {
     }
 
     public String getWindSpeed() {
-        return windSpeed.isEmpty() ? hm.get(noData) : windSpeed+context.getResources().getString(R.string.m_per_sec);
+        return windSpeed.isEmpty() ? hm.get(noData) : windSpeed + context.getResources().getString(R.string.m_per_sec);
     }
 
     //Данные считаются старыми, если им больше часа. Сравнение со временем приходящим с сервера, а не со временем фактического получения данных
