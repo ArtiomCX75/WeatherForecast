@@ -41,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
             Log.e("my", "Error while creating table " + TABLE_LIST_CITY_NAME);
         }
         try {
-            db.execSQL("CREATE TABLE " + TABLE_SYS_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, KEY TEXT, VALUE TEXT);");
+            db.execSQL("CREATE TABLE " + TABLE_SYS_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, KEY1 TEXT, VALUE TEXT);");
         } catch (SQLException e) {
             Log.e("my", "Error while creating table " + TABLE_SYS_NAME);
         }
