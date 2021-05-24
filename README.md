@@ -5,5 +5,3 @@
 <br>25.05.2021 [v0.3-beta](https://github.com/ArtiomCX75/WeatherForecast/releases/tag/v0.3-beta)
 <br>14.09.2016 [v0.2-beta](https://github.com/ArtiomCX75/WeatherForecast/releases/tag/v0.2-beta)
 <br>15.08.2016 [v0.1-beta](https://github.com/ArtiomCX75/WeatherForecast/releases/tag/v0.1-beta)
-
-######tested on Android 4.0 - 7.0
