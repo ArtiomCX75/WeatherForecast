@@ -40,7 +40,6 @@ public class WeatherInfoActivity extends AppCompatActivity implements Updatable,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e("MY", firebaseInstanceId.getToken());
         //  Toast.makeText(WeatherInfoActivity.this, R.string.pull_for_refresh, Toast.LENGTH_SHORT).show();
         ActivityWeatherInfoBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_weather_info);
         Intent intent = getIntent();
