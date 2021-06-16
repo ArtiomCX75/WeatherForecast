@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.faa1192.weatherforecast">
+    package="com.faa1192.weatherforecast"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -20,23 +23,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Preferred.PrefCitiesActivity">
+        <activity android:name=".preferred.PrefCitiesActivity">
 
         </activity>
-        <activity android:name=".Weather.WeatherInfoActivity">
+        <activity android:name=".weather.WeatherInfoActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Preferred.PrefCitiesActivity" />
+                android:value=".preferred.PrefCitiesActivity" />
         </activity>
-        <activity android:name=".Cities.AddCityActivity">
+        <activity android:name=".cities.AddCityActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Preferred.PrefCitiesActivity" />
+                android:value=".preferred.PrefCitiesActivity" />
         </activity>
-        <activity android:name=".Countries.CountriesActivity">
+        <activity android:name=".countries.CountriesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Cities.AddCityActivity" />
+                android:value=".cities.AddCityActivity" />
         </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data

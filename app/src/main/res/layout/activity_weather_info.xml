@@ -10,7 +10,7 @@
     android:gravity="end"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".Weather.WeatherInfoActivity">
+    tools:context=".weather.WeatherInfoActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -25,7 +25,7 @@
 
             <fragment
                 android:id="@+id/fragment3"
-                android:name="com.faa1192.weatherforecast.Weather.WeatherInfoFragment"
+                android:name="com.faa1192.weatherforecast.weather.WeatherInfoFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/card_weather_info" />

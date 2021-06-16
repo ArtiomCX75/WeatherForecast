@@ -28,7 +28,7 @@
 
             <fragment
                 android:id="@+id/fragment_pref"
-                class="com.faa1192.weatherforecast.Preferred.PrefCitiesListFragment"
+                class="com.faa1192.weatherforecast.preferred.PrefCitiesListFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"

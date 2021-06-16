@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    sourceSets {
+        main.java.srcDirs += 'app/src/main/kotlin'
+    }
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.faa1192.weatherforecast"
@@ -40,11 +43,11 @@ ext {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.4.0-alpha01'
+    implementation 'androidx.appcompat:appcompat:1.4.0-alpha02'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.0'
-    implementation 'com.google.android.material:material:1.4.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0-rc01'
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
 
     implementation 'com.google.firebase:firebase-crash:16.2.1'
@@ -53,8 +56,8 @@ dependencies {
     implementation "androidx.multidex:multidex:2.0.1"
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0-beta01'
-    androidTestImplementation 'androidx.test:runner:1.4.0-beta01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0-beta02'
+    androidTestImplementation 'androidx.test:runner:1.4.0-beta02'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.code.gson:gson:2.8.6'
   //  implementation 'com.google.android.gms:play-services:12.0.1'
@@ -75,6 +78,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
 
     // Annotation processor
+    //noinspection LifecycleAnnotationProcessorWithJava8
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     // alternately - if using Java8, use the following instead of lifecycle-compiler
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"

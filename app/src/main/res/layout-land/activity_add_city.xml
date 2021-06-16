@@ -36,7 +36,7 @@
 
         <fragment
             android:id="@+id/fragment_city_list"
-            android:name="com.faa1192.weatherforecast.Cities.CitiesListFragment"
+            android:name="com.faa1192.weatherforecast.cities.CitiesListFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
