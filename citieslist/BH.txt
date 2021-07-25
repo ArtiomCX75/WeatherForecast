@@ -9,10 +9,10 @@
 {"_id":290291,"name":"Kingdom of Bahrain","country":"BH","coord":{"lon":50.5,"lat":26}}
 {"_id":290187,"name":"Madinat Isa","country":"BH","coord":{"lon":50.547779,"lat":26.173611}}
 {"_id":290340,"name":"Manama","country":"BH","coord":{"lon":50.583199,"lat":26.215361}}
-{"_id":290082,"name":"Umm ash Sha�?ūm","country":"BH","coord":{"lon":50.583328,"lat":26.216669}}
+{"_id":290082,"name":"Umm ash Sha�?ūm","country":"BH","coord":{"lon":50.583328,"lat":26.216669}}
 {"_id":7090973,"name":"Central Governorate","country":"BH","coord":{"lon":50.566669,"lat":26.16667}}
 {"_id":290104,"name":"Sitrah","country":"BH","coord":{"lon":50.62056,"lat":26.15472}}
-{"_id":290240,"name":"Ḩillat �?Abd aş Şāliḩ","country":"BH","coord":{"lon":50.51667,"lat":26.22139}}
+{"_id":290240,"name":"Ḩillat �?Abd aş Şāliḩ","country":"BH","coord":{"lon":50.51667,"lat":26.22139}}
 {"_id":290333,"name":"Muharraq Governorate","country":"BH","coord":{"lon":50.616669,"lat":26.25}}
 {"_id":290123,"name":"Samāhīj","country":"BH","coord":{"lon":50.634998,"lat":26.280001}}
 {"_id":290363,"name":"Al Hadd","country":"BH","coord":{"lon":50.654171,"lat":26.24556}}

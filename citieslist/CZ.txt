@@ -305,7 +305,7 @@
 {"_id":3072841,"name":"Kravare","country":"CZ","coord":{"lon":18.004721,"lat":49.93203}}
 {"_id":3064066,"name":"Třebovice","country":"CZ","coord":{"lon":18.19346,"lat":49.830952}}
 {"_id":3061864,"name":"Žantov","country":"CZ","coord":{"lon":15.04312,"lat":50.485649}}
-{"_id":3066849,"name":"�?itka","country":"CZ","coord":{"lon":14.29923,"lat":49.894508}}
+{"_id":3066849,"name":"�?itka","country":"CZ","coord":{"lon":14.29923,"lat":49.894508}}
 {"_id":3062153,"name":"Záběhlice","country":"CZ","coord":{"lon":14.39449,"lat":49.966679}}
 {"_id":3075022,"name":"Hovorcovice","country":"CZ","coord":{"lon":14.51789,"lat":50.178661}}
 {"_id":3072952,"name":"Kraliky","country":"CZ","coord":{"lon":16.76054,"lat":50.083839}}

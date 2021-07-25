@@ -1,0 +1,86 @@
+package com.faa1192.weatherforecast.cities
+
+import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.PorterDuff
+import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
+import android.text.Html
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.multidex.MultiDex
+import androidx.recyclerview.widget.RecyclerView
+import com.faa1192.weatherforecast.R
+import com.faa1192.weatherforecast.Updatable
+import com.faa1192.weatherforecast.countries.CountriesActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
+//Активити содержащее список всех городов
+class AddCityActivity : AppCompatActivity(), Updatable {
+    private var searchView: SearchView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        MultiDex.install(this)
+        setContentView(R.layout.activity_add_city)
+        val actionBar = supportActionBar
+        actionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.col_pr_dark)))
+        actionBar.setDisplayHomeAsUpEnabled(true)
+        actionBar.title = Html.fromHtml(
+            "<font color=\"" + resources.getColor(R.color.pr_text) + "\">" + getString(R.string.adding_city) + "</font>"
+        )
+        val upArrow = resources.getDrawable(R.drawable.ic_back_arrow)
+        upArrow.setColorFilter(resources.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
+        actionBar.setHomeAsUpIndicator(upArrow)
+        searchView = findViewById<View>(R.id.search) as SearchView
+        searchView!!.setIconifiedByDefault(false)
+        searchView!!.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                update()
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                update()
+                return false
+            }
+        })
+        searchView!!.isFocusable = false
+        val addListener =
+            View.OnClickListener { // Toast.makeText(AddCityActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
+                val intent = Intent(applicationContext, CountriesActivity::class.java)
+                startActivityForResult(intent, 1)
+                overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
+            }
+        val floatingActionButton = findViewById<View>(R.id.fabcity) as FloatingActionButton
+        floatingActionButton.backgroundTintList =
+            ColorStateList.valueOf(resources.getColor(R.color.col_pr))
+        floatingActionButton.setOnClickListener(addListener)
+        floatingActionButton.size = FloatingActionButton.SIZE_NORMAL
+        floatingActionButton.setColorFilter(resources.getColor(R.color.sec_text))
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode != -1) return
+        update()
+    }
+
+    //Обновление адаптера во время поиска
+    override fun update() {
+        val citiesListFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment_city_list) as CitiesListFragment?
+        val rv = citiesListFragment!!.view as RecyclerView?
+        val cityInListAdapter =
+            CityInListAdapter(
+                CityDBHelper.init(this@AddCityActivity).getCityList(
+                    searchView!!.query.toString().trim { it <= ' ' }), this@AddCityActivity
+            )
+        rv!!.adapter = cityInListAdapter
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
+    }
+}

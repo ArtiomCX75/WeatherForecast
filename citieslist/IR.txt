@@ -33,7 +33,7 @@
 {"_id":413931,"name":"Ostān-e Ardabīl","country":"IR","coord":{"lon":48,"lat":38.5}}
 {"_id":37755,"name":"Ravīndūzaq","country":"IR","coord":{"lon":48.080002,"lat":38.4398}}
 {"_id":128222,"name":"Ostān-e Kermānshāh","country":"IR","coord":{"lon":46.75,"lat":34.416672}}
-{"_id":6720817,"name":"Shahrak-e Be�?s̄at","country":"IR","coord":{"lon":47.071201,"lat":34.301899}}
+{"_id":6720817,"name":"Shahrak-e Be�?s̄at","country":"IR","coord":{"lon":47.071201,"lat":34.301899}}
 {"_id":115637,"name":"Shajarāt","country":"IR","coord":{"lon":49.173698,"lat":31.5741}}
 {"_id":30321,"name":"Zīrjān","country":"IR","coord":{"lon":58.43586,"lat":34.214401}}
 {"_id":113832,"name":"Şūfīābād","country":"IR","coord":{"lon":53.320202,"lat":35.457298}}
@@ -65,7 +65,7 @@
 {"_id":123256,"name":"Ḩowẕ-e Sorkh","country":"IR","coord":{"lon":59.136929,"lat":35.195129}}
 {"_id":116401,"name":"Ostān-e Semnān","country":"IR","coord":{"lon":55,"lat":35.5}}
 {"_id":110791,"name":"Ostān-e Tehrān","country":"IR","coord":{"lon":51.416672,"lat":35.666672}}
-{"_id":120219,"name":"Qal�?eh-ye Moḩammad �?Alī Khān","country":"IR","coord":{"lon":50.981098,"lat":35.2528}}
+{"_id":120219,"name":"Qal�?eh-ye Moḩammad �?Alī Khān","country":"IR","coord":{"lon":50.981098,"lat":35.2528}}
 {"_id":124763,"name":"Ostān-e Markazī","country":"IR","coord":{"lon":49.833328,"lat":34.333328}}
 {"_id":126584,"name":"Ostān-e Kordestān","country":"IR","coord":{"lon":47,"lat":35.666672}}
 {"_id":3530,"name":"Qabāghlū","country":"IR","coord":{"lon":46.168499,"lat":36.173302}}
@@ -108,7 +108,7 @@
 {"_id":142363,"name":"Babol","country":"IR","coord":{"lon":52.678951,"lat":36.551319}}
 {"_id":132144,"name":"Hamadan","country":"IR","coord":{"lon":48.514561,"lat":34.799221}}
 {"_id":418606,"name":"Najafabad","country":"IR","coord":{"lon":51.366798,"lat":32.634399}}
-{"_id":69349,"name":"�?Abbāsābād-e Qūsheh","country":"IR","coord":{"lon":59.216671,"lat":32.866669}}
+{"_id":69349,"name":"�?Abbāsābād-e Qūsheh","country":"IR","coord":{"lon":59.216671,"lat":32.866669}}
 {"_id":144449,"name":"Ahvāz","country":"IR","coord":{"lon":48.7505,"lat":31.355301}}
 {"_id":116667,"name":"Saveh","country":"IR","coord":{"lon":50.356602,"lat":35.021301}}
 {"_id":443792,"name":"Ostān-e Golestān","country":"IR","coord":{"lon":55,"lat":37.25}}
@@ -154,7 +154,7 @@
 {"_id":140851,"name":"Berāk","country":"IR","coord":{"lon":54.3955,"lat":27.668699}}
 {"_id":11754,"name":"Bālā Aḩmad Kolā","country":"IR","coord":{"lon":52.667271,"lat":36.649059}}
 {"_id":7052836,"name":"Ḩasanābād","country":"IR","coord":{"lon":61.054298,"lat":36.546501}}
-{"_id":7034325,"name":"Sa�?īdābād-e Pā�?īn","country":"IR","coord":{"lon":56.076302,"lat":30.257601}}
+{"_id":7034325,"name":"Sa�?īdābād-e Pā�?īn","country":"IR","coord":{"lon":56.076302,"lat":30.257601}}
 {"_id":138568,"name":"Cheshmeh Kabūd","country":"IR","coord":{"lon":46.405102,"lat":33.5732}}
 {"_id":125794,"name":"Lāvān","country":"IR","coord":{"lon":53.369999,"lat":26.809719}}
 {"_id":400747,"name":"Abū Mūsā","country":"IR","coord":{"lon":55.023628,"lat":25.86698}}
@@ -169,7 +169,7 @@
 {"_id":18557,"name":"Qarālar-e Mīrzā Ḩoseynqolī","country":"IR","coord":{"lon":45.067501,"lat":37.674702}}
 {"_id":6689293,"name":"Reẕāābād","country":"IR","coord":{"lon":48.396198,"lat":38.3237}}
 {"_id":3245,"name":"Taglag","country":"IR","coord":{"lon":44.98333,"lat":38.450001}}
-{"_id":390237,"name":"Ja�?farābād-e Now","country":"IR","coord":{"lon":52.590801,"lat":29.525999}}
+{"_id":390237,"name":"Ja�?farābād-e Now","country":"IR","coord":{"lon":52.590801,"lat":29.525999}}
 {"_id":131965,"name":"Hārom","country":"IR","coord":{"lon":53.714699,"lat":28.905399}}
 {"_id":11263,"name":"Shahrīār Kandeh","country":"IR","coord":{"lon":53.19902,"lat":36.631939}}
 {"_id":118848,"name":"Ramak","country":"IR","coord":{"lon":50.667931,"lat":36.898361}}

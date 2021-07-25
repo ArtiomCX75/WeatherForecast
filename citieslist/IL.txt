@@ -1,4 +1,4 @@
-{"_id":295582,"name":"‚Ä?Azriqam","country":"IL","coord":{"lon":34.700001,"lat":31.75}}
+{"_id":295582,"name":"ÔøΩ?Azriqam","country":"IL","coord":{"lon":34.700001,"lat":31.75}}
 {"_id":294622,"name":"Judieda Makr","country":"IL","coord":{"lon":35.154999,"lat":32.92556}}
 {"_id":294387,"name":"Maghar","country":"IL","coord":{"lon":35.407028,"lat":32.889839}}
 {"_id":294568,"name":"Kefar Aharon","country":"IL","coord":{"lon":34.792782,"lat":31.91111}}
@@ -12,8 +12,8 @@
 {"_id":294377,"name":"Ma·∫ñseya","country":"IL","coord":{"lon":35.007038,"lat":31.748541}}
 {"_id":293279,"name":"Urim","country":"IL","coord":{"lon":34.523281,"lat":31.304331}}
 {"_id":293361,"name":"Tel Litwinsky","country":"IL","coord":{"lon":34.848061,"lat":32.05389}}
-{"_id":293823,"name":"Qiryat Tiv‚Ä?on","country":"IL","coord":{"lon":35.12722,"lat":32.723888}}
-{"_id":293969,"name":"Or ‚Ä?Aqiva","country":"IL","coord":{"lon":34.920872,"lat":32.506401}}
+{"_id":293823,"name":"Qiryat TivÔøΩ?on","country":"IL","coord":{"lon":35.12722,"lat":32.723888}}
+{"_id":293969,"name":"Or ÔøΩ?Aqiva","country":"IL","coord":{"lon":34.920872,"lat":32.506401}}
 {"_id":293327,"name":"Tequma","country":"IL","coord":{"lon":34.578159,"lat":31.449841}}
 {"_id":293253,"name":"Yafo","country":"IL","coord":{"lon":34.752239,"lat":32.05043}}
 {"_id":293690,"name":"Rosh HaAyin","country":"IL","coord":{"lon":34.945831,"lat":32.09417}}
@@ -28,12 +28,12 @@
 {"_id":6693679,"name":"Modiin","country":"IL","coord":{"lon":34.999008,"lat":31.90729}}
 {"_id":6945291,"name":"Old City","country":"IL","coord":{"lon":35.234169,"lat":31.77667}}
 {"_id":294952,"name":"Southern District","country":"IL","coord":{"lon":34.833332,"lat":30.666668}}
-{"_id":294097,"name":"Na·∫ïerat ‚Ä?Illit","country":"IL","coord":{"lon":35.32468,"lat":32.70816}}
+{"_id":294097,"name":"Na·∫ïerat ÔøΩ?Illit","country":"IL","coord":{"lon":35.32468,"lat":32.70816}}
 {"_id":293857,"name":"Qevu·∫ïat Yavne","country":"IL","coord":{"lon":34.720798,"lat":31.81555}}
-{"_id":295471,"name":"Bet ‚Ä?Ezra","country":"IL","coord":{"lon":34.655941,"lat":31.736059}}
+{"_id":295471,"name":"Bet ÔøΩ?Ezra","country":"IL","coord":{"lon":34.655941,"lat":31.736059}}
 {"_id":294063,"name":"Nevatim","country":"IL","coord":{"lon":34.88208,"lat":31.224159}}
 {"_id":295410,"name":"Binyamina","country":"IL","coord":{"lon":34.944988,"lat":32.523201}}
-{"_id":294035,"name":"Nir‚Ä?am","country":"IL","coord":{"lon":34.580059,"lat":31.51959}}
+{"_id":294035,"name":"NirÔøΩ?am","country":"IL","coord":{"lon":34.580059,"lat":31.51959}}
 {"_id":295714,"name":"Allonim","country":"IL","coord":{"lon":35.141941,"lat":32.720001}}
 {"_id":295080,"name":"Gan Yavne","country":"IL","coord":{"lon":34.706589,"lat":31.787371}}
 {"_id":294498,"name":"Kefar Witqin","country":"IL","coord":{"lon":34.877369,"lat":32.38126}}
@@ -50,11 +50,11 @@
 {"_id":8199420,"name":"Oranit","country":"IL","coord":{"lon":34.99094,"lat":32.131649}}
 {"_id":294666,"name":"Hurfeish","country":"IL","coord":{"lon":35.348351,"lat":33.017109}}
 {"_id":294824,"name":"Northern District","country":"IL","coord":{"lon":35.333328,"lat":32.833328}}
-{"_id":295179,"name":"‚Ä?En Zetim","country":"IL","coord":{"lon":35.48513,"lat":32.994781}}
+{"_id":295179,"name":"ÔøΩ?En Zetim","country":"IL","coord":{"lon":35.48513,"lat":32.994781}}
 {"_id":294904,"name":"Central District","country":"IL","coord":{"lon":34.916672,"lat":32.083328}}
 {"_id":294074,"name":"Ness Ziona","country":"IL","coord":{"lon":34.798679,"lat":31.929331}}
 {"_id":8072868,"name":"Merkaz Shapira","country":"IL","coord":{"lon":34.707039,"lat":31.696421}}
-{"_id":294990,"name":"Giv‚Ä?at Mordekhay","country":"IL","coord":{"lon":35.200001,"lat":31.76667}}
+{"_id":294990,"name":"GivÔøΩ?at Mordekhay","country":"IL","coord":{"lon":35.200001,"lat":31.76667}}
 {"_id":293396,"name":"Tel Aviv District","country":"IL","coord":{"lon":34.799999,"lat":32.083328}}
 {"_id":294777,"name":"Herzliyya B","country":"IL","coord":{"lon":34.816669,"lat":32.166672}}
 {"_id":293788,"name":"Ramat Gan","country":"IL","coord":{"lon":34.814171,"lat":32.080559}}
@@ -96,7 +96,7 @@
 {"_id":293943,"name":"Pard√©s HÃ±anna Karkur","country":"IL","coord":{"lon":34.97781,"lat":32.474079}}
 {"_id":294384,"name":"Ma·∫ñanayim","country":"IL","coord":{"lon":35.570599,"lat":32.988979}}
 {"_id":294068,"name":"Netivot","country":"IL","coord":{"lon":34.588581,"lat":31.42215}}
-{"_id":294410,"name":"Ma‚Ä?agan Mikha‚Äôel","country":"IL","coord":{"lon":34.916382,"lat":32.555489}}
+{"_id":294410,"name":"MaÔøΩ?agan Mikha‚Äôel","country":"IL","coord":{"lon":34.916382,"lat":32.555489}}
 {"_id":293655,"name":"Sakhnin","country":"IL","coord":{"lon":35.293331,"lat":32.862221}}
 {"_id":293825,"name":"Qiryat Shemona","country":"IL","coord":{"lon":35.572121,"lat":33.207329}}
 {"_id":294778,"name":"Herzliyya","country":"IL","coord":{"lon":34.83667,"lat":32.165829}}
@@ -109,7 +109,7 @@
 {"_id":293436,"name":"Talme Menashe","country":"IL","coord":{"lon":34.849998,"lat":31.950001}}
 {"_id":295523,"name":"Beit Jann","country":"IL","coord":{"lon":35.381519,"lat":32.964642}}
 {"_id":294057,"name":"Newe Efrayim","country":"IL","coord":{"lon":34.870831,"lat":32.029999}}
-{"_id":295740,"name":"‚Ä?Afula","country":"IL","coord":{"lon":35.291672,"lat":32.611111}}
+{"_id":295740,"name":"ÔøΩ?Afula","country":"IL","coord":{"lon":35.291672,"lat":32.611111}}
 {"_id":293918,"name":"Peta·∫ñ Tiqwa","country":"IL","coord":{"lon":34.872219,"lat":32.088612}}
 {"_id":293896,"name":"Qalansuwa","country":"IL","coord":{"lon":34.98106,"lat":32.284931}}
 {"_id":293162,"name":"Yodefat","country":"IL","coord":{"lon":35.26944,"lat":32.836109}}
@@ -123,10 +123,10 @@
 {"_id":294999,"name":"Givatayim","country":"IL","coord":{"lon":34.811668,"lat":32.069721}}
 {"_id":293371,"name":"Tel HÃ±anan","country":"IL","coord":{"lon":35.03167,"lat":32.774719}}
 {"_id":294817,"name":"HÃ±a·∫ïerim","country":"IL","coord":{"lon":34.713902,"lat":31.24057}}
-{"_id":293153,"name":"Yoqne‚Ä?am ‚Ä?Illit","country":"IL","coord":{"lon":35.133331,"lat":32.666672}}
+{"_id":293153,"name":"YoqneÔøΩ?am ÔøΩ?Illit","country":"IL","coord":{"lon":35.133331,"lat":32.666672}}
 {"_id":293181,"name":"YirkƒÅ","country":"IL","coord":{"lon":35.212002,"lat":32.953758}}
 {"_id":295095,"name":"Gal‚Äôon","country":"IL","coord":{"lon":34.84758,"lat":31.633659}}
-{"_id":295189,"name":"‚Ä?En Netafim","country":"IL","coord":{"lon":34.882801,"lat":29.584299}}
+{"_id":295189,"name":"ÔøΩ?En Netafim","country":"IL","coord":{"lon":34.882801,"lat":29.584299}}
 {"_id":293792,"name":"Ramat Aviv","country":"IL","coord":{"lon":34.795559,"lat":32.110561}}
 {"_id":6620954,"name":"Ketura","country":"IL","coord":{"lon":35.061298,"lat":29.9702}}
 {"_id":293824,"name":"Qiryat Shemu‚Äôel","country":"IL","coord":{"lon":35.064442,"lat":32.838058}}

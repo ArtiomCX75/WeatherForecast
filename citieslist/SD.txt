@@ -63,10 +63,10 @@
 {"_id":408653,"name":"White Nile State","country":"SD","coord":{"lon":32.400002,"lat":13.5}}
 {"_id":7024903,"name":"Tag≈´g","country":"SD","coord":{"lon":36.364799,"lat":15.4071}}
 {"_id":408649,"name":"Al Qadarif State","country":"SD","coord":{"lon":35.349998,"lat":14.05}}
-{"_id":378020,"name":"‚Ä?AzƒÅzah","country":"SD","coord":{"lon":35.299999,"lat":14.13333}}
+{"_id":378020,"name":"ÔøΩ?AzƒÅzah","country":"SD","coord":{"lon":35.299999,"lat":14.13333}}
 {"_id":408666,"name":"Northern Darfur State","country":"SD","coord":{"lon":25.5,"lat":16}}
 {"_id":379555,"name":"El Fasher","country":"SD","coord":{"lon":25.34936,"lat":13.62793}}
-{"_id":375831,"name":"El ‚Ä?Urdi","country":"SD","coord":{"lon":30.450001,"lat":19.16667}}
+{"_id":375831,"name":"El ÔøΩ?Urdi","country":"SD","coord":{"lon":30.450001,"lat":19.16667}}
 {"_id":378361,"name":"Ash Shiqlah","country":"SD","coord":{"lon":34.01083,"lat":17.676109}}
 {"_id":364103,"name":"Wad Medani","country":"SD","coord":{"lon":33.51989,"lat":14.40118}}
 {"_id":365137,"name":"Omdurman","country":"SD","coord":{"lon":32.47773,"lat":15.64453}}

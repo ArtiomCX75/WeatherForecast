@@ -3,7 +3,7 @@
 {"_id":6940677,"name":"Al Bayda City","country":"YE","coord":{"lon":45.556599,"lat":13.9849}}
 {"_id":6201196,"name":"Muḩāfaz̧at Ibb","country":"YE","coord":{"lon":44.166672,"lat":14}}
 {"_id":74475,"name":"Ibb","country":"YE","coord":{"lon":44.155079,"lat":14.03356}}
-{"_id":7356639,"name":"Bayt Sa�?d Nāşir","country":"YE","coord":{"lon":44.19886,"lat":13.9922}}
+{"_id":7356639,"name":"Bayt Sa�?d Nāşir","country":"YE","coord":{"lon":44.19886,"lat":13.9922}}
 {"_id":71132,"name":"Sanaa","country":"YE","coord":{"lon":44.4249,"lat":15.26069}}
 {"_id":6940801,"name":"Bani Matar","country":"YE","coord":{"lon":44.049801,"lat":15.215}}
 {"_id":79133,"name":"Al Khasamah","country":"YE","coord":{"lon":44.102188,"lat":15.32345}}
@@ -12,10 +12,10 @@
 {"_id":34915,"name":"Dayr al Ḩisī","country":"YE","coord":{"lon":43.099998,"lat":16.049999}}
 {"_id":74222,"name":"Muḩāfaz̧at al Jawf","country":"YE","coord":{"lon":45.5243,"lat":16.597401}}
 {"_id":6940701,"name":"Al Maslub","country":"YE","coord":{"lon":44.5667,"lat":16.0961}}
-{"_id":71622,"name":"Rakkat al �?Askarī","country":"YE","coord":{"lon":44.48333,"lat":16.15}}
-{"_id":70222,"name":"Muḩāfaz̧at Ta�?izz","country":"YE","coord":{"lon":44,"lat":13.5}}
+{"_id":71622,"name":"Rakkat al �?Askarī","country":"YE","coord":{"lon":44.48333,"lat":16.15}}
+{"_id":70222,"name":"Muḩāfaz̧at Ta�?izz","country":"YE","coord":{"lon":44,"lat":13.5}}
 {"_id":6940600,"name":"Ash Shamayatayn","country":"YE","coord":{"lon":43.98,"lat":13.1822}}
-{"_id":7355357,"name":"Al Quray�?","country":"YE","coord":{"lon":44.075668,"lat":13.15596}}
+{"_id":7355357,"name":"Al Quray�?","country":"YE","coord":{"lon":44.075668,"lat":13.15596}}
 {"_id":69500,"name":"Zabid","country":"YE","coord":{"lon":43.315182,"lat":14.1951}}
 {"_id":69559,"name":"Yarim","country":"YE","coord":{"lon":44.377949,"lat":14.29804}}
 {"_id":6940691,"name":"Salh","country":"YE","coord":{"lon":44.040199,"lat":13.5839}}
@@ -42,16 +42,16 @@
 {"_id":79415,"name":"Al Hudaydah","country":"YE","coord":{"lon":42.954521,"lat":14.79781}}
 {"_id":79836,"name":"Al Bayda","country":"YE","coord":{"lon":45.57272,"lat":13.98523}}
 {"_id":69543,"name":"Republic of Yemen","country":"YE","coord":{"lon":47.5,"lat":15.5}}
-{"_id":70221,"name":"At Ta�?izzīyah","country":"YE","coord":{"lon":44.009411,"lat":13.69479}}
+{"_id":70221,"name":"At Ta�?izzīyah","country":"YE","coord":{"lon":44.009411,"lat":13.69479}}
 {"_id":75411,"name":"Muḩāfaz̧at Ḩaḑramawt","country":"YE","coord":{"lon":49,"lat":16}}
 {"_id":6940615,"name":"Rakhyah","country":"YE","coord":{"lon":47.7728,"lat":15.4618}}
 {"_id":71136,"name":"Sana","country":"YE","coord":{"lon":47.76667,"lat":15.4}}
-{"_id":80412,"name":"Muḩāfaz̧at �?Adan","country":"YE","coord":{"lon":44.916672,"lat":12.83333}}
+{"_id":80412,"name":"Muḩāfaz̧at �?Adan","country":"YE","coord":{"lon":44.916672,"lat":12.83333}}
 {"_id":6940814,"name":"Craiter","country":"YE","coord":{"lon":45.038101,"lat":12.7731}}
 {"_id":415189,"name":"Aden","country":"YE","coord":{"lon":45.036671,"lat":12.77944}}
 {"_id":76183,"name":"Muḩāfaz̧at Dhamār","country":"YE","coord":{"lon":44.272942,"lat":14.68296}}
 {"_id":6940616,"name":"Dawran Aness","country":"YE","coord":{"lon":44.1143,"lat":14.8288}}
-{"_id":70223,"name":"Ta�?izz","country":"YE","coord":{"lon":44.033329,"lat":14.78333}}
+{"_id":70223,"name":"Ta�?izz","country":"YE","coord":{"lon":44.033329,"lat":14.78333}}
 {"_id":6940756,"name":"Al Mukalla City","country":"YE","coord":{"lon":49.192902,"lat":14.5396}}
 {"_id":7472737,"name":"Ḩayy as Salām","country":"YE","coord":{"lon":49.130562,"lat":14.53314}}
 {"_id":79416,"name":"Muḩāfaz̧at al Ḩudaydah","country":"YE","coord":{"lon":43.192791,"lat":14.91732}}
@@ -66,7 +66,7 @@
 {"_id":79737,"name":"Al Fujayr","country":"YE","coord":{"lon":48.799999,"lat":15.96667}}
 {"_id":6940758,"name":"Hidaybu","country":"YE","coord":{"lon":54.008202,"lat":12.5025}}
 {"_id":72589,"name":"Morī","country":"YE","coord":{"lon":53.900002,"lat":12.63333}}
-{"_id":71333,"name":"Muḩāfaz̧at Şa�?dah","country":"YE","coord":{"lon":43.914879,"lat":17.0634}}
+{"_id":71333,"name":"Muḩāfaz̧at Şa�?dah","country":"YE","coord":{"lon":43.914879,"lat":17.0634}}
 {"_id":6940797,"name":"As Safra","country":"YE","coord":{"lon":43.856602,"lat":17.0142}}
 {"_id":79561,"name":"Al Ḩamzāt","country":"YE","coord":{"lon":43.73333,"lat":16.966669}}
 {"_id":6940753,"name":"Ghayl Ba Wazir","country":"YE","coord":{"lon":49.024502,"lat":14.8778}}
@@ -78,7 +78,7 @@
 {"_id":72965,"name":"Marib City","country":"YE","coord":{"lon":45.303398,"lat":15.4156}}
 {"_id":72968,"name":"Ma'rib","country":"YE","coord":{"lon":45.325809,"lat":15.46253}}
 {"_id":6940612,"name":"Al Hawak","country":"YE","coord":{"lon":42.997799,"lat":14.7601}}
-{"_id":407317,"name":"As Sal�?ah","country":"YE","coord":{"lon":42.996231,"lat":14.7352}}
+{"_id":407317,"name":"As Sal�?ah","country":"YE","coord":{"lon":42.996231,"lat":14.7352}}
 {"_id":80425,"name":"Muḩāfaz̧at Abyan","country":"YE","coord":{"lon":46.125999,"lat":13.6291}}
 {"_id":6940648,"name":"Al Mahfad","country":"YE","coord":{"lon":46.756001,"lat":13.9705}}
 {"_id":78966,"name":"Al Makdash","country":"YE","coord":{"lon":46.650002,"lat":14.18333}}

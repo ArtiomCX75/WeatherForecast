@@ -13,7 +13,7 @@
 {"_id":108052,"name":"As Sulaymānīyah","country":"SA","coord":{"lon":47.295559,"lat":24.12361}}
 {"_id":407308,"name":"As Sahbā’","country":"SA","coord":{"lon":47.379662,"lat":24.191019}}
 {"_id":108241,"name":"Al Minţaqah ash Sharqīyah","country":"SA","coord":{"lon":51,"lat":22.5}}
-{"_id":391749,"name":"�?Uşayfirāt","country":"SA","coord":{"lon":49.432049,"lat":26.10927}}
+{"_id":391749,"name":"�?Uşayfirāt","country":"SA","coord":{"lon":49.432049,"lat":26.10927}}
 {"_id":100926,"name":"Umm Lajj","country":"SA","coord":{"lon":37.268501,"lat":25.021259}}
 {"_id":101322,"name":"Turabah","country":"SA","coord":{"lon":41.633099,"lat":21.21406}}
 {"_id":102651,"name":"Sabya","country":"SA","coord":{"lon":42.62537,"lat":17.1495}}
@@ -30,22 +30,22 @@
 {"_id":400685,"name":"Al Fayşalīyah","country":"SA","coord":{"lon":46.776981,"lat":24.64348}}
 {"_id":107968,"name":"Taif","country":"SA","coord":{"lon":40.415829,"lat":21.270281}}
 {"_id":110336,"name":"Ad Dammam","country":"SA","coord":{"lon":50.10326,"lat":26.43442}}
-{"_id":389860,"name":"Ash Shu�?aybah","country":"SA","coord":{"lon":50.11528,"lat":26.433889}}
+{"_id":389860,"name":"Ash Shu�?aybah","country":"SA","coord":{"lon":50.11528,"lat":26.433889}}
 {"_id":102891,"name":"Ras Tanura","country":"SA","coord":{"lon":50.159168,"lat":26.64389}}
 {"_id":101627,"name":"Minţaqat Tabūk","country":"SA","coord":{"lon":37.333328,"lat":27.5}}
 {"_id":101628,"name":"Tabuk","country":"SA","coord":{"lon":36.583328,"lat":28.383329}}
 {"_id":104515,"name":"Mecca","country":"SA","coord":{"lon":39.826111,"lat":21.42667}}
-{"_id":108179,"name":"Minţaqat �?Asīr","country":"SA","coord":{"lon":43.166672,"lat":19.16667}}
+{"_id":108179,"name":"Minţaqat �?Asīr","country":"SA","coord":{"lon":43.166672,"lat":19.16667}}
 {"_id":110690,"name":"Abha","country":"SA","coord":{"lon":42.50528,"lat":18.216391}}
 {"_id":109224,"name":"Minţaqat al Madīnah","country":"SA","coord":{"lon":39.666672,"lat":25.66667}}
 {"_id":104308,"name":"Masāḩilī","country":"SA","coord":{"lon":38.23246,"lat":24.027769}}
-{"_id":104625,"name":"Madīnat Yanbu�? aş Şinā�?īyah","country":"SA","coord":{"lon":38.227501,"lat":23.999439}}
+{"_id":104625,"name":"Madīnat Yanbu�? aş Şinā�?īyah","country":"SA","coord":{"lon":38.227501,"lat":23.999439}}
 {"_id":103533,"name":"Nimrān","country":"SA","coord":{"lon":42.599998,"lat":20}}
 {"_id":107304,"name":"Buraydah","country":"SA","coord":{"lon":43.974972,"lat":26.325991}}
 {"_id":107312,"name":"Abqaiq","country":"SA","coord":{"lon":49.677608,"lat":25.937099}}
 {"_id":108927,"name":"Al Qatif","country":"SA","coord":{"lon":50.024521,"lat":26.5208}}
 {"_id":107797,"name":"Dhahran","country":"SA","coord":{"lon":50.135281,"lat":26.30324}}
-{"_id":110737,"name":"Abā as Su�?ūd","country":"SA","coord":{"lon":44.099998,"lat":17.466669}}
+{"_id":110737,"name":"Abā as Su�?ūd","country":"SA","coord":{"lon":44.099998,"lat":17.466669}}
 {"_id":105072,"name":"Khamis Mushayt","country":"SA","coord":{"lon":42.729172,"lat":18.306391}}
 {"_id":108933,"name":"Minţaqat al Qaşīm","country":"SA","coord":{"lon":43.466671,"lat":27.08333}}
 {"_id":108435,"name":"Ar Rass","country":"SA","coord":{"lon":43.497299,"lat":25.86944}}
@@ -62,7 +62,7 @@
 {"_id":108773,"name":"Al Wajh","country":"SA","coord":{"lon":36.45248,"lat":26.24551}}
 {"_id":101591,"name":"Tamrah","country":"SA","coord":{"lon":45.433941,"lat":20.40843}}
 {"_id":101312,"name":"Turayf","country":"SA","coord":{"lon":38.663738,"lat":31.67252}}
-{"_id":409515,"name":"Al �?Awājīyah","country":"SA","coord":{"lon":40.54842,"lat":21.447689}}
+{"_id":409515,"name":"Al �?Awājīyah","country":"SA","coord":{"lon":40.54842,"lat":21.447689}}
 {"_id":103331,"name":"Qārā","country":"SA","coord":{"lon":40.22694,"lat":29.87694}}
 {"_id":8019123,"name":"Sharūrah","country":"SA","coord":{"lon":47.11488,"lat":17.48946}}
 {"_id":109579,"name":"Minţaqat al Ḩudūd ash Shamālīyah","country":"SA","coord":{"lon":42.666672,"lat":30}}
@@ -80,7 +80,7 @@
 {"_id":109923,"name":"Al Başar","country":"SA","coord":{"lon":43.869732,"lat":26.285299}}
 {"_id":110325,"name":"Ad Dawadimi","country":"SA","coord":{"lon":44.392368,"lat":24.507721}}
 {"_id":101810,"name":"Sufan","country":"SA","coord":{"lon":42.599998,"lat":19.98333}}
-{"_id":110060,"name":"Al �?Aqīq","country":"SA","coord":{"lon":41.664341,"lat":20.273581}}
+{"_id":110060,"name":"Al �?Aqīq","country":"SA","coord":{"lon":41.664341,"lat":20.273581}}
 {"_id":108384,"name":"Ar Ruqayyiqah","country":"SA","coord":{"lon":49.566669,"lat":25.35}}
 {"_id":106261,"name":"Ḩajlah","country":"SA","coord":{"lon":42.633331,"lat":18.25}}
 {"_id":396460,"name":"Khishaybī al Ḩaḑar","country":"SA","coord":{"lon":43.283531,"lat":25.762119}}

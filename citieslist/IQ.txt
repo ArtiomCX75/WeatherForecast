@@ -1,5 +1,5 @@
-{"_id":384848,"name":"Qarah Gawl al �?Ulyā","country":"IQ","coord":{"lon":45.6325,"lat":35.353889}}
-{"_id":448961,"name":"Tall �?Alāwī","country":"IQ","coord":{"lon":44.552891,"lat":31.59358}}
+{"_id":384848,"name":"Qarah Gawl al �?Ulyā","country":"IQ","coord":{"lon":45.6325,"lat":35.353889}}
+{"_id":448961,"name":"Tall �?Alāwī","country":"IQ","coord":{"lon":44.552891,"lat":31.59358}}
 {"_id":98862,"name":"Muḩāfaz̧at an Najaf","country":"IQ","coord":{"lon":43.833328,"lat":31.25}}
 {"_id":94589,"name":"Raḩbah","country":"IQ","coord":{"lon":44.314999,"lat":31.73357}}
 {"_id":94823,"name":"Muḩāfaz̧at Karbalā’","country":"IQ","coord":{"lon":43.833328,"lat":32.5}}
@@ -20,15 +20,15 @@
 {"_id":99237,"name":"Republic of Iraq","country":"IQ","coord":{"lon":44,"lat":33}}
 {"_id":92873,"name":"Niskah Jaw","country":"IQ","coord":{"lon":45.648056,"lat":35.353333}}
 {"_id":94889,"name":"Kānī Mīr","country":"IQ","coord":{"lon":45.674999,"lat":35.310833}}
-{"_id":92244,"name":"Qāzaw al �?Ulyā","country":"IQ","coord":{"lon":45.692501,"lat":35.338333}}
+{"_id":92244,"name":"Qāzaw al �?Ulyā","country":"IQ","coord":{"lon":45.692501,"lat":35.338333}}
 {"_id":384597,"name":"Charbūkh","country":"IQ","coord":{"lon":45.712223,"lat":35.315834}}
 {"_id":94796,"name":"Karīm Āwah","country":"IQ","coord":{"lon":45.733334,"lat":35.299999}}
 {"_id":94932,"name":"Kānī Kawah Jabūkh","country":"IQ","coord":{"lon":45.726665,"lat":35.31028}}
-{"_id":384598,"name":"Muḩammad �?Azīz","country":"IQ","coord":{"lon":45.731945,"lat":35.325279}}
+{"_id":384598,"name":"Muḩammad �?Azīz","country":"IQ","coord":{"lon":45.731945,"lat":35.325279}}
 {"_id":94931,"name":"Kānī Kawah al Qadīmah","country":"IQ","coord":{"lon":45.743889,"lat":35.302502}}
 {"_id":6686317,"name":"-","country":"IQ","coord":{"lon":45.9753,"lat":35.5779}}
 {"_id":99596,"name":"Alan","country":"IQ","coord":{"lon":45.776001,"lat":35.290001}}
-{"_id":417262,"name":"Qalwazah �?Ulyā","country":"IQ","coord":{"lon":45.7855,"lat":35.253201}}
+{"_id":417262,"name":"Qalwazah �?Ulyā","country":"IQ","coord":{"lon":45.7855,"lat":35.253201}}
 {"_id":94964,"name":"Kānī Bardīnah","country":"IQ","coord":{"lon":45.808201,"lat":35.239498}}
 {"_id":417256,"name":"Kūlān","country":"IQ","coord":{"lon":45.7855,"lat":35.209099}}
 {"_id":89977,"name":"Wuluwr","country":"IQ","coord":{"lon":45.749722,"lat":35.115002}}
@@ -36,10 +36,10 @@
 {"_id":384823,"name":"Zālah Nāw","country":"IQ","coord":{"lon":45.710835,"lat":35.084442}}
 {"_id":384077,"name":"Nāwday","country":"IQ","coord":{"lon":45.718334,"lat":35.022499}}
 {"_id":98227,"name":"Muḩāfaz̧at Bābil","country":"IQ","coord":{"lon":44.583332,"lat":32.666668}}
-{"_id":99308,"name":"�?Alī al Aḩmad","country":"IQ","coord":{"lon":44.049999,"lat":33.066666}}
+{"_id":99308,"name":"�?Alī al Aḩmad","country":"IQ","coord":{"lon":44.049999,"lat":33.066666}}
 {"_id":446658,"name":"Bāzjī","country":"IQ","coord":{"lon":45.5075,"lat":35.683887}}
 {"_id":97572,"name":"Bwzān","country":"IQ","coord":{"lon":45.966667,"lat":35.566666}}
-{"_id":6835394,"name":"�?Alwān Muḩammad","country":"IQ","coord":{"lon":45.00959,"lat":33.999084}}
+{"_id":6835394,"name":"�?Alwān Muḩammad","country":"IQ","coord":{"lon":45.00959,"lat":33.999084}}
 {"_id":89341,"name":"Muḩāfaz̧at al Başrah","country":"IQ","coord":{"lon":47.25,"lat":30.33333}}
 {"_id":98689,"name":"Ar Rumaylah","country":"IQ","coord":{"lon":47.34972,"lat":30.27417}}
 {"_id":99536,"name":"Al Barjisīyah","country":"IQ","coord":{"lon":47.566669,"lat":30.35}}
@@ -49,20 +49,20 @@
 {"_id":6772182,"name":"Ḩawīlīyah","country":"IQ","coord":{"lon":47.02256,"lat":31.49262}}
 {"_id":98180,"name":"Muḩāfaz̧at Baghdād","country":"IQ","coord":{"lon":44.25,"lat":33.133331}}
 {"_id":99914,"name":"Abū Muḩammad","country":"IQ","coord":{"lon":44.116669,"lat":33.166672}}
-{"_id":92628,"name":"Qal�?at as Sādah","country":"IQ","coord":{"lon":44.157219,"lat":33.161388}}
+{"_id":92628,"name":"Qal�?at as Sādah","country":"IQ","coord":{"lon":44.157219,"lat":33.161388}}
 {"_id":99592,"name":"Muḩāfaz̧at al Anbār","country":"IQ","coord":{"lon":41.75,"lat":33}}
-{"_id":435805,"name":"Qaryat al �?Ankūr","country":"IQ","coord":{"lon":43.42918,"lat":33.220909}}
+{"_id":435805,"name":"Qaryat al �?Ankūr","country":"IQ","coord":{"lon":43.42918,"lat":33.220909}}
 {"_id":448779,"name":"Qaryat al Majarrah","country":"IQ","coord":{"lon":43.510658,"lat":33.198212}}
 {"_id":6798467,"name":"Sawḩ al Ghawr","country":"IQ","coord":{"lon":43.10643,"lat":33.19656}}
-{"_id":96269,"name":"�?Arab Ḩasan as Suhayl","country":"IQ","coord":{"lon":44.15752,"lat":33.32304}}
+{"_id":96269,"name":"�?Arab Ḩasan as Suhayl","country":"IQ","coord":{"lon":44.15752,"lat":33.32304}}
 {"_id":96215,"name":"Ḩājj Sallūm","country":"IQ","coord":{"lon":44.349171,"lat":33.455349}}
-{"_id":6759153,"name":"�?Ayn al Arnab","country":"IQ","coord":{"lon":42.462509,"lat":33.605831}}
-{"_id":6806015,"name":"�?Abd Shaḩḩādh Mūsá","country":"IQ","coord":{"lon":44.219349,"lat":33.574348}}
-{"_id":6928117,"name":"Al Qaryat al �?Aşirīyah","country":"IQ","coord":{"lon":45.101299,"lat":34.139439}}
+{"_id":6759153,"name":"�?Ayn al Arnab","country":"IQ","coord":{"lon":42.462509,"lat":33.605831}}
+{"_id":6806015,"name":"�?Abd Shaḩḩādh Mūsá","country":"IQ","coord":{"lon":44.219349,"lat":33.574348}}
+{"_id":6928117,"name":"Al Qaryat al �?Aşirīyah","country":"IQ","coord":{"lon":45.101299,"lat":34.139439}}
 {"_id":6763613,"name":"Qūr al Aslāf","country":"IQ","coord":{"lon":41.305698,"lat":34.217659}}
-{"_id":91823,"name":"Sa�?d Allāh Afandī","country":"IQ","coord":{"lon":45.333328,"lat":34.316669}}
+{"_id":91823,"name":"Sa�?d Allāh Afandī","country":"IQ","coord":{"lon":45.333328,"lat":34.316669}}
 {"_id":91695,"name":"Muhafazat Salah ad Din","country":"IQ","coord":{"lon":43.650002,"lat":34.5}}
-{"_id":6871491,"name":"Maḩmūd �?Alī","country":"IQ","coord":{"lon":43.33181,"lat":34.400398}}
+{"_id":6871491,"name":"Maḩmūd �?Alī","country":"IQ","coord":{"lon":43.33181,"lat":34.400398}}
 {"_id":6752102,"name":"Qaryat as Sādah","country":"IQ","coord":{"lon":44.295872,"lat":34.559769}}
 {"_id":98410,"name":"Muḩāfaz̧at Kirkūk","country":"IQ","coord":{"lon":44.166672,"lat":35.25}}
 {"_id":96165,"name":"Hamādīyah","country":"IQ","coord":{"lon":44.21352,"lat":35.277569}}
@@ -73,9 +73,9 @@
 {"_id":6860746,"name":"Qaryat al Muftiyāt","country":"IQ","coord":{"lon":43.333359,"lat":36.077229}}
 {"_id":95445,"name":"Muḩāfaz̧at Arbīl","country":"IQ","coord":{"lon":44,"lat":36.166672}}
 {"_id":7018408,"name":"Ghaitli","country":"IQ","coord":{"lon":43.578098,"lat":36.145378}}
-{"_id":98299,"name":"Qaryat �?Ayn Nāşir","country":"IQ","coord":{"lon":43.070259,"lat":36.125061}}
+{"_id":98299,"name":"Qaryat �?Ayn Nāşir","country":"IQ","coord":{"lon":43.070259,"lat":36.125061}}
 {"_id":6786700,"name":"Tall Daghsh","country":"IQ","coord":{"lon":42.240959,"lat":36.138069}}
-{"_id":98756,"name":"Qaryat al �?Arbīd","country":"IQ","coord":{"lon":43.08062,"lat":36.198238}}
+{"_id":98756,"name":"Qaryat al �?Arbīd","country":"IQ","coord":{"lon":43.08062,"lat":36.198238}}
 {"_id":445967,"name":"Qāzaw as Suflá","country":"IQ","coord":{"lon":45.707722,"lat":35.335911}}
 {"_id":99250,"name":"Al Imām","country":"IQ","coord":{"lon":44.583328,"lat":32.666672}}
 {"_id":98463,"name":"As Sulaymaniyah","country":"IQ","coord":{"lon":45.437489,"lat":35.561131}}
@@ -83,7 +83,7 @@
 {"_id":98182,"name":"Baghdad","country":"IQ","coord":{"lon":44.400879,"lat":33.34058}}
 {"_id":6201158,"name":"Shūrīyah","country":"IQ","coord":{"lon":44.39444,"lat":33.342499}}
 {"_id":95446,"name":"Erbil","country":"IQ","coord":{"lon":44.01062,"lat":36.19257}}
-{"_id":6818134,"name":"Yūsuf �?Alī","country":"IQ","coord":{"lon":44.032318,"lat":32.601028}}
+{"_id":6818134,"name":"Yūsuf �?Alī","country":"IQ","coord":{"lon":44.032318,"lat":32.601028}}
 {"_id":96966,"name":"Dīwānīyah","country":"IQ","coord":{"lon":44.582218,"lat":33.001389}}
 {"_id":99072,"name":"Mosul","country":"IQ","coord":{"lon":43.118889,"lat":36.334999}}
 {"_id":99532,"name":"Al Basrah","country":"IQ","coord":{"lon":47.788849,"lat":30.53488}}
@@ -97,7 +97,7 @@
 {"_id":98854,"name":"An Nasiriyah","country":"IQ","coord":{"lon":46.261021,"lat":31.05205}}
 {"_id":93396,"name":"Mudarras","country":"IQ","coord":{"lon":47.183331,"lat":31.85}}
 {"_id":98717,"name":"Ar Ramadi","country":"IQ","coord":{"lon":43.30584,"lat":33.422569}}
-{"_id":435797,"name":"Ḩayy al �?Adl","country":"IQ","coord":{"lon":43.300541,"lat":33.418869}}
+{"_id":435797,"name":"Ḩayy al �?Adl","country":"IQ","coord":{"lon":43.300541,"lat":33.418869}}
 {"_id":6871849,"name":"Ḩayy ash Shīshīn","country":"IQ","coord":{"lon":43.687931,"lat":34.593109}}
 {"_id":97270,"name":"Muḩāfaz̧at Dahūk","country":"IQ","coord":{"lon":43.25,"lat":37}}
 {"_id":96994,"name":"Dahuk","country":"IQ","coord":{"lon":42.99398,"lat":36.869499}}
@@ -105,7 +105,7 @@
 {"_id":99454,"name":"Al Fallujah","country":"IQ","coord":{"lon":43.77951,"lat":33.353802}}
 {"_id":90026,"name":"Tozkhurmato","country":"IQ","coord":{"lon":44.62994,"lat":34.890461}}
 {"_id":99135,"name":"Al Kūfah","country":"IQ","coord":{"lon":44.403332,"lat":32.034721}}
-{"_id":7046940,"name":"Kānī �?Abdū","country":"IQ","coord":{"lon":41.84935,"lat":36.30209}}
+{"_id":7046940,"name":"Kānī �?Abdū","country":"IQ","coord":{"lon":41.84935,"lat":36.30209}}
 {"_id":99762,"name":"Ad Diwaniyah","country":"IQ","coord":{"lon":44.93063,"lat":31.990511}}
 {"_id":97990,"name":"Baqubah","country":"IQ","coord":{"lon":44.655449,"lat":33.748459}}
 {"_id":92365,"name":"Qaryat Bānī Mālik","country":"IQ","coord":{"lon":47.700001,"lat":30.566669}}

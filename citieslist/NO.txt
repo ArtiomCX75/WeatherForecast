@@ -44,7 +44,7 @@
 {"_id":6453399,"name":"Arendal","country":"NO","coord":{"lon":8.76501,"lat":58.460388}}
 {"_id":3162955,"name":"Arendal","country":"NO","coord":{"lon":8.77253,"lat":58.46151}}
 {"_id":3227747,"name":"StrÃ¸msbu","country":"NO","coord":{"lon":8.75083,"lat":58.45528}}
-{"_id":3143188,"name":"Ã?stfold fylke","country":"NO","coord":{"lon":11.5,"lat":59.333328}}
+{"_id":3143188,"name":"ï¿½?stfold fylke","country":"NO","coord":{"lon":11.5,"lat":59.333328}}
 {"_id":6453384,"name":"Moss","country":"NO","coord":{"lon":10.65968,"lat":59.434361}}
 {"_id":3145375,"name":"Moss","country":"NO","coord":{"lon":10.65771,"lat":59.434029}}
 {"_id":3135516,"name":"Suldalsosen","country":"NO","coord":{"lon":6.5,"lat":59.5}}
@@ -201,7 +201,7 @@
 {"_id":3136768,"name":"StjÃ¸rdal","country":"NO","coord":{"lon":11.0273,"lat":63.56699}}
 {"_id":3136765,"name":"Stjordalshalsen","country":"NO","coord":{"lon":10.92618,"lat":63.468102}}
 {"_id":3134260,"name":"Torp","country":"NO","coord":{"lon":10.2425,"lat":59.179722}}
-{"_id":3143410,"name":"Ã?rland","country":"NO","coord":{"lon":9.66633,"lat":63.685741}}
+{"_id":3143410,"name":"ï¿½?rland","country":"NO","coord":{"lon":9.66633,"lat":63.685741}}
 {"_id":3159198,"name":"Djupdalen","country":"NO","coord":{"lon":9.58333,"lat":63.700001}}
 {"_id":6453314,"name":"Porsanger","country":"NO","coord":{"lon":24.955919,"lat":70.052139}}
 {"_id":779082,"name":"Lakselv","country":"NO","coord":{"lon":24.971821,"lat":70.051331}}
@@ -241,7 +241,7 @@
 {"_id":3131656,"name":"Vikna","country":"NO","coord":{"lon":11.24198,"lat":64.863617}}
 {"_id":3140840,"name":"Ryem","country":"NO","coord":{"lon":11.16667,"lat":64.849998}}
 {"_id":3141217,"name":"RÃ¸ssvoll","country":"NO","coord":{"lon":14.33333,"lat":66.366669}}
-{"_id":3143333,"name":"Ã?rsta","country":"NO","coord":{"lon":6.13084,"lat":62.199371}}
+{"_id":3143333,"name":"ï¿½?rsta","country":"NO","coord":{"lon":6.13084,"lat":62.199371}}
 {"_id":3224678,"name":"Ytre Hovden","country":"NO","coord":{"lon":6.06667,"lat":62.183331}}
 {"_id":6453369,"name":"Notodden","country":"NO","coord":{"lon":9.26046,"lat":59.559921}}
 {"_id":3139818,"name":"Sem","country":"NO","coord":{"lon":9.21667,"lat":59.566669}}
@@ -292,7 +292,7 @@
 {"_id":3156529,"name":"Fredrikstad","country":"NO","coord":{"lon":10.9298,"lat":59.218102}}
 {"_id":3163392,"name":"Alesund","country":"NO","coord":{"lon":6.15492,"lat":62.472252}}
 {"_id":3336587,"name":"Askoy","country":"NO","coord":{"lon":5.18333,"lat":60.400002}}
-{"_id":3142849,"name":"Ã?yer","country":"NO","coord":{"lon":10.41297,"lat":61.26495}}
+{"_id":3142849,"name":"ï¿½?yer","country":"NO","coord":{"lon":10.41297,"lat":61.26495}}
 {"_id":3134016,"name":"Tretten","country":"NO","coord":{"lon":10.30066,"lat":61.314232}}
 {"_id":779349,"name":"Karasjok","country":"NO","coord":{"lon":25.51885,"lat":69.472237}}
 {"_id":779350,"name":"Karasjok","country":"NO","coord":{"lon":25.511221,"lat":69.47187}}

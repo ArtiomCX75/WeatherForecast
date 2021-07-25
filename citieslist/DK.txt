@@ -157,7 +157,7 @@
 {"_id":2614515,"name":"Rørvig","country":"DK","coord":{"lon":11.75268,"lat":55.94405}}
 {"_id":6418539,"name":"Region Midtjylland","country":"DK","coord":{"lon":9.5,"lat":56.166672}}
 {"_id":2624647,"name":"Århus Kommune","country":"DK","coord":{"lon":10.16897,"lat":56.16317}}
-{"_id":2615589,"name":"�?sterby","country":"DK","coord":{"lon":10.13967,"lat":56.083038}}
+{"_id":2615589,"name":"�?sterby","country":"DK","coord":{"lon":10.13967,"lat":56.083038}}
 {"_id":2620045,"name":"Holstebro Kommune","country":"DK","coord":{"lon":8.58333,"lat":56.333328}}
 {"_id":2613094,"name":"Sønder Bundgårde","country":"DK","coord":{"lon":8.26526,"lat":56.235439}}
 {"_id":2610315,"name":"Viborg Kommune","country":"DK","coord":{"lon":9.36667,"lat":56.450001}}
@@ -244,7 +244,7 @@
 {"_id":2625068,"name":"Åbenrå Kommune","country":"DK","coord":{"lon":9.41667,"lat":55.033329}}
 {"_id":3223114,"name":"Ornum","country":"DK","coord":{"lon":9.58333,"lat":55.033329}}
 {"_id":2622705,"name":"Egholm","country":"DK","coord":{"lon":9.83681,"lat":57.068668}}
-{"_id":2615590,"name":"�?sterby","country":"DK","coord":{"lon":8.34587,"lat":55.98381}}
+{"_id":2615590,"name":"�?sterby","country":"DK","coord":{"lon":8.34587,"lat":55.98381}}
 {"_id":2616402,"name":"Nørby","country":"DK","coord":{"lon":8.6882,"lat":57.05611}}
 {"_id":2613729,"name":"Skive Kommune","country":"DK","coord":{"lon":9,"lat":56.583328}}
 {"_id":2610176,"name":"Vinkel","country":"DK","coord":{"lon":9.14417,"lat":56.55378}}
@@ -520,7 +520,7 @@
 {"_id":2617982,"name":"Langå","country":"DK","coord":{"lon":10.72176,"lat":55.194229}}
 {"_id":2616773,"name":"Mørke","country":"DK","coord":{"lon":10.38187,"lat":56.33453}}
 {"_id":2610155,"name":"Virum","country":"DK","coord":{"lon":12.45103,"lat":55.79488}}
-{"_id":2615754,"name":"�?lby Lyng","country":"DK","coord":{"lon":12.18416,"lat":55.49015}}
+{"_id":2615754,"name":"�?lby Lyng","country":"DK","coord":{"lon":12.18416,"lat":55.49015}}
 {"_id":2617179,"name":"Lystrup","country":"DK","coord":{"lon":12.24028,"lat":55.36055}}
 {"_id":2612025,"name":"Svenstrup","country":"DK","coord":{"lon":10.56038,"lat":56.407902}}
 {"_id":2610912,"name":"Ulstrup","country":"DK","coord":{"lon":11.67649,"lat":55.32753}}

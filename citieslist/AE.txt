@@ -18,13 +18,13 @@
 {"_id":292913,"name":"Al Ayn","country":"AE","coord":{"lon":55.760559,"lat":24.191669}}
 {"_id":292879,"name":"Al Fujayrah","country":"AE","coord":{"lon":56.25,"lat":25.133329}}
 {"_id":292878,"name":"Al Fujayrah","country":"AE","coord":{"lon":56.341412,"lat":25.116409}}
-{"_id":291110,"name":"Rafā�?","country":"AE","coord":{"lon":56.35014,"lat":25.34701}}
+{"_id":291110,"name":"Rafā�?","country":"AE","coord":{"lon":56.35014,"lat":25.34701}}
 {"_id":292766,"name":"Al Qīmī","country":"AE","coord":{"lon":55.745819,"lat":24.24914}}
 {"_id":292932,"name":"Ajman","country":"AE","coord":{"lon":55.43504,"lat":25.41111}}
 {"_id":6691204,"name":"Muwafjah","country":"AE","coord":{"lon":55.46928,"lat":25.34852}}
 {"_id":291075,"name":"Ra’s al Khaymah","country":"AE","coord":{"lon":56,"lat":25.66667}}
 {"_id":412516,"name":"Al Ḩamrānīyah","country":"AE","coord":{"lon":55.90028,"lat":25.611389}}
-{"_id":290624,"name":"�?Ūd al Bayḑā’","country":"AE","coord":{"lon":55.45533,"lat":25.016251}}
+{"_id":290624,"name":"�?Ūd al Bayḑā’","country":"AE","coord":{"lon":55.45533,"lat":25.016251}}
 {"_id":412578,"name":"Aţ Ţuwār","country":"AE","coord":{"lon":55.366669,"lat":25.26667}}
 {"_id":292836,"name":"Al Jaḩr","country":"AE","coord":{"lon":55.583328,"lat":24.25}}
 {"_id":8057179,"name":"Minţaqat al Maţār","country":"AE","coord":{"lon":54.45343,"lat":24.437}}

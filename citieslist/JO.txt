@@ -1,6 +1,6 @@
 {"_id":250199,"name":"Muḩāfaz̧at aţ Ţafīlah","country":"JO","coord":{"lon":35.583328,"lat":30.75}}
 {"_id":250420,"name":"Anjarah","country":"JO","coord":{"lon":35.756531,"lat":32.306301}}
-{"_id":248380,"name":"Muḩāfaz̧at Ma�?ān","country":"JO","coord":{"lon":36.583328,"lat":30.33333}}
+{"_id":248380,"name":"Muḩāfaz̧at Ma�?ān","country":"JO","coord":{"lon":36.583328,"lat":30.33333}}
 {"_id":246314,"name":"Umm as Summaq","country":"JO","coord":{"lon":35.854301,"lat":31.88542}}
 {"_id":247105,"name":"Sahab","country":"JO","coord":{"lon":36.005009,"lat":31.87207}}
 {"_id":443123,"name":"Muḩāfaz̧at Mādabā","country":"JO","coord":{"lon":35.666672,"lat":31.58333}}
@@ -34,7 +34,7 @@
 {"_id":250258,"name":"As Salt","country":"JO","coord":{"lon":35.727219,"lat":32.039169}}
 {"_id":250303,"name":"isfīr al Maḩaṭṭah","country":"JO","coord":{"lon":35.762859,"lat":30.179291}}
 {"_id":250085,"name":"Az Zubaydīyah","country":"JO","coord":{"lon":36.295952,"lat":32.378719}}
-{"_id":443122,"name":"Muḩāfaz̧at al �?Aqabah","country":"JO","coord":{"lon":35.333328,"lat":29.75}}
+{"_id":443122,"name":"Muḩāfaz̧at al �?Aqabah","country":"JO","coord":{"lon":35.333328,"lat":29.75}}
 {"_id":7031355,"name":"Tall al Khalīfah","country":"JO","coord":{"lon":35.001839,"lat":29.557159}}
 {"_id":248174,"name":"Mārkā","country":"JO","coord":{"lon":35.98333,"lat":31.98333}}
 {"_id":250639,"name":"Al Jizah","country":"JO","coord":{"lon":35.957211,"lat":31.69968}}

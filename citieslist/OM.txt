@@ -25,8 +25,8 @@
 {"_id":289212,"name":"Al Jibāl","country":"OM","coord":{"lon":56.01619,"lat":22.14431}}
 {"_id":289415,"name":"Aflāj","country":"OM","coord":{"lon":58.213249,"lat":22.383881}}
 {"_id":288239,"name":"Ghubrat Ţanūf","country":"OM","coord":{"lon":57.41153,"lat":23.04838}}
-{"_id":411720,"name":"Mu�? askar �?Ibrī","country":"OM","coord":{"lon":56.434052,"lat":23.195511}}
-{"_id":287241,"name":"Mazra�? Khuşayyin","country":"OM","coord":{"lon":58.14333,"lat":23.37361}}
+{"_id":411720,"name":"Mu�? askar �?Ibrī","country":"OM","coord":{"lon":56.434052,"lat":23.195511}}
+{"_id":287241,"name":"Mazra�? Khuşayyin","country":"OM","coord":{"lon":58.14333,"lat":23.37361}}
 {"_id":411740,"name":"Muḩāfaz̧at Masqaţ","country":"OM","coord":{"lon":58.51667,"lat":23.5}}
 {"_id":287286,"name":"Muscat","country":"OM","coord":{"lon":58.592201,"lat":23.613871}}
 {"_id":286621,"name":"Salalah","country":"OM","coord":{"lon":54.092369,"lat":17.015051}}
@@ -46,9 +46,9 @@
 {"_id":288712,"name":"Bilād aş Şūr","country":"OM","coord":{"lon":59.484871,"lat":22.55283}}
 {"_id":7630442,"name":"Aş Şalālah al Jadīdah","country":"OM","coord":{"lon":54.099201,"lat":17.01882}}
 {"_id":288602,"name":"Camp","country":"OM","coord":{"lon":58.883331,"lat":20.66667}}
-{"_id":388692,"name":"�?Ashub","country":"OM","coord":{"lon":56.231392,"lat":26.1675}}
+{"_id":388692,"name":"�?Ashub","country":"OM","coord":{"lon":56.231392,"lat":26.1675}}
 {"_id":7110710,"name":"Muḩāfaz̧at al Buraymī","country":"OM","coord":{"lon":56.100269,"lat":24.10014}}
-{"_id":288979,"name":"Aş Şa�?arah","country":"OM","coord":{"lon":55.78389,"lat":24.25}}
+{"_id":288979,"name":"Aş Şa�?arah","country":"OM","coord":{"lon":55.78389,"lat":24.25}}
 {"_id":288507,"name":"Dib Dibba","country":"OM","coord":{"lon":56.257778,"lat":26.197781}}
 {"_id":289142,"name":"Al Qabil","country":"OM","coord":{"lon":58.694721,"lat":22.570999}}
 {"_id":412084,"name":"Bayt al Awabi","country":"OM","coord":{"lon":57.52459,"lat":23.30324}}

@@ -7,8 +7,8 @@
 {"_id":1148416,"name":"Aril","country":"AF","coord":{"lon":67.389381,"lat":32.453541}}
 {"_id":7106997,"name":"Khênḏakaī Karam Zāway","country":"AF","coord":{"lon":69.142174,"lat":32.532841}}
 {"_id":1433879,"name":"Kākā Khēl","country":"AF","coord":{"lon":69.266472,"lat":32.53952}}
-{"_id":1121941,"name":"Ūrāyin-e �?Ulyā","country":"AF","coord":{"lon":62.182041,"lat":33.24662}}
-{"_id":1435246,"name":"Khānī-ye �?Ulyā","country":"AF","coord":{"lon":68.530434,"lat":33.386532}}
+{"_id":1121941,"name":"Ūrāyin-e �?Ulyā","country":"AF","coord":{"lon":62.182041,"lat":33.24662}}
+{"_id":1435246,"name":"Khānī-ye �?Ulyā","country":"AF","coord":{"lon":68.530434,"lat":33.386532}}
 {"_id":1462157,"name":"Shiwnah Takhak","country":"AF","coord":{"lon":67.011597,"lat":34.21674}}
 {"_id":1129953,"name":"Kānsī Suflá","country":"AF","coord":{"lon":65.254913,"lat":34.528061}}
 {"_id":1470705,"name":"Dahan-e Akhtah Khānah","country":"AF","coord":{"lon":65.169777,"lat":34.509521}}
@@ -314,7 +314,7 @@
 {"_id":1140025,"name":"Wilāyat-e Herāt","country":"AF","coord":{"lon":62,"lat":34.5}}
 {"_id":1131257,"name":"Wilāyat-e Paktiyā","country":"AF","coord":{"lon":69.333328,"lat":33.666672}}
 {"_id":1136938,"name":"Kharoti","country":"AF","coord":{"lon":69.032967,"lat":33.54871}}
-{"_id":1148914,"name":"�?Alī Muḩammad Khēl","country":"AF","coord":{"lon":69.418037,"lat":33.518311}}
+{"_id":1148914,"name":"�?Alī Muḩammad Khēl","country":"AF","coord":{"lon":69.418037,"lat":33.518311}}
 {"_id":1130419,"name":"Pusht Kōh","country":"AF","coord":{"lon":62.13467,"lat":34.10582}}
 {"_id":1132366,"name":"Wilāyat-e Nangarhār","country":"AF","coord":{"lon":70.416672,"lat":34.333328}}
 {"_id":1144882,"name":"Tsōbī","country":"AF","coord":{"lon":71.027199,"lat":34.068729}}
@@ -343,7 +343,7 @@
 {"_id":1135702,"name":"Wilāyat-e Kunaṟ","country":"AF","coord":{"lon":71.133331,"lat":34.950001}}
 {"_id":1424092,"name":"Hilālzō Kêlay","country":"AF","coord":{"lon":71.263046,"lat":35.00631}}
 {"_id":1131054,"name":"Wilāyat-e Parwān","country":"AF","coord":{"lon":68.916672,"lat":35}}
-{"_id":1423348,"name":"Mīr �?Alā","country":"AF","coord":{"lon":69.168083,"lat":35.05928}}
+{"_id":1423348,"name":"Mīr �?Alā","country":"AF","coord":{"lon":69.168083,"lat":35.05928}}
 {"_id":1423399,"name":"Gul Bahār","country":"AF","coord":{"lon":69.269638,"lat":35.145901}}
 {"_id":1133815,"name":"Marīd","country":"AF","coord":{"lon":71.300423,"lat":35.157501}}
 {"_id":1147707,"name":"Wilāyat-e Bādghīs","country":"AF","coord":{"lon":63.75,"lat":35}}
@@ -382,7 +382,7 @@
 {"_id":1123004,"name":"Taloqan","country":"AF","coord":{"lon":69.534508,"lat":36.73605}}
 {"_id":1133453,"name":"Maymana","country":"AF","coord":{"lon":64.783607,"lat":35.921391}}
 {"_id":1141269,"name":"Ghazni","country":"AF","coord":{"lon":68.426888,"lat":33.553558}}
-{"_id":1447259,"name":"Jam�?eh �?Olyā","country":"AF","coord":{"lon":68.426109,"lat":33.553059}}
+{"_id":1447259,"name":"Jam�?eh �?Olyā","country":"AF","coord":{"lon":68.426109,"lat":33.553059}}
 {"_id":1147290,"name":"Balkh","country":"AF","coord":{"lon":66.897202,"lat":36.756351}}
 {"_id":1129070,"name":"Qizilābād","country":"AF","coord":{"lon":67.19574,"lat":36.7201}}
 {"_id":1467993,"name":"Qarah Qishlāq","country":"AF","coord":{"lon":68.892883,"lat":36.657059}}
@@ -393,7 +393,7 @@
 {"_id":1140605,"name":"Guzarah","country":"AF","coord":{"lon":62.212349,"lat":34.212231}}
 {"_id":1136354,"name":"Deh Khwahan","country":"AF","coord":{"lon":70.21875,"lat":37.889648}}
 {"_id":1438158,"name":"Mīānūr Kalā","country":"AF","coord":{"lon":69.252777,"lat":33.628132}}
-{"_id":1447263,"name":"Qal�?ah-ye �?Abd ul Aḩmad Khān","country":"AF","coord":{"lon":68.427498,"lat":33.53722}}
+{"_id":1447263,"name":"Qal�?ah-ye �?Abd ul Aḩmad Khān","country":"AF","coord":{"lon":68.427498,"lat":33.53722}}
 {"_id":1447254,"name":"Kala-Navi-Sarm-Reg","country":"AF","coord":{"lon":68.416389,"lat":33.53833}}
 {"_id":1146727,"name":"Bāī Mālasī","country":"AF","coord":{"lon":70.512398,"lat":37.132938}}
 {"_id":1428258,"name":"Kalayi-Gulyamsheykhi","country":"AF","coord":{"lon":62.152641,"lat":32.374889}}

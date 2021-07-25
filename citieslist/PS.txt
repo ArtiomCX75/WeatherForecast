@@ -8,7 +8,7 @@
 {"_id":285108,"name":"Al Birah","country":"PS","coord":{"lon":35.220612,"lat":31.907209}}
 {"_id":284555,"name":"Aţ Ţūr","country":"PS","coord":{"lon":35.249329,"lat":31.782721}}
 {"_id":285153,"name":"West Bank","country":"PS","coord":{"lon":35.25,"lat":31.66667}}
-{"_id":282340,"name":"Qiryat Arba�?","country":"PS","coord":{"lon":35.118969,"lat":31.528379}}
+{"_id":282340,"name":"Qiryat Arba�?","country":"PS","coord":{"lon":35.118969,"lat":31.528379}}
 {"_id":282830,"name":"Maskiyyot","country":"PS","coord":{"lon":35.5,"lat":32.316669}}
 {"_id":285094,"name":"Al Ḩaram ash Sharīf","country":"PS","coord":{"lon":35.23333,"lat":31.783331}}
 {"_id":281141,"name":"Dayr al Balah","country":"PS","coord":{"lon":34.345249,"lat":31.41655}}
@@ -21,7 +21,7 @@
 {"_id":6254930,"name":"Palestine","country":"PS","coord":{"lon":35.203289,"lat":31.92157}}
 {"_id":281132,"name":"Gaza Strip","country":"PS","coord":{"lon":34.333328,"lat":31.41667}}
 {"_id":282615,"name":"Nablus","country":"PS","coord":{"lon":35.25444,"lat":32.221111}}
-{"_id":8073072,"name":"�?Ayn Sārah","country":"PS","coord":{"lon":35.09882,"lat":31.536489}}
+{"_id":8073072,"name":"�?Ayn Sārah","country":"PS","coord":{"lon":35.09882,"lat":31.536489}}
 {"_id":7890366,"name":"Khallat Hamamah","country":"PS","coord":{"lon":35.192429,"lat":31.7216}}
 {"_id":281102,"name":"Rafah","country":"PS","coord":{"lon":34.259521,"lat":31.287001}}
 {"_id":281124,"name":"Khan Yunis","country":"PS","coord":{"lon":34.306271,"lat":31.340179}}

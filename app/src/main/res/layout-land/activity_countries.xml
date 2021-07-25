@@ -34,7 +34,7 @@
 
             <fragment
                 android:id="@+id/fragment_coun"
-                class="com.faa1192.weatherforecast.Countries.CountriesListFragment"
+                class="com.faa1192.weatherforecast.countries.CountriesListFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"

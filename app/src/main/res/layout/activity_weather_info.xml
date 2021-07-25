@@ -25,7 +25,7 @@
 
             <fragment
                 android:id="@+id/fragment3"
-                android:name="com.faa1192.weatherforecast.Weather.WeatherInfoFragment"
+                android:name="com.faa1192.weatherforecast.weather.WeatherInfoFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/card_weather_info" />

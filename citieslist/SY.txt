@@ -35,7 +35,7 @@
 {"_id":7637147,"name":"Ḩayy al Ḩamīdīyah","country":"SY","coord":{"lon":36.717419,"lat":34.73325}}
 {"_id":169387,"name":"Muḩāfaz̧at Idlib","country":"SY","coord":{"lon":36.666672,"lat":35.833328}}
 {"_id":8181926,"name":"Bustān Ghanūm","country":"SY","coord":{"lon":36.630249,"lat":35.929581}}
-{"_id":170903,"name":"Muḩāfaz̧at Dar�?ā","country":"SY","coord":{"lon":36.166672,"lat":33}}
+{"_id":170903,"name":"Muḩāfaz̧at Dar�?ā","country":"SY","coord":{"lon":36.166672,"lat":33}}
 {"_id":166365,"name":"Nawa","country":"SY","coord":{"lon":36.039902,"lat":32.890442}}
 {"_id":163342,"name":"Muḩāfaz̧at Ţarţūs","country":"SY","coord":{"lon":36.158669,"lat":35.004269}}
 {"_id":171830,"name":"Baniyas","country":"SY","coord":{"lon":35.948711,"lat":35.181881}}
@@ -43,7 +43,7 @@
 {"_id":8181847,"name":"Bāshūrah","country":"SY","coord":{"lon":36.75108,"lat":35.132679}}
 {"_id":173813,"name":"Muḩāfaz̧at al Ḩasakah","country":"SY","coord":{"lon":41,"lat":36.5}}
 {"_id":173377,"name":"Al Qamishli","country":"SY","coord":{"lon":41.22842,"lat":37.051411}}
-{"_id":166940,"name":"Mazra�?at Muḩammad Aḩmad","country":"SY","coord":{"lon":38.316669,"lat":34.549999}}
+{"_id":166940,"name":"Mazra�?at Muḩammad Aḩmad","country":"SY","coord":{"lon":38.316669,"lat":34.549999}}
 {"_id":169492,"name":"Ḩumaymīm","country":"SY","coord":{"lon":35.940449,"lat":35.401791}}
 {"_id":170031,"name":"Ḩalkū","country":"SY","coord":{"lon":41.216671,"lat":37.033329}}
 {"_id":164025,"name":"Subaykhan","country":"SY","coord":{"lon":40.60833,"lat":34.854439}}

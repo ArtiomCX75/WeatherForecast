@@ -1,7 +1,7 @@
 {"_id":389472,"name":"Baladīyat al Wakrah","country":"QA","coord":{"lon":51.333328,"lat":24.85}}
 {"_id":389465,"name":"Baladīyat al Khawr wa adh Dhakhīrah","country":"QA","coord":{"lon":51.316669,"lat":25.76667}}
 {"_id":389470,"name":"Baladīyat ad Dawḩah","country":"QA","coord":{"lon":51.5,"lat":25.25}}
-{"_id":289698,"name":"Nu�?ayjah","country":"QA","coord":{"lon":51.559166,"lat":25.252501}}
+{"_id":289698,"name":"Nu�?ayjah","country":"QA","coord":{"lon":51.559166,"lat":25.252501}}
 {"_id":289688,"name":"State of Qatar","country":"QA","coord":{"lon":51.25,"lat":25.5}}
 {"_id":290030,"name":"Doha","country":"QA","coord":{"lon":51.533333,"lat":25.286667}}
 {"_id":411795,"name":"Umm Ghuwaylīnah","country":"QA","coord":{"lon":51.547779,"lat":25.277222}}
@@ -9,7 +9,7 @@
 {"_id":442553,"name":"Mukaynis","country":"QA","coord":{"lon":51.21833,"lat":25.121941}}
 {"_id":289813,"name":"Dukhan","country":"QA","coord":{"lon":50.785831,"lat":25.42972}}
 {"_id":411804,"name":"Al Jasrah","country":"QA","coord":{"lon":51.534168,"lat":25.28611}}
-{"_id":8030540,"name":"Baladīyat az̧ Z̧a�?āyin","country":"QA","coord":{"lon":51.450001,"lat":25.51667}}
+{"_id":8030540,"name":"Baladīyat az̧ Z̧a�?āyin","country":"QA","coord":{"lon":51.450001,"lat":25.51667}}
 {"_id":289911,"name":"Al Wusayl","country":"QA","coord":{"lon":51.485279,"lat":25.497499}}
 {"_id":389467,"name":"Baladīyat Umm Şalāl","country":"QA","coord":{"lon":51.333328,"lat":25.466669}}
 {"_id":289523,"name":"Umm Salal Muhammad","country":"QA","coord":{"lon":51.403889,"lat":25.416941}}
