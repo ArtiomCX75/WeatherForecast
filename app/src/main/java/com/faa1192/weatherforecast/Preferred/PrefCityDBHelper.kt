@@ -16,12 +16,12 @@ import com.faa1192.weatherforecast.weather.WeatherData
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.BufferedReader
-import java.util.*
+import java.io.IOException
 
 //хелпер для работы с базой городов добавленных в избранное
 class PrefCityDBHelper private constructor(context: Context) : DBHelper(context) {
     private val cursorPC: Cursor
-        private get() = this.writableDatabase.query(
+        get() = this.writableDatabase.query(
             TABLE_PREF_NAME,
             arrayOf("_id", "NAME", "country", "lon", "lat", "DATA"),
             null,
@@ -142,13 +142,21 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
                 "http://api.openweathermap.org/data/2.5/weather?id=" + city[0]?.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric"
             Log.e("my", "url:$urlString")
             try {
+                Log.d("my", "1")
                 val client = OkHttpClient()
-                val request: Request = Request.Builder().url(urlString).build()
+                Log.d("my", "2")
+                val request = Request.Builder().url(urlString).build()
+                Log.d("my", "3")
                 val response = client.newCall(request).execute()
+                Log.d("my", "4")
                 val br = BufferedReader(response.body!!.charStream())
+                Log.d("my", "5")
                 resultString = br.readLine()
+                Log.d("my", "6")
                 success = true
-            } catch (e: Exception) {
+                Log.d("my", "7")
+            } catch (e: IOException) {
+                Log.e("my", "Проблемы с загрузкой")
                 var i = 0
                 while (i < e.stackTrace.size) {
                     Log.e("my", e.stackTrace[i].toString())

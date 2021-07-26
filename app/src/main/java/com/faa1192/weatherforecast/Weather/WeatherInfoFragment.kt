@@ -12,7 +12,7 @@ import com.faa1192.weatherforecast.databinding.CardWeatherInfoBinding
 
 //Фрагмент с данными о погоде конкретного города
 class WeatherInfoFragment : Fragment() {
-    var binding: CardWeatherInfoBinding? = null
+    private var binding: CardWeatherInfoBinding? = null
 
     //Заполнение информации о погоде
     fun setInfo(city: City) {

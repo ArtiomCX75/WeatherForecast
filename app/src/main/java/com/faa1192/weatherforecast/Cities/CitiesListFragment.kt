@@ -18,7 +18,7 @@ class CitiesListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val recyclerView = inflater.inflate(R.layout.recycle_view, container, false) as RecyclerView
         val cityInListAdapter =
             context?.let { CityInListAdapter(CityDBHelper.init(activity).getCityList(""), it) }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,16 +20,19 @@ class PrefCitiesListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val recyclerView = inflater.inflate(R.layout.recycle_view, container, false) as RecyclerView
         val prefCitiesAdapter =
             PrefCitiesAdapter(context?.let { PrefCityDBHelper.customInit(it).cityList }, context)
         val prefCityCount = prefCitiesAdapter.itemCount
+
+        val resultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                AddCityActivity().onActivityResult(result)
+            }
+
         if (prefCityCount == 0) {
-            requireActivity().startActivityForResult(
-                Intent(activity, AddCityActivity::class.java),
-                1
-            )
+            resultLauncher.launch(Intent(activity, AddCityActivity::class.java))
             requireActivity().overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
         }
         recyclerView.adapter = prefCitiesAdapter
@@ -49,14 +53,14 @@ class PrefCitiesListFragment : Fragment() {
                 //  Toast.makeText(getActivity(), "sw: "+direction+"="+viewHolder, Toast.LENGTH_LONG).show();
                 val fragment =
                     activity!!.supportFragmentManager.findFragmentById(R.id.fragment_pref) as PrefCitiesListFragment?
-                val recyclerView = fragment!!.view as RecyclerView?
-                var cwta = recyclerView!!.adapter as PrefCitiesAdapter?
+                val rv = fragment!!.view as RecyclerView?
+                var cwta = rv!!.adapter as PrefCitiesAdapter?
                 cwta!!.cityList?.get(viewHolder.adapterPosition)?.let {
                     PrefCityDBHelper.customInit(activity!!)
                         .delFromDbPref(it)
                 }
                 cwta = PrefCitiesAdapter(PrefCityDBHelper.customInit(activity!!).cityList, activity)
-                recyclerView.adapter = cwta
+                rv.adapter = cwta
             }
         }
         val itemTouchHelper = ItemTouchHelper(simpleCallback)

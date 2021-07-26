@@ -47,17 +47,17 @@ class PrefCitiesAdapter(cities: List<City>?, context: Context?) :
         }
         cardView.findViewWithTag<View>("lin_layout").setOnLongClickListener {
             val builder = AlertDialog.Builder(context)
-            val allertTitle = context.resources.getString(R.string.del_city_title)
+            val alertTitle = context.resources.getString(R.string.del_city_title)
             val allerMessage = context.resources.getString(R.string.del_city_question)
             val yes = context.resources.getString(R.string.yes)
             val no = context.resources.getString(R.string.no)
-            builder.setTitle(allertTitle)
+            builder.setTitle(alertTitle)
                 .setMessage(String.format(allerMessage, cityList?.get(position)?.shortName))
                 .setCancelable(true)
                 .setNegativeButton(
                     no
-                ) { dialog, id -> dialog.cancel() }
-                .setPositiveButton(yes) { dialog, id ->
+                ) { dialog, _ -> dialog.cancel() }
+                .setPositiveButton(yes) { dialog, _ ->
                     cityList?.get(position)?.let { it1 ->
                         PrefCityDBHelper.customInit(context).delFromDbPref(
                             it1

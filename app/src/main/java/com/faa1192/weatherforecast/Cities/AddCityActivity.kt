@@ -2,11 +2,11 @@ package com.faa1192.weatherforecast.cities
 
 import android.content.Intent
 import android.content.res.ColorStateList
-import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Html
 import android.view.View
+import androidx.activity.result.ActivityResult
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.multidex.MultiDex
@@ -24,13 +24,15 @@ class AddCityActivity : AppCompatActivity(), Updatable {
         MultiDex.install(this)
         setContentView(R.layout.activity_add_city)
         val actionBar = supportActionBar
-        actionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.col_pr_dark)))
+        actionBar!!.setBackgroundDrawable(ColorDrawable(applicationContext.getColor(R.color.col_pr_dark)))
         actionBar.setDisplayHomeAsUpEnabled(true)
         actionBar.title = Html.fromHtml(
-            "<font color=\"" + resources.getColor(R.color.pr_text) + "\">" + getString(R.string.adding_city) + "</font>"
+            "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + getString(R.string.adding_city) + "</font>",
+            0
         )
-        val upArrow = resources.getDrawable(R.drawable.ic_back_arrow)
-        upArrow.setColorFilter(resources.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
+        val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
+
+        // TODO fix me        upArrow?.setColorFilter(applicationContext.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
         actionBar.setHomeAsUpIndicator(upArrow)
         searchView = findViewById<View>(R.id.search) as SearchView
         searchView!!.setIconifiedByDefault(false)
@@ -54,15 +56,14 @@ class AddCityActivity : AppCompatActivity(), Updatable {
             }
         val floatingActionButton = findViewById<View>(R.id.fabcity) as FloatingActionButton
         floatingActionButton.backgroundTintList =
-            ColorStateList.valueOf(resources.getColor(R.color.col_pr))
+            ColorStateList.valueOf(applicationContext.getColor(R.color.col_pr))
         floatingActionButton.setOnClickListener(addListener)
         floatingActionButton.size = FloatingActionButton.SIZE_NORMAL
-        floatingActionButton.setColorFilter(resources.getColor(R.color.sec_text))
+        floatingActionButton.setColorFilter(applicationContext.getColor(R.color.sec_text))
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode != -1) return
+    fun onActivityResult(result: ActivityResult) {
+        if (result.resultCode != -1) return
         update()
     }
 

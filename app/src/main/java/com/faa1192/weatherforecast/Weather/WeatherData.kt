@@ -11,26 +11,26 @@ import java.util.*
 //класс объекта "Погодные данные". Служит для десериализации json в java object
 class WeatherData {
     var jsonString = ""
-        get() = if (jsonString.isEmpty()) "" else field
+        get() = if (field.isEmpty()) "" else field
     var cityName = "" //название города ПРИХОДЯЩЕЕ С СЕРВЕРА
     var humidity = "" //влажность
-        get() = if (humidity.isEmpty()) hm[noData]!! else "$field%"
+        get() = if (field.isEmpty()) hm[noData]!! else "$field%"
     var pressure = "" //давление
-        get() = if (pressure.isEmpty()) hm[noData]!! else (java.lang.Double.valueOf(field) * 0.7500637554192).toString()
+        get() = if (field.isEmpty()) hm[noData]!! else (java.lang.Double.valueOf(field) * 0.7500637554192).toString()
             .substring(0, 6) + context!!.resources.getString(R.string.mm)
     var temp = "" //температура
-        get() = if (temp.isEmpty()) hm[noData]!! else "$field°C"
+        get() = if (field.isEmpty()) hm[noData]!! else "$field°C"
     var sunrise = "" //восход
         get() = stringToTime(field)
     var sunset = "" //закат
         get() = stringToTime(field)
     var windSpeed = "" //скорость ветра
-        get() = if (windSpeed.isEmpty()) hm[noData]!! else field + context!!.resources.getString(R.string.m_per_sec)
+        get() = if (field.isEmpty()) hm[noData]!! else field + context!!.resources.getString(R.string.m_per_sec)
     var windDeg = "" //направление ветра
         get() {
-            return if (windDeg.isEmpty()) hm[noData]!! else {
+            return if (field.isEmpty()) hm[noData]!! else {
                 val response: String
-                var angle = java.lang.Double.valueOf(windDeg)
+                var angle = java.lang.Double.valueOf(field)
                 angle += 22.5
                 val side = angle.toInt() / 45
                 response = when (side) {
@@ -49,19 +49,19 @@ class WeatherData {
         }
     var weatherDescription = "" //описание погоды
         get() {
-            if (weatherDescription.isEmpty()) weatherDescription = noData
-            weatherDescription = weatherDescription.replace(" ", "_").lowercase(Locale.ROOT)
+            if (field.isEmpty()) field = noData
+            field = field.replace(" ", "_").lowercase(Locale.ROOT)
             return if (hm[field] == null || hm[field]!!
                     .isEmpty()
             ) field else hm[field]!!
         }
     var weatherMain = "" //краткое описание погоды
         get() {
-            if (weatherMain.isEmpty()) weatherMain = noData
-            weatherMain = weatherMain.replace(" ", "_").lowercase(Locale.getDefault())
-            return if (hm[weatherMain] == null || hm[weatherMain]!!
+            if (field.isEmpty()) field = noData
+            field = field.replace(" ", "_").lowercase(Locale.getDefault())
+            return if (hm[field] == null || hm[field]!!
                     .isEmpty()
-            ) weatherMain else hm[weatherMain]!!
+            ) field else hm[field]!!
         }
     private var time = 0L //актуальное время сведений о погоде (приходит с сервера)
     val noData = "no_data"
@@ -75,8 +75,8 @@ class WeatherData {
             val key = context!!.resources.getStringArray(R.array.wd_k)
             val value = context!!.resources.getStringArray(R.array.wd_v)
             for (i in key.indices) {
-                hm[key.get(i)] =
-                    value.get(i)
+                hm[key[i]] =
+                    value[i]
             }
         }
     }
@@ -84,6 +84,7 @@ class WeatherData {
     constructor()
     constructor(jsonString: String) {
         this.jsonString = jsonString
+        val qwe = JSONTokener(jsonString)
         try {
             val jsonTokener = JSONTokener(jsonString)
             val baseJsonObject = JSONObject(jsonTokener)
@@ -163,6 +164,9 @@ class WeatherData {
                 Log.e("my", e.stackTrace[i].toString())
                 i++
             }
+            Log.e("my", "======================================")
+            Log.e("my", "start" + jsonString + "stop")
+            Log.e("my", "start1" + qwe + "stop2")
         }
     }
 

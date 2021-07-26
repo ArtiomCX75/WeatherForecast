@@ -4,10 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.text.Html
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -39,19 +39,19 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             }
         val actionBar = supportActionBar
         actionBar!!.setTitle(R.string.favorites)
-        actionBar.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.col_pr_dark)))
+        actionBar.setBackgroundDrawable(ColorDrawable(applicationContext.getColor(R.color.col_pr_dark)))
         actionBar.title = Html.fromHtml(
-            "<font color=\"" + resources.getColor(R.color.pr_text) + "\">" + getString(R.string.app_name) + "</font>"
+            "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + getString(R.string.app_name) + "</font>",
+            0
         )
-        val upArrow = resources.getDrawable(R.drawable.ic_back_arrow)
-        upArrow.setColorFilter(resources.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
+        val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
         actionBar.setHomeAsUpIndicator(upArrow)
         val floatingActionButton = findViewById<View>(R.id.fabpref) as FloatingActionButton
         floatingActionButton.backgroundTintList =
-            ColorStateList.valueOf(resources.getColor(R.color.col_pr))
+            ColorStateList.valueOf(applicationContext.getColor(R.color.col_pr))
         floatingActionButton.setOnClickListener(addListener)
         floatingActionButton.size = FloatingActionButton.SIZE_NORMAL
-        floatingActionButton.setColorFilter(resources.getColor(R.color.sec_text))
+        floatingActionButton.setColorFilter(applicationContext.getColor(R.color.sec_text))
         swipeRefreshLayout = findViewById<View>(R.id.refresher) as SwipeRefreshLayout
         swipeRefreshLayout!!.setOnRefreshListener(this)
         swipeRefreshLayout!!.setColorSchemeColors(
@@ -87,7 +87,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         swipeRefreshLayout!!.isRefreshing = true
         PrefCityDBHelper.customInit(this@PrefCitiesActivity).updateAllDataFromWeb()
         update()
-        Handler().postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
+        Handler(Looper.myLooper()!!).postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
     }
 
     override fun onBackPressed() {

@@ -10,11 +10,11 @@ import android.util.Log
  * Created by faa11 on 30.09.2016.
  */
 
-val DB_NAME = "app_db"
-val TABLE_PREF_NAME = "PREFCITY"
-val TABLE_LIST_CITY_NAME = "CITY"
-val TABLE_SYS_NAME = "SYSTEM"
-val DB_VERSION = 3
+const val DB_NAME = "app_db"
+const val TABLE_PREF_NAME = "PREFCITY"
+const val TABLE_LIST_CITY_NAME = "CITY"
+const val TABLE_SYS_NAME = "SYSTEM"
+const val DB_VERSION = 3
 
 open class DBHelper protected constructor(var context: Context) :
     SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
@@ -23,19 +23,19 @@ open class DBHelper protected constructor(var context: Context) :
 
     override fun onCreate(db: SQLiteDatabase) {
         try {
-            db.execSQL("CREATE TABLE " + TABLE_PREF_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);")
+            db.execSQL("CREATE TABLE $TABLE_PREF_NAME (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT, DATA TEXT);")
         } catch (e: SQLException) {
-            Log.e("my", "Error while creating table " + TABLE_PREF_NAME)
+            Log.e("my", "Error while creating table $TABLE_PREF_NAME")
         }
         try {
-            db.execSQL("CREATE TABLE " + TABLE_LIST_CITY_NAME + " (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT);")
+            db.execSQL("CREATE TABLE $TABLE_LIST_CITY_NAME (_id TEXT PRIMARY KEY, NAME TEXT, COUNTRY TEXT, LON TEXT, LAT TEXT);")
         } catch (e: SQLException) {
-            Log.e("my", "Error while creating table " + TABLE_LIST_CITY_NAME)
+            Log.e("my", "Error while creating table $TABLE_LIST_CITY_NAME")
         }
         try {
-            db.execSQL("CREATE TABLE " + TABLE_SYS_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, KEY1 TEXT, VALUE TEXT);")
+            db.execSQL("CREATE TABLE $TABLE_SYS_NAME (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, KEY1 TEXT, VALUE TEXT);")
         } catch (e: SQLException) {
-            Log.e("my", "Error while creating table " + TABLE_SYS_NAME)
+            Log.e("my", "Error while creating table $TABLE_SYS_NAME")
         }
     }
 
