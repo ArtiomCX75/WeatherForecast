@@ -14,7 +14,7 @@ import com.faa1192.weatherforecast.countries.Country
 import com.faa1192.weatherforecast.preferred.PrefCityDBHelper
 
 //адптер для recycler view класса CitiesListFragment
-open class CityInListAdapter(val cityList: List<City>?, protected val context: Context) :
+open class CityInListAdapter(val cityList: List<City>, protected val context: Context) :
     RecyclerView.Adapter<CityInListAdapter.ViewHolder>() {
     class ViewHolder(val cardView: CardView) : RecyclerView.ViewHolder(cardView)
 
@@ -28,21 +28,21 @@ open class CityInListAdapter(val cityList: List<City>?, protected val context: C
         val cardView = holder.cardView
         var textView = cardView.findViewById<View>(R.id.city_in_list_name) as TextView
         textView.text =
-            cityList?.get(position)?.shortName  //country + ": " + cityList.get(position).name);
+            cityList[position].shortName  //country + ": " + cityList.get(position).name);
         textView = cardView.findViewById<View>(R.id.city_in_list_name_extra) as TextView
         textView.text =
-            if (cityList?.get(position)?.extraName?.length == 0) cityList[position].country?.let {
+            if (cityList[position].extraName.isEmpty()) cityList[position].country.let {
                 Country(context).getName(
                     it
                 )
-            } else cityList?.get(position)?.extraName + ", " + cityList?.get(position)?.country?.let {
+            } else cityList[position].extraName + ", " + cityList[position].country.let {
                 Country(
                     context
                 ).getName(it)
             }
         cardView.findViewWithTag<View>("lin_layout").setOnClickListener {
-            val chosenCity = cityList?.get(position)
-            PrefCityDBHelper.customInit(context).addToDbPref(chosenCity!!)
+            val chosenCity = cityList.get(position)
+            PrefCityDBHelper.customInit(context).addToDbPref(chosenCity)
             PrefCityDBHelper.customInit(context).updateDataFromWeb(chosenCity)
             Toast.makeText(
                 context,
@@ -57,6 +57,6 @@ open class CityInListAdapter(val cityList: List<City>?, protected val context: C
     }
 
     override fun getItemCount(): Int {
-        return cityList!!.size
+        return cityList.size
     }
 }

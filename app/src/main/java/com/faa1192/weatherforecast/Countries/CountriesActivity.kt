@@ -7,6 +7,7 @@ import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.text.Html
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -36,15 +37,15 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         requestedOrientation =
             if (screenOrientation == 0) ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         val actionBar = supportActionBar
-        actionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.col_pr_dark)))
+        actionBar!!.setBackgroundDrawable(ColorDrawable(applicationContext.getColor(R.color.col_pr_dark)))
         actionBar.title = Html.fromHtml(
-            "<font color=\"" + resources.getColor(R.color.pr_text) + "\">" + getString(
+            "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + getString(
                 R.string.adding_cities
-            ) + "</font>"
+            ) + "</font>", 0
         )
         actionBar.setDisplayHomeAsUpEnabled(true)
-        val upArrow = resources.getDrawable(R.drawable.ic_back_arrow)
-        upArrow.setColorFilter(resources.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
+        val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
+        upArrow?.setColorFilter(applicationContext.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
         actionBar.setHomeAsUpIndicator(upArrow)
         swipeRefreshLayout = (binding as ActivityCountriesBinding).refresher
         swipeRefreshLayout!!.setOnRefreshListener(this)
@@ -55,7 +56,7 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
         val progressBar = (binding as ActivityCountriesBinding).progressBar
         progressBar.progressDrawable.setColorFilter(
-            resources.getColor(R.color.pr_text),
+            applicationContext.getColor(R.color.pr_text),
             PorterDuff.Mode.SRC_IN
         )
     }
@@ -70,7 +71,7 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     override fun onRefresh() {
         swipeRefreshLayout!!.isRefreshing = true
         update()
-        Handler().postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
+        Handler(Looper.myLooper()!!).postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
     }
 
     override fun onBackPressed() {

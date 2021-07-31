@@ -5,7 +5,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.SQLException
-import android.os.AsyncTask
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
@@ -14,6 +13,9 @@ import com.faa1192.weatherforecast.DBHelper
 import com.faa1192.weatherforecast.R
 import com.faa1192.weatherforecast.TABLE_LIST_CITY_NAME
 import com.faa1192.weatherforecast.countries.CountriesActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.BufferedReader
@@ -42,112 +44,103 @@ open class CityDBHelper protected constructor(context: Context?) : DBHelper(cont
         return cityList
     }
 
-    fun downloadCountry(str: String?) {
-        val coc = CitiesOfCountry()
-        coc.execute(str)
+    fun downloadCitiesOfCountry(str: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            downloadCitiesListOfCountry(str)
+        }
+
     }
 
     //Загрузка городов с инета
-    private inner class CitiesOfCountry : AsyncTask<String?, Int?, Void?>() {
-        var countryName = ""
+    private fun downloadCitiesListOfCountry(country: String) {
         val list = ArrayList<String>()
-        var success = false
-        override fun onPreExecute() {
-            super.onPreExecute()
-            (context as Activity).findViewById<View>(R.id.progressBar).visibility =
-                View.VISIBLE
-        }
+        var success: Boolean
+        val activity = context as Activity
+        activity.findViewById<View>(R.id.progressBar).visibility = View.VISIBLE
 
-        override fun doInBackground(vararg params: String?): Void? {
-            success = false
-            countryName = params[0].toString()
-            val urlString =
-                "https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/$countryName.txt"
-            Log.e("my", "url:$urlString")
+        success = false
+        var countryName: String = country
+        val urlString =
+            "https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/$countryName.txt"
+        Log.e("my", "url:$urlString")
+        try {
+            val client = OkHttpClient()
+            val request: Request = Request.Builder().url(urlString).build()
+            val response = client.newCall(request).execute()
+            val br = BufferedReader(response.body!!.charStream())
+            var temp = br.readLine()
+            while (temp != null && temp.isNotEmpty()) {
+                list.add(temp)
+                temp = br.readLine()
+            }
+            success = true
+        } catch (e: Exception) {
+            var i = 0
+            while (i < e.stackTrace.size) {
+                Log.e("my", e.stackTrace[i].toString())
+                i++
+            }
+        }
+        if (success) {
             try {
-                val client = OkHttpClient()
-                val request: Request = Request.Builder().url(urlString).build()
-                val response = client.newCall(request).execute()
-                val br = BufferedReader(response.body!!.charStream())
-                var temp = br.readLine()
-                while (temp != null && !temp.isEmpty()) {
-                    list.add(temp)
-                    temp = br.readLine()
+                this@CityDBHelper.writableDatabase.execSQL("DELETE from $TABLE_LIST_CITY_NAME WHERE country = '$countryName'")
+            } catch (e: SQLException) {
+                Log.e("my", "sql exception. db doesn't exist")
+            }
+            try {
+                Log.e("my", "success")
+                val db = this@CityDBHelper.writableDatabase
+                val contentValues = ContentValues()
+                var city: City
+                db.beginTransaction()
+                for (i in list.indices) {
+                    city = City(list[i])
+                    contentValues.put("_id", city.id)
+                    contentValues.put("name", city.name)
+                    contentValues.put("country", city.country)
+                    contentValues.put("lon", city.lon)
+                    contentValues.put("lat", city.lat)
+                    db.insert(TABLE_LIST_CITY_NAME, null, contentValues)
+                    fun onProgressUpdate(vararg values: Int?) {
+                        ((context as Activity).findViewById<View>(R.id.progressBar) as ProgressBar).progress =
+                            values[0]!!
+                    }
+                    onProgressUpdate(i * 100 / list.size)
                 }
-                success = true
+                db.setTransactionSuccessful()
+                db.endTransaction()
+                //    Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
+                Log.e("my", "add " + list.size)
             } catch (e: Exception) {
+                Log.e(
+                    "my",
+                    "citydbhelper: cannot be cast to updatable or sql exeption"
+                ) // не критично
                 var i = 0
                 while (i < e.stackTrace.size) {
                     Log.e("my", e.stackTrace[i].toString())
                     i++
                 }
             }
-            if (success) {
-                try {
-                    this@CityDBHelper.writableDatabase.execSQL("DELETE from " + TABLE_LIST_CITY_NAME + " WHERE country = '" + countryName + "'")
-                } catch (e: SQLException) {
-                    Log.e("my", "sql exception. db doesn't exist")
-                }
-                try {
-                    Log.e("my", "success")
-                    val db = this@CityDBHelper.writableDatabase
-                    val contentValues = ContentValues()
-                    var city: City
-                    db.beginTransaction()
-                    for (i in list.indices) {
-                        city = City(list[i])
-                        contentValues.put("_id", city.id)
-                        contentValues.put("name", city.name)
-                        contentValues.put("country", city.country)
-                        contentValues.put("lon", city.lon)
-                        contentValues.put("lat", city.lat)
-                        db.insert(TABLE_LIST_CITY_NAME, null, contentValues)
-                        publishProgress(i * 100 / list.size)
-                    }
-                    db.setTransactionSuccessful()
-                    db.endTransaction()
-                    //    Toast.makeText(context, "download completed", Toast.LENGTH_LONG).show();
-                    Log.e("my", "add " + list.size)
-                } catch (e: Exception) {
-                    Log.e(
-                        "my",
-                        "citydbhelper: cannot be cast to updatable or sql exeption"
-                    ) // не критично
-                    var i = 0
-                    while (i < e.stackTrace.size) {
-                        Log.e("my", e.stackTrace[i].toString())
-                        i++
-                    }
-                }
-            } else {
-                Toast.makeText(
-                    context,
-                    context.resources.getString(R.string.connection_error),
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-            return null
+        } else {
+            Toast.makeText(
+                context,
+                context.resources.getString(R.string.connection_error),
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
-        override fun onProgressUpdate(vararg values: Int?) {
-            super.onProgressUpdate(*values)
-            ((context as Activity).findViewById<View>(R.id.progressBar) as ProgressBar).progress =
-                values[0]!!
-        }
 
-        override fun onPostExecute(result: Void?) {
-            super.onPostExecute(result)
-            /*((Activity) context).findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
-            Intent intent = new Intent(context, PrefCitiesActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(intent);
-            */(context as Activity).finish()
-            (context as CountriesActivity).overridePendingTransition(
-                R.anim.alpha_on,
-                R.anim.alpha_off
-            )
-        }
+        /*((Activity) context).findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
+        Intent intent = new Intent(context, PrefCitiesActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+        */(context as Activity).finish()
+        (context as CountriesActivity).overridePendingTransition(
+            R.anim.alpha_on,
+            R.anim.alpha_off
+        )
 
 
     }

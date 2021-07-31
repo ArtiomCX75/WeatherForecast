@@ -58,7 +58,7 @@ class CountryInListAdapter(private val countriesList: List<String>, private val 
                 .setCancelable(false)
             val alert = builder.create()
             alert.show()
-            init(context).downloadCountry(chosenCountry)
+            init(context).downloadCitiesOfCountry(chosenCountry)
         }
     }
 

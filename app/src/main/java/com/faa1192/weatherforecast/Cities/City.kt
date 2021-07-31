@@ -15,18 +15,18 @@ class City {
     var name = ""
 
     @JvmField
-    var country: String? = ""
+    var country: String = ""
 
     @JvmField
-    var lon: String? = ""
+    var lon: String = ""
 
     @JvmField
-    var lat: String? = ""
+    var lat: String = ""
 
     @JvmField
     var data = WeatherData()
 
-    internal constructor(id: Int, name: String, country: String?, lon: String?, lat: String?) {
+    internal constructor(id: Int, name: String, country: String, lon: String, lat: String) {
         this.id = id
         this.name = name
         this.country = country
@@ -36,12 +36,12 @@ class City {
 
     constructor(
         id: Int,
-        name: String?,
-        country: String?,
-        lon: String?,
-        lat: String?,
+        name: String,
+        country: String,
+        lon: String,
+        lat: String,
         data: WeatherData
-    ) : this(id, name!!, country, lon, lat) {
+    ) : this(id, name, country, lon, lat) {
         this.data = data
     }
 
@@ -115,10 +115,10 @@ class City {
         fun fromBundle(bundle: Bundle): City {
             return City(
                 bundle.getInt("id"),
-                bundle.getString("name"),
-                bundle.getString("country"),
-                bundle.getString("lon"),
-                bundle.getString("lat"),
+                bundle.getString("name") ?: "",
+                bundle.getString("country") ?: "",
+                bundle.getString("lon") ?: "",
+                bundle.getString("lat") ?: "",
                 WeatherData(bundle.getString("data") ?: "")
             )
         }
