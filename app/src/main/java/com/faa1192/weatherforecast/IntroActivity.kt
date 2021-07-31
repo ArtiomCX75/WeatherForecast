@@ -16,23 +16,16 @@ open class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         MultiDex.install(this)
         setContentView(R.layout.activity_intro)
-        /*       window.setFlags(
-                   WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                   WindowManager.LayoutParams.FLAG_FULLSCREEN
-               )
-
-         */
         val image = findViewById<View>(R.id.intro_image) as ImageView
         val animation = AnimationUtils.loadAnimation(this, R.anim.intro)
-        //    animation.setRepeatCount(Animation.INFINITE);
         image.startAnimation(animation)
         val handler = Handler(Looper.myLooper()!!)
         handler.postDelayed({
-            val intent = Intent(this@IntroActivity, PrefCitiesActivity::class.java)
+            val intent = Intent(this, PrefCitiesActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
-        }, 2500)
+        }, 2000)
     }
 }

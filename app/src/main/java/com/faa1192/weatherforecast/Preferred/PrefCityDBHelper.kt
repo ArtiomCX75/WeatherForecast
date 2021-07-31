@@ -4,7 +4,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.SQLException
-import android.os.AsyncTask
 import android.util.Log
 import android.widget.Toast
 import com.faa1192.weatherforecast.DBHelper
@@ -13,6 +12,9 @@ import com.faa1192.weatherforecast.TABLE_PREF_NAME
 import com.faa1192.weatherforecast.Updatable
 import com.faa1192.weatherforecast.cities.City
 import com.faa1192.weatherforecast.weather.WeatherData
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.BufferedReader
@@ -97,8 +99,9 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
             //Toast.makeText(context, "old", Toast.LENGTH_SHORT).show(); //for debug
             Log.e("my", "old")
         }
-        val webUpdateHelper = WebUpdateHelper()
-        webUpdateHelper.execute(city)
+        CoroutineScope(Dispatchers.IO).launch {
+            webUpdateHelper(city)
+        }
     }
 
     //удаление города из избранного
@@ -127,84 +130,76 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
     }
 
     //класс для работы с инетом
-    private inner class WebUpdateHelper : AsyncTask<City?, Void?, Void?>() {
+    private fun webUpdateHelper(city: City) {
         var resultString = ""
 
         //  InputStream inputStream;
-        var city: City? = null
+
         var success = false
 
-        //(vararg params: City?): Void?
-        override fun doInBackground(vararg city: City?): Void? {
-            success = false
-            this.city = city[0]
-            val urlString =
-                "http://api.openweathermap.org/data/2.5/weather?id=" + city[0]?.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric"
-            Log.e("my", "url:$urlString")
-            try {
-                Log.d("my", "1")
-                val client = OkHttpClient()
-                Log.d("my", "2")
-                val request = Request.Builder().url(urlString).build()
-                Log.d("my", "3")
-                val response = client.newCall(request).execute()
-                Log.d("my", "4")
-                val br = BufferedReader(response.body!!.charStream())
-                Log.d("my", "5")
-                resultString = br.readLine()
-                Log.d("my", "6")
-                success = true
-                Log.d("my", "7")
-            } catch (e: IOException) {
-                Log.e("my", "Проблемы с загрузкой")
-                var i = 0
-                while (i < e.stackTrace.size) {
-                    Log.e("my", e.stackTrace[i].toString())
-                    i++
-                }
+        val urlString =
+            "https://api.openweathermap.org/data/2.5/weather?id=" + city.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric"
+        Log.e("my", "url:$urlString")
+        try {
+            Log.d("my", "1")
+            val client = OkHttpClient()
+            Log.d("my", "2")
+            val request = Request.Builder().url(urlString).build()
+            Log.d("my", "3")
+            val response = client.newCall(request).execute()
+            Log.d("my", "4")
+            val br = BufferedReader(response.body!!.charStream())
+            Log.d("my", "5")
+            resultString = br.readLine()
+            Log.d("my", "6")
+            success = true
+            Log.d("my", "7")
+        } catch (e: IOException) {
+            Log.e("my", "Проблемы с загрузкой")
+            var i = 0
+            while (i < e.stackTrace.size) {
+                Log.e("my", e.stackTrace[i].toString())
+                i++
             }
-            return null
         }
 
-        override fun onPostExecute(result: Void?) {
-            super.onPostExecute(result)
-            try {
-                if (success) {
-                    val weatherData = WeatherData(resultString)
-                    city!!.data = WeatherData(resultString)
-                    val contentValues = ContentValues()
-                    contentValues.put("DATA", weatherData.jsonString)
-                    dbHelper.writableDatabase.update(
-                        TABLE_PREF_NAME,
-                        contentValues,
-                        "_id = " + city!!.id,
-                        null
-                    )
-                    //    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
-                    (context as Updatable).update()
-                } else {
-                    Toast.makeText(
-                        context,
-                        context.resources.getString(R.string.connection_error),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            } catch (e: SQLException) {
-                Log.e("my", "sql exception")
-                var i = 0
-                while (i < e.stackTrace.size) {
-                    Log.e("my", e.stackTrace[i].toString())
-                    i++
-                }
-            } catch (e: Exception) {
-                Log.e("my", "prefcitydbhelper: cannot be cast to updatable") // не критично
-                var i = 0
-                while (i < e.stackTrace.size) {
-                    Log.e("my", e.stackTrace[i].toString())
-                    i++
-                }
+        try {
+            if (success) {
+                val weatherData = WeatherData(resultString)
+                city.data = WeatherData(resultString)
+                val contentValues = ContentValues()
+                contentValues.put("DATA", weatherData.jsonString)
+                dbHelper.writableDatabase.update(
+                    TABLE_PREF_NAME,
+                    contentValues,
+                    "_id = " + city.id,
+                    null
+                )
+                //    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show(); //for debug
+                (context as Updatable).update()
+            } else {
+                Toast.makeText(
+                    context,
+                    context.resources.getString(R.string.connection_error),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        } catch (e: SQLException) {
+            Log.e("my", "sql exception")
+            var i = 0
+            while (i < e.stackTrace.size) {
+                Log.e("my", e.stackTrace[i].toString())
+                i++
+            }
+        } catch (e: Exception) {
+            Log.e("my", "prefcitydbhelper: cannot be cast to updatable") // не критично
+            var i = 0
+            while (i < e.stackTrace.size) {
+                Log.e("my", e.stackTrace[i].toString())
+                i++
             }
         }
+
     }
 
     companion object {
