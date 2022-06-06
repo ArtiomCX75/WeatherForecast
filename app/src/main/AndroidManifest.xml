@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".IntroActivity"
+            android:exported="true"
             android:theme="@style/AppThemeNoAppbar">
             <intent-filter>
                 <action
