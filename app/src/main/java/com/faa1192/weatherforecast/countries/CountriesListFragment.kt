@@ -50,7 +50,7 @@ class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/W
                 .build()
             val response = okHttpClient.newCall(request).execute()
             val br = BufferedReader(
-                Objects.requireNonNull(response.body)?.charStream()
+                Objects.requireNonNull(response.body).charStream()
             )
             var temp = br.readLine()
             while (temp != null && temp.isNotEmpty()) {
@@ -67,9 +67,9 @@ class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/W
             if (success) {
                 val countryInListAdapter = context?.let { CountryInListAdapter(list, it) }
                 val clf =
-                    activity!!.supportFragmentManager.findFragmentById(R.id.fragment_coun) as CountriesListFragment?
+                    requireActivity().supportFragmentManager.findFragmentById(R.id.fragment_coun) as CountriesListFragment?
                 val recyclerView = clf!!.view as RecyclerView?
-                val orientation = activity!!.resources.configuration.orientation
+                val orientation = requireActivity().resources.configuration.orientation
                 if (orientation == Configuration.ORIENTATION_PORTRAIT) {
                     val linearLayoutManager = LinearLayoutManager(activity)
                     linearLayoutManager.isSmoothScrollbarEnabled = true

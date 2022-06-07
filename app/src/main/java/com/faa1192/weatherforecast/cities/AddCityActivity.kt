@@ -8,6 +8,7 @@ import android.text.Html
 import android.view.View
 import androidx.activity.result.ActivityResult
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.SearchView
 import androidx.multidex.MultiDex
 import androidx.recyclerview.widget.RecyclerView
@@ -30,7 +31,7 @@ class AddCityActivity : AppCompatActivity(), Updatable {
             "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + getString(R.string.adding_city) + "</font>",
             0
         )
-        val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
+        val upArrow = AppCompatResources.getDrawable(applicationContext, R.drawable.ic_back_arrow)
 
         // TODO fix me        upArrow?.setColorFilter(applicationContext.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
         actionBar.setHomeAsUpIndicator(upArrow)

@@ -41,7 +41,7 @@ open class CityInListAdapter(val cityList: List<City>, protected val context: Co
                 ).getName(it)
             }
         cardView.findViewWithTag<View>("lin_layout").setOnClickListener {
-            val chosenCity = cityList.get(position)
+            val chosenCity = cityList[position]
             PrefCityDBHelper.customInit(context).addToDbPref(chosenCity)
             PrefCityDBHelper.customInit(context).updateDataFromWeb(chosenCity)
             Toast.makeText(

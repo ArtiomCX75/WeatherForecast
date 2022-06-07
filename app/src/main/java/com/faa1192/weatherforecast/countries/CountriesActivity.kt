@@ -11,6 +11,7 @@ import android.os.Looper
 import android.text.Html
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.DataBindingUtil
 import androidx.multidex.MultiDex
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -44,7 +45,7 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             ) + "</font>", 0
         )
         actionBar.setDisplayHomeAsUpEnabled(true)
-        val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
+        val upArrow = AppCompatResources.getDrawable(applicationContext, R.drawable.ic_back_arrow)
         upArrow?.setColorFilter(applicationContext.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
         actionBar.setHomeAsUpIndicator(upArrow)
         swipeRefreshLayout = (binding as ActivityCountriesBinding).refresher

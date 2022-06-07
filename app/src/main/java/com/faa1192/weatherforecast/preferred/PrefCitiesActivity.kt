@@ -11,6 +11,7 @@ import android.os.Looper
 import android.text.Html
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.multidex.MultiDex
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -44,7 +45,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + getString(R.string.app_name) + "</font>",
             0
         )
-        val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
+        val upArrow = AppCompatResources.getDrawable(applicationContext, R.drawable.ic_back_arrow)
         actionBar.setHomeAsUpIndicator(upArrow)
         val floatingActionButton = findViewById<View>(R.id.fabpref) as FloatingActionButton
         floatingActionButton.backgroundTintList =
@@ -60,7 +61,6 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             Color.argb(255, 0, 0, 200)
         )
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         // if (resultCode != -1)
         //     return;

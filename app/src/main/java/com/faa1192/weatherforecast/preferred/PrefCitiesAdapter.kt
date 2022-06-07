@@ -29,7 +29,7 @@ class PrefCitiesAdapter(cities: List<City>, context: Context) :
         var textView = cardView.findViewById<View>(R.id.city_wt_name) as TextView
         textView.text = cityList[position].shortName
         textView = cardView.findViewById<View>(R.id.city_wt_temp) as TextView
-        textView.text = (cityList[position].data.temp) + ",  " + (cityList[position].data.weatherMain)
+        textView.text = "${cityList[position].data.temp} ,  ${cityList[position].data.weatherMain}"
         cardView.findViewWithTag<View>("lin_layout").setOnClickListener {
             val intent = Intent(context, WeatherInfoActivity::class.java)
             val selectedCity = cityList[position]
@@ -49,7 +49,7 @@ class PrefCitiesAdapter(cities: List<City>, context: Context) :
             val yes = context.resources.getString(R.string.yes)
             val no = context.resources.getString(R.string.no)
             builder.setTitle(alertTitle)
-                .setMessage(String.format(allerMessage, cityList.get(position).shortName))
+                .setMessage(String.format(allerMessage, cityList[position].shortName))
                 .setCancelable(true)
                 .setNegativeButton(
                     no
@@ -63,7 +63,7 @@ class PrefCitiesAdapter(cities: List<City>, context: Context) :
                     try {
                         (context as Updatable).update()
                     } catch (e: Exception) {
-                        Log.e("my", "citywithtempadapter: cannot be cast to updatable")
+                        Log.e("my", "CityWithTempAdapter: cannot be cast to updatable")
                     }
                     dialog.cancel()
                 }

@@ -138,7 +138,7 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
         var success = false
 
         val urlString =
-            "https://api.openweathermap.org/data/2.5/weather?id=" + city.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric"
+            "http://api.openweathermap.org/data/2.5/weather?id=" + city.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric"
         Log.e("my", "url:$urlString")
         try {
             Log.d("my", "1")
@@ -148,7 +148,7 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
             Log.d("my", "3")
             val response = client.newCall(request).execute()
             Log.d("my", "4")
-            val br = BufferedReader(response.body!!.charStream())
+            val br = BufferedReader(response.body.charStream())
             Log.d("my", "5")
             resultString = br.readLine()
             Log.d("my", "6")
@@ -192,7 +192,7 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
                 i++
             }
         } catch (e: Exception) {
-            Log.e("my", "prefcitydbhelper: cannot be cast to updatable") // не критично
+            Log.e("my", "PrefCityDBHelper: cannot be cast to updatable") // не критично
             var i = 0
             while (i < e.stackTrace.size) {
                 Log.e("my", e.stackTrace[i].toString())

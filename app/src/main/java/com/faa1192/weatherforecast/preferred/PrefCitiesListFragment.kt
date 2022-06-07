@@ -23,7 +23,10 @@ class PrefCitiesListFragment : Fragment() {
     ): View {
         val recyclerView = inflater.inflate(R.layout.recycle_view, container, false) as RecyclerView
         val prefCitiesAdapter =
-            PrefCitiesAdapter(PrefCityDBHelper.customInit(context!!).cityList, context!!)
+            PrefCitiesAdapter(
+                PrefCityDBHelper.customInit(requireContext()).cityList,
+                requireContext()
+            )
         val prefCityCount = prefCitiesAdapter.itemCount
 
         val resultLauncher =
@@ -55,7 +58,7 @@ class PrefCitiesListFragment : Fragment() {
                     activity!!.supportFragmentManager.findFragmentById(R.id.fragment_pref) as PrefCitiesListFragment?
                 val rv = fragment!!.view as RecyclerView?
                 var cwta = rv!!.adapter as PrefCitiesAdapter?
-                cwta!!.cityList[viewHolder.adapterPosition].let {
+                cwta!!.cityList[viewHolder.bindingAdapterPosition].let { // getBindingAdapterPosition() or getAbsoluteAdapterPosition()
                     PrefCityDBHelper.customInit(activity!!)
                         .delFromDbPref(it)
                 }

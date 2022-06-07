@@ -11,8 +11,8 @@ import java.util.*
 //класс объекта "Погодные данные". Служит для десериализации json в java object
 class WeatherData {
     var jsonString = ""
-        get() = if (field.isEmpty()) "" else field
-    var cityName = "" //название города ПРИХОДЯЩЕЕ С СЕРВЕРА
+        get() = field.ifEmpty { "" }
+    private var cityName = "" //название города ПРИХОДЯЩЕЕ С СЕРВЕРА
     var humidity = "" //влажность
         get() = if (field.isEmpty()) hm[noData]!! else "$field%"
     var pressure = "" //давление
@@ -64,7 +64,7 @@ class WeatherData {
             ) field else hm[field]!!
         }
     private var time = 0L //актуальное время сведений о погоде (приходит с сервера)
-    val noData = "no_data"
+    private val noData = "no_data"
 
     companion object {
         private val hm = HashMap<String, String?>()
@@ -184,9 +184,9 @@ class WeatherData {
     //Данные считаются старыми, если им больше часа. Сравнение со временем приходящим с сервера, а не со временем фактического получения данных
     val isActualData: Boolean
         get() {
-            val curenttime = Date().time / 1000
-            //Log.e("my", "TIME:" + (curenttime - time) + ""); //fordebug
-            return curenttime - time < 3600
+            val currentTime = Date().time / 1000
+            //Log.e("my", "TIME:" + (currentTime - time) + ""); //for debug
+            return currentTime - time < 3600
         }
 
     //Преобразование строки со временем в читабельный вид с поправкой на часовой пояс +3

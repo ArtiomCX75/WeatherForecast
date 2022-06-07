@@ -59,7 +59,7 @@ open class CityDBHelper protected constructor(context: Context?) : DBHelper(cont
         activity.findViewById<View>(R.id.progressBar).visibility = View.VISIBLE
 
         success = false
-        var countryName: String = country
+        val countryName: String = country
         val urlString =
             "https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/$countryName.txt"
         Log.e("my", "url:$urlString")
@@ -67,7 +67,7 @@ open class CityDBHelper protected constructor(context: Context?) : DBHelper(cont
             val client = OkHttpClient()
             val request: Request = Request.Builder().url(urlString).build()
             val response = client.newCall(request).execute()
-            val br = BufferedReader(response.body!!.charStream())
+            val br = BufferedReader(response.body.charStream())
             var temp = br.readLine()
             while (temp != null && temp.isNotEmpty()) {
                 list.add(temp)
@@ -114,7 +114,7 @@ open class CityDBHelper protected constructor(context: Context?) : DBHelper(cont
             } catch (e: Exception) {
                 Log.e(
                     "my",
-                    "citydbhelper: cannot be cast to updatable or sql exeption"
+                    "CityDBHelper: cannot be cast to updatable or sql exception"
                 ) // не критично
                 var i = 0
                 while (i < e.stackTrace.size) {
