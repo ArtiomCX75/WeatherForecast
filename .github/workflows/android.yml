@@ -22,5 +22,10 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+    - name: Putting data
+      env:
+        DATA: ${{ secrets.GOOGLE_SERVICES_JSON }}
+      run: echo $DATA > /home/runner/work/WeatherForecast/WeatherForecast/app/google-services.json
+      
     - name: Build with Gradle
       run: ./gradlew build
