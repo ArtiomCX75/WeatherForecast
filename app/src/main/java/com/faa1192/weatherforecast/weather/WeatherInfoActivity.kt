@@ -38,7 +38,9 @@ class WeatherInfoActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         actionBar!!.setDisplayHomeAsUpEnabled(true)
         actionBar.setBackgroundDrawable(ColorDrawable(applicationContext.getColor(R.color.col_pr_dark)))
         actionBar.title = Html.fromHtml(
-            "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + resources.getString(R.string.weather_in_city) + city!!.shortName + "</font>",
+            "<font color=\"" + applicationContext.getColor(R.color.pr_text) + "\">" + resources.getString(
+                R.string.weather_in_city
+            ) + city!!.shortName + "</font>",
             0
         )
         val upArrow = applicationContext.getDrawable(R.drawable.ic_back_arrow)
@@ -56,7 +58,10 @@ class WeatherInfoActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     override fun onRefresh() {
         swipeRefreshLayout!!.isRefreshing = true
         customInit(this).updateDataFromWeb(city!!)
-        Handler(Looper.myLooper()!!).postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
+        Handler(Looper.myLooper()!!).postDelayed(
+            { swipeRefreshLayout!!.isRefreshing = false },
+            3000
+        )
     }
 
     //Обновление данных о погоде с базы

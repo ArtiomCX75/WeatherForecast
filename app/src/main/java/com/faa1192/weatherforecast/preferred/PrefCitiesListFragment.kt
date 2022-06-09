@@ -62,7 +62,8 @@ class PrefCitiesListFragment : Fragment() {
                     PrefCityDBHelper.customInit(activity!!)
                         .delFromDbPref(it)
                 }
-                cwta = PrefCitiesAdapter(PrefCityDBHelper.customInit(activity!!).cityList, activity!!)
+                cwta =
+                    PrefCitiesAdapter(PrefCityDBHelper.customInit(activity!!).cityList, activity!!)
                 rv.adapter = cwta
             }
         }

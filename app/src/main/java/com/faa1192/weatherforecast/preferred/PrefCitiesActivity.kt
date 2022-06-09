@@ -61,6 +61,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             Color.argb(255, 0, 0, 200)
         )
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         // if (resultCode != -1)
         //     return;
@@ -87,7 +88,10 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         swipeRefreshLayout!!.isRefreshing = true
         PrefCityDBHelper.customInit(this@PrefCitiesActivity).updateAllDataFromWeb()
         update()
-        Handler(Looper.myLooper()!!).postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
+        Handler(Looper.myLooper()!!).postDelayed(
+            { swipeRefreshLayout!!.isRefreshing = false },
+            3000
+        )
     }
 
     override fun onBackPressed() {

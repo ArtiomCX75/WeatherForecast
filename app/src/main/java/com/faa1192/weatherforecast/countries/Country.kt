@@ -2,7 +2,6 @@ package com.faa1192.weatherforecast.countries
 
 import android.content.Context
 import com.faa1192.weatherforecast.R
-import java.util.*
 
 class Country(private val context: Context) {
     private val map: MutableMap<String, Int> = HashMap()

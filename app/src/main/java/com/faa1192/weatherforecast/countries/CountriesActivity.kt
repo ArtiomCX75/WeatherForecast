@@ -46,7 +46,10 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
         actionBar.setDisplayHomeAsUpEnabled(true)
         val upArrow = AppCompatResources.getDrawable(applicationContext, R.drawable.ic_back_arrow)
-        upArrow?.setColorFilter(applicationContext.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
+        upArrow?.setColorFilter(
+            applicationContext.getColor(R.color.pr_text),
+            PorterDuff.Mode.SRC_ATOP
+        )
         actionBar.setHomeAsUpIndicator(upArrow)
         swipeRefreshLayout = (binding as ActivityCountriesBinding).refresher
         swipeRefreshLayout!!.setOnRefreshListener(this)
@@ -72,7 +75,10 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     override fun onRefresh() {
         swipeRefreshLayout!!.isRefreshing = true
         update()
-        Handler(Looper.myLooper()!!).postDelayed({ swipeRefreshLayout!!.isRefreshing = false }, 3000)
+        Handler(Looper.myLooper()!!).postDelayed(
+            { swipeRefreshLayout!!.isRefreshing = false },
+            3000
+        )
     }
 
     override fun onBackPressed() {
