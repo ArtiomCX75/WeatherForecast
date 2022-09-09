@@ -47,4 +47,6 @@
     <string name="SW">"SW"</string>
     <string name="W">"W"</string>
     <string name="NW">"NW"</string>
+    <string name="loader">Loader</string>
+    <string name="add">Add</string>
 </resources>

@@ -12,18 +12,20 @@ import android.text.Html
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.databinding.DataBindingUtil
 import androidx.multidex.MultiDex
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.faa1192.weatherforecast.R
 import com.faa1192.weatherforecast.Updatable
 import com.faa1192.weatherforecast.databinding.ActivityCountriesBinding
+import com.faa1192.weatherforecast.databinding.RecycleViewBinding
 
 //Активити содержащее список всех стран
 class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     private var swipeRefreshLayout: SwipeRefreshLayout? = null
-    private var binding: ActivityCountriesBinding? = null
+    private lateinit var activityCountriesBinding: ActivityCountriesBinding
+    private lateinit var recycleViewBinding: RecycleViewBinding
+
     private val screenOrientation: Int
         get() {
             if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) return ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE else if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) return ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -33,7 +35,8 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MultiDex.install(this)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_countries)
+        activityCountriesBinding = ActivityCountriesBinding.inflate(layoutInflater)
+        val recycleViewBinding = RecycleViewBinding.inflate(layoutInflater)
         //        setContentView(R.layout.activity_countries);
         requestedOrientation =
             if (screenOrientation == 0) ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -51,14 +54,14 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             PorterDuff.Mode.SRC_ATOP
         )
         actionBar.setHomeAsUpIndicator(upArrow)
-        swipeRefreshLayout = (binding as ActivityCountriesBinding).refresher
+        swipeRefreshLayout = activityCountriesBinding.refresher
         swipeRefreshLayout!!.setOnRefreshListener(this)
         swipeRefreshLayout!!.setColorSchemeColors(
             Color.argb(255, 200, 0, 0),
             Color.argb(255, 0, 200, 0),
             Color.argb(255, 0, 0, 200)
         )
-        val progressBar = (binding as ActivityCountriesBinding).progressBar
+        val progressBar = activityCountriesBinding.progressBar
         progressBar.progressDrawable.setColorFilter(
             applicationContext.getColor(R.color.pr_text),
             PorterDuff.Mode.SRC_IN
@@ -67,7 +70,7 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
 
     override fun update() {
         val fragment =
-            supportFragmentManager.findFragmentById(R.id.fragment_coun) as CountriesListFragment?
+            supportFragmentManager.findFragmentById(R.id.fragment_country) as CountriesListFragment?
         //  RecyclerView recyclerView = (RecyclerView) fragment.getView();
         fragment!!.update()
     }

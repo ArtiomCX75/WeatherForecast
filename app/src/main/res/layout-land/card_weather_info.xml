@@ -1,7 +1,7 @@
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-<androidx.cardview.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/card_view_extra"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -40,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
 
                 <TextView
                     android:id="@+id/extra_city_pressure"
@@ -48,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
 
                 <TextView
                     android:id="@+id/extra_city_wind_speed"
@@ -56,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
 
                 <TextView
                     android:id="@+id/extra_city_sunrise"
@@ -64,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -79,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
 
                 <TextView
                     android:id="@+id/extra_city_humidity"
@@ -87,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
 
                 <TextView
                     android:id="@+id/extra_city_wind_deg"
@@ -95,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
 
                 <TextView
                     android:id="@+id/extra_city_sunset"
@@ -103,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:layout_marginLeft="6dp" />
+                    android:layout_marginStart="6dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -113,7 +114,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
-            android:layout_marginLeft="6dp" />
+            android:layout_marginStart="6dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
-    </layout>

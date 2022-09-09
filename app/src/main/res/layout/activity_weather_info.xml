@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-    
-    <LinearLayout
-        android:id="@+id/activity_weather_info_container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:id="@+id/activity_weather_info_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/col_pr"
+    android:gravity="end"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".weather.WeatherInfoActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresher_weather_data"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/col_pr"
-        android:gravity="end"
-        android:orientation="vertical"
-        android:padding="5dp"
-        tools:context=".weather.WeatherInfoActivity">
+        android:layout_height="match_parent">
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/refresher_weather_data"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            android:layout_height="match_parent"
             android:fillViewport="true">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment3"
                 android:name="com.faa1192.weatherforecast.weather.WeatherInfoFragment"
                 android:layout_width="match_parent"
@@ -32,4 +31,3 @@
         </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>
-</layout>

@@ -8,18 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.faa1192.weatherforecast.R
 import com.faa1192.weatherforecast.countries.CountriesActivity
+import com.faa1192.weatherforecast.databinding.RecycleViewBinding
 
 //Фрагмент со списком всех городов
 class CitiesListFragment : Fragment() {
+    private lateinit var binding: RecycleViewBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val recyclerView = inflater.inflate(R.layout.recycle_view, container, false) as RecyclerView
+        binding = RecycleViewBinding.inflate(inflater)
+        val recyclerView = binding.recycleViewCities
         val cityInListAdapter =
             context?.let { CityInListAdapter(CityDBHelper.init(activity).getCityList(""), it) }
         val cityCount = cityInListAdapter?.itemCount

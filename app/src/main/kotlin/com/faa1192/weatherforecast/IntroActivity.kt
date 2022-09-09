@@ -4,19 +4,20 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.multidex.MultiDex
+import com.faa1192.weatherforecast.databinding.ActivityIntroBinding
 import com.faa1192.weatherforecast.preferred.PrefCitiesActivity
 
 open class IntroActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityIntroBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MultiDex.install(this)
-        setContentView(R.layout.activity_intro)
-        val image = findViewById<View>(R.id.intro_image) as ImageView
+        binding = ActivityIntroBinding.inflate(layoutInflater)
+        setContentView(binding.introLayout)
+        val image = binding.introImage
         val animation = AnimationUtils.loadAnimation(this, R.anim.intro)
         image.startAnimation(animation)
         val handler = Handler(Looper.myLooper()!!)

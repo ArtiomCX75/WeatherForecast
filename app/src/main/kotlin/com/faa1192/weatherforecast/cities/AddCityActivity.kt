@@ -15,15 +15,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.faa1192.weatherforecast.R
 import com.faa1192.weatherforecast.Updatable
 import com.faa1192.weatherforecast.countries.CountriesActivity
+import com.faa1192.weatherforecast.databinding.ActivityAddCityBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 //Активити содержащее список всех городов
 class AddCityActivity : AppCompatActivity(), Updatable {
+    private lateinit var binding: ActivityAddCityBinding
     private var searchView: SearchView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MultiDex.install(this)
-        setContentView(R.layout.activity_add_city)
+        binding = ActivityAddCityBinding.inflate(layoutInflater)
+        setContentView(binding.addCityLayout)
         val actionBar = supportActionBar
         actionBar!!.setBackgroundDrawable(ColorDrawable(applicationContext.getColor(R.color.col_pr_dark)))
         actionBar.setDisplayHomeAsUpEnabled(true)
@@ -35,7 +38,7 @@ class AddCityActivity : AppCompatActivity(), Updatable {
 
         // TODO fix me        upArrow?.setColorFilter(applicationContext.getColor(R.color.pr_text), PorterDuff.Mode.SRC_ATOP)
         actionBar.setHomeAsUpIndicator(upArrow)
-        searchView = findViewById<View>(R.id.search) as SearchView
+        searchView = binding.searchView
         searchView!!.setIconifiedByDefault(false)
         searchView!!.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -55,12 +58,12 @@ class AddCityActivity : AppCompatActivity(), Updatable {
                 startActivityForResult(intent, 1)
                 overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
             }
-        val floatingActionButton = findViewById<View>(R.id.fabcity) as FloatingActionButton
-        floatingActionButton.backgroundTintList =
+        val fab = binding.fabcity
+        fab.backgroundTintList =
             ColorStateList.valueOf(applicationContext.getColor(R.color.col_pr))
-        floatingActionButton.setOnClickListener(addListener)
-        floatingActionButton.size = FloatingActionButton.SIZE_NORMAL
-        floatingActionButton.setColorFilter(applicationContext.getColor(R.color.sec_text))
+        fab.setOnClickListener(addListener)
+        fab.size = FloatingActionButton.SIZE_NORMAL
+        fab.setColorFilter(applicationContext.getColor(R.color.sec_text))
     }
 
     fun onActivityResult(result: ActivityResult) {
@@ -70,9 +73,8 @@ class AddCityActivity : AppCompatActivity(), Updatable {
 
     //Обновление адаптера во время поиска
     override fun update() {
-        val citiesListFragment =
-            supportFragmentManager.findFragmentById(R.id.fragment_city_list) as CitiesListFragment?
-        val rv = citiesListFragment!!.view as RecyclerView?
+        val citiesListFragment = binding.fragmentCityList
+        val rv = citiesListFragment as RecyclerView?
         val cityInListAdapter =
             CityInListAdapter(
                 CityDBHelper.init(this@AddCityActivity).getCityList(

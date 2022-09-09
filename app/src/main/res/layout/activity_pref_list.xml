@@ -18,17 +18,17 @@
             android:background="@color/col_pr_dark"
             android:gravity="center"
             android:text="@string/your_cities"
-            android:textColor="@color/sec_text"
+            android:textColor="#795548"
             android:textSize="18sp" />
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/refresher"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_pref"
-                class="com.faa1192.weatherforecast.preferred.PrefCitiesListFragment"
+                android:name="com.faa1192.weatherforecast.preferred.PrefCitiesListFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -43,11 +43,10 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_gravity="end"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:src="@drawable/ic_add_city_icon"
+        android:contentDescription="@string/add"
         app:rippleColor="@color/col_pr_dark" />
 </RelativeLayout>
