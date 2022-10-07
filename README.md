@@ -1,3 +1,5 @@
+//todo rewrite all code from Kotlin-automigrated to Kotlin-true code
+
 # WeatherForecast
 ![screen](https://github.com/ArtiomCX75/WeatherForecast/blob/develop/screenshots/0.2/3.png)
 ## It's a simple application for displaying the weather information
