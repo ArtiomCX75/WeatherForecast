@@ -1,46 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_countries_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/col_pr"
+    android:gravity="center|top"
     android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@color/col_pr_dark"
+        android:gravity="center"
+        android:text="@string/choose_country"
+        android:textColor="#795548"
+        android:textSize="18sp" />
 
-        <TextView
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/col_pr_dark"
+        android:visibility="invisible" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_country"
+            android:name="com.faa1192.weatherforecast.countries.CountriesListFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/col_pr_dark"
-            android:gravity="center"
-            android:text="@string/choose_country"
-            android:textColor="@color/sec_text"
-            android:textSize="18sp" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@color/col_pr_dark"
-            android:visibility="invisible" />
-
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/refresher"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <fragment
-                android:id="@+id/fragment_coun"
-                class="com.faa1192.weatherforecast.countries.CountriesListFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="center" />
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    </LinearLayout>
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            tools:layout="@layout/recycle_view" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>
-</layout>

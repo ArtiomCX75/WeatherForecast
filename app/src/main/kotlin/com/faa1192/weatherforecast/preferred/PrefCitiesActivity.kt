@@ -16,6 +16,7 @@ import androidx.multidex.MultiDex
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+import com.faa1192.weatherforecast.MyObserver
 import com.faa1192.weatherforecast.R
 import com.faa1192.weatherforecast.Updatable
 import com.faa1192.weatherforecast.cities.AddCityActivity
@@ -24,11 +25,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 //Активити содержащее список городов добавленных в избранное
 class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     private var swipeRefreshLayout: SwipeRefreshLayout? = null
+    lateinit var myObserver: MyObserver
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MultiDex.install(this)
         context = applicationContext
         setContentView(R.layout.activity_pref_list)
+        myObserver = MyObserver()
+        lifecycle.addObserver(myObserver)
         //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.pull_for_refresh), Toast.LENGTH_SHORT).show();
         //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.hold_for_delete), Toast.LENGTH_SHORT).show();
         PrefCityDBHelper.customInit(applicationContext).updateAllDataFromWeb()
@@ -62,6 +66,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
     }
 
+    @Suppress("OverrideDeprecatedMigration")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         // if (resultCode != -1)
         //     return;
@@ -94,6 +99,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)

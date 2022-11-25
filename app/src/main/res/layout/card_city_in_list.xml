@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="96dp"
     android:layout_marginBottom="1dp"
@@ -30,11 +31,11 @@
             <TextView
                 android:id="@+id/city_in_list_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:textColor="@color/pr_text"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -48,14 +49,14 @@
             <TextView
                 android:id="@+id/city_in_list_name_extra"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
-                android:gravity="center|left"
+                android:gravity="center|start"
                 android:textColor="@color/sec_text"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="NestedWeights" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

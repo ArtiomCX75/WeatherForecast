@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.text.Html
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import androidx.multidex.MultiDex
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
@@ -22,13 +21,13 @@ import com.faa1192.weatherforecast.preferred.PrefCityDBHelper.Companion.customIn
 class WeatherInfoActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     private var city: City? = null
     private var swipeRefreshLayout: SwipeRefreshLayout? = null
+    private lateinit var binding: ActivityWeatherInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         MultiDex.install(this)
         super.onCreate(savedInstanceState)
         //  Toast.makeText(WeatherInfoActivity.this, R.string.pull_for_refresh, Toast.LENGTH_SHORT).show();
-        val binding: ActivityWeatherInfoBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_weather_info)
+        binding = ActivityWeatherInfoBinding.inflate(layoutInflater)
         val intent = intent
         city = fromBundle(intent.extras!!)
         val fragment =
@@ -71,6 +70,7 @@ class WeatherInfoActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         fragment!!.setInfo(customInit(this).getCity(city!!.id))
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
