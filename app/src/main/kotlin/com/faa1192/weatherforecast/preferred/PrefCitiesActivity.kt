@@ -66,6 +66,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
     }
 
+    @Suppress("OverrideDeprecatedMigration")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         // if (resultCode != -1)
         //     return;
@@ -98,6 +99,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)

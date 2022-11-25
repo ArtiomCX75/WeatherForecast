@@ -70,6 +70,7 @@ class WeatherInfoActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         fragment!!.setInfo(customInit(this).getCity(city!!.id))
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)

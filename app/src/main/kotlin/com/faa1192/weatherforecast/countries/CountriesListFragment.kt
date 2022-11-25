@@ -82,7 +82,6 @@ class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/W
             if (success) {
                 Log.d("WWW", "success 2")
                 val countryInListAdapter = context?.let { CountryInListAdapter(list, it) }
-                val clf = activityCountriesBinding.fragmentCountry
 
                 val recyclerView = binding.recycleViewCities
                 val orientation = requireActivity().resources.configuration.orientation
@@ -97,7 +96,7 @@ class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/W
                 }
                 recyclerView.adapter = countryInListAdapter
             }
-        } catch (e: Exception) {
+        } catch (_: Exception) {
         }
 
     }
