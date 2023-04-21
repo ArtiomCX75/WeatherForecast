@@ -84,6 +84,7 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         )
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         overridePendingTransition(R.anim.alpha_on, R.anim.alpha_off)
