@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkPreview 'android-UpsideDownCake'
+    compileSdkPreview 'UpsideDownCake'
     defaultConfig {
         multiDexEnabled true
         applicationId "com.faa1192.weatherforecast"
