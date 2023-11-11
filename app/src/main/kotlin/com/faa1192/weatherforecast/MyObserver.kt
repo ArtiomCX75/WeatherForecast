@@ -8,7 +8,7 @@ import androidx.lifecycle.OnLifecycleEvent
 
 class MyObserver : LifecycleObserver {
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
+    //@OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     fun myFun(source: LifecycleOwner, event: Lifecycle.Event) {
         Log.d("WWW", event.toString())
     }

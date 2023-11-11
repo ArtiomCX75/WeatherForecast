@@ -2,7 +2,6 @@ package com.faa1192.weatherforecast.countries
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,11 +13,10 @@ import com.faa1192.weatherforecast.databinding.RecycleViewBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.Request
 import java.io.BufferedReader
-import java.io.IOException
-import java.util.*
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
 
 //Фрагмент со списком стран
 class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/move_citieslist_to_server/citieslist/list.txt
@@ -37,50 +35,47 @@ class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/W
         val recyclerView = binding.recycleViewCities
 
         update()
-        //  list.add("RU");
-        //   list.add("UA");
+        CoroutineScope(Dispatchers.IO).launch {
+            downloadCountyList()
+        }
+          list.add("RU");
+          list.add("UA");
         return recyclerView
     }
 
     fun update() {
-        Log.d("WWW", "update 0")
-        CoroutineScope(Dispatchers.IO).launch {
-            Log.d("WWW", "update 1")
+/*        CoroutineScope(Dispatchers.IO).launch {
             downloadCountyList()
-            Log.d("WWW", "update 2")
-        }
+        } */
     }
 
     private fun downloadCountyList() {
-        var success: Boolean
+        if (list.isNotEmpty()) {
+            return
+        }
+        var success = false
         list.clear()
-        try {
-            Log.d("WWW", "try")
-            val okHttpClient = OkHttpClient()
-            val request: Request = Request.Builder().get()
-                .url("https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/list.txt")
-                .build()
-            val response = okHttpClient.newCall(request).execute()
-            val br = BufferedReader(
-                Objects.requireNonNull(response.body).charStream()
-            )
-            var temp = br.readLine()
-            while (temp != null && temp.isNotEmpty()) {
-                list.add(temp)
-                temp = br.readLine()
+
+        val mURL =
+            URL("https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/list.txt")
+
+        with(mURL.openConnection() as HttpURLConnection) {
+            requestMethod = "GET"
+            BufferedReader(InputStreamReader(inputStream)).use {
+                val response = StringBuffer()
+                var inputLine = it.readLine()
+                while (inputLine != null) {
+                    list.add(inputLine)
+                    response.append(inputLine)
+                    inputLine = it.readLine()
+                    success = true
+                }
+                it.close()
             }
-            success = true
-            Log.d("WWW", "success true")
-        } catch (e: IOException) {
-            Log.d("WWW", "success false")
-            success = false
-            e.printStackTrace()
         }
 
         try {
-            Log.d("WWW", "try 2")
             if (success) {
-                Log.d("WWW", "success 2")
                 val countryInListAdapter = context?.let { CountryInListAdapter(list, it) }
 
                 val recyclerView = binding.recycleViewCities
@@ -96,8 +91,7 @@ class CountriesListFragment  //   https://raw.githubusercontent.com/ArtiomCX75/W
                 }
                 recyclerView.adapter = countryInListAdapter
             }
-        } catch (_: Exception) {
-        }
+        } catch (_: Exception) {}
 
     }
 }

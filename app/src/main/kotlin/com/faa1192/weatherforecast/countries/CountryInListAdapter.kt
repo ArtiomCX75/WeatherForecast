@@ -41,7 +41,6 @@ class CountryInListAdapter(private val countriesList: List<String>, private val 
             )
             progressBar.layoutParams = lp
             val chosenCountry = countriesList[position]
-            // Intent intent = new Intent();
             val activity = context as Activity
             activity.setResult(Activity.RESULT_OK)
             //String country = data.getStringExtra("country");

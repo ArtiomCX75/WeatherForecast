@@ -36,8 +36,8 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         super.onCreate(savedInstanceState)
         MultiDex.install(this)
         activityCountriesBinding = ActivityCountriesBinding.inflate(layoutInflater)
-        val recycleViewBinding = RecycleViewBinding.inflate(layoutInflater)
-        //        setContentView(R.layout.activity_countries);
+        recycleViewBinding = RecycleViewBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_countries);
         requestedOrientation =
             if (screenOrientation == 0) ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         val actionBar = supportActionBar
@@ -69,15 +69,13 @@ class CountriesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
     }
 
     override fun update() {
-        val fragment =
-            supportFragmentManager.findFragmentById(R.id.fragment_country) as CountriesListFragment?
-        //  RecyclerView recyclerView = (RecyclerView) fragment.getView();
-        fragment!!.update()
+        //  val fragment = supportFragmentManager.findFragmentById(R.id.fragment_country) as CountriesListFragment
+        //   fragment.update()
     }
 
     override fun onRefresh() {
         swipeRefreshLayout!!.isRefreshing = true
-        update()
+        //   update()
         Handler(Looper.myLooper()!!).postDelayed(
             { swipeRefreshLayout!!.isRefreshing = false },
             3000

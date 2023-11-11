@@ -15,10 +15,10 @@ import com.faa1192.weatherforecast.weather.WeatherData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.Request
 import java.io.BufferedReader
-import java.io.IOException
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
 
 //хелпер для работы с базой городов добавленных в избранное
 class PrefCityDBHelper private constructor(context: Context) : DBHelper(context) {
@@ -138,28 +138,25 @@ class PrefCityDBHelper private constructor(context: Context) : DBHelper(context)
         var success = false
 
         val urlString =
-            "http://api.openweathermap.org/data/2.5/weather?id=" + city.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric"
+            URL("http://api.openweathermap.org/data/2.5/weather?id=" + city.id + "&appid=5fa682315be7b0b6b329bca80a9bbf08&lang=en&units=metric")
         Log.e("my", "url:$urlString")
-        try {
-            Log.d("my", "1")
-            val client = OkHttpClient()
-            Log.d("my", "2")
-            val request = Request.Builder().url(urlString).build()
-            Log.d("my", "3")
-            val response = client.newCall(request).execute()
-            Log.d("my", "4")
-            val br = BufferedReader(response.body.charStream())
-            Log.d("my", "5")
-            resultString = br.readLine()
-            Log.d("my", "6")
-            success = true
-            Log.d("my", "7")
-        } catch (e: IOException) {
-            Log.e("my", "Проблемы с загрузкой")
-            var i = 0
-            while (i < e.stackTrace.size) {
-                Log.e("my", e.stackTrace[i].toString())
-                i++
+
+        with(urlString.openConnection() as HttpURLConnection) {
+            requestMethod = "GET"
+            println("URL : $url")
+            println("Response Code : $responseCode")
+            BufferedReader(InputStreamReader(inputStream)).use {
+                val response = StringBuffer()
+                var inputLine = it.readLine()
+                while (inputLine != null) {
+                    //   list.add(inputLine)
+                    response.append(inputLine)
+                    inputLine = it.readLine()
+                    success = true
+                }
+                it.close()
+                println("Response : $response")
+                resultString = response.toString()
             }
         }
 

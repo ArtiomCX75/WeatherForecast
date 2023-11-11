@@ -16,9 +16,10 @@ import com.faa1192.weatherforecast.countries.CountriesActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.Request
 import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
 
 //хелпер для работы с базой всех городов
 open class CityDBHelper protected constructor(context: Context?) : DBHelper(context!!) {
@@ -61,26 +62,28 @@ open class CityDBHelper protected constructor(context: Context?) : DBHelper(cont
         success = false
         val countryName: String = country
         val urlString =
-            "https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/$countryName.txt"
+            URL("https://raw.githubusercontent.com/ArtiomCX75/WeatherForecast/develop/citieslist/$countryName.txt")
         Log.e("my", "url:$urlString")
-        try {
-            val client = OkHttpClient()
-            val request: Request = Request.Builder().url(urlString).build()
-            val response = client.newCall(request).execute()
-            val br = BufferedReader(response.body.charStream())
-            var temp = br.readLine()
-            while (temp != null && temp.isNotEmpty()) {
-                list.add(temp)
-                temp = br.readLine()
-            }
-            success = true
-        } catch (e: Exception) {
-            var i = 0
-            while (i < e.stackTrace.size) {
-                Log.e("my", e.stackTrace[i].toString())
-                i++
+
+        val response = StringBuffer()
+        with(urlString.openConnection() as HttpURLConnection) {
+            requestMethod = "GET"
+            println("URL : $url")
+            println("Response Code : $responseCode")
+            BufferedReader(InputStreamReader(inputStream)).use {
+                val response = StringBuffer()
+                var inputLine = it.readLine()
+                while (inputLine != null) {
+                    list.add(inputLine)
+                    response.append(inputLine)
+                    inputLine = it.readLine()
+                    success = true
+                }
+                it.close()
+                println("Response : $response")
             }
         }
+
         if (success) {
             try {
                 this@CityDBHelper.writableDatabase.execSQL("DELETE from $TABLE_LIST_CITY_NAME WHERE country = '$countryName'")

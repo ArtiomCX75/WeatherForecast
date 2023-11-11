@@ -16,6 +16,7 @@ import com.faa1192.weatherforecast.R
 import com.faa1192.weatherforecast.Updatable
 import com.faa1192.weatherforecast.countries.CountriesActivity
 import com.faa1192.weatherforecast.databinding.ActivityAddCityBinding
+import com.faa1192.weatherforecast.preferred.PrefCitiesListFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 //Активити содержащее список всех городов
@@ -73,8 +74,8 @@ class AddCityActivity : AppCompatActivity(), Updatable {
 
     //Обновление адаптера во время поиска
     override fun update() {
-        val citiesListFragment = binding.fragmentCityList
-        val rv = citiesListFragment as RecyclerView?
+        val citiesListFragment : CitiesListFragment = supportFragmentManager.findFragmentById(R.id.fragment_city_list) as CitiesListFragment
+        val rv = citiesListFragment.view as RecyclerView?
         val cityInListAdapter =
             CityInListAdapter(
                 CityDBHelper.init(this@AddCityActivity).getCityList(

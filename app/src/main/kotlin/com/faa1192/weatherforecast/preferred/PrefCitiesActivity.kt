@@ -33,8 +33,6 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
         setContentView(R.layout.activity_pref_list)
         myObserver = MyObserver()
         lifecycle.addObserver(myObserver)
-        //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.pull_for_refresh), Toast.LENGTH_SHORT).show();
-        //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.hold_for_delete), Toast.LENGTH_SHORT).show();
         PrefCityDBHelper.customInit(applicationContext).updateAllDataFromWeb()
         val addListener =
             View.OnClickListener { //Toast.makeText(PrefCitiesActivity.this, getResources().getString(R.string.wait_pls), Toast.LENGTH_SHORT).show();
@@ -64,6 +62,7 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
             Color.argb(255, 0, 200, 0),
             Color.argb(255, 0, 0, 200)
         )
+        update()
     }
 
     @Suppress("OverrideDeprecatedMigration")
@@ -78,14 +77,15 @@ class PrefCitiesActivity : AppCompatActivity(), Updatable, OnRefreshListener {
 
     //Обновление адаптера при добавлении нового города, удалении из избранного etc
     override fun update() {
-        val fragment =
-            supportFragmentManager.findFragmentById(R.id.fragment_pref) as PrefCitiesListFragment?
+        val fragment = supportFragmentManager.findFragmentById(R.id.fragment_pref) as PrefCitiesListFragment?
         val recyclerView = fragment!!.view as RecyclerView?
         val prefCitiesAdapter = PrefCitiesAdapter(
             PrefCityDBHelper.customInit(this@PrefCitiesActivity).cityList,
             this@PrefCitiesActivity
         )
-        recyclerView!!.adapter = prefCitiesAdapter
+        if (recyclerView != null) {
+            recyclerView.adapter = prefCitiesAdapter
+        }
     }
 
     //Обновление данных о погоде (с инета)
